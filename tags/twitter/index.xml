@@ -24,10 +24,10 @@
     
     <item>
       <title>支持twitter的AppEngine-OAuth-Library</title>
-      <link>https://xixitalk.github.io/blog/2013/06/14/appengine-oauth-library/</link>
+      <link>https://xixitalk.github.io/blog/2013/06/14/AppEngine-OAuth-Library/</link>
       <pubDate>Fri, 14 Jun 2013 09:13:55 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/14/appengine-oauth-library/</guid>
+      <guid>https://xixitalk.github.io/blog/2013/06/14/AppEngine-OAuth-Library/</guid>
       <description>&lt;p&gt;自己在GAE上写了个浏览twitter的web页面，虽然丑陋但是自我感觉良好，使用的是v1.0的API，这两天twitter停用了v1.0的API，换用v1.1，调试了一下没有调试好，还是直接用别人造好的轮子吧。&lt;/p&gt;
 
 &lt;p&gt;AppEngine-OAuth-Library &lt;a href=&#34;https://github.com/mikeknapp/AppEngine-OAuth-Library&#34; target=&#34;_blank&#34;&gt;https://github.com/mikeknapp/AppEngine-OAuth-Library&lt;/a&gt;&lt;/p&gt;

@@ -24,10 +24,10 @@
     
     <item>
       <title>产品中多个不明可执行程序dvrHelper</title>
-      <link>https://xixitalk.github.io/blog/2016/08/30/virus-dvrhelper/</link>
+      <link>https://xixitalk.github.io/blog/2016/08/30/virus-dvrHelper/</link>
       <pubDate>Tue, 30 Aug 2016 16:48:47 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/08/30/virus-dvrhelper/</guid>
+      <guid>https://xixitalk.github.io/blog/2016/08/30/virus-dvrHelper/</guid>
       <description>&lt;p&gt;一个数据类产品，测试报告描述：FTP上传下载加浏览器看视频，一个小时内必死机。&lt;/p&gt;
 
 &lt;p&gt;死机现场初步分析：死机直接原因是系统内存耗尽，但是发现进程里多了三个奇怪的进程，进程名都像是随机字符串，两个死机现场都有，并且进程名还随机的不一样。&lt;/p&gt;
@@ -37,10 +37,10 @@
     
     <item>
       <title>netlink遇到ENOBUFS错误</title>
-      <link>https://xixitalk.github.io/blog/2016/08/18/netlink-enobufs/</link>
+      <link>https://xixitalk.github.io/blog/2016/08/18/netlink-ENOBUFS/</link>
       <pubDate>Thu, 18 Aug 2016 08:49:42 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/08/18/netlink-enobufs/</guid>
+      <guid>https://xixitalk.github.io/blog/2016/08/18/netlink-ENOBUFS/</guid>
       <description>&lt;p&gt;一个场景：USB插拔的时候内核会通过netlink广播到user层，多个应用接收这个消息。但是出现了errno 105错误，105错误是：&lt;code&gt;No buffer space available&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>

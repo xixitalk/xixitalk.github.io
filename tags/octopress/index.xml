@@ -35,10 +35,10 @@
     
     <item>
       <title>octopress加快rake generate速度</title>
-      <link>https://xixitalk.github.io/blog/2013/06/19/octopress-rake-gen_deploy/</link>
+      <link>https://xixitalk.github.io/blog/2013/06/19/Octopress-Rake-gen_deploy/</link>
       <pubDate>Wed, 19 Jun 2013 21:35:54 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/19/octopress-rake-gen_deploy/</guid>
+      <guid>https://xixitalk.github.io/blog/2013/06/19/Octopress-Rake-gen_deploy/</guid>
       <description>&lt;p&gt;octopress随着文件越来越多，&lt;code&gt;rake generate&lt;/code&gt;越来越慢。这样可以加快速度。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -64,10 +64,10 @@ $ git clone git@github.com:xixitalk/xixitalk.github.com.git _deploy
     
     <item>
       <title>octopress里插入flickr的图片</title>
-      <link>https://xixitalk.github.io/blog/2013/06/19/insert-a-image-from-flickr-in-octopress/</link>
+      <link>https://xixitalk.github.io/blog/2013/06/19/Insert-a-Image-From-Flickr-in-Octopress/</link>
       <pubDate>Wed, 19 Jun 2013 10:17:24 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/19/insert-a-image-from-flickr-in-octopress/</guid>
+      <guid>https://xixitalk.github.io/blog/2013/06/19/Insert-a-Image-From-Flickr-in-Octopress/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.flickr.com&#34; target=&#34;_blank&#34;&gt;flickr&lt;/a&gt;更新之后，免费1T空间，同时可以上传质量很好的图片。&lt;a href=&#34;http://www.instagram.com&#34; target=&#34;_blank&#34;&gt;instagram&lt;/a&gt;的图片质量太差了。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>

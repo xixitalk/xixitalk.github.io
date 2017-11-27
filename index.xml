@@ -78,10 +78,10 @@
     
     <item>
       <title>当小孩吞吃了一个红枣核</title>
-      <link>https://xixitalk.github.io/blog/2017/08/28/when-a-child-eat-a-chinese-date-stone/</link>
+      <link>https://xixitalk.github.io/blog/2017/08/28/When-a-child-eat-a-chinese-date-stone/</link>
       <pubDate>Mon, 28 Aug 2017 10:51:54 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2017/08/28/when-a-child-eat-a-chinese-date-stone/</guid>
+      <guid>https://xixitalk.github.io/blog/2017/08/28/When-a-child-eat-a-chinese-date-stone/</guid>
       <description>&lt;p&gt;&lt;strong&gt;不要给小孩吃红枣！不要给小孩吃红枣！不要给小孩吃红枣！&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -89,10 +89,10 @@
     
     <item>
       <title>华硕路由器外接硬盘格式化成什么文件系统最好</title>
-      <link>https://xixitalk.github.io/blog/2016/11/12/how-to-format-usb-drive-for-asus-router/</link>
+      <link>https://xixitalk.github.io/blog/2016/11/12/How-to-Format-Usb-Drive-for-asus-router/</link>
       <pubDate>Sat, 12 Nov 2016 15:33:41 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/11/12/how-to-format-usb-drive-for-asus-router/</guid>
+      <guid>https://xixitalk.github.io/blog/2016/11/12/How-to-Format-Usb-Drive-for-asus-router/</guid>
       <description>&lt;p&gt;关键词：华硕 AC66U AC68U 外接硬盘 文件系统 EXT4 EXT3 NTFS FAT32&lt;/p&gt;
 
 &lt;p&gt;我有一台华硕AC66U，外接了一块2.5吋移动硬盘。不知道格式化成什么格式最好？硬盘本来是EXT4格式的，插上发现没有自动挂载，搜索发现，AC66U建议用&lt;strong&gt;EXT3&lt;/strong&gt;格式，而AC68U建议用&lt;strong&gt;EXT4&lt;/strong&gt;格式。果然格式成EXT3后，插上AC66U后&lt;strong&gt;自动挂载&lt;/strong&gt;了。其他华硕机器未验证。&lt;/p&gt;
@@ -113,10 +113,10 @@
     
     <item>
       <title>西部数据硬盘Load_Cycle_Count增长过快的问题</title>
-      <link>https://xixitalk.github.io/blog/2016/10/31/western-digital-problems/</link>
+      <link>https://xixitalk.github.io/blog/2016/10/31/Western-Digital-problems/</link>
       <pubDate>Mon, 31 Oct 2016 08:39:21 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/10/31/western-digital-problems/</guid>
+      <guid>https://xixitalk.github.io/blog/2016/10/31/Western-Digital-problems/</guid>
       <description>&lt;p&gt;关键词：硬盘 西部数据 希捷 东芝&lt;/p&gt;
 
 &lt;p&gt;我有一块西部数据的3.5寸硬盘，同时有一块笔记本淘汰下来的东芝的2.5寸硬盘，关键数据用这两个硬盘进行备份。最近东芝的硬盘偶尔读取失败，所以寻思再买一块硬盘替代东芝的这块硬盘。于是在网上搜索到底是买西部数据还是希捷，还是东芝的硬盘。搜索发现了西部数据硬盘曾经有“Load_Cycle_Count”的问题:&lt;a href=&#34;https://blog.vandenbrand.org/2012/04/05/western-digital-green-caviar-wd10eads-and-hdparm-problems/&#34; target=&#34;_blank&#34;&gt;Western Digital Green Caviar WD10EADS and hdparm problems&lt;/a&gt;
@@ -155,10 +155,10 @@
     
     <item>
       <title>stunnel双向证书认证</title>
-      <link>https://xixitalk.github.io/blog/2016/10/13/stunnel-with-bilateral-authentication/</link>
+      <link>https://xixitalk.github.io/blog/2016/10/13/Stunnel-With-Bilateral-Authentication/</link>
       <pubDate>Thu, 13 Oct 2016 20:09:49 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/10/13/stunnel-with-bilateral-authentication/</guid>
+      <guid>https://xixitalk.github.io/blog/2016/10/13/Stunnel-With-Bilateral-Authentication/</guid>
       <description>&lt;p&gt;stunnel 双向证书认证：&lt;strong&gt;防止没授权的客户端连接stunnel服务器，防止客户端连接假的服务器&lt;/strong&gt;。&lt;/p&gt;
 
 &lt;p&gt;stunnel官方的&lt;a href=&#34;https://www.stunnel.org/auth.html&#34; target=&#34;_blank&#34;&gt;说明&lt;/a&gt;是：（客户端）检查服务器端证书是为了防止&lt;strong&gt;中间人攻击&lt;/strong&gt;；（服务器端）检查客户端证书是为了严格控制客户端的访问。&lt;/p&gt;
@@ -213,10 +213,10 @@
     
     <item>
       <title>TCP/IP之以太网帧</title>
-      <link>https://xixitalk.github.io/blog/2016/10/10/ethernet-of-tcpip/</link>
+      <link>https://xixitalk.github.io/blog/2016/10/10/Ethernet-of-tcpip/</link>
       <pubDate>Mon, 10 Oct 2016 10:15:46 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/10/10/ethernet-of-tcpip/</guid>
+      <guid>https://xixitalk.github.io/blog/2016/10/10/Ethernet-of-tcpip/</guid>
       <description>&lt;h3 id=&#34;ethernet-ii-以太网v2帧&#34;&gt;Ethernet II(以太网V2帧)&lt;/h3&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -235,10 +235,10 @@
     
     <item>
       <title>柏林警方在难民中心枪杀了一名父亲，因为他企图攻击性侵他女儿的嫌疑犯</title>
-      <link>https://xixitalk.github.io/blog/2016/09/30/berlin-police-shoot-dead-father-at-refugee-centre-as-he-attacks-man-he-accused-of-abusing-daughter/</link>
+      <link>https://xixitalk.github.io/blog/2016/09/30/Berlin-Police-shoot-dead-father-at-refugee-centre-as-he-attacks-man-he-accused-of-abusing-daughter/</link>
       <pubDate>Fri, 30 Sep 2016 09:10:49 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/09/30/berlin-police-shoot-dead-father-at-refugee-centre-as-he-attacks-man-he-accused-of-abusing-daughter/</guid>
+      <guid>https://xixitalk.github.io/blog/2016/09/30/Berlin-Police-shoot-dead-father-at-refugee-centre-as-he-attacks-man-he-accused-of-abusing-daughter/</guid>
       <description>&lt;h3 id=&#34;berlin-police-shoot-dead-father-at-refugee-centre-as-he-attacks-man-he-accused-of-abusing-daughter&#34;&gt;Berlin Police shoot dead father at refugee centre as he attacks man he accused of abusing daughter&lt;/h3&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -268,10 +268,10 @@
     
     <item>
       <title>产品中多个不明可执行程序dvrHelper</title>
-      <link>https://xixitalk.github.io/blog/2016/08/30/virus-dvrhelper/</link>
+      <link>https://xixitalk.github.io/blog/2016/08/30/virus-dvrHelper/</link>
       <pubDate>Tue, 30 Aug 2016 16:48:47 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/08/30/virus-dvrhelper/</guid>
+      <guid>https://xixitalk.github.io/blog/2016/08/30/virus-dvrHelper/</guid>
       <description>&lt;p&gt;一个数据类产品，测试报告描述：FTP上传下载加浏览器看视频，一个小时内必死机。&lt;/p&gt;
 
 &lt;p&gt;死机现场初步分析：死机直接原因是系统内存耗尽，但是发现进程里多了三个奇怪的进程，进程名都像是随机字符串，两个死机现场都有，并且进程名还随机的不一样。&lt;/p&gt;
@@ -281,10 +281,10 @@
     
     <item>
       <title>netlink遇到ENOBUFS错误</title>
-      <link>https://xixitalk.github.io/blog/2016/08/18/netlink-enobufs/</link>
+      <link>https://xixitalk.github.io/blog/2016/08/18/netlink-ENOBUFS/</link>
       <pubDate>Thu, 18 Aug 2016 08:49:42 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/08/18/netlink-enobufs/</guid>
+      <guid>https://xixitalk.github.io/blog/2016/08/18/netlink-ENOBUFS/</guid>
       <description>&lt;p&gt;一个场景：USB插拔的时候内核会通过netlink广播到user层，多个应用接收这个消息。但是出现了errno 105错误，105错误是：&lt;code&gt;No buffer space available&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -314,10 +314,10 @@
     
     <item>
       <title>fwrite()多了个了0x0D字符</title>
-      <link>https://xixitalk.github.io/blog/2016/08/02/fwrite-0x0d/</link>
+      <link>https://xixitalk.github.io/blog/2016/08/02/fwrite-0x0D/</link>
       <pubDate>Tue, 02 Aug 2016 08:18:55 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/08/02/fwrite-0x0d/</guid>
+      <guid>https://xixitalk.github.io/blog/2016/08/02/fwrite-0x0D/</guid>
       <description>&lt;p&gt;fwrite()写文件竟然多了个了0x0D字符，buffer里检查了也确实没有0x0D，一搜索竟然是如果fopen不是二进制打开，fwrite()遇到0x0A额外写一个0x0D。0D 0A是windows平台的换行符，很明显这是只有在windows平台才有的奇特现象。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -336,10 +336,10 @@
     
     <item>
       <title>C库线程安全函数</title>
-      <link>https://xixitalk.github.io/blog/2016/07/31/thread-safe-c-library-functions/</link>
+      <link>https://xixitalk.github.io/blog/2016/07/31/Thread-safe-C-library-functions/</link>
       <pubDate>Sun, 31 Jul 2016 08:28:21 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/07/31/thread-safe-c-library-functions/</guid>
+      <guid>https://xixitalk.github.io/blog/2016/07/31/Thread-safe-C-library-functions/</guid>
       <description>&lt;p&gt;C库线程安全函数和不安全函数&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -439,10 +439,10 @@
     
     <item>
       <title>我的AStyle配置选项</title>
-      <link>https://xixitalk.github.io/blog/2016/07/11/my-astyle-config/</link>
+      <link>https://xixitalk.github.io/blog/2016/07/11/my-AStyle-config/</link>
       <pubDate>Mon, 11 Jul 2016 18:35:57 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/07/11/my-astyle-config/</guid>
+      <guid>https://xixitalk.github.io/blog/2016/07/11/my-AStyle-config/</guid>
       <description>&lt;p&gt;我的AStyle代码格式工具的选项：AStyle.exe -A1 -C -S -K -Y -f -s4 -p -U -o -n main.c&lt;/p&gt;
 
 &lt;p&gt;在&lt;code&gt;notepad++&lt;/code&gt;里添加：&lt;code&gt;运行(R)--运行(R)&lt;/code&gt; 选择AStyle.exe，选项输入&lt;code&gt;-A1 -C -S -K -Y -f -s4 -p -U -o -n &amp;quot;$(FULL_CURRENT_PATH)&amp;quot;&lt;/code&gt;，然后点击&lt;code&gt;保存&lt;/code&gt;，这样就保存在运行菜单里了。每次使用从&lt;code&gt;运行(R)&lt;/code&gt;点击即可。&lt;/p&gt;
@@ -474,10 +474,10 @@
     
     <item>
       <title>UINT32引起的死循环</title>
-      <link>https://xixitalk.github.io/blog/2016/07/09/dead-loop-uint32/</link>
+      <link>https://xixitalk.github.io/blog/2016/07/09/dead-loop-UINT32/</link>
       <pubDate>Sat, 09 Jul 2016 10:02:35 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/07/09/dead-loop-uint32/</guid>
+      <guid>https://xixitalk.github.io/blog/2016/07/09/dead-loop-UINT32/</guid>
       <description>&lt;p&gt;UINT32 引起的死循环&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -498,10 +498,10 @@
     
     <item>
       <title>在树莓派上安装SigmaVPN</title>
-      <link>https://xixitalk.github.io/blog/2016/05/07/install-sigmavpn-on-raspbian/</link>
+      <link>https://xixitalk.github.io/blog/2016/05/07/Install-SigmaVPN-on-Raspbian/</link>
       <pubDate>Sat, 07 May 2016 20:27:44 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/05/07/install-sigmavpn-on-raspbian/</guid>
+      <guid>https://xixitalk.github.io/blog/2016/05/07/Install-SigmaVPN-on-Raspbian/</guid>
       <description>&lt;p&gt;Install SigmaVPN on Raspbian&lt;br /&gt;
 在树莓派上安装SigmaVPN&lt;/p&gt;
 
@@ -510,10 +510,10 @@
     
     <item>
       <title>Install owncloud 9.0.2 on RaspberryPi</title>
-      <link>https://xixitalk.github.io/blog/2016/04/22/install-owncloud-on-raspberrypi/</link>
+      <link>https://xixitalk.github.io/blog/2016/04/22/Install-owncloud-on-raspberrypi/</link>
       <pubDate>Fri, 22 Apr 2016 23:16:41 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/04/22/install-owncloud-on-raspberrypi/</guid>
+      <guid>https://xixitalk.github.io/blog/2016/04/22/Install-owncloud-on-raspberrypi/</guid>
       <description>&lt;p&gt;Install owncloud 9.0.2 on RaspberryPi&lt;br /&gt;
 在树莓派上安装owncloud 9.0.2&lt;/p&gt;
 
@@ -537,10 +537,10 @@
     
     <item>
       <title>免费申请S/MIME证书</title>
-      <link>https://xixitalk.github.io/blog/2014/06/21/free-smime-certificate-key/</link>
+      <link>https://xixitalk.github.io/blog/2014/06/21/Free-SMIME-Certificate-Key/</link>
       <pubDate>Sat, 21 Jun 2014 00:05:11 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2014/06/21/free-smime-certificate-key/</guid>
+      <guid>https://xixitalk.github.io/blog/2014/06/21/Free-SMIME-Certificate-Key/</guid>
       <description>&lt;h2 id=&#34;申请证书&#34;&gt;申请证书&lt;/h2&gt;
 
 &lt;p&gt;从这里可以申请到免费的S/MIME 邮件证书：&lt;a href=&#34;http://www.instantssl.com/ssl-certificate-products/free-email-certificate.html&#34; target=&#34;_blank&#34;&gt;http://www.instantssl.com/ssl-certificate-products/free-email-certificate.html&lt;/a&gt;，
@@ -615,10 +615,10 @@
     
     <item>
       <title>科学作为一种志业</title>
-      <link>https://xixitalk.github.io/blog/2014/03/26/science-as-a-vocation/</link>
+      <link>https://xixitalk.github.io/blog/2014/03/26/Science-as-a-Vocation/</link>
       <pubDate>Wed, 26 Mar 2014 10:08:49 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2014/03/26/science-as-a-vocation/</guid>
+      <guid>https://xixitalk.github.io/blog/2014/03/26/Science-as-a-Vocation/</guid>
       <description>&lt;p&gt;中文：&lt;a href=&#34;http://blog.sciencenet.cn/blog-449420-610439.html&#34; target=&#34;_blank&#34;&gt;http://blog.sciencenet.cn/blog-449420-610439.html&lt;/a&gt;&lt;br /&gt;
 英文：&lt;a href=&#34;http://anthropos-lab.net/wp/wp-content/uploads/2011/12/Weber-Science-as-a-Vocation.pdf&#34; target=&#34;_blank&#34;&gt;http://anthropos-lab.net/wp/wp-content/uploads/2011/12/Weber-Science-as-a-Vocation.pdf&lt;/a&gt;&lt;/p&gt;
 
@@ -632,10 +632,10 @@
     
     <item>
       <title>韦伯：政治作为一种志业</title>
-      <link>https://xixitalk.github.io/blog/2014/03/25/politics-as-a-vocation/</link>
+      <link>https://xixitalk.github.io/blog/2014/03/25/Politics-as-a-Vocation/</link>
       <pubDate>Tue, 25 Mar 2014 09:50:57 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2014/03/25/politics-as-a-vocation/</guid>
+      <guid>https://xixitalk.github.io/blog/2014/03/25/Politics-as-a-Vocation/</guid>
       <description>&lt;p&gt;马克斯‧韦伯(Max Weber, 1864-1920)，德国学者，与马克思、涂尔干齐名，并列为现代社会学的「奠基者」。他不但是当代西方有影响力的社会科学家之一，也是现代文化比较研究的先驱人物。历任柏林、弗莱堡及海德堡等大学教授，曾主编Archiv fur Sozialwissenschaft und Sozialpolitik与Grundriss der Sozialokonomik。一生著述甚多，以《新教伦理与资本主义精神》、《宗教社会学论文集》及《经济与社会》等最为脍炙人口。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://www.liberal-vision.org/wp-content/uploads/2010/03/weber.jpg&#34; alt=&#34;Max Webber&#34; title=&#34;Max Webber&#34; /&gt;&lt;/p&gt;
@@ -648,10 +648,10 @@
     
     <item>
       <title>心脏骤停急救</title>
-      <link>https://xixitalk.github.io/blog/2014/02/07/cpr-aed/</link>
+      <link>https://xixitalk.github.io/blog/2014/02/07/CPR-AED/</link>
       <pubDate>Fri, 07 Feb 2014 11:11:10 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2014/02/07/cpr-aed/</guid>
+      <guid>https://xixitalk.github.io/blog/2014/02/07/CPR-AED/</guid>
       <description>&lt;h2 id=&#34;1-概述&#34;&gt;1. 概述&lt;/h2&gt;
 
 &lt;p&gt;心脏骤停急救分五个步骤，其中前三个在医护人员到达之前非医护人员可以做的：电话求救、CPR、电击除颤&lt;/p&gt;
@@ -667,10 +667,10 @@ VF：Ventricular Fibrillation 心室纤维性颤动&lt;/p&gt;
     
     <item>
       <title>维多利亚的秘密的创始人的秘密</title>
-      <link>https://xixitalk.github.io/blog/2013/10/31/roy-raymond/</link>
+      <link>https://xixitalk.github.io/blog/2013/10/31/Roy-Raymond/</link>
       <pubDate>Thu, 31 Oct 2013 17:24:19 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/10/31/roy-raymond/</guid>
+      <guid>https://xixitalk.github.io/blog/2013/10/31/Roy-Raymond/</guid>
       <description>&lt;p&gt;{% blockquote 柯冰(‏@laojiang2010) &lt;a href=&#34;https://twitter.com/laojiang2010/status/395660825291022336&#34; target=&#34;_blank&#34;&gt;https://twitter.com/laojiang2010/status/395660825291022336&lt;/a&gt; %}
 &lt;a href=&#34;http://www.slate.com/articles/business/when_big_businesses_were_small&#34; target=&#34;_blank&#34;&gt;http://www.slate.com/articles/business/when_big_businesses_were_small&lt;/a&gt; … 维多利亚的秘密背后的悲剧：1977年，斯坦福的MBA想给太太买内衣，但是在店里觉得尴尬无比，于是就开了自己的内衣店。1982年1百万卖掉。 1993年他跳下金门大桥
 {% endblockquote %}&lt;/p&gt;
@@ -680,10 +680,10 @@ VF：Ventricular Fibrillation 心室纤维性颤动&lt;/p&gt;
     
     <item>
       <title>The Vitamin Myth: Why We Think We Need Supplements</title>
-      <link>https://xixitalk.github.io/blog/2013/07/21/the-vitamin-myth/</link>
+      <link>https://xixitalk.github.io/blog/2013/07/21/The-Vitamin-Myth/</link>
       <pubDate>Sun, 21 Jul 2013 13:10:46 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/07/21/the-vitamin-myth/</guid>
+      <guid>https://xixitalk.github.io/blog/2013/07/21/The-Vitamin-Myth/</guid>
       <description>&lt;p&gt;来源：&lt;a href=&#34;http://www.theatlantic.com/health/archive/2013/07/the-vitamin-myth-why-we-think-we-need-supplements/277947/&#34; target=&#34;_blank&#34;&gt;The Vitamin Myth: Why We Think We Need Supplements&lt;/a&gt; by &lt;a href=&#34;http://www.theatlantic.com/paul-offit/&#34; target=&#34;_blank&#34;&gt;PAUL OFFIT&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;中文翻译：&lt;a href=&#34;http://ww3.sinaimg.cn/large/7c3fe21bjw1e6th1c1puxj20hsf4k4qs.jpg&#34; target=&#34;_blank&#34;&gt;维生素迷信：为什么我们认为我们需要补充维生素&lt;/a&gt;  by @蕨代霜蛟&lt;/p&gt;
@@ -701,10 +701,10 @@ VF：Ventricular Fibrillation 心室纤维性颤动&lt;/p&gt;
     
     <item>
       <title>托马斯·潘恩《常识》第一章</title>
-      <link>https://xixitalk.github.io/blog/2013/07/17/common-sense-chapter-1/</link>
+      <link>https://xixitalk.github.io/blog/2013/07/17/Common-Sense-chapter-1/</link>
       <pubDate>Wed, 17 Jul 2013 17:36:51 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/07/17/common-sense-chapter-1/</guid>
+      <guid>https://xixitalk.github.io/blog/2013/07/17/Common-Sense-chapter-1/</guid>
       <description>&lt;h3 id=&#34;of-the-origin-and-design-of-government-in-general-with-concise-remarks-on-the-english-constitution&#34;&gt;OF THE ORIGIN AND DESIGN OF GOVERNMENT IN GENERAL,WITH CONCISE REMARKS ON THE ENGLISH CONSTITUTION&lt;/h3&gt;
 
 &lt;h3 id=&#34;常规的政府起源和设计-兼简评英国制度&#34;&gt;常规的政府起源和设计，兼简评英国制度&lt;/h3&gt;
@@ -727,10 +727,10 @@ VF：Ventricular Fibrillation 心室纤维性颤动&lt;/p&gt;
     
     <item>
       <title>《美丽新世界》</title>
-      <link>https://xixitalk.github.io/blog/2013/07/11/brave-new-world/</link>
+      <link>https://xixitalk.github.io/blog/2013/07/11/Brave-New-World/</link>
       <pubDate>Thu, 11 Jul 2013 15:49:04 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/07/11/brave-new-world/</guid>
+      <guid>https://xixitalk.github.io/blog/2013/07/11/Brave-New-World/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.ruanyifeng.com/blog/2011/03/brave_new_world.html&#34; target=&#34;_blank&#34;&gt;阮一峰《美丽新世界》读后感》&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.guokr.com/blog/310237/&#34; target=&#34;_blank&#34;&gt;金色葡萄《如何拒绝进入美丽新世界》&lt;/a&gt;&lt;/p&gt;
@@ -800,10 +800,10 @@ chown test /home/test
     
     <item>
       <title>乙肝五项指标</title>
-      <link>https://xixitalk.github.io/blog/2013/07/05/second-liver-5-indexes/</link>
+      <link>https://xixitalk.github.io/blog/2013/07/05/Second-liver-5-indexes/</link>
       <pubDate>Fri, 05 Jul 2013 15:41:59 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/07/05/second-liver-5-indexes/</guid>
+      <guid>https://xixitalk.github.io/blog/2013/07/05/Second-liver-5-indexes/</guid>
       <description>&lt;p&gt;乙型肝炎病毒表面抗原      HBsAg       阴性&lt;br /&gt;
 乙型肝炎病毒表面抗体      HBsAb       阳性&lt;br /&gt;
 乙型肝炎病毒e抗原         HBeAg     阴性&lt;br /&gt;
@@ -855,10 +855,10 @@ chown test /home/test
     
     <item>
       <title>西奥克兰发生一起自杀溺亡</title>
-      <link>https://xixitalk.github.io/blog/2013/06/25/west-auckland-drowning-not-suspicious/</link>
+      <link>https://xixitalk.github.io/blog/2013/06/25/West-Auckland-drowning-not-suspicious/</link>
       <pubDate>Tue, 25 Jun 2013 16:57:00 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/25/west-auckland-drowning-not-suspicious/</guid>
+      <guid>https://xixitalk.github.io/blog/2013/06/25/West-Auckland-drowning-not-suspicious/</guid>
       <description>&lt;p&gt;来源:&lt;a href=&#34;http://www.3news.co.nz/West-Auckland-drowning-not-suspicious/tabid/423/articleID/302561/Default.aspx&#34; target=&#34;_blank&#34;&gt;West Auckland drowning not suspicious&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Police say the death of a man found in a stream bordering the west Auckland suburbs of Henderson and Massey was not suspicious.&lt;br /&gt;
@@ -883,10 +883,10 @@ chown test /home/test
     
     <item>
       <title>穆斯林禁食猪肉常见问答</title>
-      <link>https://xixitalk.github.io/blog/2013/06/23/pork-forbidden/</link>
+      <link>https://xixitalk.github.io/blog/2013/06/23/PORK-FORBIDDEN/</link>
       <pubDate>Sun, 23 Jun 2013 07:42:11 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/23/pork-forbidden/</guid>
+      <guid>https://xixitalk.github.io/blog/2013/06/23/PORK-FORBIDDEN/</guid>
       <description>&lt;p&gt;第一个信息来源 &lt;a href=&#34;http://www.irf.net/index.php?option=com_content&amp;amp;view=article&amp;amp;id=394%3Apork-forbidden&amp;amp;catid=71%3Amost-common-questions-asked-by-non-muslim&amp;amp;Itemid=199&#34; target=&#34;_blank&#34;&gt;FAQs Most Common Questions asked by Non Muslims：PORK FORBIDDEN&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;第二个信息来源 &lt;a href=&#34;http://www.islamicvoice.com/february.99/zakir.htm&#34; target=&#34;_blank&#34;&gt;Questions Commonly Asked by Non-Muslims - VI : Why is Pork Forbidden?&lt;/a&gt;,和第一个信息地址的内容大部分相同，比第一个信息更正式一些。&lt;/p&gt;
@@ -920,10 +920,10 @@ The fact that consumption of pork is prohibited in Islam is well-known. The foll
     
     <item>
       <title>世界卫生组织（WHO）对转基因技术的看法</title>
-      <link>https://xixitalk.github.io/blog/2013/06/21/who-transgene/</link>
+      <link>https://xixitalk.github.io/blog/2013/06/21/WHO-Transgene/</link>
       <pubDate>Fri, 21 Jun 2013 11:23:57 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/21/who-transgene/</guid>
+      <guid>https://xixitalk.github.io/blog/2013/06/21/WHO-Transgene/</guid>
       <description>&lt;p&gt;世界卫生组织（WHO）2005年的生物技术报告 &lt;a href=&#34;http://www.who.int/foodsafety/fs_management/No_04_Biotech_Jun05_ch.pdf&#34; target=&#34;_blank&#34;&gt;http://www.who.int/foodsafety/fs_management/No_04_Biotech_Jun05_ch.pdf&lt;/a&gt;&lt;/p&gt;
 
 &lt;ol&gt;
@@ -938,10 +938,10 @@ The fact that consumption of pork is prohibited in Islam is well-known. The foll
     
     <item>
       <title>octopress加快rake generate速度</title>
-      <link>https://xixitalk.github.io/blog/2013/06/19/octopress-rake-gen_deploy/</link>
+      <link>https://xixitalk.github.io/blog/2013/06/19/Octopress-Rake-gen_deploy/</link>
       <pubDate>Wed, 19 Jun 2013 21:35:54 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/19/octopress-rake-gen_deploy/</guid>
+      <guid>https://xixitalk.github.io/blog/2013/06/19/Octopress-Rake-gen_deploy/</guid>
       <description>&lt;p&gt;octopress随着文件越来越多，&lt;code&gt;rake generate&lt;/code&gt;越来越慢。这样可以加快速度。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -967,10 +967,10 @@ $ git clone git@github.com:xixitalk/xixitalk.github.com.git _deploy
     
     <item>
       <title>Dnsmasq上分发WPAD</title>
-      <link>https://xixitalk.github.io/blog/2013/06/19/wpad-with-dns-on-dnsmasq/</link>
+      <link>https://xixitalk.github.io/blog/2013/06/19/WPAD-with-DNS-on-Dnsmasq/</link>
       <pubDate>Wed, 19 Jun 2013 14:34:04 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/19/wpad-with-dns-on-dnsmasq/</guid>
+      <guid>https://xixitalk.github.io/blog/2013/06/19/WPAD-with-DNS-on-Dnsmasq/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Web_Proxy_Autodiscovery_Protocol&#34; target=&#34;_blank&#34;&gt;WPAD&lt;/a&gt;全称是Web Proxy Auto-Discovery，可以通过DHCP或者DNS进行代理分发，这样局域网里客户端连接上后自动进行代理。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.thekelleys.org.uk/dnsmasq/doc.html&#34; target=&#34;_blank&#34;&gt;dnsmasq&lt;/a&gt;为一个轻量的DNS和DHCP服务器。dnsmasq.conf配置说明&lt;a href=&#34;http://www.thekelleys.org.uk/dnsmasq/docs/dnsmasq.conf.example&#34; target=&#34;_blank&#34;&gt;dnsmasq.conf.example&lt;/a&gt;。&lt;/p&gt;
@@ -982,10 +982,10 @@ $ git clone git@github.com:xixitalk/xixitalk.github.com.git _deploy
     
     <item>
       <title>octopress里插入flickr的图片</title>
-      <link>https://xixitalk.github.io/blog/2013/06/19/insert-a-image-from-flickr-in-octopress/</link>
+      <link>https://xixitalk.github.io/blog/2013/06/19/Insert-a-Image-From-Flickr-in-Octopress/</link>
       <pubDate>Wed, 19 Jun 2013 10:17:24 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/19/insert-a-image-from-flickr-in-octopress/</guid>
+      <guid>https://xixitalk.github.io/blog/2013/06/19/Insert-a-Image-From-Flickr-in-Octopress/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.flickr.com&#34; target=&#34;_blank&#34;&gt;flickr&lt;/a&gt;更新之后，免费1T空间，同时可以上传质量很好的图片。&lt;a href=&#34;http://www.instagram.com&#34; target=&#34;_blank&#34;&gt;instagram&lt;/a&gt;的图片质量太差了。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -1045,10 +1045,10 @@ sha1sum 2a76c9799aa5410090234edfda36ef69f5f99a42&lt;/p&gt;
     
     <item>
       <title>支持twitter的AppEngine-OAuth-Library</title>
-      <link>https://xixitalk.github.io/blog/2013/06/14/appengine-oauth-library/</link>
+      <link>https://xixitalk.github.io/blog/2013/06/14/AppEngine-OAuth-Library/</link>
       <pubDate>Fri, 14 Jun 2013 09:13:55 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/14/appengine-oauth-library/</guid>
+      <guid>https://xixitalk.github.io/blog/2013/06/14/AppEngine-OAuth-Library/</guid>
       <description>&lt;p&gt;自己在GAE上写了个浏览twitter的web页面，虽然丑陋但是自我感觉良好，使用的是v1.0的API，这两天twitter停用了v1.0的API，换用v1.1，调试了一下没有调试好，还是直接用别人造好的轮子吧。&lt;/p&gt;
 
 &lt;p&gt;AppEngine-OAuth-Library &lt;a href=&#34;https://github.com/mikeknapp/AppEngine-OAuth-Library&#34; target=&#34;_blank&#34;&gt;https://github.com/mikeknapp/AppEngine-OAuth-Library&lt;/a&gt;&lt;/p&gt;
@@ -1148,10 +1148,10 @@ imdb:http://www.imdb.com/title/tt1389096/
     
     <item>
       <title>男人是否携带HPV病毒检查不出来</title>
-      <link>https://xixitalk.github.io/blog/2013/06/08/man-vs-hpv/</link>
+      <link>https://xixitalk.github.io/blog/2013/06/08/man-vs-HPV/</link>
       <pubDate>Sat, 08 Jun 2013 15:13:47 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/08/man-vs-hpv/</guid>
+      <guid>https://xixitalk.github.io/blog/2013/06/08/man-vs-HPV/</guid>
       <description>&lt;p&gt;关键词：man male HPV 男人 HPV病毒&lt;br /&gt;
 参看这篇：&lt;a href=&#34;http://www.nbcnews.com/id/41853611/ns/health-sexual_health/t/guys-man-get-vaccinated-hpv-your-responsibility/&#34; target=&#34;_blank&#34;&gt;NBCNews:Guys, man up and get vaccinated: HPV is your responsibility&lt;/a&gt;&lt;/p&gt;
 
@@ -1200,10 +1200,10 @@ imdb:http://www.imdb.com/title/tt1389096/
     
     <item>
       <title>反对『中医』理由汇集</title>
-      <link>https://xixitalk.github.io/blog/2013/06/06/anti-traditional-chinese-medicine/</link>
+      <link>https://xixitalk.github.io/blog/2013/06/06/Anti-Traditional-Chinese-medicine/</link>
       <pubDate>Thu, 06 Jun 2013 09:59:58 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/06/anti-traditional-chinese-medicine/</guid>
+      <guid>https://xixitalk.github.io/blog/2013/06/06/Anti-Traditional-Chinese-medicine/</guid>
       <description>&lt;h3 id=&#34;中药制剂是大分子-容易造成肾衰&#34;&gt;中药制剂是大分子，容易造成肾衰&lt;/h3&gt;
 
 &lt;p&gt;中药制剂是大分子，输液进入血液循环系统，造成肾衰。
@@ -1222,10 +1222,10 @@ imdb:http://www.imdb.com/title/tt1389096/
     
     <item>
       <title>TestDisk 恢复误删数据的神器</title>
-      <link>https://xixitalk.github.io/blog/2013/06/04/testdisk-data-recovery/</link>
+      <link>https://xixitalk.github.io/blog/2013/06/04/TestDisk-Data-Recovery/</link>
       <pubDate>Tue, 04 Jun 2013 09:50:39 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/04/testdisk-data-recovery/</guid>
+      <guid>https://xixitalk.github.io/blog/2013/06/04/TestDisk-Data-Recovery/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://www.cgsecurity.org/mw/images/Testdisklogo_clear_100.png&#34; alt=&#34;TestDisk&#34; /&gt;
 TestDisk, Data Recovery&lt;/p&gt;
 

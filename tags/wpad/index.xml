@@ -13,10 +13,10 @@
     
     <item>
       <title>Dnsmasq上分发WPAD</title>
-      <link>https://xixitalk.github.io/blog/2013/06/19/wpad-with-dns-on-dnsmasq/</link>
+      <link>https://xixitalk.github.io/blog/2013/06/19/WPAD-with-DNS-on-Dnsmasq/</link>
       <pubDate>Wed, 19 Jun 2013 14:34:04 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/19/wpad-with-dns-on-dnsmasq/</guid>
+      <guid>https://xixitalk.github.io/blog/2013/06/19/WPAD-with-DNS-on-Dnsmasq/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Web_Proxy_Autodiscovery_Protocol&#34; target=&#34;_blank&#34;&gt;WPAD&lt;/a&gt;全称是Web Proxy Auto-Discovery，可以通过DHCP或者DNS进行代理分发，这样局域网里客户端连接上后自动进行代理。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.thekelleys.org.uk/dnsmasq/doc.html&#34; target=&#34;_blank&#34;&gt;dnsmasq&lt;/a&gt;为一个轻量的DNS和DHCP服务器。dnsmasq.conf配置说明&lt;a href=&#34;http://www.thekelleys.org.uk/dnsmasq/docs/dnsmasq.conf.example&#34; target=&#34;_blank&#34;&gt;dnsmasq.conf.example&lt;/a&gt;。&lt;/p&gt;

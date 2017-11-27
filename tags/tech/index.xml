@@ -69,10 +69,10 @@
     
     <item>
       <title>华硕路由器外接硬盘格式化成什么文件系统最好</title>
-      <link>https://xixitalk.github.io/blog/2016/11/12/how-to-format-usb-drive-for-asus-router/</link>
+      <link>https://xixitalk.github.io/blog/2016/11/12/How-to-Format-Usb-Drive-for-asus-router/</link>
       <pubDate>Sat, 12 Nov 2016 15:33:41 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/11/12/how-to-format-usb-drive-for-asus-router/</guid>
+      <guid>https://xixitalk.github.io/blog/2016/11/12/How-to-Format-Usb-Drive-for-asus-router/</guid>
       <description>&lt;p&gt;关键词：华硕 AC66U AC68U 外接硬盘 文件系统 EXT4 EXT3 NTFS FAT32&lt;/p&gt;
 
 &lt;p&gt;我有一台华硕AC66U，外接了一块2.5吋移动硬盘。不知道格式化成什么格式最好？硬盘本来是EXT4格式的，插上发现没有自动挂载，搜索发现，AC66U建议用&lt;strong&gt;EXT3&lt;/strong&gt;格式，而AC68U建议用&lt;strong&gt;EXT4&lt;/strong&gt;格式。果然格式成EXT3后，插上AC66U后&lt;strong&gt;自动挂载&lt;/strong&gt;了。其他华硕机器未验证。&lt;/p&gt;
@@ -110,10 +110,10 @@
     
     <item>
       <title>stunnel双向证书认证</title>
-      <link>https://xixitalk.github.io/blog/2016/10/13/stunnel-with-bilateral-authentication/</link>
+      <link>https://xixitalk.github.io/blog/2016/10/13/Stunnel-With-Bilateral-Authentication/</link>
       <pubDate>Thu, 13 Oct 2016 20:09:49 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/10/13/stunnel-with-bilateral-authentication/</guid>
+      <guid>https://xixitalk.github.io/blog/2016/10/13/Stunnel-With-Bilateral-Authentication/</guid>
       <description>&lt;p&gt;stunnel 双向证书认证：&lt;strong&gt;防止没授权的客户端连接stunnel服务器，防止客户端连接假的服务器&lt;/strong&gt;。&lt;/p&gt;
 
 &lt;p&gt;stunnel官方的&lt;a href=&#34;https://www.stunnel.org/auth.html&#34; target=&#34;_blank&#34;&gt;说明&lt;/a&gt;是：（客户端）检查服务器端证书是为了防止&lt;strong&gt;中间人攻击&lt;/strong&gt;；（服务器端）检查客户端证书是为了严格控制客户端的访问。&lt;/p&gt;
@@ -157,10 +157,10 @@
     
     <item>
       <title>TCP/IP之以太网帧</title>
-      <link>https://xixitalk.github.io/blog/2016/10/10/ethernet-of-tcpip/</link>
+      <link>https://xixitalk.github.io/blog/2016/10/10/Ethernet-of-tcpip/</link>
       <pubDate>Mon, 10 Oct 2016 10:15:46 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/10/10/ethernet-of-tcpip/</guid>
+      <guid>https://xixitalk.github.io/blog/2016/10/10/Ethernet-of-tcpip/</guid>
       <description>&lt;h3 id=&#34;ethernet-ii-以太网v2帧&#34;&gt;Ethernet II(以太网V2帧)&lt;/h3&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -179,10 +179,10 @@
     
     <item>
       <title>我的AStyle配置选项</title>
-      <link>https://xixitalk.github.io/blog/2016/07/11/my-astyle-config/</link>
+      <link>https://xixitalk.github.io/blog/2016/07/11/my-AStyle-config/</link>
       <pubDate>Mon, 11 Jul 2016 18:35:57 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/07/11/my-astyle-config/</guid>
+      <guid>https://xixitalk.github.io/blog/2016/07/11/my-AStyle-config/</guid>
       <description>&lt;p&gt;我的AStyle代码格式工具的选项：AStyle.exe -A1 -C -S -K -Y -f -s4 -p -U -o -n main.c&lt;/p&gt;
 
 &lt;p&gt;在&lt;code&gt;notepad++&lt;/code&gt;里添加：&lt;code&gt;运行(R)--运行(R)&lt;/code&gt; 选择AStyle.exe，选项输入&lt;code&gt;-A1 -C -S -K -Y -f -s4 -p -U -o -n &amp;quot;$(FULL_CURRENT_PATH)&amp;quot;&lt;/code&gt;，然后点击&lt;code&gt;保存&lt;/code&gt;，这样就保存在运行菜单里了。每次使用从&lt;code&gt;运行(R)&lt;/code&gt;点击即可。&lt;/p&gt;
@@ -192,10 +192,10 @@
     
     <item>
       <title>UINT32引起的死循环</title>
-      <link>https://xixitalk.github.io/blog/2016/07/09/dead-loop-uint32/</link>
+      <link>https://xixitalk.github.io/blog/2016/07/09/dead-loop-UINT32/</link>
       <pubDate>Sat, 09 Jul 2016 10:02:35 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/07/09/dead-loop-uint32/</guid>
+      <guid>https://xixitalk.github.io/blog/2016/07/09/dead-loop-UINT32/</guid>
       <description>&lt;p&gt;UINT32 引起的死循环&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -203,10 +203,10 @@
     
     <item>
       <title>免费申请S/MIME证书</title>
-      <link>https://xixitalk.github.io/blog/2014/06/21/free-smime-certificate-key/</link>
+      <link>https://xixitalk.github.io/blog/2014/06/21/Free-SMIME-Certificate-Key/</link>
       <pubDate>Sat, 21 Jun 2014 00:05:11 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2014/06/21/free-smime-certificate-key/</guid>
+      <guid>https://xixitalk.github.io/blog/2014/06/21/Free-SMIME-Certificate-Key/</guid>
       <description>&lt;h2 id=&#34;申请证书&#34;&gt;申请证书&lt;/h2&gt;
 
 &lt;p&gt;从这里可以申请到免费的S/MIME 邮件证书：&lt;a href=&#34;http://www.instantssl.com/ssl-certificate-products/free-email-certificate.html&#34; target=&#34;_blank&#34;&gt;http://www.instantssl.com/ssl-certificate-products/free-email-certificate.html&lt;/a&gt;，
@@ -316,10 +316,10 @@
     
     <item>
       <title>反对『中医』理由汇集</title>
-      <link>https://xixitalk.github.io/blog/2013/06/06/anti-traditional-chinese-medicine/</link>
+      <link>https://xixitalk.github.io/blog/2013/06/06/Anti-Traditional-Chinese-medicine/</link>
       <pubDate>Thu, 06 Jun 2013 09:59:58 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/06/anti-traditional-chinese-medicine/</guid>
+      <guid>https://xixitalk.github.io/blog/2013/06/06/Anti-Traditional-Chinese-medicine/</guid>
       <description>&lt;h3 id=&#34;中药制剂是大分子-容易造成肾衰&#34;&gt;中药制剂是大分子，容易造成肾衰&lt;/h3&gt;
 
 &lt;p&gt;中药制剂是大分子，输液进入血液循环系统，造成肾衰。

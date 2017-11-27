@@ -41,10 +41,10 @@
     
     <item>
       <title>stunnel双向证书认证</title>
-      <link>https://xixitalk.github.io/blog/2016/10/13/stunnel-with-bilateral-authentication/</link>
+      <link>https://xixitalk.github.io/blog/2016/10/13/Stunnel-With-Bilateral-Authentication/</link>
       <pubDate>Thu, 13 Oct 2016 20:09:49 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/10/13/stunnel-with-bilateral-authentication/</guid>
+      <guid>https://xixitalk.github.io/blog/2016/10/13/Stunnel-With-Bilateral-Authentication/</guid>
       <description>&lt;p&gt;stunnel 双向证书认证：&lt;strong&gt;防止没授权的客户端连接stunnel服务器，防止客户端连接假的服务器&lt;/strong&gt;。&lt;/p&gt;
 
 &lt;p&gt;stunnel官方的&lt;a href=&#34;https://www.stunnel.org/auth.html&#34; target=&#34;_blank&#34;&gt;说明&lt;/a&gt;是：（客户端）检查服务器端证书是为了防止&lt;strong&gt;中间人攻击&lt;/strong&gt;；（服务器端）检查客户端证书是为了严格控制客户端的访问。&lt;/p&gt;
