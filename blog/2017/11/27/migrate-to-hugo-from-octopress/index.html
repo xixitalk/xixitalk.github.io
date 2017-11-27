@@ -16,7 +16,7 @@
   
 
   
-  <title>用frp代替stunnel进行服务共享和安全连接</title>
+  <title>从octopress迁移到hugo</title>
 
   
   
@@ -111,14 +111,14 @@ ga('send', 'pageview');
         
 
 <header>
-    <p class="meta">Nov 13, 2017
+    <p class="meta">Nov 27, 2017
          - 1 minute read 
-         - <a href="https://xixitalk.github.io/blog/2017/11/13/use-frp-instead-of-stunnel/#disqus_thread">Comments</a>
+         - <a href="https://xixitalk.github.io/blog/2017/11/27/migrate-to-hugo-from-octopress/#disqus_thread">Comments</a>
 
         
     </p>
     <h1 class="entry-title">
-         用frp代替stunnel进行服务共享和安全连接 
+         从octopress迁移到hugo 
     </h1>
 </header>
 
@@ -128,73 +128,73 @@ ga('send', 'pageview');
           
           
           
-          <p>需求：家里内网的服务，办公室内网可以访问。</p>
-
-<h4 id="环境说明">环境说明</h4>
-
-<p>办公室电脑是 10.40.xx.xx这样的内网IP。家里路由器是有公网IP的。家里一台树莓派3（IP 192.168.1.104）接在路由器下，路由器IP是192.168.1.1 公网IP假定是180.109.114.114。路由器上配置端口映射，把端口14828映射到树莓派3的192.168.1.104上。端口号14828可以自行选择其他的，和下面保持一致即可。</p>
+          <p><a href="http://octopress.org/" target="_blank">octopress</a>编译速度很慢，2.0版本依赖老的ruby版本，环境搭建复杂，3.0版本几年来还没有正式发布，所以本blog切换到了<a href="https://gohugo.io/" target="_blank">Hugo</a>，下面是迁移记录。</p>
 
 <p></p>
 
-<h4 id="原理">原理</h4>
+<h2 id="下载hugo">下载hugo</h2>
 
-<p>公网主机运行一个frp服务端，开放的服务和访问端各运行一个frp客户端，两个客户端之间进行通信，通过frp的stcp机制可以同时解决内网穿透和安全连接。公网IP主机可以是家里路由器，也可以是因特网上的VPS主机。<br />
-我的环境是frp服务端运行在路由器下面的树莓派上，路由器上配置了端口转发，frp服务端等同于运行在有公网IP的路由器上。</p>
+<p>从<a href="https://github.com/gohugoio/hugo/releases" target="_blank">https://github.com/gohugoio/hugo/releases</a>下载合适的hugo版本，我下载的是ARM版本，在树莓派3上运行。</p>
 
-<h2 id="服务配置">服务配置</h2>
+<h2 id="hugo新建站">hugo新建站</h2>
 
-<p>下面以开放家里内网MEOW代理服务为例。MEOW运行在树莓派3上（192.168.1.104），端口是7788。</p>
+<p>用下面hugo命令，新建站点文件。</p>
 
-<h3 id="frp服务端配置">frp服务端配置</h3>
-
-<p>frp服务运行在公网VPS上。因为我路由器有公网IP，并配置了端口转发，我的环境是运行在家里树莓派3上。</p>
-
-<pre><code>[common]
-bind_port = 14828
+<pre><code>hugo new site myblog
 </code></pre>
 
-<h3 id="frp客户端1-meow的frp客户端配置">frp客户端1：MEOW的frp客户端配置</h3>
+<h2 id="选择模板">选择模板</h2>
 
-<p>MEOW是运行家里内网树莓派3上的HTTP代理服务。</p>
+<p>选择<code>Hugo-Octopress</code>模板，用下面命令获取。</p>
 
-<pre><code># frpc1.ini
-[common]
-server_addr = 192.168.1.104
-server_port = 14828
-
-[meow_http]
-type = stcp
-sk = pass_token_123
-local_ip = 192.168.1.104
-local_port = 7788
-use_encryption = true
-use_compression = true
+<pre><code>git submodule add https://github.com/parsiya/Hugo-Octopress.git themes/Hugo-Octopress
 </code></pre>
 
-<p><code>pass_token_123</code>是安全密码，自行定义，和下面客户端2配置要一致。公网IP在路由器，并且14828端口开启了端口映射，所以对于192.168.1.1或公网IP 180.109.114.114的14828端口访问都会转到192.168.1.104，所以这里配置<code>server_addr</code>是192.168.1.104。如果是公网VPS，这里<code>server_addr</code>地址改成公网IP。</p>
+<h2 id="配置站点config-toml">配置站点config.toml</h2>
 
-<h3 id="frp客户端2-服务访问端">frp客户端2：服务访问端</h3>
+<p>参考<a href="https://github.com/xixitalk/blog-source/blob/master/config.toml" target="_blank">https://github.com/xixitalk/blog-source/blob/master/config.toml</a>配置。效果参看<a href="https://xixitalk.github.io/" target="_blank">https://xixitalk.github.io/</a></p>
 
-<p>客户端2运行在外部内网，比如办公室内网，是服务访问端。http_proxy是办公室上网代理，如果不需要则去掉。</p>
+<h2 id="博客转换迁移">博客转换迁移</h2>
 
-<pre><code># frpc2.ini
-[common]
-server_addr = 180.109.114.114
-server_port = 14828
-http_proxy = http://proxy.example.com.cn:80
+<p>主要是文章头的格式转换，可以参考这个python脚本<a href="https://github.com/xixitalk/blog-source/blob/master/convert.py" target="_blank">https://github.com/xixitalk/blog-source/blob/master/convert.py</a>，把main函数里下面两行放开，把<code>octopress</code>的<code>source/_post</code>目录博文(.markdown)放在<code>post</code>目录，执行<code>mkdir -p out &amp;&amp; python convert.py</code>命令，会将转换的hugo博文放在<code>out</code>目录，将<code>out</code>目录的博文拷贝到hugo的<code>content/post</code>目录。</p>
 
-[meow_http_vistor]
-type = stcp
-role = vistor
-server_name = meow_http
-sk = pass_token_123
-bind_addr = 127.0.0.1
-bind_port = 8088
-use_encryption = true
-use_compression = true
+<pre><code>  #convert_dir()
+  #return
 </code></pre>
 
-<p>MEOW是HTTP代理服务，浏览器设置<a href="http://127.0.0.1:8088" target="_blank">http://127.0.0.1:8088</a> 就可以使用家里的MEOW服务了。如果是FTP、SSH、HTTP服务，换成对应的端口即可。</p>
+<h2 id="博客预览">博客预览</h2>
+
+<p>用下面的命令进行博客预览，假定IP是192.168.1.104，如果是本机换成localhost。</p>
+
+<pre><code>hugo server -D --bind 192.168.1.104 --theme=Hugo-Octopress  --disableFastRender
+--buildDrafts --baseURL=http://192.168.1.104:1313
+</code></pre>
+
+<h2 id="初始化博客发布目录public">初始化博客发布目录public</h2>
+
+<p>用git初始化public目录，这个目录就是博客的发布目录，是要上传到github的仓库的，仓库名要是：<code>[yourname].github.io</code>。</p>
+
+<pre><code>git submodule add git@github.com:[yourname]/[yourname].github.io.git public
+</code></pre>
+
+<h2 id="博客编译">博客编译</h2>
+
+<p>用下面的命令进行博客编译生成，生成文件在<code>public</code>目录。</p>
+
+<pre><code>hugo  --theme=Hugo-Octopress
+</code></pre>
+
+<h2 id="博客发布">博客发布</h2>
+
+<p>把<code>public</code>目录文件发布到github上。</p>
+
+<pre><code>cd public
+git add -A
+git commit -m &quot;deploy to github&quot;
+git push origin master
+</code></pre>
+
+<p>除public目录外，其他文件自行找git仓库管理，可以是github page的source分支，也可以是独立git仓库。我用了独立仓库，参见<a href="https://github.com/xixitalk/blog-source" target="_blank">https://github.com/xixitalk/blog-source</a>。</p>
         </div>
         
 
@@ -202,12 +202,12 @@ use_compression = true
   <p class="meta">
     <span class="byline author vcard">Posted by <span class="fn">xixitalk</span></span>
     
-    <time>Nov 13, 2017</time>
+    <time>Nov 27, 2017</time>
     
       <span class="categories">
         Tags:
         
-          <a class="category" href="https://xixitalk.github.io/tags/tech">tech</a>  
+          <a class="category" href="https://xixitalk.github.io/tags/tech">tech</a>  <a class="category" href="https://xixitalk.github.io/tags/hugo">hugo</a>  <a class="category" href="https://xixitalk.github.io/tags/octopress">octopress</a>  
     
     </span>
   </p>
@@ -219,11 +219,9 @@ use_compression = true
 
   <p class="meta">
     
-        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2017/11/13/link-office-from-home-via-frp/" title="内网穿透：从家里连接办公室电脑">内网穿透：从家里连接办公室电脑</a>
+        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2017/11/13/use-frp-instead-of-stunnel/" title="用frp代替stunnel进行服务共享和安全连接">用frp代替stunnel进行服务共享和安全连接</a>
     
 
-    
-      <a class="basic-alignment right" href="https://xixitalk.github.io/blog/2017/11/27/migrate-to-hugo-from-octopress/" title="从octopress迁移到hugo">从octopress迁移到hugo</a>
     
   </p>
   

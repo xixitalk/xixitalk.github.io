@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://xixitalk.github.io/blog/2017/11/27/migrate-to-hugo-from-octopress/</loc>
+    <lastmod>2017-11-27T17:23:59+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://xixitalk.github.io/about/</loc>
     <lastmod>2017-11-26T22:17:08+08:00</lastmod>
   </url>
@@ -676,6 +681,12 @@
   </url>
   
   <url>
+    <loc>https://xixitalk.github.io/tags/hugo/</loc>
+    <lastmod>2017-11-27T17:23:59+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://xixitalk.github.io/tags/iptables/</loc>
     <lastmod>2013-05-30T21:53:00+08:00</lastmod>
     <priority>0</priority>
@@ -725,7 +736,7 @@
   
   <url>
     <loc>https://xixitalk.github.io/tags/octopress/</loc>
-    <lastmod>2016-10-12T10:53:20+08:00</lastmod>
+    <lastmod>2017-11-27T17:23:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -737,7 +748,7 @@
   
   <url>
     <loc>https://xixitalk.github.io/post/</loc>
-    <lastmod>2017-11-13T16:14:36+08:00</lastmod>
+    <lastmod>2017-11-27T17:23:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -815,7 +826,7 @@
   
   <url>
     <loc>https://xixitalk.github.io/tags/tech/</loc>
-    <lastmod>2017-11-13T16:14:36+08:00</lastmod>
+    <lastmod>2017-11-27T17:23:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -851,7 +862,7 @@
   
   <url>
     <loc>https://xixitalk.github.io/</loc>
-    <lastmod>2017-11-26T22:17:08+08:00</lastmod>
+    <lastmod>2017-11-27T17:23:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   
