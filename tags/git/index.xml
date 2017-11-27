@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on xixitalk&#39;s snippet</title>
+    <link>https://xixitalk.github.io/tags/git/</link>
+    <description>Recent content in Git on xixitalk&#39;s snippet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 12 Jul 2013 08:23:33 +0800</lastBuildDate>
+    
+	<atom:link href="https://xixitalk.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>git ssh使用代理</title>
+      <link>https://xixitalk.github.io/blog/2013/07/12/git-ssh-proxy/</link>
+      <pubDate>Fri, 12 Jul 2013 08:23:33 +0800</pubDate>
+      
+      <guid>https://xixitalk.github.io/blog/2013/07/12/git-ssh-proxy/</guid>
+      <description>&lt;p&gt;昨天在树莓派上发现通过&lt;code&gt;ssh&lt;/code&gt;方式向&lt;code&gt;github.com&lt;/code&gt;的代码仓库&lt;code&gt;git push&lt;/code&gt;代码一直提示连接&lt;code&gt;github.com&lt;/code&gt;的22端口失败。而&lt;code&gt;HTTP&lt;/code&gt;和&lt;code&gt;HTTPS&lt;/code&gt;访问&lt;code&gt;github.com&lt;/code&gt;正常，怀疑&lt;code&gt;github.com&lt;/code&gt;的22端口被墙了。使用&lt;code&gt;ssh&lt;/code&gt;方式的特点是可以不用输入密码，方便在shell里进行自动操作，而&lt;code&gt;https&lt;/code&gt;需要输入密码。&lt;/p&gt;
+
+&lt;p&gt;树莓派上有&lt;code&gt;socks5&lt;/code&gt;代理和&lt;code&gt;http&lt;/code&gt;代理，下面配置&lt;code&gt;git ssh&lt;/code&gt;通过代理进行&lt;code&gt;git&lt;/code&gt;操作。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>git manual</title>
+      <link>https://xixitalk.github.io/blog/2012/11/24/git-manual/</link>
+      <pubDate>Sat, 24 Nov 2012 21:54:00 +0800</pubDate>
+      
+      <guid>https://xixitalk.github.io/blog/2012/11/24/git-manual/</guid>
+      <description>&lt;p&gt;##初始化目录&lt;/p&gt;
+
+&lt;p&gt;以下两种方式&lt;/p&gt;
+
+&lt;p&gt;###空目录初始化&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;###获取一个git仓库代码&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/yegle/flask_twip.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>octopress命令备忘录</title>
+      <link>https://xixitalk.github.io/blog/2012/11/23/octopress-command-note/</link>
+      <pubDate>Fri, 23 Nov 2012 23:07:00 +0800</pubDate>
+      
+      <guid>https://xixitalk.github.io/blog/2012/11/23/octopress-command-note/</guid>
+      <description>&lt;h2 id=&#34;创建新文章&#34;&gt;创建新文章&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;rake new_post[&amp;quot;TITLE&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>flask_twip在heroku上搭建教程</title>
+      <link>https://xixitalk.github.io/blog/2012/11/23/flask-twip-on-heroku/</link>
+      <pubDate>Fri, 23 Nov 2012 21:01:00 +0800</pubDate>
+      
+      <guid>https://xixitalk.github.io/blog/2012/11/23/flask-twip-on-heroku/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/yegle/flask_twip&#34; target=&#34;_blank&#34;&gt;flask_twip&lt;/a&gt;是@&lt;a href=&#34;http://twitter.com/yegle&#34; target=&#34;_blank&#34;&gt;yegle&lt;/a&gt;写的一个可以搭建在&lt;a href=&#34;http://www.heroku.com/&#34; target=&#34;_blank&#34;&gt;heroku&lt;/a&gt;上的一个&lt;a href=&#34;http://code.google.com/p/twip/&#34; target=&#34;_blank&#34;&gt;twip&lt;/a&gt;的port程序。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

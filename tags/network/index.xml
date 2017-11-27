@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Network on xixitalk&#39;s snippet</title>
+    <link>https://xixitalk.github.io/tags/network/</link>
+    <description>Recent content in Network on xixitalk&#39;s snippet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Oct 2016 19:00:54 +0800</lastBuildDate>
+    
+	<atom:link href="https://xixitalk.github.io/tags/network/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DNS协议学习笔记之DNS查询</title>
+      <link>https://xixitalk.github.io/blog/2016/10/10/dns-protocol/</link>
+      <pubDate>Mon, 10 Oct 2016 19:00:54 +0800</pubDate>
+      
+      <guid>https://xixitalk.github.io/blog/2016/10/10/dns-protocol/</guid>
+      <description>&lt;p&gt;DNS学习概要：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;DNS几个概念：A记录、AAAA记录、MX记录、CNAME记录、TEXT记录、URL转发、NS记录&lt;/li&gt;
+&lt;li&gt;DNS查询报文&lt;/li&gt;
+&lt;li&gt;DNS响应报文&lt;/li&gt;
+&lt;li&gt;Google DNS over HTTPS&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>TCP/IP之IP包头部</title>
+      <link>https://xixitalk.github.io/blog/2016/10/10/ipheader-of-tcpip/</link>
+      <pubDate>Mon, 10 Oct 2016 17:03:51 +0800</pubDate>
+      
+      <guid>https://xixitalk.github.io/blog/2016/10/10/ipheader-of-tcpip/</guid>
+      <description>&lt;p&gt;TCP/IP之IP包头部&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>TCP/IP之以太网帧</title>
+      <link>https://xixitalk.github.io/blog/2016/10/10/ethernet-of-tcpip/</link>
+      <pubDate>Mon, 10 Oct 2016 10:15:46 +0800</pubDate>
+      
+      <guid>https://xixitalk.github.io/blog/2016/10/10/ethernet-of-tcpip/</guid>
+      <description>&lt;h3 id=&#34;ethernet-ii-以太网v2帧&#34;&gt;Ethernet II(以太网V2帧)&lt;/h3&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>DNS在HTTP网络交互流程中的位置</title>
+      <link>https://xixitalk.github.io/blog/2016/10/09/http-connection/</link>
+      <pubDate>Sun, 09 Oct 2016 08:55:37 +0800</pubDate>
+      
+      <guid>https://xixitalk.github.io/blog/2016/10/09/http-connection/</guid>
+      <description>&lt;p&gt;DNS在HTTP网络交互流程中的位置&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>算法：判断是否是中国IP？</title>
+      <link>https://xixitalk.github.io/blog/2013/03/11/func-is-china-ip/</link>
+      <pubDate>Mon, 11 Mar 2013 19:11:00 +0800</pubDate>
+      
+      <guid>https://xixitalk.github.io/blog/2013/03/11/func-is-china-ip/</guid>
+      <description>&lt;p&gt;世界上有五个&lt;a href=&#34;http://en.wikipedia.org/wiki/Regional_Internet_registry&#34; target=&#34;_blank&#34;&gt;区域互联网注册管理机构&lt;/a&gt;，负责亚洲和太平洋地区的是亚太网络信息中心(APNIC)。&lt;a href=&#34;http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest&#34; target=&#34;_blank&#34;&gt;点击这里&lt;/a&gt;可以获得亚太地址各个国家或地区申请到的IP地址区域。
+中国共申请到42亿中的330026496个IPv4地址（约3.3亿）,分布在3579块不同的区域。&lt;br /&gt;
+IPv4地址格式是addr1.addr2.addr3.addr4，为了减少查找次数，考虑用空间换时间思路。所有2的32次方的IP，分布在256x256的区域内，每个区域表述addr1.addr2.*.*表述的IP（65536个IP）。
+判断一个IP首先由addr1和addr2直接找到addr1.addr2.*.*的区域块，在块内进行搜索判断，这样查询的次数将大大降低。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

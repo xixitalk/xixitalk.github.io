@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+
+  
+  
+  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  
+
+  
+  <title>stunnel原理</title>
+
+  
+  
+  <link rel="stylesheet" href="https://xixitalk.github.io/css/hugo-octopress.css">
+
+  
+  
+
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  
+  <link href="https://xixitalk.github.io/favicon.png" rel="icon">
+
+  
+  
+  
+
+  
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta name="author" content="xixitalk">
+
+  
+  <meta name="generator" content="Hugo 0.31" />
+
+  
+  
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-32324744-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+</head>
+<body>
+
+
+<header role="banner"><hgroup>
+  
+  <h1><a href="https://xixitalk.github.io/">xixitalk&#39;s snippet</a></h1>
+    <h2>Post Longer Than 140 Characters Tweets</h2>
+</hgroup></header>
+
+
+<nav role="navigation">
+
+<ul class="main-navigation">
+  
+  
+    
+      <li><a href="https://xixitalk.github.io/" title="Blog">Blog</a></li>
+    
+  
+    
+      <li><a href="https://xixitalk.github.io/tags/" title="Tags"  target="_blank" >Tags</a></li>
+    
+  
+</ul>
+
+
+<ul class="subscription">
+  
+    
+        <a href="https://xixitalk.github.io/index.xml" target="_blank" type="application/rss+xml" title="RSS"><i class="fa fa-rss-square fa-lg"></i></a>
+    
+  
+
+</ul>
+
+
+<form action="https://www.google.com/search" method="get" target="_blank">
+  <fieldset role="search">
+  	<input class="search" type="text" name="q" results="0" placeholder="Search"/>
+    <input type="hidden" name="q" value="site:https://xixitalk.github.io/" />
+  </fieldset>
+</form>
+
+</nav>
+
+
+<div id="main">
+  <div id="content">
+    <div>
+      <article class="hentry" role="article">
+
+        
+        
+
+<header>
+    <p class="meta">Apr 8, 2013
+         - 1 minute read 
+         - <a href="https://xixitalk.github.io/blog/2013/04/08/stunnel-principle/#disqus_thread">Comments</a>
+
+        
+    </p>
+    <h1 class="entry-title">
+         stunnel原理 
+    </h1>
+</header>
+
+
+        <div class="entry-content">
+          
+          
+          
+          
+          <p>搜索关键词：stunnel proxy socks5 HTTP HTTPS 代理</p>
+
+<p>stunnel原理如图：</p>
+
+<p></p>
+
+<p><a href="/static/images/2013/04/stunnel.png"><img src="/static/images/2013/04/stunnel.png" alt="stunnel原理图" /></a></p>
+
+<p>具体教程可参见下面篇博文：<br />
+<a href="https://w3.owind.com/pub/ssledge/" target="_blank">搭建SSLedge HTTPS代理</a><br />
+<a href="https://wido.me/sunteya/setup-a-socks-proxy-server-pass-by-secure-firewall/" target="_blank">通过 stunnel 搭建安全高性能的 sockts 代理服务器</a><br />
+<a href="http://www.ibm.com/developerworks/cn/security/s-stun/" target="_blank">使用 Stunnel 加密 如何在 SSL 内加密任意 TCP 连接</a>(提醒这篇文章发表于2001年，现在看来可能部分配置不适用)</p>
+        </div>
+        
+
+<footer>
+  <p class="meta">
+    <span class="byline author vcard">Posted by <span class="fn">xixitalk</span></span>
+    
+    <time>Apr 8, 2013</time>
+    
+      <span class="categories">
+        Tags:
+        
+          <a class="category" href="https://xixitalk.github.io/tags/stunnel">stunnel</a>  <a class="category" href="https://xixitalk.github.io/tags/proxy">proxy</a>  
+    
+    </span>
+  </p>
+
+  
+  
+
+  
+
+  <p class="meta">
+    
+        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2013/03/11/func-is-china-ip/" title="算法：判断是否是中国IP？">算法：判断是否是中国IP？</a>
+    
+
+    
+      <a class="basic-alignment right" href="https://xixitalk.github.io/blog/2013/05/29/update-ddns-with-api/" title="用API更新3322.org免费二级域名的DDNS">用API更新3322.org免费二级域名的DDNS</a>
+    
+  </p>
+  
+    
+      <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'gitblog';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+  
+</footer>
+
+      </article>
+    </div>
+    
+
+<aside class="sidebar thirds">
+  <section class="first odd">
+
+    
+      <h1>About me</h1>
+    
+
+    <p>
+      
+        <p><a href="http://twitter.com/xixitalk" target="_blank">xixitalk@twitter</a></p>
+
+<p><a href="http://github.com/xixitalk" target="_blank">xixitalk@github</a></p>
+
+<p>My PGP <a href="https://keybase.io/xixitalk/key.asc" target="_blank">https://keybase.io/xixitalk/key.asc</a></p>
+
+      
+    </p>
+  </section>
+
+
+
+  
+  <ul class="sidebar-nav">
+    <li class="sidebar-nav-item">
+      
+      
+      
+      
+       
+      
+      
+      
+      
+      
+      
+
+    
+    
+    </li>
+  </ul>
+
+  
+
+  
+
+  
+  
+  
+
+</aside>
+
+  </div>
+</div>
+
+<footer role="contentinfo">
+  <p>Copyright &copy; 2017 xixitalk - <a href="https://xixitalk.github.io/license/">License</a> -
+  <span class="credit">Powered by <a target="_blank" href="https://gohugo.io">Hugo</a> and <a target="_blank" href="https://github.com/parsiya/hugo-octopress/">Hugo-Octopress</a> theme.
+</p>
+
+</footer>
+
+
+
+
+
+
+<script>
+  var _gaq=[['_setAccount','UA-32324744-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+
+  
+  
+  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  
+
+  
+  <title>linux应用内存占用maps分析</title>
+
+  
+  
+  <link rel="stylesheet" href="https://xixitalk.github.io/css/hugo-octopress.css">
+
+  
+  
+
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  
+  <link href="https://xixitalk.github.io/favicon.png" rel="icon">
+
+  
+  
+  
+
+  
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta name="author" content="xixitalk">
+
+  
+  <meta name="generator" content="Hugo 0.31" />
+
+  
+  
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-32324744-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+</head>
+<body>
+
+
+<header role="banner"><hgroup>
+  
+  <h1><a href="https://xixitalk.github.io/">xixitalk&#39;s snippet</a></h1>
+    <h2>Post Longer Than 140 Characters Tweets</h2>
+</hgroup></header>
+
+
+<nav role="navigation">
+
+<ul class="main-navigation">
+  
+  
+    
+      <li><a href="https://xixitalk.github.io/" title="Blog">Blog</a></li>
+    
+  
+    
+      <li><a href="https://xixitalk.github.io/tags/" title="Tags"  target="_blank" >Tags</a></li>
+    
+  
+</ul>
+
+
+<ul class="subscription">
+  
+    
+        <a href="https://xixitalk.github.io/index.xml" target="_blank" type="application/rss+xml" title="RSS"><i class="fa fa-rss-square fa-lg"></i></a>
+    
+  
+
+</ul>
+
+
+<form action="https://www.google.com/search" method="get" target="_blank">
+  <fieldset role="search">
+  	<input class="search" type="text" name="q" results="0" placeholder="Search"/>
+    <input type="hidden" name="q" value="site:https://xixitalk.github.io/" />
+  </fieldset>
+</form>
+
+</nav>
+
+
+<div id="main">
+  <div id="content">
+    <div>
+      <article class="hentry" role="article">
+
+        
+        
+
+<header>
+    <p class="meta">Jul 12, 2016
+         - 3 minute read 
+         - <a href="https://xixitalk.github.io/blog/2016/07/12/app-mem-used-on-linux/#disqus_thread">Comments</a>
+
+        
+    </p>
+    <h1 class="entry-title">
+         linux应用内存占用maps分析 
+    </h1>
+</header>
+
+
+        <div class="entry-content">
+          
+          
+          
+          
+          <p>假设一个应用的pid是PID，则<code>cat /proc/PID/maps</code>显示这个应用的内存占用。</p>
+
+<p></p>
+
+<h3 id="maps格式">maps格式</h3>
+
+<pre><code>address           perms offset  dev   inode   pathname
+00008000-00009000 r-xp 00000000 b3:02 317712     /home/pi/test/pmap/a.out
+</code></pre>
+
+<ol>
+<li><strong>address</strong> - This is the starting and ending address of the region in the process&rsquo;s address space。说明：都是虚拟地址，并不代码真实的物理地址。</li>
+<li><strong>permissions</strong> - This describes how pages in the region can be accessed. There are four different permissions: read, write, execute, and shared. If read/write/execute are disabled, a &lsquo;-&rsquo; will appear instead of the &lsquo;r&rsquo;/&lsquo;w&rsquo;/&lsquo;x&rsquo;. If a region is not shared, it is private, so a &lsquo;p&rsquo; will appear instead of an &rsquo;s&rsquo;. If the process attempts to access memory in a way that is not permitted, a segmentation fault is generated. Permissions can be changed using the <code>mprotect</code> system call.</li>
+<li><strong>offset</strong> - If the region was mapped from a file (using mmap), this is the offset in the file where the mapping begins. If the memory was not mapped from a file, it&rsquo;s just 0.</li>
+<li><strong>device</strong> - If the region was mapped from a file, this is the major and minor device number (in hex) where the file lives.</li>
+<li><strong>inode</strong> - If the region was mapped from a file, this is the file number.</li>
+<li><strong>pathname</strong> - If the region was mapped from a file, this is the name of the file. This field is blank for anonymous mapped regions. There are also special regions with names like [heap], [stack], or [vdso]. [vdso] stands for virtual dynamic shared object. It&rsquo;s used by system calls to switch to kernel mode. Here&rsquo;s a good article about it.</li>
+</ol>
+
+<h3 id="实例分析">实例分析</h3>
+
+<p>写一个简单的实例main.c，funcA地址在代码段，s_buf在数据段，buf是局部变量，在栈空间，pheap是malloc申请的，是heap空间。</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+
+static char s_buf[1024];
+void funcA(void)
+{
+  printf(&quot;funcA address:%08x\n&quot;,funcA);
+}
+
+int main(int argc,char *argv[])
+{
+  int i = 0;
+  char buf[1024] = {0};
+  char *pheap = malloc(2048);
+
+  for(i=0;i&lt;1000;i++)
+  {
+    funcA();
+    printf(&quot;buf address:%08x\n&quot;,buf);
+    printf(&quot;s_buf address:%08x\n&quot;,s_buf);
+    printf(&quot;pheap address:%08x\n&quot;,pheap);
+    sleep(10);
+  }
+  free(pheap);
+  return 0;
+}
+</code></pre>
+
+<p>编译运行</p>
+
+<pre><code>$gcc main.c
+$./a.out
+funcA address:000084a0
+buf address:becb9318
+s_buf address:000107ac
+pheap address:01171008
+funcA address:000084a0
+buf address:becb9318
+s_buf address:000107ac
+pheap address:01171008
+</code></pre>
+
+<p>在另一个窗口</p>
+
+<pre><code>$ ps aux | grep out
+pi       27725  0.0  0.2   1676   424 pts/0    S+   10:43   0:00 ./a.out
+$ cat /proc/27725/maps &gt; a.out.maps
+$ cat a.out.maps
+00008000-00009000 r-xp 00000000 b3:02 317712     /home/pi/test/pmap/a.out
+00010000-00011000 rw-p 00000000 b3:02 317712     /home/pi/test/pmap/a.out
+01171000-01192000 rw-p 00000000 00:00 0          [heap]
+b6e36000-b6f59000 r-xp 00000000 b3:02 1925       /lib/arm-linux-gnueabihf/libc-2.13.so
+b6f59000-b6f60000 ---p 00123000 b3:02 1925       /lib/arm-linux-gnueabihf/libc-2.13.so
+b6f60000-b6f62000 r--p 00122000 b3:02 1925       /lib/arm-linux-gnueabihf/libc-2.13.so
+b6f62000-b6f63000 rw-p 00124000 b3:02 1925       /lib/arm-linux-gnueabihf/libc-2.13.so
+b6f63000-b6f66000 rw-p 00000000 00:00 0
+b6f74000-b6f76000 r-xp 00000000 b3:02 27194      /usr/lib/arm-linux-gnueabihf/libcofi_rpi.so
+b6f76000-b6f7d000 ---p 00002000 b3:02 27194      /usr/lib/arm-linux-gnueabihf/libcofi_rpi.so
+b6f7d000-b6f7e000 rw-p 00001000 b3:02 27194      /usr/lib/arm-linux-gnueabihf/libcofi_rpi.so
+b6f7e000-b6f9b000 r-xp 00000000 b3:02 1919       /lib/arm-linux-gnueabihf/ld-2.13.so
+b6f9e000-b6fa2000 rw-p 00000000 00:00 0
+b6fa2000-b6fa3000 r-xp 00000000 00:00 0          [sigpage]
+b6fa3000-b6fa4000 r--p 0001d000 b3:02 1919       /lib/arm-linux-gnueabihf/ld-2.13.so
+b6fa4000-b6fa5000 rw-p 0001e000 b3:02 1919       /lib/arm-linux-gnueabihf/ld-2.13.so
+bec99000-becba000 rw-p 00000000 00:00 0          [stack]
+ffff0000-ffff1000 r-xp 00000000 00:00 0          [vectors]
+</code></pre>
+
+<p>a.out.maps内容分析如下</p>
+
+<pre><code>00008000-00009000 r-xp 00000000 b3:02 317712     /home/pi/test/pmap/a.out  
+代码段，funcA在这个区间,权限是r-xp，有读、执行权限，p是private
+</code></pre>
+
+<pre><code>00010000-00011000 rw-p 00000000 b3:02 317712     /home/pi/test/pmap/a.out  
+数据段，s_buf在这个区间,权限是rw-p，有读写，p是private
+</code></pre>
+
+<pre><code>01171000-01192000 rw-p 00000000 00:00 0          [heap]
+堆空间，pheap在这个区间，权限是rw-p，有读写，p是private
+</code></pre>
+
+<pre><code>b6e36000-b6f59000 r-xp 00000000 b3:02 1925       /lib/arm-linux-gnueabihf/libc-2.13.so
+libc库代码段
+</code></pre>
+
+<pre><code>b6f59000-b6f60000 ---p 00123000 b3:02 1925       /lib/arm-linux-gnueabihf/libc-2.13.so
+libc库内存防止越界空间，权限是---p，没有rwx权限，用户访问就触发段错误
+</code></pre>
+
+<pre><code>b6f60000-b6f62000 r--p 00122000 b3:02 1925       /lib/arm-linux-gnueabihf/libc-2.13.so
+libc库只读内存区。如果const变量，则在代码段；如果是全局变量则在数据段，还不知道这个区域内容。
+</code></pre>
+
+<pre><code>b6f62000-b6f63000 rw-p 00124000 b3:02 1925       /lib/arm-linux-gnueabihf/libc-2.13.so
+libc库数据段
+</code></pre>
+
+<pre><code>b6f63000-b6f66000 rw-p 00000000 00:00 0
+b6f9e000-b6fa2000 rw-p 00000000 00:00 0
+未知，权限rw-p应该共享库相关的数据区
+</code></pre>
+
+<pre><code>b6f74000-b6f76000 r-xp 00000000 b3:02 27194      /usr/lib/arm-linux-gnueabihf/libcofi_rpi.so
+b6f76000-b6f7d000 ---p 00002000 b3:02 27194      /usr/lib/arm-linux-gnueabihf/libcofi_rpi.so
+b6f7d000-b6f7e000 rw-p 00001000 b3:02 27194      /usr/lib/arm-linux-gnueabihf/libcofi_rpi.so
+b6f7e000-b6f9b000 r-xp 00000000 b3:02 1919       /lib/arm-linux-gnueabihf/ld-2.13.so
+b6fa3000-b6fa4000 r--p 0001d000 b3:02 1919       /lib/arm-linux-gnueabihf/ld-2.13.so
+b6fa4000-b6fa5000 rw-p 0001e000 b3:02 1919       /lib/arm-linux-gnueabihf/ld-2.13.so
+同libc分析
+</code></pre>
+
+<pre><code>b6fa2000-b6fa3000 r-xp 00000000 00:00 0          [sigpage]
+和信号相关的一个page，ARM架构独有好像
+</code></pre>
+
+<pre><code>bec99000-becba000 rw-p 00000000 00:00 0          [stack]
+栈空间，局部变量buf在这个区间
+</code></pre>
+
+<pre><code>ffff0000-ffff1000 r-xp 00000000 00:00 0          [vectors]
+中断向量
+</code></pre>
+
+<p>待完善&hellip;</p>
+
+<h3 id="参考资料">参考资料</h3>
+
+<p><a href="http://stackoverflow.com/questions/1401359/understanding-linux-proc-id-maps" target="_blank">http://stackoverflow.com/questions/1401359/understanding-linux-proc-id-maps</a></p>
+
+<p><a href="http://stackoverflow.com/questions/16524895/proc-pid-maps-shows-pages-with-no-rwx-permissions-on-x86-64-linux" target="_blank">http://stackoverflow.com/questions/16524895/proc-pid-maps-shows-pages-with-no-rwx-permissions-on-x86-64-linux</a></p>
+
+<p><a href="https://yq.aliyun.com/articles/54405" target="_blank">https://yq.aliyun.com/articles/54405</a></p>
+        </div>
+        
+
+<footer>
+  <p class="meta">
+    <span class="byline author vcard">Posted by <span class="fn">xixitalk</span></span>
+    
+    <time>Jul 12, 2016</time>
+    
+      <span class="categories">
+        Tags:
+        
+          <a class="category" href="https://xixitalk.github.io/tags/linux">linux</a>  
+    
+    </span>
+  </p>
+
+  
+  
+
+  
+
+  <p class="meta">
+    
+        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2016/07/11/linux-mem-used/" title="Linux内存占用分布分析">Linux内存占用分布分析</a>
+    
+
+    
+      <a class="basic-alignment right" href="https://xixitalk.github.io/blog/2016/07/13/kernel-contig_page_data/" title="linux kernel全局变量contig_page_data含义">linux kernel全局变量contig_page_data含义</a>
+    
+  </p>
+  
+    
+      <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'gitblog';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+  
+</footer>
+
+      </article>
+    </div>
+    
+
+<aside class="sidebar thirds">
+  <section class="first odd">
+
+    
+      <h1>About me</h1>
+    
+
+    <p>
+      
+        <p><a href="http://twitter.com/xixitalk" target="_blank">xixitalk@twitter</a></p>
+
+<p><a href="http://github.com/xixitalk" target="_blank">xixitalk@github</a></p>
+
+<p>My PGP <a href="https://keybase.io/xixitalk/key.asc" target="_blank">https://keybase.io/xixitalk/key.asc</a></p>
+
+      
+    </p>
+  </section>
+
+
+
+  
+  <ul class="sidebar-nav">
+    <li class="sidebar-nav-item">
+      
+      
+      
+      
+       
+      
+      
+      
+      
+      
+      
+
+    
+    
+    </li>
+  </ul>
+
+  
+
+  
+
+  
+  
+  
+
+</aside>
+
+  </div>
+</div>
+
+<footer role="contentinfo">
+  <p>Copyright &copy; 2017 xixitalk - <a href="https://xixitalk.github.io/license/">License</a> -
+  <span class="credit">Powered by <a target="_blank" href="https://gohugo.io">Hugo</a> and <a target="_blank" href="https://github.com/parsiya/hugo-octopress/">Hugo-Octopress</a> theme.
+</p>
+
+</footer>
+
+
+
+
+
+
+<script>
+  var _gaq=[['_setAccount','UA-32324744-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+</html>
+

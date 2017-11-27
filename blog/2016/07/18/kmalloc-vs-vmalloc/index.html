@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+
+  
+  
+  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  
+
+  
+  <title>linux内核kmalloc和vmalloc的区别</title>
+
+  
+  
+  <link rel="stylesheet" href="https://xixitalk.github.io/css/hugo-octopress.css">
+
+  
+  
+
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  
+  <link href="https://xixitalk.github.io/favicon.png" rel="icon">
+
+  
+  
+  
+
+  
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta name="author" content="xixitalk">
+
+  
+  <meta name="generator" content="Hugo 0.31" />
+
+  
+  
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-32324744-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+</head>
+<body>
+
+
+<header role="banner"><hgroup>
+  
+  <h1><a href="https://xixitalk.github.io/">xixitalk&#39;s snippet</a></h1>
+    <h2>Post Longer Than 140 Characters Tweets</h2>
+</hgroup></header>
+
+
+<nav role="navigation">
+
+<ul class="main-navigation">
+  
+  
+    
+      <li><a href="https://xixitalk.github.io/" title="Blog">Blog</a></li>
+    
+  
+    
+      <li><a href="https://xixitalk.github.io/tags/" title="Tags"  target="_blank" >Tags</a></li>
+    
+  
+</ul>
+
+
+<ul class="subscription">
+  
+    
+        <a href="https://xixitalk.github.io/index.xml" target="_blank" type="application/rss+xml" title="RSS"><i class="fa fa-rss-square fa-lg"></i></a>
+    
+  
+
+</ul>
+
+
+<form action="https://www.google.com/search" method="get" target="_blank">
+  <fieldset role="search">
+  	<input class="search" type="text" name="q" results="0" placeholder="Search"/>
+    <input type="hidden" name="q" value="site:https://xixitalk.github.io/" />
+  </fieldset>
+</form>
+
+</nav>
+
+
+<div id="main">
+  <div id="content">
+    <div>
+      <article class="hentry" role="article">
+
+        
+        
+
+<header>
+    <p class="meta">Jul 18, 2016
+         - 2 minute read 
+         - <a href="https://xixitalk.github.io/blog/2016/07/18/kmalloc-vs-vmalloc/#disqus_thread">Comments</a>
+
+        
+    </p>
+    <h1 class="entry-title">
+         linux内核kmalloc和vmalloc的区别 
+    </h1>
+</header>
+
+
+        <div class="entry-content">
+          
+          
+          
+          
+          <p>kmalloc 和 vmalloc的区别</p>
+
+<p></p>
+
+<h4 id="kmalloc">kmalloc</h4>
+
+<pre><code>void *kmalloc(size_t size, gfp_t flags)
+</code></pre>
+
+<p>kmalloc是内核中最常用的一种内存分配方式，<strong>连续的物理内存</strong>。如果size是常量，调用<code>kmem_cache_alloc_trace</code>分配，否则调用<code>__kmalloc</code>分配。size如果是常量且大于4M，直接返回0（内核版本3.4.5）；如果size是0，返回地址是<code>((void *)16)</code>。</p>
+
+<h4 id="vmalloc">vmalloc</h4>
+
+<pre><code>void *vmalloc(unsigned long size)
+</code></pre>
+
+<p>kmalloc内存分配方式都是物理连续的，能保证较低的平均访问时间。但是在某些场合中，对内存区的请求不是很频繁，较高的内存访问时间也 可以接受，这是就可以分配一段<strong>线性连续，物理不连续</strong>的地址，带来的好处是一次可以分配较大块的内存。vmalloc对 一次能分配的内存大小没有明确限制。</p>
+
+<h5 id="kmalloc预处理后的代码">kmalloc预处理后的代码</h5>
+
+<pre><code>static inline __attribute__((always_inline)) __attribute__((always_inline)) void *kmalloc(size_t size, gfp_t flags)
+{
+ struct kmem_cache *cachep;
+ void *ret;
+
+ if (__builtin_constant_p(size)) {
+  int i = 0;
+
+  if (!size)
+   return ((void *)16);
+
+# 1 &quot;include/linux/kmalloc_sizes.h&quot; 1
+ if (size &lt;= 32) goto found; else i++;
+ if (size &lt;= 64) goto found; else i++;
+ if (size &lt;= 128) goto found; else i++;
+ if (size &lt;= 192) goto found; else i++;
+ if (size &lt;= 256) goto found; else i++;
+ if (size &lt;= 512) goto found; else i++;
+ if (size &lt;= 1024) goto found; else i++;
+ if (size &lt;= 2048) goto found; else i++;
+ if (size &lt;= 4096) goto found; else i++;
+ if (size &lt;= 8192) goto found; else i++;
+ if (size &lt;= 16384) goto found; else i++;
+ if (size &lt;= 32768) goto found; else i++;
+ if (size &lt;= 65536) goto found; else i++;
+ if (size &lt;= 131072) goto found; else i++;
+ if (size &lt;= 262144) goto found; else i++;
+ if (size &lt;= 524288) goto found; else i++;
+ if (size &lt;= 1048576) goto found; else i++;
+ if (size &lt;= 2097152) goto found; else i++;
+ if (size &lt;= 4194304) goto found; else i++;
+# 145 &quot;include/linux/slab_def.h&quot; 2
+
+  return ((void *)0);
+found:
+   cachep = malloc_sizes[i].cs_cachep;
+
+  ret = kmem_cache_alloc_trace(size, cachep, flags);
+
+  return ret;
+ }
+ return __kmalloc(size, flags);
+}
+
+void *__kmalloc(size_t size, gfp_t flags)
+{
+ return __do_kmalloc(size, flags, ((void *)0));
+}
+
+static inline __attribute__((always_inline)) __attribute__((always_inline)) void *__do_kmalloc(size_t size, gfp_t flags, void *caller)
+{
+ struct kmem_cache *cachep;
+ void *ret;
+ 
+ cachep = __find_general_cachep(size, flags);
+ if (__builtin_expect(!!(((unsigned long)(cachep) &lt;= (unsigned long)((void *)16))), 0))
+  return cachep;
+ ret = __cache_alloc(cachep, flags, caller);
+
+ trace_kmalloc((unsigned long) caller, ret,
+        size, cachep-&gt;buffer_size, flags);
+
+ return ret;
+}
+</code></pre>
+
+<h1 id="引用文章">引用文章</h1>
+
+<p><a href="http://www.ahlinux.com/start/kernel/18604.html" target="_blank">http://www.ahlinux.com/start/kernel/18604.html</a></p>
+
+<p><a href="http://blog.csdn.net/bullbat/article/details/7181396" target="_blank">http://blog.csdn.net/bullbat/article/details/7181396</a></p>
+        </div>
+        
+
+<footer>
+  <p class="meta">
+    <span class="byline author vcard">Posted by <span class="fn">xixitalk</span></span>
+    
+    <time>Jul 18, 2016</time>
+    
+      <span class="categories">
+        Tags:
+        
+          <a class="category" href="https://xixitalk.github.io/tags/linux">linux</a>  <a class="category" href="https://xixitalk.github.io/tags/kernel">kernel</a>  
+    
+    </span>
+  </p>
+
+  
+  
+
+  
+
+  <p class="meta">
+    
+        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2016/07/13/kernel-contig_page_data/" title="linux kernel全局变量contig_page_data含义">linux kernel全局变量contig_page_data含义</a>
+    
+
+    
+      <a class="basic-alignment right" href="https://xixitalk.github.io/blog/2016/07/18/pthread-autoclean-when-exiting/" title="pthread退出时自动回收资源">pthread退出时自动回收资源</a>
+    
+  </p>
+  
+    
+      <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'gitblog';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+  
+</footer>
+
+      </article>
+    </div>
+    
+
+<aside class="sidebar thirds">
+  <section class="first odd">
+
+    
+      <h1>About me</h1>
+    
+
+    <p>
+      
+        <p><a href="http://twitter.com/xixitalk" target="_blank">xixitalk@twitter</a></p>
+
+<p><a href="http://github.com/xixitalk" target="_blank">xixitalk@github</a></p>
+
+<p>My PGP <a href="https://keybase.io/xixitalk/key.asc" target="_blank">https://keybase.io/xixitalk/key.asc</a></p>
+
+      
+    </p>
+  </section>
+
+
+
+  
+  <ul class="sidebar-nav">
+    <li class="sidebar-nav-item">
+      
+      
+      
+      
+       
+      
+      
+      
+      
+      
+      
+
+    
+    
+    </li>
+  </ul>
+
+  
+
+  
+
+  
+  
+  
+
+</aside>
+
+  </div>
+</div>
+
+<footer role="contentinfo">
+  <p>Copyright &copy; 2017 xixitalk - <a href="https://xixitalk.github.io/license/">License</a> -
+  <span class="credit">Powered by <a target="_blank" href="https://gohugo.io">Hugo</a> and <a target="_blank" href="https://github.com/parsiya/hugo-octopress/">Hugo-Octopress</a> theme.
+</p>
+
+</footer>
+
+
+
+
+
+
+<script>
+  var _gaq=[['_setAccount','UA-32324744-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+</html>
+
