@@ -17,7 +17,7 @@
       <pubDate>Fri, 14 Jun 2013 11:48:41 +0800</pubDate>
       
       <guid>https://xixitalk.github.io/blog/2013/06/14/go-lang-for-raspberrypi/</guid>
-      <description>&lt;p&gt;###安装go语言&lt;/p&gt;
+      <description>&lt;h3 id=&#34;安装go语言&#34;&gt;安装go语言&lt;/h3&gt;
 
 &lt;p&gt;选用非官方的二进制软件包，详细：&lt;a href=&#34;http://dave.cheney.net/unofficial-arm-tarballs&#34; target=&#34;_blank&#34;&gt;http://dave.cheney.net/unofficial-arm-tarballs&lt;/a&gt;&lt;/p&gt;
 

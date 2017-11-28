@@ -128,7 +128,7 @@ ga('send', 'pageview');
           
           
           
-          <p>###安装go语言</p>
+          <h3 id="安装go语言">安装go语言</h3>
 
 <p>选用非官方的二进制软件包，详细：<a href="http://dave.cheney.net/unofficial-arm-tarballs" target="_blank">http://dave.cheney.net/unofficial-arm-tarballs</a></p>
 
@@ -140,7 +140,7 @@ sha1sum 2a76c9799aa5410090234edfda36ef69f5f99a42</p>
 
 <p>解压到/home/pi/go目录即可</p>
 
-<p>###设置go语言编译环境变量</p>
+<h3 id="设置go语言编译环境变量">设置go语言编译环境变量</h3>
 
 <pre><code>export GOROOT=/home/pi/go/go
 export GOPATH=/home/pi/go/mygo
@@ -152,7 +152,7 @@ export PATH=$PATH:$GOROOT/bin
 <pre><code>sudo apt-get install mercurial
 </code></pre>
 
-<p>###编译cow proxy</p>
+<h3 id="编译cow-proxy">编译cow proxy</h3>
 
 <p><a href="https://github.com/cyfdecyf/cow" target="_blank">cow proxy</a>是<a href="http://twitter.com/cyfdecyf" target="_blank">@cyfdecyf</a>用go语言编写的一个自动代理，代码开源，支持二级socks代理。<br />
 用下面的命令编译</p>
@@ -167,9 +167,9 @@ export PATH=$PATH:$GOROOT/bin
 
 <p>编译好的cow二进制文件位于/home/pi/go/mygo目录下。</p>
 
-<p>我已经编译好的二进制在<a href="https://github.com/xixitalk/build/tree/master/cow" target="_blank">https://github.com/xixitalk/build/tree/master/cow</a></p>
+<p>我已经编译好的二进制在<a href="https://github.com/xixitalk/build/tree/master/cow" target="_blank">https://github.com/xixitalk/build/tree/master/cow</a>。(cow官方已经提供ARM版本的了<a href="https://github.com/cyfdecyf/cow/releases" target="_blank">https://github.com/cyfdecyf/cow/releases</a> &ndash; 2017.11.28 更新)。</p>
 
-<p>###下一次更新代码再编译</p>
+<h3 id="下一次更新代码再编译">下一次更新代码再编译</h3>
 
 <pre><code>go get -u  github.com/cyfdecyf/cow
 </code></pre>
