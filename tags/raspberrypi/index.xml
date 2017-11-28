@@ -54,7 +54,9 @@
       <pubDate>Fri, 14 Jun 2013 11:48:41 +0800</pubDate>
       
       <guid>https://xixitalk.github.io/blog/2013/06/14/go-lang-for-raspberrypi/</guid>
-      <description>&lt;h3 id=&#34;安装go语言&#34;&gt;安装go语言&lt;/h3&gt;
+      <description>&lt;p&gt;【golang和cow都提供ARM版本了 2017.11.28 更新，文档更新了一下】&lt;/p&gt;
+
+&lt;h3 id=&#34;安装go语言&#34;&gt;安装go语言&lt;/h3&gt;
 
 &lt;p&gt;下载golang的ARM版本&lt;a href=&#34;https://golang.org/dl/&#34; target=&#34;_blank&#34;&gt;https://golang.org/dl/&lt;/a&gt;，如1.9.2版本是go1.9.2.linux-armv6l.tar.gz。&lt;/p&gt;
 
