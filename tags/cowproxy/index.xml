@@ -19,11 +19,7 @@
       <guid>https://xixitalk.github.io/blog/2013/06/14/go-lang-for-raspberrypi/</guid>
       <description>&lt;h3 id=&#34;安装go语言&#34;&gt;安装go语言&lt;/h3&gt;
 
-&lt;p&gt;选用非官方的二进制软件包，详细：&lt;a href=&#34;http://dave.cheney.net/unofficial-arm-tarballs&#34; target=&#34;_blank&#34;&gt;http://dave.cheney.net/unofficial-arm-tarballs&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ARMv6 (Raspberry Pi, etc)&lt;br /&gt;
-&lt;a href=&#34;http://dave.cheney.net/paste/go1.1.linux-arm~armv6-1.tar.gz&#34; target=&#34;_blank&#34;&gt;go1.1.linux-arm~armv6-1.tar.gz&lt;/a&gt;&lt;br /&gt;
-sha1sum 2a76c9799aa5410090234edfda36ef69f5f99a42&lt;/p&gt;
+&lt;p&gt;下载golang的ARM版本&lt;a href=&#34;https://golang.org/dl/&#34; target=&#34;_blank&#34;&gt;https://golang.org/dl/&lt;/a&gt;，如1.9.2版本是go1.9.2.linux-armv6l.tar.gz。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
