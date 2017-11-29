@@ -30,16 +30,16 @@
       <pubDate>Sat, 24 Nov 2012 21:54:00 +0800</pubDate>
       
       <guid>https://xixitalk.github.io/blog/2012/11/24/git-manual/</guid>
-      <description>&lt;p&gt;##初始化目录&lt;/p&gt;
+      <description>&lt;h2 id=&#34;初始化目录&#34;&gt;初始化目录&lt;/h2&gt;
 
 &lt;p&gt;以下两种方式&lt;/p&gt;
 
-&lt;p&gt;###空目录初始化&lt;/p&gt;
+&lt;h3 id=&#34;空目录初始化&#34;&gt;空目录初始化&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;git init
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;###获取一个git仓库代码&lt;/p&gt;
+&lt;h3 id=&#34;获取一个git仓库代码&#34;&gt;获取一个git仓库代码&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;git clone https://github.com/yegle/flask_twip.git
 &lt;/code&gt;&lt;/pre&gt;
