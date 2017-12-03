@@ -6,10 +6,23 @@
     <description>Recent content in Linux on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Sep 2016 08:03:35 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 03 Dec 2017 14:42:05 +0800</lastBuildDate>
     
 	<atom:link href="https://xixitalk.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>便于代码阅读清理内核代码</title>
+      <link>https://xixitalk.github.io/blog/2017/12/03/clean-linux-kernel-file/</link>
+      <pubDate>Sun, 03 Dec 2017 14:42:05 +0800</pubDate>
+      
+      <guid>https://xixitalk.github.io/blog/2017/12/03/clean-linux-kernel-file/</guid>
+      <description>&lt;p&gt;Linux代码庞大，代码阅读时候发现无关代码太多，清理一下无关代码便于阅读（清理的标准是某产品内核编译没有用到的文件）。&lt;/p&gt;
+
+&lt;p&gt;原理：版本编译用到的文件会更新文件的atime，atime没有更新的文件就是编译无关文件。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>造了一个轮子：sleep命令</title>

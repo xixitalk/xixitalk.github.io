@@ -12,7 +12,7 @@
   
 
   
-  <title>从octopress迁移到hugo</title>
+  <title>便于代码阅读清理内核代码</title>
 
   
   
@@ -120,14 +120,14 @@ ga('send', 'pageview');
         
 
 <header>
-    <p class="meta">Nov 27, 2017
+    <p class="meta">Dec 3, 2017
         
-         - <a href="https://xixitalk.github.io/blog/2017/11/27/migrate-to-hugo-from-octopress/#disqus_thread">Comments</a>
+         - <a href="https://xixitalk.github.io/blog/2017/12/03/clean-linux-kernel-file/#disqus_thread">Comments</a>
 
         
     </p>
     <h1 class="entry-title">
-         从octopress迁移到hugo 
+         便于代码阅读清理内核代码 
     </h1>
 </header>
 
@@ -137,73 +137,78 @@ ga('send', 'pageview');
           
           
           
-          <p><a href="http://octopress.org/" target="_blank">octopress</a>编译速度很慢，2.0版本依赖老的ruby版本，环境搭建复杂，3.0版本几年来还没有正式发布，所以本blog切换到了<a href="https://gohugo.io/" target="_blank">Hugo</a>，下面是迁移记录。</p>
+          <p>Linux代码庞大，代码阅读时候发现无关代码太多，清理一下无关代码便于阅读（清理的标准是某产品内核编译没有用到的文件）。</p>
+
+<p>原理：版本编译用到的文件会更新文件的atime，atime没有更新的文件就是编译无关文件。</p>
 
 <p></p>
 
-<h2 id="下载hugo">下载hugo</h2>
+<h2 id="新建一个对atime敏感的分区">新建一个对atime敏感的分区</h2>
 
-<p>从<a href="https://github.com/gohugoio/hugo/releases" target="_blank">https://github.com/gohugoio/hugo/releases</a>下载合适的hugo版本，我下载的是ARM版本，在树莓派3上运行，把<code>hugo</code>命令加到<code>PATH</code>环境变量里。</p>
-
-<h2 id="hugo新建站">hugo新建站</h2>
-
-<p>用下面hugo命令，新建站点文件。</p>
-
-<pre><code>hugo new site myblog
+<pre><code>dd if=/dev/zero of=kernel_new.img bs=4k count=60000
+mkfs.ext4 kernel_new.img
+tune2fs -c0 -i0 kernel_new.img
+mv kernel kernel_old
+mount -o loop,strictatime kernel_new.img ./kernel
 </code></pre>
 
-<h2 id="选择模板">选择模板</h2>
+<h2 id="同步代码">同步代码</h2>
 
-<p>选择<code>Hugo-Octopress</code>模板，用下面命令获取。</p>
-
-<pre><code>git submodule add https://github.com/parsiya/Hugo-Octopress.git themes/Hugo-Octopress
+<pre><code>rsync -av --delete ./kernel_old/ ./kernel/
 </code></pre>
 
-<h2 id="配置站点config-toml">配置站点config.toml</h2>
+<h2 id="刷新所有文件atime">刷新所有文件atime</h2>
 
-<p>参考<a href="https://github.com/xixitalk/blog-source/blob/master/config.toml" target="_blank">https://github.com/xixitalk/blog-source/blob/master/config.toml</a>配置。效果参看<a href="https://xixitalk.github.io/" target="_blank">https://xixitalk.github.io/</a></p>
+<pre><code>import os
+import time
 
-<h2 id="博客转换迁移">博客转换迁移</h2>
+def TimeStampToTime(timestamp):
+        timeStruct = time.localtime(timestamp)
+        return time.strftime('%Y-%m-%d %H:%M:%S',timeStruct)
 
-<p>主要是文章头的格式转换，可以参考这个python脚本<a href="https://github.com/xixitalk/blog-source/blob/master/convert.py" target="_blank">https://github.com/xixitalk/blog-source/blob/master/convert.py</a>，把main函数里下面两行放开，把<code>octopress</code>的<code>source/_post</code>目录博文(.markdown)放在<code>post</code>目录，执行<code>mkdir -p out &amp;&amp; python convert.py</code>命令，会将转换的hugo博文放在<code>out</code>目录，将<code>out</code>目录的博文拷贝到hugo的<code>content/post</code>目录。</p>
+now_time = time.time()
+os.system('echo %s &gt; touch.time' % now_time)
+now_time_str = TimeStampToTime(now_time)
 
-<pre><code>  #convert_dir()
-  #return
+exec_str = 'find . -type f | xargs  touch -a --date=&quot;%s&quot;' % now_time_str
+#print exec_str
+print &quot;touch time: %s (%f)&quot; % (now_time_str,now_time)
+print now_time
+os.system(exec_str)
 </code></pre>
 
-<h2 id="博客预览">博客预览</h2>
+<h2 id="版本编译">版本编译</h2>
 
-<p>用下面的命令进行博客预览，假定IP是192.168.1.104，如果是本机换成localhost。</p>
+<h2 id="清理无关代码">清理无关代码</h2>
 
-<pre><code>hugo server -D --bind 192.168.1.104 --theme=Hugo-Octopress  --disableFastRender
---buildDrafts --baseURL=http://192.168.1.104:1313
+<pre><code>import os
+
+os.system(&quot;find . -type f &gt; allfile.txt&quot;)
+os.system(&quot;touch *.py&quot;)
+
+fd = open('touch.time','r')
+touch_time = fd.read().strip('\n')
+touch_time_int = int(float(touch_time))
+#print touch_time_int
+fd.close()
+
+fd = open(&quot;allfile.txt&quot;,'r')
+
+for item in fd.readlines():
+  item = item.strip('\n')
+  atime_int = int(os.path.getatime(item))
+  if atime_int == touch_time_int:
+    print 'file %s useless' % item
+    if item[-7:] != '.backup':
+      os.system('mv -v %s %s.backup' % (item,item))
+
+fd.close()
 </code></pre>
 
-<h2 id="初始化博客发布目录public">初始化博客发布目录public</h2>
+<p>清理后再编译，如果编译成功，用命令删除.backup文件。</p>
 
-<p>用git初始化public目录，这个目录就是博客的发布目录，是要上传到github的仓库的，仓库名要是：<code>[yourname].github.io</code>。</p>
-
-<pre><code>git submodule add git@github.com:[yourname]/[yourname].github.io.git public
+<pre><code>find . -name &quot;*.backup&quot; | xargs rm -fv
 </code></pre>
-
-<h2 id="博客编译">博客编译</h2>
-
-<p>用下面的命令进行博客编译生成，生成文件在<code>public</code>目录。</p>
-
-<pre><code>hugo  --theme=Hugo-Octopress
-</code></pre>
-
-<h2 id="博客发布">博客发布</h2>
-
-<p>把<code>public</code>目录文件发布到github上。</p>
-
-<pre><code>cd public
-git add -A
-git commit -m &quot;deploy to github&quot;
-git push origin master
-</code></pre>
-
-<p>除public目录外，其他文件自行找git仓库管理，可以是github page的source分支，也可以是独立git仓库。我用了独立仓库，参见<a href="https://github.com/xixitalk/blog-source" target="_blank">https://github.com/xixitalk/blog-source</a>。</p>
         </div>
         
 
@@ -211,12 +216,12 @@ git push origin master
   <p class="meta">
     <span class="byline author vcard">Posted by <span class="fn">xixitalk</span></span>
     
-    <time>Nov 27, 2017</time>
+    <time>Dec 3, 2017</time>
     
       <span class="categories">
         Tags:
         
-          <a class="category" href="https://xixitalk.github.io/tags/tech">tech</a>  <a class="category" href="https://xixitalk.github.io/tags/hugo">hugo</a>  <a class="category" href="https://xixitalk.github.io/tags/octopress">octopress</a>  
+          <a class="category" href="https://xixitalk.github.io/tags/linux">linux</a>  <a class="category" href="https://xixitalk.github.io/tags/tech">tech</a>  
     
     </span>
   </p>
@@ -228,11 +233,9 @@ git push origin master
 
   <p class="meta">
     
-        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2017/11/13/use-frp-instead-of-stunnel/" title="用frp代替stunnel进行服务共享和安全连接">用frp代替stunnel进行服务共享和安全连接</a>
+        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2017/11/27/migrate-to-hugo-from-octopress/" title="从octopress迁移到hugo">从octopress迁移到hugo</a>
     
 
-    
-      <a class="basic-alignment right" href="https://xixitalk.github.io/blog/2017/12/03/clean-linux-kernel-file/" title="便于代码阅读清理内核代码">便于代码阅读清理内核代码</a>
     
   </p>
   
