@@ -145,19 +145,34 @@ ga('send', 'pageview');
 
 <h2 id="新建一个对atime敏感的分区">新建一个对atime敏感的分区</h2>
 
-<pre><code>dd if=/dev/zero of=kernel_new.img bs=4k count=60000
+<p>通常从性能考虑，文件系统挂载都选择忽略atime更新(noatime)，所以我们需要新建一个对atime敏感的分区，一有读文件，立即更新文件atime，编译过程对于源代码就是读操作，这样源代码atime更新了就说明这个文件参与编译了，没有变化就是没有参与编译。</p>
+
+<p>分区通过创建一个大的EXT4的映像文件进行实现。挂载选项重点是加上<code>strictatime</code>选项。下面选项创建了一个4GB的EXT4文件系统映像，其他空间大小调整<code>count=4</code>即可。</p>
+
+<pre><code>dd if=/dev/zero of=kernel_new.img bs=1G count=4
 mkfs.ext4 kernel_new.img
 tune2fs -c0 -i0 kernel_new.img
-mv kernel kernel_old
+</code></pre>
+
+<p>备份内核原始代码</p>
+
+<pre><code>mv kernel kernel_old
+</code></pre>
+
+<p>EXT4文件映像挂载到原内核目录</p>
+
+<pre><code>mkdir -p kernel
 mount -o loop,strictatime kernel_new.img ./kernel
 </code></pre>
 
-<h2 id="同步代码">同步代码</h2>
+<p>同步代码</p>
 
 <pre><code>rsync -av --delete ./kernel_old/ ./kernel/
 </code></pre>
 
-<h2 id="刷新所有文件atime">刷新所有文件atime</h2>
+<h2 id="刷新所有-s-c-h-文件atime">刷新所有(.S .c .h)文件atime</h2>
+
+<p>保存为touch.py，在kernel目录执行<code>python touch.py</code></p>
 
 <pre><code>import os
 import time
@@ -169,21 +184,30 @@ def TimeStampToTime(timestamp):
 now_time = time.time()
 os.system('echo %s &gt; touch.time' % now_time)
 now_time_str = TimeStampToTime(now_time)
-
-exec_str = 'find . -type f | xargs  touch -a --date=&quot;%s&quot;' % now_time_str
-#print exec_str
 print &quot;touch time: %s (%f)&quot; % (now_time_str,now_time)
-print now_time
+
+exec_str = 'find . -type f -name &quot;*.c&quot; | xargs  touch -a --date=&quot;%s&quot;' % now_time_str
 os.system(exec_str)
+
+exec_str = 'find . -type f -name &quot;*.h&quot; | xargs  touch -a --date=&quot;%s&quot;' % now_time_str
+os.system(exec_str)
+
+exec_str = 'find . -type f -name &quot;*.S&quot; | xargs  touch -a --date=&quot;%s&quot;' % now_time_str
+os.system(exec_str)
+
 </code></pre>
 
 <h2 id="版本编译">版本编译</h2>
 
-<h2 id="清理无关代码">清理无关代码</h2>
+<h2 id="标识无关代码">标识无关代码</h2>
+
+<p>保存为analyse.py,在kernel目录，执行<code>python analyse.py</code></p>
 
 <pre><code>import os
 
-os.system(&quot;find . -type f &gt; allfile.txt&quot;)
+os.system('find . -type f -name &quot;*.c&quot; &gt; allfile.txt')
+os.system('find . -type f -name &quot;*.h&quot; &gt;&gt; allfile.txt')
+os.system('find . -type f -name &quot;*.S&quot; &gt;&gt; allfile.txt')
 os.system(&quot;touch *.py&quot;)
 
 fd = open('touch.time','r')
@@ -205,9 +229,32 @@ for item in fd.readlines():
 fd.close()
 </code></pre>
 
-<p>清理后再编译，如果编译成功，用命令删除.backup文件。</p>
+<p>清理后再编译，如果编译成功，用命令删除无关文件。</p>
 
-<pre><code>find . -name &quot;*.backup&quot; | xargs rm -fv
+<pre><code>#!/bin/bash
+
+find . -name &quot;*.o&quot; | xargs rm
+find . -name &quot;*.ko&quot; | xargs rm
+find . -name &quot;*.backup&quot; | xargs rm
+find . -name &quot;*.cmd&quot; | xargs rm
+find . -name &quot;*.tmp&quot; | xargs rm
+find . -name &quot;*.order&quot; | xargs rm
+find . -name &quot;*.install&quot; | xargs rm
+find . -name &quot;*.a&quot; | xargs rm
+find . -name &quot;*.gz&quot; | xargs rm
+find . -name &quot;*.so&quot; | xargs rm
+find . -name &quot;*.dtb&quot; | xargs rm
+#find . -name &quot;*.lds&quot; | xargs rm
+find . -name &quot;*.check&quot; | xargs rm
+find . -name &quot;built-in.mod.c&quot; | xargs rm
+find . -name &quot;modules.order&quot; | xargs rm
+find . -name &quot;modules.builtin&quot; | xargs rm
+#find . -name &quot;\.?&quot; | xargs rm
+rm -fr vmlinux System.map .tmp_versions .tmp_*
+rm -v arch/arm/boot/compressed/vmlinux*
+rm -v arch/arm/boot/compressed/piggy*
+rm -v arch/arm/boot/*Image
+
 </code></pre>
         </div>
         
