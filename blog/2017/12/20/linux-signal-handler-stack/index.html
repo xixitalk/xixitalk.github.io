@@ -12,7 +12,7 @@
   
 
   
-  <title>便于代码阅读清理内核代码</title>
+  <title>linux信号回调栈空间</title>
 
   
   
@@ -120,14 +120,14 @@ ga('send', 'pageview');
         
 
 <header>
-    <p class="meta">Dec 3, 2017
+    <p class="meta">Dec 20, 2017
         
-         - <a href="https://xixitalk.github.io/blog/2017/12/03/clean-linux-kernel-file/#disqus_thread">Comments</a>
+         - <a href="https://xixitalk.github.io/blog/2017/12/20/linux-signal-handler-stack/#disqus_thread">Comments</a>
 
         
     </p>
     <h1 class="entry-title">
-         便于代码阅读清理内核代码 
+         linux信号回调栈空间 
     </h1>
 </header>
 
@@ -137,125 +137,111 @@ ga('send', 'pageview');
           
           
           
-          <p>Linux代码庞大，代码阅读时候发现无关代码太多，清理一下无关代码便于阅读（清理的标准是某产品内核编译没有用到的文件）。</p>
-
-<p>原理：版本编译用到的文件会更新文件的atime，atime没有更新的文件就是编译无关文件。</p>
+          <p>Linux上通过signal()或者sigaction()可以自定义注册一个信号的信号回调，那么信号回调是执行的栈空间在哪里呢？以下代码以内核3.4.100为例。</p>
 
 <p></p>
 
-<h2 id="新建一个对atime敏感的分区">新建一个对atime敏感的分区</h2>
+<p>通过<code>man 7 signal</code>查看手册，有这么一句话。</p>
 
-<p>通常从性能考虑，文件系统挂载都选择忽略atime更新(noatime)，所以我们需要新建一个对atime敏感的分区，一有读文件，立即更新文件atime，编译过程对于源代码就是读操作，这样源代码atime更新了就说明这个文件参与编译了，没有变化就是没有参与编译。</p>
+<blockquote>
+<p>By default, the signal handler is invoked on the normal
+       process stack.  It is possible to arrange that the signal handler
+       uses an alternate stack; see sigaltstack(2) for a discussion of how
+       to do this and when it might be useful.</p>
+</blockquote>
 
-<p>分区通过创建一个大的EXT4的映像文件进行实现。挂载选项重点是加上<code>strictatime</code>选项。下面选项创建了一个4GB的EXT4文件系统映像，其他空间大小调整<code>count=4</code>即可。</p>
+<p>通过<code>sigaltstack</code>可以设置信号handler独立的执行栈，如果没有设置就是在进程栈里。那应用正在执行，进程栈已经压栈了很多层次函数调用，信号handler使用进程栈的哪一部分呢。</p>
 
-<pre><code>dd if=/dev/zero of=kernel_new.img bs=1G count=4
-mkfs.ext4 kernel_new.img
-tune2fs -c0 -i0 kernel_new.img
+<p>信号执行时刻：当进程因为（系统调用、中断和异常）从内核态切换到用户态时检查该进程是否有信号等待处理。</p>
+
+<p><img src="http://lh6.googleusercontent.com/-_HeCa43rU8o/T69fVlh4E2I/AAAAAAAAAIw/EGiHTpWzNQE/s755/signal_handle.png" alt="enter image description here" /></p>
+
+<p><img src="http://img.blog.csdn.net/20130519183522574" alt="信号的捕捉" /></p>
+
+<h2 id="独立信号栈">独立信号栈</h2>
+
+<p>先说独立信号栈，用<code>sigaltstack</code>设置独立的栈，在应用上如下设置：</p>
+
+<pre><code>    stack_t ss;
+      
+    ss.ss_sp = malloc(SIGSTKSZ);
+    ss.ss_size = SIGSTKSZ;
+    ss.ss_flags = 0;
+    if (sigaltstack(&amp;ss, NULL) == -1)
+    {
+        return EXIT_FAILURE;
+    }
 </code></pre>
 
-<p>备份内核原始代码</p>
+<p>内核在<code>do_sigaltstack</code>函数里将地址和大小保存到进程的task struct结构里。</p>
 
-<pre><code>mv kernel kernel_old
+<pre><code>		current-&gt;sas_ss_sp = (unsigned long) ss_sp;
+		current-&gt;sas_ss_size = ss_size;
 </code></pre>
 
-<p>EXT4文件映像挂载到原内核目录</p>
+<p>信号handler执行的时候内核通过get_sigframe获得信号的栈地址。</p>
 
-<pre><code>mkdir -p kernel
-mount -o loop,strictatime kernel_new.img ./kernel
+<pre><code>	/*
+	 * This is the X/Open sanctioned signal stack switching.
+	 */
+	if ((ka-&gt;sa.sa_flags &amp; SA_ONSTACK) &amp;&amp; !sas_ss_flags(sp))
+		sp = current-&gt;sas_ss_sp + current-&gt;sas_ss_size;
 </code></pre>
 
-<p>同步代码</p>
+<p>第一个判断条件的意思是用户态通过sigstack系统调用设置了独立栈标志;
+第二个判断条件是，用户态进程栈，不在独立栈的范围内;</p>
 
-<pre><code>rsync -av --delete ./kernel_old/ ./kernel/
+<p>如果满足条件，就把<code>sigaltstack</code>设置的空间作为信号handler执行的栈空间。</p>
+
+<h2 id="信号共享进程栈">信号共享进程栈</h2>
+
+<p>如果用户没有用<code>sigaltstack</code>设置单独的栈，那就用进程栈。同样在内核<code>get_sigframe</code>获得进程栈地址。默认sp赋予<code>regs-&gt;ARM_sp</code>，这个是进程栈中已经使用的栈顶(小地址，栈的使用从高地址到低地址减少)。<strong>信号栈在进程栈已经使用的后面(向小地址扩展)开始,使用进程栈空闲区域</strong>。</p>
+
+<pre><code>static inline void __user *
+get_sigframe(struct k_sigaction *ka, struct pt_regs *regs, int framesize)
+{
+	unsigned long sp = regs-&gt;ARM_sp;
+	void __user *frame;
+
+	/*
+	 * This is the X/Open sanctioned signal stack switching.
+	 */
+	if ((ka-&gt;sa.sa_flags &amp; SA_ONSTACK) &amp;&amp; !sas_ss_flags(sp))
+		sp = current-&gt;sas_ss_sp + current-&gt;sas_ss_size;
+
+	/*
+	 * ATPCS B01 mandates 8-byte alignment
+	 */
+	frame = (void __user *)((sp - framesize) &amp; ~7);
+
+	return frame;
+}
 </code></pre>
 
-<h2 id="刷新所有-s-c-h-文件atime">刷新所有(.S .c .h)文件atime</h2>
+<p>进程栈和信号栈位置大概如下：</p>
 
-<p>保存为touch.py，在kernel目录执行<code>python touch.py</code></p>
-
-<pre><code>import os
-import time
-
-def TimeStampToTime(timestamp):
-        timeStruct = time.localtime(timestamp)
-        return time.strftime('%Y-%m-%d %H:%M:%S',timeStruct)
-
-now_time = time.time()
-os.system('echo %s &gt; touch.time' % now_time)
-now_time_str = TimeStampToTime(now_time)
-print &quot;touch time: %s (%f)&quot; % (now_time_str,now_time)
-
-exec_str = 'find . -type f -name &quot;*.c&quot; | xargs  touch -a --date=&quot;%s&quot;' % now_time_str
-os.system(exec_str)
-
-exec_str = 'find . -type f -name &quot;*.h&quot; | xargs  touch -a --date=&quot;%s&quot;' % now_time_str
-os.system(exec_str)
-
-exec_str = 'find . -type f -name &quot;*.S&quot; | xargs  touch -a --date=&quot;%s&quot;' % now_time_str
-os.system(exec_str)
-
+<pre><code>|————————————————————| 低地址 栈顶
+|                    |
+|                    |
+|--------------------| 信号栈栈底，向低地址扩展 
+|                    |
+|--------------------| 应用被调度切换走时栈顶(regs-&gt;ARM_sp)
+|                    |
+|                    |
+|                    |
+|                    |
+|                    |
+|                    |
+|                    |
+|                    |
+|————————————————————| 高地址 进程栈底  main
 </code></pre>
 
-<h2 id="版本编译">版本编译</h2>
+<h1 id="参考资料">参考资料</h1>
 
-<h2 id="标识无关代码">标识无关代码</h2>
+<p><a href="http://blog.csdn.net/chenyu105/article/details/7093603" target="_blank">&lt;深入浅出&gt; linux 信号栈</a></p>
 
-<p>保存为analyse.py,在kernel目录，执行<code>python analyse.py</code></p>
-
-<pre><code>import os
-
-os.system('find . -type f -name &quot;*.c&quot; &gt; allfile.txt')
-os.system('find . -type f -name &quot;*.h&quot; &gt;&gt; allfile.txt')
-os.system('find . -type f -name &quot;*.S&quot; &gt;&gt; allfile.txt')
-os.system(&quot;touch *.py&quot;)
-
-fd = open('touch.time','r')
-touch_time = fd.read().strip('\n')
-touch_time_int = int(float(touch_time))
-#print touch_time_int
-fd.close()
-
-fd = open(&quot;allfile.txt&quot;,'r')
-
-for item in fd.readlines():
-  item = item.strip('\n')
-  atime_int = int(os.path.getatime(item))
-  if atime_int == touch_time_int:
-    print 'file %s useless' % item
-    if item[-7:] != '.backup':
-      os.system('mv -v %s %s.backup' % (item,item))
-
-fd.close()
-</code></pre>
-
-<p>清理后再编译，如果编译成功，用命令删除无关文件。</p>
-
-<pre><code>#!/bin/bash
-
-find . -name &quot;*.o&quot; | xargs rm
-find . -name &quot;*.ko&quot; | xargs rm
-find . -name &quot;*.backup&quot; | xargs rm
-find . -name &quot;*.cmd&quot; | xargs rm
-find . -name &quot;*.tmp&quot; | xargs rm
-find . -name &quot;*.order&quot; | xargs rm
-find . -name &quot;*.install&quot; | xargs rm
-find . -name &quot;*.a&quot; | xargs rm
-find . -name &quot;*.gz&quot; | xargs rm
-find . -name &quot;*.so&quot; | xargs rm
-find . -name &quot;*.dtb&quot; | xargs rm
-#find . -name &quot;*.lds&quot; | xargs rm
-find . -name &quot;*.check&quot; | xargs rm
-find . -name &quot;built-in.mod.c&quot; | xargs rm
-find . -name &quot;modules.order&quot; | xargs rm
-find . -name &quot;modules.builtin&quot; | xargs rm
-#find . -name &quot;\.?&quot; | xargs rm
-rm -fr vmlinux System.map .tmp_versions .tmp_*
-rm -v arch/arm/boot/compressed/vmlinux*
-rm -v arch/arm/boot/compressed/piggy*
-rm -v arch/arm/boot/*Image
-
-</code></pre>
+<p><a href="http://blog.jobbole.com/101619/" target="_blank">Linux 信号应用之黑匣子程序设计</a></p>
         </div>
         
 
@@ -263,7 +249,7 @@ rm -v arch/arm/boot/*Image
   <p class="meta">
     <span class="byline author vcard">Posted by <span class="fn">xixitalk</span></span>
     
-    <time>Dec 3, 2017</time>
+    <time>Dec 20, 2017</time>
     
       <span class="categories">
         Tags:
@@ -280,11 +266,9 @@ rm -v arch/arm/boot/*Image
 
   <p class="meta">
     
-        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2017/11/27/migrate-to-hugo-from-octopress/" title="从octopress迁移到hugo">从octopress迁移到hugo</a>
+        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2017/12/03/clean-linux-kernel-file/" title="便于代码阅读清理内核代码">便于代码阅读清理内核代码</a>
     
 
-    
-      <a class="basic-alignment right" href="https://xixitalk.github.io/blog/2017/12/20/linux-signal-handler-stack/" title="linux信号回调栈空间">linux信号回调栈空间</a>
     
   </p>
   

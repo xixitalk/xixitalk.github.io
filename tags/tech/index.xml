@@ -6,10 +6,21 @@
     <description>Recent content in Tech on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Dec 2017 14:42:05 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 20 Dec 2017 14:13:53 +0800</lastBuildDate>
     
 	<atom:link href="https://xixitalk.github.io/tags/tech/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>linux信号回调栈空间</title>
+      <link>https://xixitalk.github.io/blog/2017/12/20/linux-signal-handler-stack/</link>
+      <pubDate>Wed, 20 Dec 2017 14:13:53 +0800</pubDate>
+      
+      <guid>https://xixitalk.github.io/blog/2017/12/20/linux-signal-handler-stack/</guid>
+      <description>&lt;p&gt;Linux上通过signal()或者sigaction()可以自定义注册一个信号的信号回调，那么信号回调是执行的栈空间在哪里呢？以下代码以内核3.4.100为例。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>便于代码阅读清理内核代码</title>
