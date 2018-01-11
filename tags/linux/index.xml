@@ -6,10 +6,21 @@
     <description>Recent content in Linux on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Dec 2017 14:13:53 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jan 2018 11:50:48 +0800</lastBuildDate>
     
 	<atom:link href="https://xixitalk.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>内核硬浮点VFP开关</title>
+      <link>https://xixitalk.github.io/blog/2018/01/11/vfpv3/</link>
+      <pubDate>Thu, 11 Jan 2018 11:50:48 +0800</pubDate>
+      
+      <guid>https://xixitalk.github.io/blog/2018/01/11/vfpv3/</guid>
+      <description>&lt;p&gt;一个产品编译链打开了VFPv3开关，重新编译版本后发现内核启动init失败。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>linux信号回调栈空间探究</title>
