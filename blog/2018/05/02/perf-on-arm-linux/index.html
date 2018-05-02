@@ -12,7 +12,7 @@
   
 
   
-  <title>xixitalk&#39;s snippet</title>
+  <title>交叉编译perf(ARM Linux)</title>
 
   
   
@@ -31,7 +31,7 @@
   
   
 
-  <link href="https://xixitalk.github.io/index.xml" rel="alternate" type="application/rss+xml" title="xixitalk&#39;s snippet" />
+  
 
   <meta name="description" content="">
   <meta name="keywords" content="">
@@ -112,153 +112,119 @@ ga('send', 'pageview');
 
 
 <div id="main">
- <div id="content">
-  <div class="blog-index">
-    
-    
-    <article>
+  <div id="content">
+    <div>
+      <article class="hentry" role="article">
 
         
         
 
 <header>
-    <p class="meta">Nov 23, 2012
+    <p class="meta">May 2, 2018
         
-         - <a href="https://xixitalk.github.io/blog/2012/11/23/octopress-command-note/#disqus_thread">Comments</a>
+         - <a href="https://xixitalk.github.io/blog/2018/05/02/perf-on-arm-linux/#disqus_thread">Comments</a>
 
         
     </p>
     <h1 class="entry-title">
-        <a href="https://xixitalk.github.io/blog/2012/11/23/octopress-command-note/">octopress命令备忘录</a>
+         交叉编译perf(ARM Linux) 
     </h1>
 </header>
 
 
-        
-          <p><h2 id="创建新文章">创建新文章</h2>
+        <div class="entry-content">
+          
+          
+          
+          
+          <p>关键词：ARM linux perf</p>
 
-<pre><code>rake new_post[&quot;TITLE&quot;]
+<p>perf对于Linux性能分析非常有用。perf在linux上编译依赖几个库，库的编译问题不大，但是要打ARM架构的补丁不好操作。所以不如索性用buildroot制作一个和平台兼容的交叉编译链，在buildroot里自动选择上需要的库，让buildroot自动下载打补丁和编译，这样操作最省事省力。</p>
+
+<p></p>
+
+<h3 id="制作perf交叉编译链">制作perf交叉编译链</h3>
+
+<p>下载buildroot，配置编译链，选择ARM架构指令集，选择C库，就算产品平台是uClibc，最好选择glibc，兼容性最好（用静态链接perf来解决C库冲突），选择Linux内核版本，同时选择libunwind、elfutils和libz库。假定编译链的CC命令制作成arm-perf-linux-gnueabi-gcc。</p>
+
+<h3 id="编译perf">编译perf</h3>
+
+<p>进入到内核代码tools/perf目录（内核版本linux-3.4.113为例），配置如下：</p>
+
+<pre><code>export ARCH=arm
+export CROSS_COMPILE=arm-perf-linux-gnueabi-
+export LDFLAGS='-static'
 </code></pre>
 
-<p></p></p>
+<p>说明：如果编译链的bin没有在用户$PATH里，CROSS_COMPILE可以配置成绝对路径。</p>
 
-          
-              <footer>
-                  <a href="https://xixitalk.github.io/blog/2012/11/23/octopress-command-note/" rel="full-article">Read on &rarr;</a>
-              </footer>
-          
+<p>然后执行make编译。</p>
 
+<pre><code>make
+</code></pre>
+
+<p>编译完成后，在perf目录会生成一个perf静态可执行程序。</p>
+
+<pre><code>$file perf
+perf: ELF 32-bit LSB executable, ARM, version 1 (SYSV), statically linked, for GNU/Linux 2.6.32, not stripped
+</code></pre>
+        </div>
         
 
-    </article>
+<footer>
+  <p class="meta">
+    <span class="byline author vcard">Posted by <span class="fn">xixitalk</span></span>
     
-    <article>
-
+    <time>May 2, 2018</time>
+    
+      <span class="categories">
+        Tags:
         
-        
+          <a class="category" href="https://xixitalk.github.io/tags/linux">linux</a>  
+    
+    </span>
+  </p>
 
-<header>
-    <p class="meta">Nov 23, 2012
-        
-         - <a href="https://xixitalk.github.io/blog/2012/11/23/flask-twip-on-heroku/#disqus_thread">Comments</a>
-
-        
-    </p>
-    <h1 class="entry-title">
-        <a href="https://xixitalk.github.io/blog/2012/11/23/flask-twip-on-heroku/">flask_twip在heroku上搭建教程</a>
-    </h1>
-</header>
-
-
-        
-          <p><p><a href="https://github.com/yegle/flask_twip" target="_blank">flask_twip</a>是@<a href="http://twitter.com/yegle" target="_blank">yegle</a>写的一个可以搭建在<a href="http://www.heroku.com/" target="_blank">heroku</a>上的一个<a href="http://code.google.com/p/twip/" target="_blank">twip</a>的port程序。</p>
-
-<p></p></p>
-
-          
-              <footer>
-                  <a href="https://xixitalk.github.io/blog/2012/11/23/flask-twip-on-heroku/" rel="full-article">Read on &rarr;</a>
-              </footer>
-          
-
-        
-
-    </article>
-    
-    
-    
-
-
-
-
-<div class="pagination">
-
-    
-        
-        
-        
-        <a href="/" aria-label="First" class="label-pagination"><i class="fa fa-angle-double-left fa-lg"></i></a>
-    
-
-    
-    
-        <a href="/blog/page/18/" aria-label="Previous" class="label-pagination"><i class="fa fa-angle-left fa-lg"></i></a>
-    
-
-    
-        <a href="/" class="label-pagination">1</a>
-    
-        <a href="/blog/page/2/" class="label-pagination">2</a>
-    
-        <a href="/blog/page/3/" class="label-pagination">3</a>
-    
-        <a href="/blog/page/4/" class="label-pagination">4</a>
-    
-        <a href="/blog/page/5/" class="label-pagination">5</a>
-    
-        <a href="/blog/page/6/" class="label-pagination">6</a>
-    
-        <a href="/blog/page/7/" class="label-pagination">7</a>
-    
-        <a href="/blog/page/8/" class="label-pagination">8</a>
-    
-        <a href="/blog/page/9/" class="label-pagination">9</a>
-    
-        <a href="/blog/page/10/" class="label-pagination">10</a>
-    
-        <a href="/blog/page/11/" class="label-pagination">11</a>
-    
-        <a href="/blog/page/12/" class="label-pagination">12</a>
-    
-        <a href="/blog/page/13/" class="label-pagination">13</a>
-    
-        <a href="/blog/page/14/" class="label-pagination">14</a>
-    
-        <a href="/blog/page/15/" class="label-pagination">15</a>
-    
-        <a href="/blog/page/16/" class="label-pagination">16</a>
-    
-        <a href="/blog/page/17/" class="label-pagination">17</a>
-    
-        <a href="/blog/page/18/" class="label-pagination">18</a>
-    
-        <a href="/blog/page/19/" class="label-pagination">19</a>
-    
-
-    
-
-    
-    
-        <a href="/blog/page/19/" aria-label="Last"><i class="fa fa-angle-double-right fa-lg"></i></a>
-    
-
-</div>
+  
+  
 
   
 
-  </div>
+  <p class="meta">
+    
+        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2018/01/11/vfpv3/" title="内核硬浮点VFP开关">内核硬浮点VFP开关</a>
+    
 
+    
+  </p>
   
+    
+      <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'gitblog';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+  
+</footer>
+
+      </article>
+    </div>
+    
 
 <aside class="sidebar thirds">
   <section class="first odd">
@@ -305,8 +271,8 @@ ga('send', 'pageview');
   
 
 </aside>
-    
- </div>
+
+  </div>
 </div>
 
 <footer role="contentinfo">
@@ -330,4 +296,4 @@ ga('send', 'pageview');
 
 </body>
 </html>
-   
+

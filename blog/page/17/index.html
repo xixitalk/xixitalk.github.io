@@ -122,6 +122,39 @@ ga('send', 'pageview');
         
 
 <header>
+    <p class="meta">May 30, 2013
+        
+         - <a href="https://xixitalk.github.io/blog/2013/05/30/iptables-port-8222-to-ssh-22/#disqus_thread">Comments</a>
+
+        
+    </p>
+    <h1 class="entry-title">
+        <a href="https://xixitalk.github.io/blog/2013/05/30/iptables-port-8222-to-ssh-22/">用iptables将8222端口转向22（SSH）</a>
+    </h1>
+</header>
+
+
+        
+          <p><p>场景：家里树莓派的SSH端口是22，因为我的树莓派本身没有连接键盘，所以不敢轻易修改SSH的端口。从办公室里连接树莓派的SSH，需要家里的路由器进行端口转发。比如将路由器的22端口转发到树莓派的22端口。实际上路由器的22转发不成功，想来应该路由器本身占用了22端口，或者屏蔽了22端口的访问。所以这样操作：路由器转发8222端口到树莓派的8222端口，树莓派的8222端口再转发到本机的22端口，实现外部SSH的访问。</p>
+
+<p></p></p>
+
+          
+              <footer>
+                  <a href="https://xixitalk.github.io/blog/2013/05/30/iptables-port-8222-to-ssh-22/" rel="full-article">Read on &rarr;</a>
+              </footer>
+          
+
+        
+
+    </article>
+    
+    <article>
+
+        
+        
+
+<header>
     <p class="meta">May 29, 2013
         
          - <a href="https://xixitalk.github.io/blog/2013/05/29/update-ddns-with-api/#disqus_thread">Comments</a>
@@ -283,39 +316,6 @@ IPv4地址格式是addr1.addr2.addr3.addr4，为了减少查找次数，考虑�
           
               <footer>
                   <a href="https://xixitalk.github.io/blog/2013/03/04/raspberry-pi/" rel="full-article">Read on &rarr;</a>
-              </footer>
-          
-
-        
-
-    </article>
-    
-    <article>
-
-        
-        
-
-<header>
-    <p class="meta">Mar 2, 2013
-        
-         - <a href="https://xixitalk.github.io/blog/2013/03/02/raspberry-pi-proxy/#disqus_thread">Comments</a>
-
-        
-    </p>
-    <h1 class="entry-title">
-        <a href="https://xixitalk.github.io/blog/2013/03/02/raspberry-pi-proxy/">利用Raspberry Pi加shadowsocks搭建代理服务</a>
-    </h1>
-</header>
-
-
-        
-          <p><p>设想：路由器和Raspberry Pi的耗电都非常小，可以常开不关机。而且手机上使用SSH -D、shadowsocks和VPN都不方便，还增加电池消耗。android上的twidere和twitter官方客户端都支持HTTP代理，iOS也方便使用pac代理。HTTP代理虽然没有加密，但是因为都在国内没有通过GFW所以不会触发屏蔽。</p>
-
-<p></p></p>
-
-          
-              <footer>
-                  <a href="https://xixitalk.github.io/blog/2013/03/02/raspberry-pi-proxy/" rel="full-article">Read on &rarr;</a>
               </footer>
           
 
