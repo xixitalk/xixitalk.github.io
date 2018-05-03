@@ -12,7 +12,7 @@
   
 
   
-  <title>交叉编译perf(ARM Linux)</title>
+  <title>模块unsupported RELA relocation:275错误</title>
 
   
   
@@ -120,14 +120,14 @@ ga('send', 'pageview');
         
 
 <header>
-    <p class="meta">May 2, 2018
+    <p class="meta">May 3, 2018
         
-         - <a href="https://xixitalk.github.io/blog/2018/05/02/perf-on-arm-linux/#disqus_thread">Comments</a>
+         - <a href="https://xixitalk.github.io/blog/2018/05/03/linux-module-unsupported-RELA-relocation/#disqus_thread">Comments</a>
 
         
     </p>
     <h1 class="entry-title">
-         交叉编译perf(ARM Linux) 
+         模块unsupported RELA relocation:275错误 
     </h1>
 </header>
 
@@ -137,36 +137,31 @@ ga('send', 'pageview');
           
           
           
-          <p>关键词：ARM linux perf</p>
-
-<p>perf对于Linux性能分析非常有用。perf在linux上编译依赖几个库，库的编译问题不大，但是要打ARM架构的补丁不好操作。所以不如索性用buildroot制作一个和平台兼容的交叉编译链，在buildroot里自动选择上需要的库，让buildroot自动下载打补丁和编译，这样操作最省事省力。</p>
+          <p>ARM A53芯片有个Erratum，编号是843419，在linux内核打开修正选项（CONFIG_ARM64_ERRATUM_843419）后，一些模块（ko）会insmod失败，提示：</p>
 
 <p></p>
 
-<h3 id="制作perf交叉编译链">制作perf交叉编译链</h3>
-
-<p>下载buildroot，配置编译链，选择ARM架构指令集，选择C库，就算产品平台是uClibc，最好选择glibc，兼容性最好（用静态链接perf来解决C库冲突），选择Linux内核版本，同时选择libunwind、elfutils和libz库。假定编译链的CC命令制作成arm-perf-linux-gnueabi-gcc。</p>
-
-<h3 id="编译perf">编译perf</h3>
-
-<p>进入到内核代码tools/perf目录（内核版本linux-3.4.113为例），配置如下：</p>
-
-<pre><code>export ARCH=arm
-export CROSS_COMPILE=arm-perf-linux-gnueabi-
-export LDFLAGS='-static'
+<pre><code>module xxx: unsupported RELA relocation:275
+insmod: can't sinert xxx.ko: invalid module
 </code></pre>
 
-<p>说明：如果编译链的bin没有在用户$PATH里，CROSS_COMPILE可以配置成绝对路径。</p>
+<p>当内核打开这个选项后，在模块的CFLAGS里增加了<code>-mcmodel=large</code>选项。而有些ko模块是自有编译框架，没有继承内核的编译选项，没有追加<code>-mcmodel=large</code>选项，所以造成insmod错误。</p>
 
-<p>然后执行make编译。</p>
+<p><strong>解决办法:</strong>就是在模块的CFLAGS里也增加<code>-mcmodel=large</code>选项。</p>
 
-<pre><code>make
+<p>检查方法1：确保ko文件进行反汇编没有adrp指令：</p>
+
+<pre><code>aarch64-linux-objdump -d xxx.ko ｜grep adrp
 </code></pre>
 
-<p>编译完成后，在perf目录会生成一个perf静态可执行程序。</p>
+<p>检查方法2：重定位信息没有<code>R_AARCH64_ADR_PRE</code></p>
 
-<pre><code>$file perf
-perf: ELF 32-bit LSB executable, ARM, version 1 (SYSV), statically linked, for GNU/Linux 2.6.32, not stripped
+<pre><code>aarch64-linux-readelf  -r xxx.ko  | grep R_AARCH64_ADR_PRE
+</code></pre>
+
+<p>如果仅增加<code>-mcmodel=large</code>选项还解决不了问题，可以试试下面的选项：</p>
+
+<pre><code> -mcmodel=large -mfix-cortex-a53-843419 
 </code></pre>
         </div>
         
@@ -175,7 +170,7 @@ perf: ELF 32-bit LSB executable, ARM, version 1 (SYSV), statically linked, for G
   <p class="meta">
     <span class="byline author vcard">Posted by <span class="fn">xixitalk</span></span>
     
-    <time>May 2, 2018</time>
+    <time>May 3, 2018</time>
     
       <span class="categories">
         Tags:
@@ -192,11 +187,9 @@ perf: ELF 32-bit LSB executable, ARM, version 1 (SYSV), statically linked, for G
 
   <p class="meta">
     
-        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2018/01/11/vfpv3/" title="内核硬浮点VFP开关">内核硬浮点VFP开关</a>
+        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2018/05/02/perf-on-arm-linux/" title="交叉编译perf(ARM Linux)">交叉编译perf(ARM Linux)</a>
     
 
-    
-      <a class="basic-alignment right" href="https://xixitalk.github.io/blog/2018/05/03/linux-module-unsupported-RELA-relocation/" title="模块unsupported RELA relocation:275错误">模块unsupported RELA relocation:275错误</a>
     
   </p>
   
