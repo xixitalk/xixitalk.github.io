@@ -17,7 +17,9 @@
       <pubDate>Thu, 03 May 2018 14:58:17 +0800</pubDate>
       
       <guid>https://xixitalk.github.io/blog/2018/05/03/linux-module-unsupported-RELA-relocation/</guid>
-      <description>&lt;p&gt;ARM A53芯片有个Erratum，编号是843419，在linux内核打开修正选项（CONFIG_ARM64_ERRATUM_843419）后，一些模块（ko）会insmod失败，提示：&lt;/p&gt;
+      <description>&lt;p&gt;ARM A53芯片有个Erratum，编号是843419，在linux内核打开修正选项后，一些模块（ko）会insmod失败，提示：&lt;/p&gt;
+
+&lt;p&gt;内核选项：CONFIG_ARM64_ERRATUM_843419&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

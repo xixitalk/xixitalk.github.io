@@ -137,31 +137,44 @@ ga('send', 'pageview');
           
           
           
-          <p>ARM A53芯片有个Erratum，编号是843419，在linux内核打开修正选项（CONFIG_ARM64_ERRATUM_843419）后，一些模块（ko）会insmod失败，提示：</p>
+          <p>ARM A53芯片有个Erratum，编号是843419，在linux内核打开修正选项后，一些模块（ko）会insmod失败，提示：</p>
+
+<p>内核选项：CONFIG_ARM64_ERRATUM_843419</p>
 
 <p></p>
 
-<pre><code>module xxx: unsupported RELA relocation:275
+<pre><code>
+module xxx: unsupported RELA relocation:275
 insmod: can't sinert xxx.ko: invalid module
+
 </code></pre>
 
-<p>当内核打开这个选项后，在模块的CFLAGS里增加了<code>-mcmodel=large</code>选项。而有些ko模块是自有编译框架，没有继承内核的编译选项，没有追加<code>-mcmodel=large</code>选项，所以造成insmod错误。</p>
+<p><br />
+当内核打开这个选项后，在模块的CFLAGS里增加了<code>-mcmodel=large</code>选项。而有些ko模块是自有编译框架，没有继承内核的编译选项，没有追加<code>-mcmodel=large</code>选项，所以造成insmod错误。</p>
 
 <p><strong>解决办法:</strong>就是在模块的CFLAGS里也增加<code>-mcmodel=large</code>选项。</p>
 
 <p>检查方法1：确保ko文件进行反汇编没有adrp指令：</p>
 
-<pre><code>aarch64-linux-objdump -d xxx.ko ｜grep adrp
+<pre><code>
+aarch64-linux-objdump -d xxx.ko ｜grep adrp
+
 </code></pre>
 
-<p>检查方法2：重定位信息没有<code>R_AARCH64_ADR_PRE</code></p>
+<p><br />
+检查方法2：重定位信息没有<code>R_AARCH64_ADR_PRE</code></p>
 
-<pre><code>aarch64-linux-readelf  -r xxx.ko  | grep R_AARCH64_ADR_PRE
+<pre><code>
+aarch64-linux-readelf  -r xxx.ko  | grep R_AARCH64_ADR_PRE
+
 </code></pre>
 
-<p>如果仅增加<code>-mcmodel=large</code>选项还解决不了问题，可以试试下面的选项：</p>
+<p><br />
+如果仅增加<code>-mcmodel=large</code>选项还解决不了问题，可以试试下面的选项：</p>
 
-<pre><code> -mcmodel=large -mfix-cortex-a53-843419 
+<pre><code>
+ -mcmodel=large -mfix-cortex-a53-843419
+
 </code></pre>
         </div>
         

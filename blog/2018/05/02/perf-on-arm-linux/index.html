@@ -151,22 +151,28 @@ ga('send', 'pageview');
 
 <p>进入到内核代码tools/perf目录（内核版本linux-3.4.113为例），配置如下：</p>
 
-<pre><code>export ARCH=arm
+<pre><code>
+export ARCH=arm
 export CROSS_COMPILE=arm-perf-linux-gnueabi-
 export LDFLAGS='-static'
+
 </code></pre>
 
 <p>说明：如果编译链的bin没有在用户$PATH里，CROSS_COMPILE可以配置成绝对路径。</p>
 
 <p>然后执行make编译。</p>
 
-<pre><code>make
+<pre><code>
+make
+
 </code></pre>
 
 <p>编译完成后，在perf目录会生成一个perf静态可执行程序。</p>
 
-<pre><code>$file perf
+<pre><code>
+$file perf
 perf: ELF 32-bit LSB executable, ARM, version 1 (SYSV), statically linked, for GNU/Linux 2.6.32, not stripped
+
 </code></pre>
         </div>
         
