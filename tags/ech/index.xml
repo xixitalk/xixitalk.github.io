@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ech on xixitalk&#39;s snippet</title>
+    <link>https://xixitalk.github.io/tags/ech/</link>
+    <description>Recent content in Ech on xixitalk&#39;s snippet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 May 2018 11:34:13 +0800</lastBuildDate>
+    
+	<atom:link href="https://xixitalk.github.io/tags/ech/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>libgcc是什么</title>
+      <link>https://xixitalk.github.io/blog/2018/05/07/what-is-libgcc/</link>
+      <pubDate>Mon, 07 May 2018 11:34:13 +0800</pubDate>
+      
+      <guid>https://xixitalk.github.io/blog/2018/05/07/what-is-libgcc/</guid>
+      <description>&lt;p&gt;一个产品flash空间非常小，只有16MB，所以不必要的东西都要裁剪掉。一次有个研发问我：发现有个程序如果缺失&lt;code&gt;libgcc_s.so.1&lt;/code&gt;，pthread_join()就会运行不正常，但是无论是&lt;code&gt;ldd&lt;/code&gt;还是&lt;code&gt;readelf -d&lt;/code&gt;都没有发现依赖&lt;code&gt;libgcc_s.so.1&lt;/code&gt;。搜索得知PC linux上也大量类似&lt;code&gt;libgcc_s.so.1 must be installed for pthread_cancel to work&lt;/code&gt;的问题。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kernel on xixitalk&#39;s snippet</title>
+    <link>https://xixitalk.github.io/tags/kernel/</link>
+    <description>Recent content in Kernel on xixitalk&#39;s snippet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Aug 2016 08:33:02 +0800</lastBuildDate>
+    
+	<atom:link href="https://xixitalk.github.io/tags/kernel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>在内核里获取当前任务名</title>
+      <link>https://xixitalk.github.io/blog/2016/08/10/current-comm/</link>
+      <pubDate>Wed, 10 Aug 2016 08:33:02 +0800</pubDate>
+      
+      <guid>https://xixitalk.github.io/blog/2016/08/10/current-comm/</guid>
+      <description>&lt;p&gt;遇到一个问题，在一个内核模块里使用current-&amp;gt;comm保存当前任务名，编译报错:&lt;code&gt;dereferencing pointer to incomplete type&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux内核代码瘦身</title>
+      <link>https://xixitalk.github.io/blog/2016/07/20/linux-kernel-source-strip/</link>
+      <pubDate>Wed, 20 Jul 2016 21:07:23 +0800</pubDate>
+      
+      <guid>https://xixitalk.github.io/blog/2016/07/20/linux-kernel-source-strip/</guid>
+      <description>&lt;p&gt;linux内核代码瘦身，原理：把不参与编译的代码删除，这样用Source Insight工具阅读代码的时候就轻简了很多。&lt;/p&gt;
+
+&lt;p&gt;例子数据：原本一个嵌入式linux内核代码1万7千个C文件，精简之后只有1222个C文件，删除了1万6千个C文件。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux内核代码预处理后便于阅读</title>
+      <link>https://xixitalk.github.io/blog/2016/07/19/preprocess-linux-kernel/</link>
+      <pubDate>Tue, 19 Jul 2016 13:39:01 +0800</pubDate>
+      
+      <guid>https://xixitalk.github.io/blog/2016/07/19/preprocess-linux-kernel/</guid>
+      <description>&lt;p&gt;linux 内核庞大而复杂。内核代码阅读的时候，有没有遇到因为宏定义或者inline层次太深而不知道到底代码是什么样子。代码预处理可以解决这个难题。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux内核kmalloc和vmalloc的区别</title>
+      <link>https://xixitalk.github.io/blog/2016/07/18/kmalloc-vs-vmalloc/</link>
+      <pubDate>Mon, 18 Jul 2016 08:41:56 +0800</pubDate>
+      
+      <guid>https://xixitalk.github.io/blog/2016/07/18/kmalloc-vs-vmalloc/</guid>
+      <description>&lt;p&gt;kmalloc 和 vmalloc的区别&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

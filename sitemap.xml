@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://xixitalk.github.io/blog/2018/05/07/what-is-libgcc/</loc>
+    <lastmod>2018-05-07T11:34:13+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://xixitalk.github.io/blog/2018/05/03/linux-module-unsupported-RELA-relocation/</loc>
     <lastmod>2018-05-03T14:58:17+08:00</lastmod>
   </url>
@@ -640,6 +645,12 @@
   </url>
   
   <url>
+    <loc>https://xixitalk.github.io/tags/ech/</loc>
+    <lastmod>2018-05-07T11:34:13+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://xixitalk.github.io/tags/english/</loc>
     <lastmod>2013-06-25T16:57:00+08:00</lastmod>
     <priority>0</priority>
@@ -737,7 +748,7 @@
   
   <url>
     <loc>https://xixitalk.github.io/tags/linux/</loc>
-    <lastmod>2018-05-03T14:58:17+08:00</lastmod>
+    <lastmod>2018-05-07T11:34:13+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -773,7 +784,7 @@
   
   <url>
     <loc>https://xixitalk.github.io/post/</loc>
-    <lastmod>2018-05-03T14:58:17+08:00</lastmod>
+    <lastmod>2018-05-07T11:34:13+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -887,7 +898,7 @@
   
   <url>
     <loc>https://xixitalk.github.io/</loc>
-    <lastmod>2018-05-03T14:58:17+08:00</lastmod>
+    <lastmod>2018-05-07T11:34:13+08:00</lastmod>
     <priority>0</priority>
   </url>
   

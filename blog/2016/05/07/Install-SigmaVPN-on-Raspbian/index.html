@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+
+  
+
+  
+  <title>在树莓派上安装SigmaVPN</title>
+
+  
+  
+  <link rel="stylesheet" href="https://xixitalk.github.io/css/hugo-octopress.css">
+
+  
+  
+
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  
+  <link href="https://xixitalk.github.io/favicon.png" rel="icon">
+
+  
+  
+  
+
+  
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta name="author" content="xixitalk">
+
+  
+  <meta name="generator" content="Hugo 0.31" />
+
+  
+  
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-32324744-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+</head>
+<body>
+
+
+<header role="banner"><hgroup>
+  
+  <h1><a href="https://xixitalk.github.io/">xixitalk&#39;s snippet</a></h1>
+    <h2>Post Longer Than 140 Characters Tweets</h2>
+</hgroup></header>
+
+
+<nav role="navigation">
+<fieldset class="mobile-nav">
+  
+  <select onchange="location = this.value;">
+    <option value="">Navigate…</option>
+      
+        <option value="https://xixitalk.github.io/">» Blog</option>
+      
+        <option value="https://xixitalk.github.io/tags/">» Tags</option>
+      
+
+  </select>
+</fieldset>
+
+
+<ul class="main-navigation">
+  
+  
+    
+      <li><a href="https://xixitalk.github.io/" title="Blog">Blog</a></li>
+    
+  
+    
+      <li><a href="https://xixitalk.github.io/tags/" title="Tags" >Tags</a></li>
+    
+  
+</ul>
+
+
+<ul class="subscription">
+  
+    
+        <a href="https://xixitalk.github.io/index.xml" target="_blank" type="application/rss+xml" title="RSS"><i class="fa fa-rss-square fa-lg"></i></a>
+    
+  
+
+</ul>
+
+
+<form action="https://www.google.com/search" method="get" target="_blank">
+  <fieldset role="search">
+  	<input class="search" type="text" name="q" results="0" placeholder="Search"/>
+    <input type="hidden" name="q" value="site:https://xixitalk.github.io/" />
+  </fieldset>
+</form>
+
+</nav>
+
+
+<div id="main">
+  <div id="content">
+    <div>
+      <article class="hentry" role="article">
+
+        
+        
+
+<header>
+    <p class="meta">May 7, 2016
+        
+         - <a href="https://xixitalk.github.io/blog/2016/05/07/Install-SigmaVPN-on-Raspbian/#disqus_thread">Comments</a>
+
+        
+    </p>
+    <h1 class="entry-title">
+         在树莓派上安装SigmaVPN 
+    </h1>
+</header>
+
+
+        <div class="entry-content">
+          
+          
+          
+          
+          <p>Install SigmaVPN on Raspbian<br />
+在树莓派上安装SigmaVPN</p>
+
+<p></p>
+
+<h1 id="以下配置还有一些问题待解决-从android-sigmavpn连接服务器-提示数据解密fail-问题原因未知-我觉得是sigmavpn软件的bug-最后我架了一个shadowsocks服务器-android手机上用影梭全局访问-在外面可以访问家里全部局域网资源">以下配置还有一些问题待解决：从Android SigmaVPN连接服务器，提示数据解密FAIL，问题原因未知，我觉得是sigmaVPN软件的BUG。最后我架了一个Shadowsocks服务器，android手机上用影梭全局访问，在外面可以访问家里全部局域网资源。</h1>
+
+<h2 id="获取sigmavpn代码">获取SigmaVPN代码</h2>
+
+<p>从github获取代码</p>
+
+<pre><code>git clone https://github.com/neilalexander/sigmavpn.git
+</code></pre>
+
+<h2 id="安装libsodium">安装libsodium</h2>
+
+<p>SigmaVPN依赖libsodium，安装libsodium</p>
+
+<pre><code>sudo apt-get install libsodium-dev
+</code></pre>
+
+<h2 id="编译sigmavpn">编译SigmaVPN</h2>
+
+<pre><code>$cd sigmavpn
+$make
+</code></pre>
+
+<p>显示以下编译信息，编译完成，没有想到编译如此简单顺利。</p>
+
+<pre><code>cc -I/usr/local/include -O2 -fPIC -Wall -Wextra -c naclkeypair.c -o naclkeypair.o
+cc -I/usr/local/include -O2 -fPIC -Wall -Wextra -c pack.c -o pack.o
+cc -I/usr/local/include -O2 -fPIC -Wall -Wextra -c tai.c -o tai.o
+cc -o naclkeypair naclkeypair.o -L/usr/local/lib -lsodium -ldl -pthread
+cc -o sigmavpn main.o modules.o dep/ini.o -L/usr/local/lib -lsodium -ldl -pthread
+cc -I/usr/local/include -I/usr/local/include proto/proto_raw.c -o proto/proto_raw.o -O2 -fPIC -Wall -Wextra -shared -L/usr/local/lib -lsodium
+cc -I/usr/local/include -I/usr/local/include proto/proto_nacl0.c pack.o -o proto/proto_nacl0.o -O2 -fPIC -Wall -Wextra -shared -L/usr/local/lib -lsodium
+cc -I/usr/local/include -I/usr/local/include proto/proto_nacltai.c pack.o tai.o -o proto/proto_nacltai.o -O2 -fPIC -Wall -Wextra -shared -L/usr/local/lib -lsodium
+cc -I/usr/local/include intf/intf_tuntap.c -o intf/intf_tuntap.o -O2 -fPIC -Wall -Wextra -shared
+cc -I/usr/local/include intf/intf_udp.c -o intf/intf_udp.o -O2 -fPIC -Wall -Wextra -shared
+</code></pre>
+
+<h2 id="sigmavpn执行环境">sigmavpn执行环境</h2>
+
+<p>sigmavpn不安装，把需要的可执行程序提取出来。sigmavpn支持模块化，需要<code>proto</code>和<code>intf</code>里的几个<code>.o</code>文件。</p>
+
+<pre><code>mkdir -p ~/tools/sigmavpn
+cp naclkeypair  ~/tools/sigmavpn/
+cp sigmavpn     ~/tools/sigmavpn/
+cp ./proto/*.o  ~/tools/sigmavpn/
+cp ./intf/*.o   ~/tools/sigmavpn/
+</code></pre>
+
+<h2 id="sigmavpn配置">SigmaVPN配置</h2>
+
+<p>我参考的是clowwindy的配置 <a href="https://gist.github.com/clowwindy/57d44b69741992d3eaa3" target="_blank">https://gist.github.com/clowwindy/57d44b69741992d3eaa3</a></p>
+
+<p>还有这个<a href="http://workiis.blogspot.com/2015/03/sigmavpn-android-setup.html" target="_blank">Workiis: SigmaVPN Android Setup</a></p>
+
+<h3 id="生成proto-publickey和proto-privatekey">生成proto_publickey和proto_privatekey</h3>
+
+<p>运行<code>naclkeypair</code>生成proto_publickey和proto_privatekey。</p>
+
+<pre><code>cd ~/tools/sigmavpn/
+./naclkeypair
+</code></pre>
+
+<h3 id="创建vpn-conf">创建vpn.conf</h3>
+
+<p>其中192.168.1.104是树莓派的IP，如果是VPS则换成VPS的公网IP。proto_publickey和proto_privatekey替换成上面的生成的值。</p>
+
+<pre><code>[mysigmavpn]
+proto = nacltai
+proto_publickey = ce499073fc29bda865d0e0a4a4cf82428252409734de4691242804e45fa67e3d
+proto_privatekey = 76db698a3ef69b0e1158a4cb238ee72a1cc5d30ed1c6fadeaa4c62549e02d95d
+local = tuntap
+local_interface = tunnel
+local_tunmode = 1
+peer = udp
+peer_localaddr = 192.168.1.104
+peer_localport = 5678
+peer_remotefloat = 1
+</code></pre>
+
+<h3 id="创建tunnel网口和配置iptables">创建tunnel网口和配置iptables</h3>
+
+<pre><code>sudo ip tuntap add dev tunnel mode tun
+sudo ifconfig tunnel 10.8.0.1/24
+sudo ifconfig tunnel mtu 1440
+sudo echo 1 &gt; /proc/sys/net/ipv4/ip_forward
+sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+sudo iptables -A FORWARD -i eth0 -o tunnel -m state --state RELATED,ESTABLISHED -j ACCEPT
+sudo iptables -A FORWARD -i tunnel -o eth0 -j ACCEPT
+sudo iptables -t mangle -A FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss 1400
+</code></pre>
+
+<h3 id="启动sigmavpn">启动sigmavpn</h3>
+
+<pre><code>./sigmavpn -c vpn.conf -m . &amp;
+</code></pre>
+
+<p>-m指定模块<code>.o</code>所在的目录。</p>
+
+<h2 id="配置android上sigmavpn客户端">配置android上sigmavpn客户端</h2>
+
+<p>在市场安装sigmavpn客户端。</p>
+
+<h3 id="tunnel配置">TUNNEL配置</h3>
+
+<p>Remote Address : vpn.conf里的peer_localaddr<br />
+Remote Port : vpn.conf里的peer_localport<br />
+Remote Public Key: vpn.conf里的proto_publickey</p>
+
+<p>选中Use TAI64 nonce</p>
+
+<h3 id="network配置">NETWORK配置</h3>
+
+<p>Tunnel Address Prefix：10.8.0.2/24</p>
+
+<p>配置完成后，点击STATUS页的CONNECT按钮，看看状态栏是不是有VPN的小钥匙了。</p>
+        </div>
+        
+
+<footer>
+  <p class="meta">
+    <span class="byline author vcard">Posted by <span class="fn">xixitalk</span></span>
+    
+    <time>May 7, 2016</time>
+    
+      <span class="categories">
+        Tags:
+        
+          <a class="category" href="https://xixitalk.github.io/tags/raspbian">raspbian</a>  <a class="category" href="https://xixitalk.github.io/tags/vpn">vpn</a>  
+    
+    </span>
+  </p>
+
+  
+  
+
+  
+
+  <p class="meta">
+    
+        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2016/04/22/Install-owncloud-on-raspberrypi/" title="Install owncloud 9.0.2 on RaspberryPi">Install owncloud 9.0.2 on RaspberryPi</a>
+    
+
+    
+      <a class="basic-alignment right" href="https://xixitalk.github.io/blog/2016/06/12/flashfire-nexus-6p/" title="Nexus 6P上用flashfire升级系统">Nexus 6P上用flashfire升级系统</a>
+    
+  </p>
+  
+    
+      <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'gitblog';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+  
+</footer>
+
+      </article>
+    </div>
+    
+
+<aside class="sidebar thirds">
+  <section class="first odd">
+
+    
+      <h1>About me</h1>
+    
+
+    <p>
+      
+        My PGP public key: <a href="https://keybase.io/xixitalk/key.asc" target="_blank">key.asc</a>
+      
+    </p>
+  </section>
+
+
+
+  
+  <ul class="sidebar-nav">
+    <li class="sidebar-nav-item">
+      <a target="_blank" href="https://github.com/xixitalk/" title="https://github.com/xixitalk/"><i class="fa fa-github fa-3x"></i></a>
+      
+      
+      <a target="_blank" href="https://twitter.com/xixitalk/" title="https://twitter.com/xixitalk/"><i class="fa fa-twitter fa-3x"></i></a>
+      <a target="_blank" href="https://keybase.io/xixitalk/" title="https://keybase.io/xixitalk/"><i class="fa fa-key fa-3x"></i></a> 
+      
+      
+      
+      
+      
+      
+
+    
+    
+    </li>
+  </ul>
+
+  
+
+  
+
+  
+  
+  
+
+</aside>
+
+  </div>
+</div>
+
+<footer role="contentinfo">
+  <p>Copyright &copy; 2018 xixitalk - <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/legalcode">License</a> -
+  <span class="credit">Powered by <a target="_blank" href="https://gohugo.io">Hugo</a> and <a target="_blank" href="https://github.com/parsiya/hugo-octopress/">Hugo-Octopress</a> theme.
+</p>
+
+</footer>
+
+
+
+
+
+
+<script>
+  var _gaq=[['_setAccount','UA-32324744-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+
+  
+
+  
+  <title>raspberry pi(树莓派）相关记录</title>
+
+  
+  
+  <link rel="stylesheet" href="https://xixitalk.github.io/css/hugo-octopress.css">
+
+  
+  
+
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  
+  <link href="https://xixitalk.github.io/favicon.png" rel="icon">
+
+  
+  
+  
+
+  
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta name="author" content="xixitalk">
+
+  
+  <meta name="generator" content="Hugo 0.31" />
+
+  
+  
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-32324744-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+</head>
+<body>
+
+
+<header role="banner"><hgroup>
+  
+  <h1><a href="https://xixitalk.github.io/">xixitalk&#39;s snippet</a></h1>
+    <h2>Post Longer Than 140 Characters Tweets</h2>
+</hgroup></header>
+
+
+<nav role="navigation">
+<fieldset class="mobile-nav">
+  
+  <select onchange="location = this.value;">
+    <option value="">Navigate…</option>
+      
+        <option value="https://xixitalk.github.io/">» Blog</option>
+      
+        <option value="https://xixitalk.github.io/tags/">» Tags</option>
+      
+
+  </select>
+</fieldset>
+
+
+<ul class="main-navigation">
+  
+  
+    
+      <li><a href="https://xixitalk.github.io/" title="Blog">Blog</a></li>
+    
+  
+    
+      <li><a href="https://xixitalk.github.io/tags/" title="Tags" >Tags</a></li>
+    
+  
+</ul>
+
+
+<ul class="subscription">
+  
+    
+        <a href="https://xixitalk.github.io/index.xml" target="_blank" type="application/rss+xml" title="RSS"><i class="fa fa-rss-square fa-lg"></i></a>
+    
+  
+
+</ul>
+
+
+<form action="https://www.google.com/search" method="get" target="_blank">
+  <fieldset role="search">
+  	<input class="search" type="text" name="q" results="0" placeholder="Search"/>
+    <input type="hidden" name="q" value="site:https://xixitalk.github.io/" />
+  </fieldset>
+</form>
+
+</nav>
+
+
+<div id="main">
+  <div id="content">
+    <div>
+      <article class="hentry" role="article">
+
+        
+        
+
+<header>
+    <p class="meta">Mar 4, 2013
+        
+         - <a href="https://xixitalk.github.io/blog/2013/03/04/raspberry-pi/#disqus_thread">Comments</a>
+
+        
+    </p>
+    <h1 class="entry-title">
+         raspberry pi(树莓派）相关记录 
+    </h1>
+</header>
+
+
+        <div class="entry-content">
+          
+          
+          
+          
+          <p>搜索关键词：raspberry pi 树莓派 教程 XBMC shadowsocks</p>
+
+<p>上周用一件旧东西和推友交换了个<a href="http://www.raspberrypi.org/" target="_blank">raspberry pi</a>(树莓派），虽然内存是256M的(最新版的树莓派升级到512M)，但想来够用了。设想是：代理服务器+<a href="http://xbmc.org/" target="_blank">XBMC</a>视频播放+挂载3.5寸移动硬盘+网站服务器。</p>
+
+<p></p>
+
+<p>###入门教程
+国内可以从ICKey买树莓派，这个售卖页面的“<a href="http://www.ickey.cn/raspberrypi.php" target="_blank">使用说明</a>”做入门教程不错，工具也都有现成的下载。</p>
+
+<p>###配件
+电源只要满足700mA/5V都可以，但最好配置&gt;1.5A/5V的电源适配器，特别如果要挂载移动硬盘<br />
+USB的键盘鼠标，如果是PS/2接口的，需要一个转接器转化成USB<br />
+一根HDMI线<br />
+一张至少4G/class4的SD卡，注意<a href="http://elinux.org/RPi_SD_cards" target="_blank">有些SD卡不兼容</a><br />
+一根microUSB线做电源线</p>
+
+<p>###树莓派版本选择
+官方推荐<a href="http://www.raspbian.org/" target="_blank">raspbian</a>系统，这个系统默认启动进入字符终端模式，可以用apt-get安装<a href="http://xbmc.org/" target="_blank">XBMC</a>应用，但是有些不稳定，没有其他三个<a href="http://xbmc.org/" target="_blank">XBMC</a>专门版本稳定，其次首次运行<a href="http://xbmc.org/" target="_blank">XBMC</a>起来要几十秒。<br />
+<a href="http://www.raspbmc.com/download/" target="_blank">raspbmc</a>、<a href="http://xbian.org/" target="_blank">xbian</a>、<a href="http://openelec.tv/get-openelec/download/viewcategory/10-raspberry-pi-builds" target="_blank">OpenELEC</a>三个都是<a href="http://xbmc.org/" target="_blank">XBMC</a>专用版本。<br />
+如果你的树莓派用来做服务器的话，推荐使用raspbian系统，raspbian有几乎和debian一样多的软件包，如lighttpd、mysql、php、apache等，正常开机不启动<a href="http://xbmc.org/" target="_blank">XBMC</a>，节省资源。<br />
+如果你有用<a href="http://xbmc.org/" target="_blank">XBMC</a>播放视频需求的话，推荐使用<a href="http://www.raspbmc.com/download/" target="_blank">raspbmc</a>，本身就是为<a href="http://xbmc.org/" target="_blank">XBMC</a>优化，其次可以用apt-get安装软件，比如lighttpd、nodejs、polipo。<a href="http://xbmc.org/" target="_blank">XBMC</a>空闲不播放时占用10%+的CPU资源，树莓派用HDMI连接到电视，要看视频打开电视就是XBMC界面。</p>
+
+<p>###代理服务器
+代理服务器的原理<a href="/blog/2013/03/02/raspberry-pi-proxy/">点击这里</a><br />
+我选择的版本是<a href="http://www.raspbmc.com/download/" target="_blank">raspbmc</a>，安装了polipo、nodejs版的shadowsocks和<a href="https://github.com/cyfdecyf/cow" target="_blank">cow</a>。<br />
+使用<a href="https://github.com/cyfdecyf/cow" target="_blank">cow</a>搭建一个http代理，cow可以设置上级代理是shadowsocks的socks5代理，cow可以自动判断网站是直接连接还是通过socks5代理。polipo主要是做代理备份，当cow工作不正常时才临时使用。</p>
+
+<p>###XBMC视频播放
+raspbmc本身就是个<a href="http://xbmc.org/" target="_blank">XBMC</a>优化版本，支持播放windows网络共享里的视频。<br />
+安卓手机可以安装个XBMC remote应用来控制树莓派上的XBMC<br />
+可以配置NFS，这样iPad上的xbmc可以远程播放树莓派连接的移动电源里的视频。iPad上的xbmc也可以通过sabma连接，但是总是连接超时，所以我改用NFS来连接。</p>
+
+<p>###挂载3.5寸移动硬盘
+因为3.5寸移动硬盘已经外接供电，这样不需要树莓派的USB供电，USB只是作为普通的数据端口。<br />
+测试<a href="http://www.raspbian.org/" target="_blank">raspbian</a>和<a href="http://www.raspbmc.com/download/" target="_blank">raspbmc</a>都可以正常挂接。驱动要安装ntfs-3g，然后通过mount挂载，具体步骤可以参考这里<a href="http://www.ficklelife.com/index.php?id=2" target="_blank">raspbmc Automount an NTFS USB HDD</a>。<br />
+最新版的<a href="http://www.raspbmc.com/download/" target="_blank">raspbmc</a>连mount都不用，插入移动硬盘后系统自动挂载，挂载在/media/[磁盘名]，磁盘名和移动硬盘挂接windows下的盘符卷标一样的。windows上可以将网络共享映射为本地磁盘，这样下载和使用都像本地磁盘没什么区别。</p>
+
+<p>警告：2.5寸的移动硬盘需要USB供电我没有尝试过。</p>
+
+<p>###网站服务器
+lighttpd用于搭建一个简单的web server，这样可以使用pac文件。<br />
+raspbmc本身带了ftp、samba、SSH服务，并且默认是打开的，可以在<a href="http://xbmc.org/" target="_blank">XBMC</a>界面：程序-raspbmc settings里打开关闭。<br />
+samba服务默认将/home/pi和/media两个目录共享，windows可以通过网上邻居访问读写,windows上可以将连接在树莓派的移动硬盘映射为一个盘符，用迅雷下载视频文件，然后在树莓派上的xbmc直接播放。</p>
+        </div>
+        
+
+<footer>
+  <p class="meta">
+    <span class="byline author vcard">Posted by <span class="fn">xixitalk</span></span>
+    
+    <time>Mar 4, 2013</time>
+    
+      <span class="categories">
+        Tags:
+        
+          <a class="category" href="https://xixitalk.github.io/tags/raspberrypi">raspberrypi</a>  
+    
+    </span>
+  </p>
+
+  
+  
+
+  
+
+  <p class="meta">
+    
+        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2013/03/02/raspberry-pi-proxy/" title="利用Raspberry Pi加shadowsocks搭建代理服务">利用Raspberry Pi加shadowsocks搭建代理服务</a>
+    
+
+    
+      <a class="basic-alignment right" href="https://xixitalk.github.io/blog/2013/03/11/android-broswer-with-http-proxy/" title="android上支持HTTP proxy代理的浏览器">android上支持HTTP proxy代理的浏览器</a>
+    
+  </p>
+  
+    
+      <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'gitblog';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+  
+</footer>
+
+      </article>
+    </div>
+    
+
+<aside class="sidebar thirds">
+  <section class="first odd">
+
+    
+      <h1>About me</h1>
+    
+
+    <p>
+      
+        My PGP public key: <a href="https://keybase.io/xixitalk/key.asc" target="_blank">key.asc</a>
+      
+    </p>
+  </section>
+
+
+
+  
+  <ul class="sidebar-nav">
+    <li class="sidebar-nav-item">
+      <a target="_blank" href="https://github.com/xixitalk/" title="https://github.com/xixitalk/"><i class="fa fa-github fa-3x"></i></a>
+      
+      
+      <a target="_blank" href="https://twitter.com/xixitalk/" title="https://twitter.com/xixitalk/"><i class="fa fa-twitter fa-3x"></i></a>
+      <a target="_blank" href="https://keybase.io/xixitalk/" title="https://keybase.io/xixitalk/"><i class="fa fa-key fa-3x"></i></a> 
+      
+      
+      
+      
+      
+      
+
+    
+    
+    </li>
+  </ul>
+
+  
+
+  
+
+  
+  
+  
+
+</aside>
+
+  </div>
+</div>
+
+<footer role="contentinfo">
+  <p>Copyright &copy; 2018 xixitalk - <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/legalcode">License</a> -
+  <span class="credit">Powered by <a target="_blank" href="https://gohugo.io">Hugo</a> and <a target="_blank" href="https://github.com/parsiya/hugo-octopress/">Hugo-Octopress</a> theme.
+</p>
+
+</footer>
+
+
+
+
+
+
+<script>
+  var _gaq=[['_setAccount','UA-32324744-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+</html>
+
