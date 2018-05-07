@@ -147,6 +147,14 @@ ga('send', 'pageview');
 
 <p>libgcc的静态库是libgcc.a，动态库是libgcc_s.so.1(libgcc_s.so指向libgcc_s.so.1)。</p>
 
+<blockquote>
+<blockquote>
+<p>libgcc是GCC提供的一个低层运行时库，当一些操作/运算在特定平台上不支持时，GCC会自动生成对这些库函数的调用，使用这些库函数来模拟实现。从概念上和源码实现中，又可以分为libgcc1和libgcc2，虽然它们最终会被编译合并为libgcc.a。</p>
+</blockquote>
+
+<p>From《libgcc1和libgcc2的区别》</p>
+</blockquote>
+
 <h2 id="是否需要libgcc-s-so-1">是否需要libgcc_s.so.1</h2>
 
 <p>搜索到下面一个信息 <a href="https://wiki.osdev.org/Libgcc" target="_blank">https://wiki.osdev.org/Libgcc</a></p>
@@ -160,6 +168,10 @@ ga('send', 'pageview');
 <h2 id="结论">结论</h2>
 
 <p>这种底层的库，还是加到文件系统比较安全。</p>
+
+<h2 id="参考资料">参考资料</h2>
+
+<p><a href="https://www.hellogcc.org/?p=33412" target="_blank">libgcc1和libgcc2的区别</a></p>
         </div>
         
 
