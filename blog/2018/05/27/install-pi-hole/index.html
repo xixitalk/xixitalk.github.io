@@ -12,7 +12,7 @@
   
 
   
-  <title>安装Pi-hole</title>
+  <title>安装pi-hole</title>
 
   
   
@@ -127,7 +127,7 @@ ga('send', 'pageview');
         
     </p>
     <h1 class="entry-title">
-         安装Pi-hole 
+         安装pi-hole 
     </h1>
 </header>
 
@@ -137,7 +137,7 @@ ga('send', 'pageview');
           
           
           
-          <p>pi-hole是通过DNS来拦截网页广告服务，突出特点是有个<strong>好看/数据管理/数据查询/数据分析界面</strong>。它是个组合套件：包括pi-hole admin网页管理（php网页）、dnsmasq、php5、lighttpd、sqlite、curl等一起搭建一个拦截广告的DNS服务，DNS服务是通过dnsmasq提供的。</p>
+          <p>pi-hole是通过DNS来拦截网页广告服务，突出特点是有个<strong>好看的数据管理/数据查询/数据分析界面</strong>。它是个组合套件：包括pi-hole admin网页管理（php网页）、dnsmasq、php5、lighttpd、sqlite、curl等一起搭建一个拦截广告的DNS服务，DNS服务是通过dnsmasq提供的。</p>
 
 <p></p>
 
@@ -185,13 +185,17 @@ sudo service  dnsmasq restart
 
 <h3 id="更新广告屏蔽列表">更新广告屏蔽列表</h3>
 
-<p>点击<code>Tools</code>-&gt;<code>Update Lists</code>进行列表更新。</p>
+<p>点击<code>Tools</code>-&gt;<code>Update Lists</code>进行列表更新。可以手动添加黑名单和白名单。</p>
 
 <h3 id="配置路由器的dns">配置路由器的DNS</h3>
 
 <p>配置路由器的DNS server为pi-hole提供的DNS服务。</p>
 
-<p>经过几个小时，就登录<code>http://IP/admin</code>就可以看到一些dns解析数据信息。可能会比较有趣。</p>
+<h3 id="最后">最后</h3>
+
+<p>经过几个小时，登录<code>http://IP/admin</code>就可以看到一些dns解析数据信息。可能会比较有趣。</p>
+
+<p><img src="https://pi-hole.github.io/graphics/Screenshots/dashboard.png" alt="pi-hole image" /></p>
         </div>
         
 
@@ -204,7 +208,7 @@ sudo service  dnsmasq restart
       <span class="categories">
         Tags:
         
-          <a class="category" href="https://xixitalk.github.io/tags/linux">linux</a>  <a class="category" href="https://xixitalk.github.io/tags/raspberry">raspberry</a>  
+          <a class="category" href="https://xixitalk.github.io/tags/linux">linux</a>  <a class="category" href="https://xixitalk.github.io/tags/raspbian">raspbian</a>  
     
     </span>
   </p>
