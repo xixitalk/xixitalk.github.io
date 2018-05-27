@@ -12,7 +12,7 @@
   
 
   
-  <title>libgcc是什么</title>
+  <title>安装Pi-hole</title>
 
   
   
@@ -120,14 +120,14 @@ ga('send', 'pageview');
         
 
 <header>
-    <p class="meta">May 7, 2018
+    <p class="meta">May 27, 2018
         
-         - <a href="https://xixitalk.github.io/blog/2018/05/07/what-is-libgcc/#disqus_thread">Comments</a>
+         - <a href="https://xixitalk.github.io/blog/2018/05/27/install-pi-hole/#disqus_thread">Comments</a>
 
         
     </p>
     <h1 class="entry-title">
-         libgcc是什么 
+         安装Pi-hole 
     </h1>
 </header>
 
@@ -137,41 +137,61 @@ ga('send', 'pageview');
           
           
           
-          <p>一个产品flash空间非常小，只有16MB，所以不必要的东西都要裁剪掉。一次有个研发问我：发现有个程序如果缺失<code>libgcc_s.so.1</code>，pthread_join()就会运行不正常，但是无论是<code>ldd</code>还是<code>readelf -d</code>都没有发现依赖<code>libgcc_s.so.1</code>。搜索得知PC linux上也大量类似<code>libgcc_s.so.1 must be installed for pthread_cancel to work</code>的问题。</p>
+          <p>pi-hole是通过DNS来拦截网页广告服务，突出特点是有个<strong>好看/数据管理/数据查询/数据分析界面</strong>。它是个组合套件：包括pi-hole admin网页管理（php网页）、dnsmasq、php5、lighttpd、sqlite、curl等一起搭建一个拦截广告的DNS服务，DNS服务是通过dnsmasq提供的。</p>
 
 <p></p>
 
-<h2 id="libgcc是什么">libgcc是什么</h2>
+<h3 id="安装">安装</h3>
 
-<p>这是gcc官方的解释，<a href="https://gcc.gnu.org/onlinedocs/gccint/Libgcc.html" target="_blank">https://gcc.gnu.org/onlinedocs/gccint/Libgcc.html</a>  ，这里有个中文版<a href="http://gccint.cding.org/Libgcc.html" target="_blank">http://gccint.cding.org/Libgcc.html</a>，最明显的看到了整型和浮点数的转换，而产品平台正好是<strong>软浮点</strong>。</p>
+<p>用下面命令进行安装，安装流程是组合套件依赖应用的安装，还有就是配置。</p>
 
-<p>libgcc的静态库是libgcc.a，动态库是libgcc_s.so.1(libgcc_s.so指向libgcc_s.so.1)。</p>
+<pre><code>
+git clone --depth 1 https://github.com/pi-hole/pi-hole.git Pi-hole
+cd &quot;Pi-hole/automated install/&quot;
+sudo bash basic-install.sh
 
-<blockquote>
-<blockquote>
-<p>libgcc是GCC提供的一个低层运行时库，当一些操作/运算在特定平台上不支持时，GCC会自动生成对这些库函数的调用，使用这些库函数来模拟实现。从概念上和源码实现中，又可以分为libgcc1和libgcc2，虽然它们最终会被编译合并为libgcc.a。</p>
-</blockquote>
+</code></pre>
 
-<p>From《libgcc1和libgcc2的区别》</p>
-</blockquote>
+<p>现在安装过程貌似没有设置密码流程了。用下面命令设置admin密码。</p>
 
-<h2 id="是否需要libgcc-s-so-1">是否需要libgcc_s.so.1</h2>
+<pre><code>
+sudo pihole -a -p
 
-<p>搜索到下面一个信息 <a href="https://wiki.osdev.org/Libgcc" target="_blank">https://wiki.osdev.org/Libgcc</a></p>
+</code></pre>
 
-<blockquote>
-<h4 id="when-do-i-need-to-link-with-libgcc">When do I need to link with libgcc?</h4>
+<h3 id="启动pihole-ftl">启动pihole-FTL</h3>
 
-<p>All code compiled with GCC must be linked with  libgcc.</p>
-</blockquote>
+<p>安装后lighttpd和dnsmasq会自动启动，pihole-FTL可能不会自动启动。</p>
 
-<h2 id="结论">结论</h2>
+<pre><code>
+sudo service pihole-FTL  restart
 
-<p>这种底层的库，还是加到文件系统比较安全。</p>
+</code></pre>
 
-<h2 id="参考资料">参考资料</h2>
+<h3 id="调整dnsmasq配置参数">调整dnsmasq配置参数</h3>
 
-<p><a href="https://www.hellogcc.org/?p=33412" target="_blank">libgcc1和libgcc2的区别</a></p>
+<p>如果系统中之前已经安装过dnsmasq，pi-hole增加的参数可能会冲突，在目录<code>/etc/dnsmasq.d</code>检查pi-hole增加的选项。比如我注释掉了server的设定，因为我原来的dnsmasq已经设置了上游dns server（用gdns-go搭建的可翻墙解析dns server）。</p>
+
+<p>下面命令重新启动dnsmasq服务：</p>
+
+<pre><code>
+sudo service  dnsmasq restart
+
+</code></pre>
+
+<h3 id="进入pi-hole管理界面">进入pi-hole管理界面</h3>
+
+<p>浏览器里打开<code>http://IP/admin</code>，点击左侧login栏目，输入密码，即可进入管理界面。</p>
+
+<h3 id="更新广告屏蔽列表">更新广告屏蔽列表</h3>
+
+<p>点击<code>Tools</code>-&gt;<code>Update Lists</code>进行列表更新。</p>
+
+<h3 id="配置路由器的dns">配置路由器的DNS</h3>
+
+<p>配置路由器的DNS server为pi-hole提供的DNS服务。</p>
+
+<p>经过几个小时，就登录<code>http://IP/admin</code>就可以看到一些dns解析数据信息。可能会比较有趣。</p>
         </div>
         
 
@@ -179,12 +199,12 @@ ga('send', 'pageview');
   <p class="meta">
     <span class="byline author vcard">Posted by <span class="fn">xixitalk</span></span>
     
-    <time>May 7, 2018</time>
+    <time>May 27, 2018</time>
     
       <span class="categories">
         Tags:
         
-          <a class="category" href="https://xixitalk.github.io/tags/tech">tech</a>  <a class="category" href="https://xixitalk.github.io/tags/linux">linux</a>  
+          <a class="category" href="https://xixitalk.github.io/tags/linux">linux</a>  <a class="category" href="https://xixitalk.github.io/tags/raspberry">raspberry</a>  
     
     </span>
   </p>
@@ -196,11 +216,9 @@ ga('send', 'pageview');
 
   <p class="meta">
     
-        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2018/05/03/linux-module-unsupported-RELA-relocation/" title="模块unsupported RELA relocation:275错误">模块unsupported RELA relocation:275错误</a>
+        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2018/05/07/what-is-libgcc/" title="libgcc是什么">libgcc是什么</a>
     
 
-    
-      <a class="basic-alignment right" href="https://xixitalk.github.io/blog/2018/05/27/install-pi-hole/" title="安装Pi-hole">安装Pi-hole</a>
     
   </p>
   
