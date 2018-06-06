@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+
+  
+
+  
+  <title>从octopress迁移到hugo</title>
+
+  
+  
+  <link rel="stylesheet" href="https://xixitalk.github.io/css/hugo-octopress.css">
+
+  
+  
+
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  
+  <link href="https://xixitalk.github.io/favicon.png" rel="icon">
+
+  
+  
+  
+
+  
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta name="author" content="xixitalk">
+
+  
+  <meta name="generator" content="Hugo 0.31" />
+
+  
+  
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-32324744-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+</head>
+<body>
+
+
+<header role="banner"><hgroup>
+  
+  <h1><a href="https://xixitalk.github.io/">xixitalk&#39;s snippet</a></h1>
+    <h2>Post Longer Than 140 Characters Tweets</h2>
+</hgroup></header>
+
+
+<nav role="navigation">
+<fieldset class="mobile-nav">
+  
+  <select onchange="location = this.value;">
+    <option value="">Navigate…</option>
+      
+        <option value="https://xixitalk.github.io/">» Blog</option>
+      
+        <option value="https://xixitalk.github.io/tags/">» Tags</option>
+      
+
+  </select>
+</fieldset>
+
+
+<ul class="main-navigation">
+  
+  
+    
+      <li><a href="https://xixitalk.github.io/" title="Blog">Blog</a></li>
+    
+  
+    
+      <li><a href="https://xixitalk.github.io/tags/" title="Tags" >Tags</a></li>
+    
+  
+</ul>
+
+
+<ul class="subscription">
+  
+    
+        <a href="https://xixitalk.github.io/index.xml" target="_blank" type="application/rss+xml" title="RSS"><i class="fa fa-rss-square fa-lg"></i></a>
+    
+  
+
+</ul>
+
+
+<form action="https://www.google.com/search" method="get" target="_blank">
+  <fieldset role="search">
+  	<input class="search" type="text" name="q" results="0" placeholder="Search"/>
+    <input type="hidden" name="q" value="site:https://xixitalk.github.io/" />
+  </fieldset>
+</form>
+
+</nav>
+
+
+<div id="main">
+  <div id="content">
+    <div>
+      <article class="hentry" role="article">
+
+        
+        
+
+<header>
+    <p class="meta">Nov 27, 2017
+        
+         - <a href="https://xixitalk.github.io/blog/2017/11/27/migrate-to-hugo-from-octopress/#disqus_thread">Comments</a>
+
+        
+    </p>
+    <h1 class="entry-title">
+         从octopress迁移到hugo 
+    </h1>
+</header>
+
+
+        <div class="entry-content">
+          
+          
+          
+          
+          <p><a href="http://octopress.org/" target="_blank">octopress</a>编译速度很慢，2.0版本依赖老的ruby版本，环境搭建复杂，3.0版本几年来还没有正式发布，所以本blog切换到了<a href="https://gohugo.io/" target="_blank">Hugo</a>，下面是迁移记录。</p>
+
+<p></p>
+
+<h2 id="下载hugo">下载hugo</h2>
+
+<p>从<a href="https://github.com/gohugoio/hugo/releases" target="_blank">https://github.com/gohugoio/hugo/releases</a>下载合适的hugo版本，我下载的是ARM版本，在树莓派3上运行，把<code>hugo</code>命令加到<code>PATH</code>环境变量里。</p>
+
+<h2 id="hugo新建站">hugo新建站</h2>
+
+<p>用下面hugo命令，新建站点文件。</p>
+
+<pre><code>hugo new site myblog
+</code></pre>
+
+<h2 id="选择模板">选择模板</h2>
+
+<p>选择<code>Hugo-Octopress</code>模板，用下面命令获取。</p>
+
+<pre><code>git submodule add https://github.com/parsiya/Hugo-Octopress.git themes/Hugo-Octopress
+</code></pre>
+
+<h2 id="配置站点config-toml">配置站点config.toml</h2>
+
+<p>参考<a href="https://github.com/xixitalk/blog-source/blob/master/config.toml" target="_blank">https://github.com/xixitalk/blog-source/blob/master/config.toml</a>配置。效果参看<a href="https://xixitalk.github.io/" target="_blank">https://xixitalk.github.io/</a></p>
+
+<h2 id="博客转换迁移">博客转换迁移</h2>
+
+<p>主要是文章头的格式转换，可以参考这个python脚本<a href="https://github.com/xixitalk/blog-source/blob/master/convert.py" target="_blank">https://github.com/xixitalk/blog-source/blob/master/convert.py</a>，把main函数里下面两行放开，把<code>octopress</code>的<code>source/_post</code>目录博文(.markdown)放在<code>post</code>目录，执行<code>mkdir -p out &amp;&amp; python convert.py</code>命令，会将转换的hugo博文放在<code>out</code>目录，将<code>out</code>目录的博文拷贝到hugo的<code>content/post</code>目录。</p>
+
+<pre><code>  #convert_dir()
+  #return
+</code></pre>
+
+<h2 id="博客预览">博客预览</h2>
+
+<p>用下面的命令进行博客预览，假定IP是192.168.1.104，如果是本机换成localhost。</p>
+
+<pre><code>hugo server -D --bind 192.168.1.104 --theme=Hugo-Octopress  --disableFastRender
+--buildDrafts --baseURL=http://192.168.1.104:1313
+</code></pre>
+
+<h2 id="初始化博客发布目录public">初始化博客发布目录public</h2>
+
+<p>用git初始化public目录，这个目录就是博客的发布目录，是要上传到github的仓库的，仓库名要是：<code>[yourname].github.io</code>。</p>
+
+<pre><code>git submodule add git@github.com:[yourname]/[yourname].github.io.git public
+</code></pre>
+
+<h2 id="博客编译">博客编译</h2>
+
+<p>用下面的命令进行博客编译生成，生成文件在<code>public</code>目录。</p>
+
+<pre><code>hugo  --theme=Hugo-Octopress
+</code></pre>
+
+<h2 id="博客发布">博客发布</h2>
+
+<p>把<code>public</code>目录文件发布到github上。</p>
+
+<pre><code>cd public
+git add -A
+git commit -m &quot;deploy to github&quot;
+git push origin master
+</code></pre>
+
+<p>除public目录外，其他文件自行找git仓库管理，可以是github page的source分支，也可以是独立git仓库。我用了独立仓库，参见<a href="https://github.com/xixitalk/blog-source" target="_blank">https://github.com/xixitalk/blog-source</a>。</p>
+        </div>
+        
+
+<footer>
+  <p class="meta">
+    <span class="byline author vcard">Posted by <span class="fn">xixitalk</span></span>
+    
+    <time>Nov 27, 2017</time>
+    
+      <span class="categories">
+        Tags:
+        
+          <a class="category" href="https://xixitalk.github.io/tags/tech">tech</a>  <a class="category" href="https://xixitalk.github.io/tags/hugo">hugo</a>  <a class="category" href="https://xixitalk.github.io/tags/octopress">octopress</a>  
+    
+    </span>
+  </p>
+
+  
+  
+
+  
+
+  <p class="meta">
+    
+        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2017/11/13/use-frp-instead-of-stunnel/" title="用frp代替stunnel进行服务共享和安全连接">用frp代替stunnel进行服务共享和安全连接</a>
+    
+
+    
+      <a class="basic-alignment right" href="https://xixitalk.github.io/blog/2017/12/03/clean-linux-kernel-file/" title="便于代码阅读清理内核代码">便于代码阅读清理内核代码</a>
+    
+  </p>
+  
+    
+      <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'gitblog';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+  
+</footer>
+
+      </article>
+    </div>
+    
+
+<aside class="sidebar thirds">
+  <section class="first odd">
+
+    
+      <h1>About me</h1>
+    
+
+    <p>
+      
+        My PGP public key: <a href="https://keybase.io/xixitalk/key.asc" target="_blank">key.asc</a>
+      
+    </p>
+  </section>
+
+
+
+  
+  <ul class="sidebar-nav">
+    <li class="sidebar-nav-item">
+      <a target="_blank" href="https://github.com/xixitalk/" title="https://github.com/xixitalk/"><i class="fa fa-github fa-3x"></i></a>
+      
+      
+      <a target="_blank" href="https://twitter.com/xixitalk/" title="https://twitter.com/xixitalk/"><i class="fa fa-twitter fa-3x"></i></a>
+      <a target="_blank" href="https://keybase.io/xixitalk/" title="https://keybase.io/xixitalk/"><i class="fa fa-key fa-3x"></i></a> 
+      
+      
+      
+      
+      
+      
+
+    
+    
+    </li>
+  </ul>
+
+  
+
+  
+
+  
+  
+  
+
+</aside>
+
+  </div>
+</div>
+
+<footer role="contentinfo">
+  <p>Copyright &copy; 2018 xixitalk - <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/legalcode">License</a> -
+  <span class="credit">Powered by <a target="_blank" href="https://gohugo.io">Hugo</a> and <a target="_blank" href="https://github.com/parsiya/hugo-octopress/">Hugo-Octopress</a> theme.
+</p>
+
+</footer>
+
+
+
+
+
+
+<script>
+  var _gaq=[['_setAccount','UA-32324744-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+</html>
+

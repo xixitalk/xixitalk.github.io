@@ -6,10 +6,31 @@
     <description>Recent content on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 May 2018 17:19:42 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 06 Jun 2018 15:51:04 +0800</lastBuildDate>
     
 	<atom:link href="https://xixitalk.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>nexus 6p更新系统</title>
+      <link>https://xixitalk.github.io/blog/2018/06/06/nexus-6p-update-system/</link>
+      <pubDate>Wed, 06 Jun 2018 15:51:04 +0800</pubDate>
+      
+      <guid>https://xixitalk.github.io/blog/2018/06/06/nexus-6p-update-system/</guid>
+      <description>&lt;h2 id=&#34;备份数据&#34;&gt;备份数据&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;备份联系人、短信和通话记录&lt;/li&gt;
+&lt;li&gt;备份照片和各别目录如Download&lt;/li&gt;
+&lt;li&gt;用钛备份备份应用，导出备份数据&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;下载factory-images&#34;&gt;下载Factory Images&lt;/h2&gt;
+
+&lt;p&gt;从&lt;a href=&#34;https://developers.google.com/android/images&#34; target=&#34;_blank&#34;&gt;https://developers.google.com/android/images&lt;/a&gt;下载Factory Images，并在windows PC上解压。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>安装pi-hole</title>

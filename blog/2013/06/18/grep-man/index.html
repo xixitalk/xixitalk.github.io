@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+
+  
+
+  
+  <title>grep命令手册</title>
+
+  
+  
+  <link rel="stylesheet" href="https://xixitalk.github.io/css/hugo-octopress.css">
+
+  
+  
+
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  
+  <link href="https://xixitalk.github.io/favicon.png" rel="icon">
+
+  
+  
+  
+
+  
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <meta name="author" content="xixitalk">
+
+  
+  <meta name="generator" content="Hugo 0.31" />
+
+  
+  
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-32324744-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+</head>
+<body>
+
+
+<header role="banner"><hgroup>
+  
+  <h1><a href="https://xixitalk.github.io/">xixitalk&#39;s snippet</a></h1>
+    <h2>Post Longer Than 140 Characters Tweets</h2>
+</hgroup></header>
+
+
+<nav role="navigation">
+<fieldset class="mobile-nav">
+  
+  <select onchange="location = this.value;">
+    <option value="">Navigate…</option>
+      
+        <option value="https://xixitalk.github.io/">» Blog</option>
+      
+        <option value="https://xixitalk.github.io/tags/">» Tags</option>
+      
+
+  </select>
+</fieldset>
+
+
+<ul class="main-navigation">
+  
+  
+    
+      <li><a href="https://xixitalk.github.io/" title="Blog">Blog</a></li>
+    
+  
+    
+      <li><a href="https://xixitalk.github.io/tags/" title="Tags" >Tags</a></li>
+    
+  
+</ul>
+
+
+<ul class="subscription">
+  
+    
+        <a href="https://xixitalk.github.io/index.xml" target="_blank" type="application/rss+xml" title="RSS"><i class="fa fa-rss-square fa-lg"></i></a>
+    
+  
+
+</ul>
+
+
+<form action="https://www.google.com/search" method="get" target="_blank">
+  <fieldset role="search">
+  	<input class="search" type="text" name="q" results="0" placeholder="Search"/>
+    <input type="hidden" name="q" value="site:https://xixitalk.github.io/" />
+  </fieldset>
+</form>
+
+</nav>
+
+
+<div id="main">
+  <div id="content">
+    <div>
+      <article class="hentry" role="article">
+
+        
+        
+
+<header>
+    <p class="meta">Jun 18, 2013
+        
+         - <a href="https://xixitalk.github.io/blog/2013/06/18/grep-man/#disqus_thread">Comments</a>
+
+        
+    </p>
+    <h1 class="entry-title">
+         grep命令手册 
+    </h1>
+</header>
+
+
+        <div class="entry-content">
+          
+          
+          
+          
+          <p>详细参看这个博文 <a href="http://blog.51yip.com/linux/1008.html" target="_blank">http://blog.51yip.com/linux/1008.html</a></p>
+
+<p>GNU Grep 2.14 <a href="http://www.gnu.org/software/grep/manual/grep.html" target="_blank">http://www.gnu.org/software/grep/manual/grep.html</a></p>
+
+<p>我常用grep命令是这样的：</p>
+
+<pre><code>grep -r -n -I Search_String  DIR
+</code></pre>
+
+<p>-I 跳过二进制文件<br />
+-r 递归子目录<br />
+-n 显示匹配的行号<br />
+Search_String 寻找匹配的字符串<br />
+DIR 查找的目录范围</p>
+
+<p></p>
+
+<pre><code>grep --help  
+匹配模式选择:  
+ -E, --extended-regexp     扩展正则表达式egrep  
+ -F, --fixed-strings       一个换行符分隔的字符串的集合fgrep  
+ -G, --basic-regexp        基本正则  
+ -P, --perl-regexp         调用的perl正则  
+ -e, --regexp=PATTERN      后面根正则模式，默认无  
+ -f, --file=FILE           从文件中获得匹配模式  
+ -i, --ignore-case         不区分大小写  
+ -w, --word-regexp         匹配整个单词  
+ -x, --line-regexp         匹配整行  
+ -z, --null-data           a data line ends in 0 byte, not newline  
+  
+杂项:  
+ -s, --no-messages         不显示错误信息  
+ -v, --invert-match        显示不匹配的行  
+ -V, --version             显示版本号  
+ --help                    显示帮助信息  
+ --mmap                use memory-mapped input if possible  
+  
+输入控制:  
+ -m, --max-count=NUM       匹配的最大数  
+ -b, --byte-offset         打印匹配行前面打印该行所在的块号码。  
+ -n, --line-number         显示的加上匹配所在的行号  
+ --line-buffered           刷新输出每一行  
+ -H, --with-filename       当搜索多个文件时，显示匹配文件名前缀  
+ -h, --no-filename         当搜索多个文件时，不显示匹配文件名前缀  
+ --label=LABEL            print LABEL as filename for standard input  
+ -o, --only-matching       show only the part of a line matching PATTERN  
+ -q, --quiet, --silent     不显示任何东西  
+ --binary-files=TYPE   assume that binary files are TYPE  
+ TYPE is 'binary', 'text', or 'without-match'  
+ -a, --text                匹配二进制的东西  
+ -I                        不匹配二进制的东西  
+ -d, --directories=ACTION  目录操作，读取，递归，跳过  
+ ACTION is 'read', 'recurse', or 'skip'  
+ -D, --devices=ACTION      设置对设备，FIFO,管道的操作，读取，跳过  
+ ACTION is 'read' or 'skip'  
+ -R, -r, --recursive       递归调用  
+ --include=PATTERN     files that match PATTERN will be examined  
+ --exclude=PATTERN     files that match PATTERN will be skipped.  
+ --exclude-from=FILE   files that match PATTERN in FILE will be skipped.  
+ -L, --files-without-match 匹配多个文件时，显示不匹配的文件名  
+ -l, --files-with-matches  匹配多个文件时，显示匹配的文件名  
+ -c, --count               显示匹配了多少次  
+ -Z, --null                print 0 byte after FILE name  
+  
+文件控制:  
+ -B, --before-context=NUM  打印匹配本身以及前面的几个行由NUM控制  
+ -A, --after-context=NUM   打印匹配本身以及随后的几个行由NUM控制  
+ -C, --context=NUM         打印匹配本身以及随后，前面的几个行由NUM控制  
+ -NUM                      根-C的用法一样的  
+ --color[=WHEN],  
+ --colour[=WHEN]       use markers to distinguish the matching string  
+ WHEN may be `always', `never' or `auto'.  
+ -U, --binary              do not strip CR characters at EOL (MSDOS)  
+ -u, --unix-byte-offsets   report offsets as if CRs were not there (MSDOS)  
+</code></pre>
+        </div>
+        
+
+<footer>
+  <p class="meta">
+    <span class="byline author vcard">Posted by <span class="fn">xixitalk</span></span>
+    
+    <time>Jun 18, 2013</time>
+    
+      <span class="categories">
+        Tags:
+        
+          <a class="category" href="https://xixitalk.github.io/tags/linux">linux</a>  
+    
+    </span>
+  </p>
+
+  
+  
+
+  
+
+  <p class="meta">
+    
+        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2013/06/15/netputweets-proxy/" title="搭建带代理的奶瓶腿">搭建带代理的奶瓶腿</a>
+    
+
+    
+      <a class="basic-alignment right" href="https://xixitalk.github.io/blog/2013/06/19/Insert-a-Image-From-Flickr-in-Octopress/" title="octopress里插入flickr的图片">octopress里插入flickr的图片</a>
+    
+  </p>
+  
+    
+      <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'gitblog';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+  
+</footer>
+
+      </article>
+    </div>
+    
+
+<aside class="sidebar thirds">
+  <section class="first odd">
+
+    
+      <h1>About me</h1>
+    
+
+    <p>
+      
+        My PGP public key: <a href="https://keybase.io/xixitalk/key.asc" target="_blank">key.asc</a>
+      
+    </p>
+  </section>
+
+
+
+  
+  <ul class="sidebar-nav">
+    <li class="sidebar-nav-item">
+      <a target="_blank" href="https://github.com/xixitalk/" title="https://github.com/xixitalk/"><i class="fa fa-github fa-3x"></i></a>
+      
+      
+      <a target="_blank" href="https://twitter.com/xixitalk/" title="https://twitter.com/xixitalk/"><i class="fa fa-twitter fa-3x"></i></a>
+      <a target="_blank" href="https://keybase.io/xixitalk/" title="https://keybase.io/xixitalk/"><i class="fa fa-key fa-3x"></i></a> 
+      
+      
+      
+      
+      
+      
+
+    
+    
+    </li>
+  </ul>
+
+  
+
+  
+
+  
+  
+  
+
+</aside>
+
+  </div>
+</div>
+
+<footer role="contentinfo">
+  <p>Copyright &copy; 2018 xixitalk - <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/legalcode">License</a> -
+  <span class="credit">Powered by <a target="_blank" href="https://gohugo.io">Hugo</a> and <a target="_blank" href="https://github.com/parsiya/hugo-octopress/">Hugo-Octopress</a> theme.
+</p>
+
+</footer>
+
+
+
+
+
+
+<script>
+  var _gaq=[['_setAccount','UA-32324744-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+</html>
+
