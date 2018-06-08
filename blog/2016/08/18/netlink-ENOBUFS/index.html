@@ -210,6 +210,7 @@ sk-&gt;sk_sndbuf     =   sysctl_wmem_default;</p>
 <p>解决办法：删除应用代码里的<code>setsockopt</code>语句,这样<code>sk_rcvbuf</code>默认就是160K，或者用<code>setsockopt</code>设置合适的大小。</p>
 
 <p>通过Google发现，网络上好多netlink实例都用了<code>setsockopt</code>设置了1024的buffer大小。应用这个代码应该是从网上抄来的。</p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
         </div>
         
 
@@ -319,8 +320,9 @@ sk-&gt;sk_sndbuf     =   sysctl_wmem_default;</p>
   </div>
 </div>
 
+
 <footer role="contentinfo">
-  <p>Copyright &copy; 2018 xixitalk - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode">License</a> -
+  <p>Copyright &copy; 2018 xixitalk - <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/legalcode">License</a> -
   <span class="credit">Powered by <a target="_blank" href="https://gohugo.io">Hugo</a> and <a target="_blank" href="https://github.com/parsiya/hugo-octopress/">Hugo-Octopress</a> theme.
 </p>
 
