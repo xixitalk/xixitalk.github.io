@@ -164,6 +164,7 @@ funcB()
 <p>问题很快定位，问题原因是其中一个函数接收消息的时候，recv函数输入可接收数据size比buffer实际size大，大小都是宏值，不容易发觉，这个buffer恰好是局部变量（栈空间），从而recv长消息的时候把栈破坏了。</p>
 
 <p>特别提醒：如果定位的testFunc函数里局部变量过大，可能需要调整STACK_FIND_SIZE大小。定位平台是ARM linux，编译是GCC，其他平台和编译器以此类推。</p>
+         <br />
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
         </div>
         
