@@ -12,7 +12,7 @@
   
 
   
-  <title>nexus 6p更新系统</title>
+  <title>动态模块加载清除icache</title>
 
   
   
@@ -120,14 +120,14 @@ ga('send', 'pageview');
         
 
 <header>
-    <p class="meta">Jun 6, 2018
+    <p class="meta">Jul 9, 2018
         
-         - <a href="https://xixitalk.github.io/blog/2018/06/06/nexus-6p-update-system/#disqus_thread">Comments</a>
+         - <a href="https://xixitalk.github.io/blog/2018/07/09/clean-icache/#disqus_thread">Comments</a>
 
         
     </p>
     <h1 class="entry-title">
-         nexus 6p更新系统 
+         动态模块加载清除icache 
     </h1>
 </header>
 
@@ -137,52 +137,43 @@ ga('send', 'pageview');
           
           
           
-          <h2 id="备份数据">备份数据</h2>
-
-<ol>
-<li>备份联系人、短信和通话记录</li>
-<li>备份照片和各别目录如Download</li>
-<li>用钛备份备份应用，导出备份数据</li>
-</ol>
-
-<h2 id="下载factory-images">下载Factory Images</h2>
-
-<p>从<a href="https://developers.google.com/android/images" target="_blank">https://developers.google.com/android/images</a>下载Factory Images，并在windows PC上解压。</p>
+          <p>在嵌入式RTOS上，一个第三方软件自己实现了程序动态加载，问题是：程序加载后跳转执行，有时候正常，有时候导致系统死机，死机原因是未定义指令异常（ARM UND）。</p>
 
 <p></p>
 
-<h2 id="安装新系统">安装新系统</h2>
+<p>从死机导出来的现场看，该地址是个跳转指令，并没有发现有什么异常，很是奇怪。</p>
 
-<p>按电源键+音量(-)键，进入bootloader，在Factory Images的解压目录，运行下面命令。</p>
+<p><strong>在load模块前清空模块的空间的icache问题解决</strong>。</p>
 
-<p>PS：*android bootloader驱动和 fastboot.exe命令都要准备好*。</p>
+<p>理论分析：ARM的icache和dcache是分开的，模块加载是内存填充操作，只影响力dcache，icache还是之前load执行的程序，这样与内存的程序指令不一致了。</p>
 
-<pre><code>flash-all.bat
+<p>linux内核的ko模块加载也有类似操作，见<code>kernel/module.c</code>里<code>flush_module_icache</code>函数。</p>
+
+<pre><code>
+static void flush_module_icache(const struct module *mod)
+{
+	mm_segment_t old_fs;
+
+	/* flush the icache in correct context */
+	old_fs = get_fs();
+	set_fs(KERNEL_DS);
+
+	/*
+	 * Flush the instruction cache, since we've played with text.
+	 * Do it before processing of module parameters, so the module
+	 * can provide parameter accessor functions of its own.
+	 */
+	if (mod-&gt;module_init)
+		flush_icache_range((unsigned long)mod-&gt;module_init,
+				   (unsigned long)mod-&gt;module_init
+				   + mod-&gt;init_size);
+	flush_icache_range((unsigned long)mod-&gt;module_core,
+			   (unsigned long)mod-&gt;module_core + mod-&gt;core_size);
+
+	set_fs(old_fs);
+}
+
 </code></pre>
-
-<p>更新完毕会自动重启进入系统，这是一个崭新的系统。设置新系统，连接网络，用浏览器下载magisk root工具。</p>
-
-<p>下载<a href="http://tiny.cc/latestmagisk" target="_blank">最新的magisk</a>，比如Magisk-v16.0.zip，用手机浏览器下载到Download目录。</p>
-
-<h2 id="安装twrp-recovery">安装twrp recovery</h2>
-
-<p>从twrp下载适合nexus 6p最新版本<a href="https://dl.twrp.me/angler/" target="_blank">https://dl.twrp.me/angler/</a>,系统关机后按电源键+音量(-)键，进入bootloader，执行：</p>
-
-<pre><code>fastboot flash recovery twrp-3.2.1-0-angler.img
-</code></pre>
-
-<h2 id="magisk-root工具">magisk root工具</h2>
-
-<p>Magisk 的<a href="https://forum.xda-developers.com/apps/magisk/official-magisk-v7-universal-systemless-t3473445" target="_blank">xda页面</a></p>
-
-<p>在bootloader，再进入到twrp recovery界面，输入解密密码，点击install，选择Download目录的Magisk-v16.0.zip进行安装。安装后重启到系统。</p>
-
-<h2 id="恢复数据">恢复数据</h2>
-
-<ol>
-<li>安装钛备份恢复数据，恢复应用和设置</li>
-<li>恢复短信、联系人和通话记录</li>
-</ol>
          <br />
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
         </div>
@@ -192,12 +183,12 @@ ga('send', 'pageview');
   <p class="meta">
     <span class="byline author vcard">Posted by <span class="fn">xixitalk</span></span>
     
-    <time>Jun 6, 2018</time>
+    <time>Jul 9, 2018</time>
     
       <span class="categories">
         Tags:
         
-          <a class="category" href="https://xixitalk.github.io/tags/android">android</a>  
+          <a class="category" href="https://xixitalk.github.io/tags/tech">tech</a>  
     
     </span>
   </p>
@@ -209,11 +200,9 @@ ga('send', 'pageview');
 
   <p class="meta">
     
-        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2018/05/27/install-pi-hole/" title="安装pi-hole">安装pi-hole</a>
+        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2018/06/06/nexus-6p-update-system/" title="nexus 6p更新系统">nexus 6p更新系统</a>
     
 
-    
-      <a class="basic-alignment right" href="https://xixitalk.github.io/blog/2018/07/09/clean-icache/" title="动态模块加载清除icache">动态模块加载清除icache</a>
     
   </p>
   
