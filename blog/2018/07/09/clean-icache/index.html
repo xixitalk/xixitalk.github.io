@@ -137,7 +137,7 @@ ga('send', 'pageview');
           
           
           
-          <p>在嵌入式RTOS上，一个第三方软件自己实现了程序动态加载，问题是：程序加载后跳转执行，有时候正常，有时候导致系统死机，死机原因是未定义指令异常（ARM UND）。</p>
+          <p>产品是嵌入式RTOS系统，一个第三方软件自己实现了程序动态加载，问题是：程序加载后跳转执行，有时候正常，有时候导致系统死机，死机原因是未定义指令异常（ARM UND）。</p>
 
 <p></p>
 
@@ -145,7 +145,7 @@ ga('send', 'pageview');
 
 <p><strong>在load模块前，按照模块地址空间清空icache后问题解决</strong>。</p>
 
-<p>理论分析：ARM的icache和dcache是分开的，模块再次加载是内存填充操作，只更新了dcache，icache还是之前执行的指令，这样与内存的程序指令不一致了。</p>
+<p>理论分析：ARM的icache和dcache是分开的，模块再次加载是内存填充操作，只更新了dcache，icache还是之前执行的指令，这样与内存（DDR）的程序指令不一致了。</p>
 
 <p>linux内核的ko模块加载也有类似操作，见<code>kernel/module.c</code>里<code>flush_module_icache</code>函数。</p>
 
@@ -200,7 +200,7 @@ static void flush_module_icache(const struct module *mod)
 
   <p class="meta">
     
-        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2018/06/06/nexus-6p-update-system/" title="nexus 6p更新系统">nexus 6p更新系统</a>
+        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2018/06/06/nexus-6p-update-system/" title="手机刷新系统">手机刷新系统</a>
     
 
     

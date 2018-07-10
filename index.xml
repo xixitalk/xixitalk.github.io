@@ -17,18 +17,20 @@
       <pubDate>Mon, 09 Jul 2018 20:07:29 +0800</pubDate>
       
       <guid>https://xixitalk.github.io/blog/2018/07/09/clean-icache/</guid>
-      <description>&lt;p&gt;在嵌入式RTOS上，一个第三方软件自己实现了程序动态加载，问题是：程序加载后跳转执行，有时候正常，有时候导致系统死机，死机原因是未定义指令异常（ARM UND）。&lt;/p&gt;
+      <description>&lt;p&gt;产品是嵌入式RTOS系统，一个第三方软件自己实现了程序动态加载，问题是：程序加载后跳转执行，有时候正常，有时候导致系统死机，死机原因是未定义指令异常（ARM UND）。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>nexus 6p更新系统</title>
+      <title>手机刷新系统</title>
       <link>https://xixitalk.github.io/blog/2018/06/06/nexus-6p-update-system/</link>
       <pubDate>Wed, 06 Jun 2018 15:51:04 +0800</pubDate>
       
       <guid>https://xixitalk.github.io/blog/2018/06/06/nexus-6p-update-system/</guid>
-      <description>&lt;h2 id=&#34;备份数据&#34;&gt;备份数据&lt;/h2&gt;
+      <description>&lt;p&gt;手机保留用户数据刷新系统，有时候系统启动不起来要全新刷新系统，记录下面方便下次使用。&lt;/p&gt;
+
+&lt;h2 id=&#34;备份数据&#34;&gt;备份数据&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;备份联系人、短信和通话记录&lt;/li&gt;

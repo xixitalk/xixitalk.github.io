@@ -17,7 +17,7 @@
       <pubDate>Mon, 09 Jul 2018 20:07:29 +0800</pubDate>
       
       <guid>https://xixitalk.github.io/blog/2018/07/09/clean-icache/</guid>
-      <description>&lt;p&gt;在嵌入式RTOS上，一个第三方软件自己实现了程序动态加载，问题是：程序加载后跳转执行，有时候正常，有时候导致系统死机，死机原因是未定义指令异常（ARM UND）。&lt;/p&gt;
+      <description>&lt;p&gt;产品是嵌入式RTOS系统，一个第三方软件自己实现了程序动态加载，问题是：程序加载后跳转执行，有时候正常，有时候导致系统死机，死机原因是未定义指令异常（ARM UND）。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
