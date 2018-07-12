@@ -122,6 +122,41 @@ ga('send', 'pageview');
         
 
 <header>
+    <p class="meta">May 2, 2018
+        
+         - <a href="https://xixitalk.github.io/blog/2018/05/02/perf-on-arm-linux/#disqus_thread">Comments</a>
+
+        
+    </p>
+    <h1 class="entry-title">
+        <a href="https://xixitalk.github.io/blog/2018/05/02/perf-on-arm-linux/">交叉编译perf(ARM Linux)</a>
+    </h1>
+</header>
+
+
+        
+          <p><p>关键词：ARM linux perf</p>
+
+<p>perf对于Linux性能分析非常有用。perf在linux上编译依赖几个库，库的编译问题不大，但是要打ARM架构的补丁不好操作。所以不如索性用buildroot制作一个和平台兼容的交叉编译链，在buildroot里自动选择上需要的库，让buildroot自动下载打补丁和编译，这样操作最省事省力。</p>
+
+<p></p></p>
+
+          
+              <footer>
+                  <a href="https://xixitalk.github.io/blog/2018/05/02/perf-on-arm-linux/" rel="full-article">Read on &rarr;</a>
+              </footer>
+          
+
+        
+
+    </article>
+    
+    <article>
+
+        
+        
+
+<header>
     <p class="meta">Jan 11, 2018
         
          - <a href="https://xixitalk.github.io/blog/2018/01/11/vfpv3/#disqus_thread">Comments</a>
@@ -280,45 +315,6 @@ ga('send', 'pageview');
           
               <footer>
                   <a href="https://xixitalk.github.io/blog/2017/11/13/use-frp-instead-of-stunnel/" rel="full-article">Read on &rarr;</a>
-              </footer>
-          
-
-        
-
-    </article>
-    
-    <article>
-
-        
-        
-
-<header>
-    <p class="meta">Nov 13, 2017
-        
-         - <a href="https://xixitalk.github.io/blog/2017/11/13/link-office-from-home-via-frp/#disqus_thread">Comments</a>
-
-        
-    </p>
-    <h1 class="entry-title">
-        <a href="https://xixitalk.github.io/blog/2017/11/13/link-office-from-home-via-frp/">内网穿透：从家里连接办公室电脑</a>
-    </h1>
-</header>
-
-
-        
-          <p><p>环境说明: 办公室电脑是 10.40.xx.xx这样的内网IP，并且办公环境要通过HTTP代理才能访问外网。我没有公网IP的VPS，但是家里路由器是有公网IP的，可以借路由器的公网IP进行内网穿透。</p>
-
-<h4 id="环境">环境</h4>
-
-<p>家里一台树莓派3（IP 192.168.1.104）接在路由器下，路由器IP是192.168.1.1  公网IP假定是180.109.114.114。路由器上配置端口映射，把14827和14828都映射到树莓派3的192.168.1.104上，端口号可以自行选择其他的，和下面保持一致即可。</p>
-
-<p>内网穿透使用<a href="https://github.com/fatedier/frp/blob/master/README_zh.md" target="_blank">frp</a>软件。frp编译好的二进制下载地址<a href="https://github.com/fatedier/frp/releases" target="_blank">https://github.com/fatedier/frp/releases</a>，树莓派使用<code>frp_0.13.0_linux_arm.tar.gz</code>。</p>
-
-<p></p></p>
-
-          
-              <footer>
-                  <a href="https://xixitalk.github.io/blog/2017/11/13/link-office-from-home-via-frp/" rel="full-article">Read on &rarr;</a>
               </footer>
           
 

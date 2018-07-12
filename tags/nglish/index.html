@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
@@ -12,7 +15,7 @@
   
 
   
-  <title>动态模块加载清除icache</title>
+  <title>Nglish</title>
 
   
   
@@ -31,7 +34,7 @@
   
   
 
-  
+  <link href="https://xixitalk.github.io/tags/nglish/index.xml" rel="alternate" type="application/rss+xml" title="xixitalk&#39;s snippet" />
 
   <meta name="description" content="">
   <meta name="keywords" content="">
@@ -114,126 +117,43 @@ ga('send', 'pageview');
 <div id="main">
   <div id="content">
     <div>
-      <article class="hentry" role="article">
-
-        
-        
-
-<header>
-    <p class="meta">Jul 9, 2018
-        
-         - <a href="https://xixitalk.github.io/blog/2018/07/09/clean-icache/#disqus_thread">Comments</a>
-
-        
-    </p>
-    <h1 class="entry-title">
-         动态模块加载清除icache 
-    </h1>
-</header>
-
-
-        <div class="entry-content">
+      <article role="article">
+        <header>
+          <h1 class="entry-title">
+            Tag: Nglish
+          </h1>
+        </header>
+        <div id="blog-archives" class="category">
           
+          <h2>
+            2018
+          </h2>
+          <article>
+            <h1>
+              <a href="https://xixitalk.github.io/blog/2018/07/12/fence-wild-dogs/" title="澳洲一处隔离野狗的栅栏显著地改变了该处的景观">澳洲一处隔离野狗的栅栏显著地改变了该处的景观</a>
+            </h1>
+            <time>
+              <span class="month">Jul</span>
+              <span class="day">12</span>
+            </time>
+            <footer>
+              <span class="categories"> 
+                
+                
+
+                
+                
+                tags:
+                 <a class="category" href="https://xixitalk.github.io/tags/nglish">nglish</a>
+                
+              </span>
+            </footer>
+          </article>
           
-          
-          
-          <p>产品是嵌入式RTOS系统，一个第三方软件自己实现了程序动态加载，问题是：程序加载后跳转执行，有时候正常，有时候导致系统死机，死机原因是未定义指令异常（ARM UND）。</p>
-
-<p></p>
-
-<p>从死机导出来的现场看，该地址是个跳转指令，并没有发现有什么异常，很是奇怪。</p>
-
-<p><strong>在load模块前，按照模块地址空间清空icache后问题解决</strong>。</p>
-
-<p>理论分析：ARM的icache和dcache是分开的，模块再次加载是内存填充操作，只更新了dcache，icache还是之前执行的指令，这样与内存（DDR）的程序指令不一致了。</p>
-
-<p>linux内核的ko模块加载也有类似操作，见<code>kernel/module.c</code>里<code>flush_module_icache</code>函数。</p>
-
-<pre><code>
-static void flush_module_icache(const struct module *mod)
-{
-	mm_segment_t old_fs;
-
-	/* flush the icache in correct context */
-	old_fs = get_fs();
-	set_fs(KERNEL_DS);
-
-	/*
-	 * Flush the instruction cache, since we've played with text.
-	 * Do it before processing of module parameters, so the module
-	 * can provide parameter accessor functions of its own.
-	 */
-	if (mod-&gt;module_init)
-		flush_icache_range((unsigned long)mod-&gt;module_init,
-				   (unsigned long)mod-&gt;module_init
-				   + mod-&gt;init_size);
-	flush_icache_range((unsigned long)mod-&gt;module_core,
-			   (unsigned long)mod-&gt;module_core + mod-&gt;core_size);
-
-	set_fs(old_fs);
-}
-
-</code></pre>
-         <br />
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
         </div>
-        
-
-<footer>
-  <p class="meta">
-    <span class="byline author vcard">Posted by <span class="fn">xixitalk</span></span>
-    
-    <time>Jul 9, 2018</time>
-    
-      <span class="categories">
-        Tags:
-        
-          <a class="category" href="https://xixitalk.github.io/tags/tech">tech</a>  
-    
-    </span>
-  </p>
-
-  
-  
-
-  
-
-  <p class="meta">
-    
-        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2018/06/06/nexus-6p-update-system/" title="手机刷新系统">手机刷新系统</a>
-    
-
-    
-      <a class="basic-alignment right" href="https://xixitalk.github.io/blog/2018/07/12/fence-wild-dogs/" title="澳洲一处隔离野狗的栅栏显著地改变了该处的景观">澳洲一处隔离野狗的栅栏显著地改变了该处的景观</a>
-    
-  </p>
-  
-    
-      <div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
-    
-    
-    
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'gitblog';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-    
-  
-</footer>
-
       </article>
     </div>
+
     
 
 <aside class="sidebar thirds">
@@ -284,7 +204,6 @@ static void flush_module_icache(const struct module *mod)
 
   </div>
 </div>
-
 
 <footer role="contentinfo">
   <p>Copyright &copy; 2018 xixitalk - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode">License</a> -
