@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Octopress on xixitalk&#39;s snippet</title>
-    <link>https://xixitalk.github.io/tags/octopress/</link>
+    <link>https://xixitalk.ml/tags/octopress/</link>
     <description>Recent content in Octopress on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 27 Nov 2017 17:23:59 +0800</lastBuildDate>
     
-	<atom:link href="https://xixitalk.github.io/tags/octopress/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xixitalk.ml/tags/octopress/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>从octopress迁移到hugo</title>
-      <link>https://xixitalk.github.io/blog/2017/11/27/migrate-to-hugo-from-octopress/</link>
+      <link>https://xixitalk.ml/blog/2017/11/27/migrate-to-hugo-from-octopress/</link>
       <pubDate>Mon, 27 Nov 2017 17:23:59 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2017/11/27/migrate-to-hugo-from-octopress/</guid>
+      <guid>https://xixitalk.ml/blog/2017/11/27/migrate-to-hugo-from-octopress/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://octopress.org/&#34; target=&#34;_blank&#34;&gt;octopress&lt;/a&gt;编译速度很慢，2.0版本依赖老的ruby版本，环境搭建复杂，3.0版本几年来还没有正式发布，所以本blog切换到了&lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;，下面是迁移记录。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>octopress里用表格</title>
-      <link>https://xixitalk.github.io/blog/2016/10/12/table-in-octopress/</link>
+      <link>https://xixitalk.ml/blog/2016/10/12/table-in-octopress/</link>
       <pubDate>Wed, 12 Oct 2016 10:53:20 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/10/12/table-in-octopress/</guid>
+      <guid>https://xixitalk.ml/blog/2016/10/12/table-in-octopress/</guid>
       <description>&lt;p&gt;octopress里怎么样用表格？octopress默认的表格border是0，看起来不整齐。这样修改可以显示border。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -35,10 +35,10 @@
     
     <item>
       <title>中国时区：CCT</title>
-      <link>https://xixitalk.github.io/blog/2013/07/06/china-coast-time/</link>
+      <link>https://xixitalk.ml/blog/2013/07/06/china-coast-time/</link>
       <pubDate>Sat, 06 Jul 2013 08:17:55 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/07/06/china-coast-time/</guid>
+      <guid>https://xixitalk.ml/blog/2013/07/06/china-coast-time/</guid>
       <description>&lt;p&gt;octopress的&lt;code&gt;rake generate&lt;/code&gt;的时候，如果时间在晚上22：00到24：00左右，发现生成的博客HTML文件日期会是第二天的日期。Google之后有人说要加&lt;code&gt;TZ=CCT&lt;/code&gt;来设定时区。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -46,10 +46,10 @@
     
     <item>
       <title>octopress加快rake generate速度</title>
-      <link>https://xixitalk.github.io/blog/2013/06/19/Octopress-Rake-gen_deploy/</link>
+      <link>https://xixitalk.ml/blog/2013/06/19/Octopress-Rake-gen_deploy/</link>
       <pubDate>Wed, 19 Jun 2013 21:35:54 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/19/Octopress-Rake-gen_deploy/</guid>
+      <guid>https://xixitalk.ml/blog/2013/06/19/Octopress-Rake-gen_deploy/</guid>
       <description>&lt;p&gt;octopress随着文件越来越多，&lt;code&gt;rake generate&lt;/code&gt;越来越慢。这样可以加快速度。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -57,10 +57,10 @@
     
     <item>
       <title>从已经存在的octopress新建环境</title>
-      <link>https://xixitalk.github.io/blog/2013/06/19/clone-from-exist-octopress/</link>
+      <link>https://xixitalk.ml/blog/2013/06/19/clone-from-exist-octopress/</link>
       <pubDate>Wed, 19 Jun 2013 18:45:41 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/19/clone-from-exist-octopress/</guid>
+      <guid>https://xixitalk.ml/blog/2013/06/19/clone-from-exist-octopress/</guid>
       <description>&lt;p&gt;场景需求：为已经存在的octopress博客在另一个目录或者主机新建一个octopress发布环境&lt;/p&gt;
 
 &lt;h3 id=&#34;获得source和master分支代码&#34;&gt;获得source和master分支代码&lt;/h3&gt;
@@ -75,10 +75,10 @@ $ git clone git@github.com:xixitalk/xixitalk.github.com.git _deploy
     
     <item>
       <title>octopress里插入flickr的图片</title>
-      <link>https://xixitalk.github.io/blog/2013/06/19/Insert-a-Image-From-Flickr-in-Octopress/</link>
+      <link>https://xixitalk.ml/blog/2013/06/19/Insert-a-Image-From-Flickr-in-Octopress/</link>
       <pubDate>Wed, 19 Jun 2013 10:17:24 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/19/Insert-a-Image-From-Flickr-in-Octopress/</guid>
+      <guid>https://xixitalk.ml/blog/2013/06/19/Insert-a-Image-From-Flickr-in-Octopress/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.flickr.com&#34; target=&#34;_blank&#34;&gt;flickr&lt;/a&gt;更新之后，免费1T空间，同时可以上传质量很好的图片。&lt;a href=&#34;http://www.instagram.com&#34; target=&#34;_blank&#34;&gt;instagram&lt;/a&gt;的图片质量太差了。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -86,10 +86,10 @@ $ git clone git@github.com:xixitalk/xixitalk.github.com.git _deploy
     
     <item>
       <title>用浏览器发布博客到octopress</title>
-      <link>https://xixitalk.github.io/blog/2013/05/31/octopress-post-from-raspberrypi/</link>
+      <link>https://xixitalk.ml/blog/2013/05/31/octopress-post-from-raspberrypi/</link>
       <pubDate>Fri, 31 May 2013 19:57:25 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/05/31/octopress-post-from-raspberrypi/</guid>
+      <guid>https://xixitalk.ml/blog/2013/05/31/octopress-post-from-raspberrypi/</guid>
       <description>&lt;h3 id=&#34;目标&#34;&gt;目标&lt;/h3&gt;
 
 &lt;p&gt;用网页发布到octopress，这样手机、iPad、办公环境都可以通过浏览器发octopress博文了。&lt;/p&gt;
@@ -103,10 +103,10 @@ $ git clone git@github.com:xixitalk/xixitalk.github.com.git _deploy
     
     <item>
       <title>octopress命令备忘录</title>
-      <link>https://xixitalk.github.io/blog/2012/11/23/octopress-command-note/</link>
+      <link>https://xixitalk.ml/blog/2012/11/23/octopress-command-note/</link>
       <pubDate>Fri, 23 Nov 2012 23:07:00 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2012/11/23/octopress-command-note/</guid>
+      <guid>https://xixitalk.ml/blog/2012/11/23/octopress-command-note/</guid>
       <description>&lt;h2 id=&#34;创建新文章&#34;&gt;创建新文章&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;rake new_post[&amp;quot;TITLE&amp;quot;]

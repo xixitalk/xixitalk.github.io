@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Proxy on xixitalk&#39;s snippet</title>
-    <link>https://xixitalk.github.io/tags/proxy/</link>
+    <link>https://xixitalk.ml/tags/proxy/</link>
     <description>Recent content in Proxy on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 03 Sep 2017 06:01:08 +0800</lastBuildDate>
     
-	<atom:link href="https://xixitalk.github.io/tags/proxy/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xixitalk.ml/tags/proxy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>树莓派3上编译haproxy</title>
-      <link>https://xixitalk.github.io/blog/2017/09/03/compile-haproxy-on-raspberry3/</link>
+      <link>https://xixitalk.ml/blog/2017/09/03/compile-haproxy-on-raspberry3/</link>
       <pubDate>Sun, 03 Sep 2017 06:01:08 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2017/09/03/compile-haproxy-on-raspberry3/</guid>
+      <guid>https://xixitalk.ml/blog/2017/09/03/compile-haproxy-on-raspberry3/</guid>
       <description>&lt;p&gt;最近发现树莓派上haproxy有点问题，Google Play下载有些不正常。所以想更新编译haproxy。raspbian软件仓库的haproxy的版本比较低，所以直接下载haproxy源代码编译。更新过程记录下来。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>git ssh使用代理</title>
-      <link>https://xixitalk.github.io/blog/2013/07/12/git-ssh-proxy/</link>
+      <link>https://xixitalk.ml/blog/2013/07/12/git-ssh-proxy/</link>
       <pubDate>Fri, 12 Jul 2013 08:23:33 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/07/12/git-ssh-proxy/</guid>
+      <guid>https://xixitalk.ml/blog/2013/07/12/git-ssh-proxy/</guid>
       <description>&lt;p&gt;昨天在树莓派上发现通过&lt;code&gt;ssh&lt;/code&gt;方式向&lt;code&gt;github.com&lt;/code&gt;的代码仓库&lt;code&gt;git push&lt;/code&gt;代码一直提示连接&lt;code&gt;github.com&lt;/code&gt;的22端口失败。而&lt;code&gt;HTTP&lt;/code&gt;和&lt;code&gt;HTTPS&lt;/code&gt;访问&lt;code&gt;github.com&lt;/code&gt;正常，怀疑&lt;code&gt;github.com&lt;/code&gt;的22端口被墙了。使用&lt;code&gt;ssh&lt;/code&gt;方式的特点是可以不用输入密码，方便在shell里进行自动操作，而&lt;code&gt;https&lt;/code&gt;需要输入密码。&lt;/p&gt;
 
 &lt;p&gt;树莓派上有&lt;code&gt;socks5&lt;/code&gt;代理和&lt;code&gt;http&lt;/code&gt;代理，下面配置&lt;code&gt;git ssh&lt;/code&gt;通过代理进行&lt;code&gt;git&lt;/code&gt;操作。&lt;/p&gt;
@@ -37,10 +37,10 @@
     
     <item>
       <title>搭建带代理的奶瓶腿</title>
-      <link>https://xixitalk.github.io/blog/2013/06/15/netputweets-proxy/</link>
+      <link>https://xixitalk.ml/blog/2013/06/15/netputweets-proxy/</link>
       <pubDate>Sat, 15 Jun 2013 21:39:29 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/15/netputweets-proxy/</guid>
+      <guid>https://xixitalk.ml/blog/2013/06/15/netputweets-proxy/</guid>
       <description>&lt;p&gt;今天证实了一个猜想：因为奶瓶腿连接twitter API是通过cURL模块，而cURL本身支持proxy，所以在国内可以搭建奶瓶腿，只要加上代理就可以正常使用。代理可以是shadowsocks转换的socks代理，也可以是再通过polipo进一步转化的HTTP代理。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -48,10 +48,10 @@
     
     <item>
       <title>stunnel原理</title>
-      <link>https://xixitalk.github.io/blog/2013/04/08/stunnel-principle/</link>
+      <link>https://xixitalk.ml/blog/2013/04/08/stunnel-principle/</link>
       <pubDate>Mon, 08 Apr 2013 16:31:00 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/04/08/stunnel-principle/</guid>
+      <guid>https://xixitalk.ml/blog/2013/04/08/stunnel-principle/</guid>
       <description>&lt;p&gt;搜索关键词：stunnel proxy socks5 HTTP HTTPS 代理&lt;/p&gt;
 
 &lt;p&gt;stunnel原理如图：&lt;/p&gt;
@@ -61,21 +61,21 @@
     
     <item>
       <title>android上支持HTTP proxy代理的浏览器</title>
-      <link>https://xixitalk.github.io/blog/2013/03/11/android-broswer-with-http-proxy/</link>
+      <link>https://xixitalk.ml/blog/2013/03/11/android-broswer-with-http-proxy/</link>
       <pubDate>Mon, 11 Mar 2013 17:07:00 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/03/11/android-broswer-with-http-proxy/</guid>
-      <description>&lt;p&gt;之前一篇文章讲了在树莓派上搭建HTTP proxy的&lt;a href=&#34;https://xixitalk.github.io/blog/2013/03/02/raspberry-pi-proxy/&#34;&gt;原理&lt;/a&gt;，这样就获得一个HTTP proxy，android上的&lt;a href=&#34;https://play.google.com/store/apps/details?id=org.mariotaku.twidere&#34; target=&#34;_blank&#34;&gt;twidere&lt;/a&gt;和&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.twitter.android&#34; target=&#34;_blank&#34;&gt;twitter&lt;/a&gt;都支持HTTP proxy，可以在设置里进行配置。但是从&lt;a href=&#34;https://play.google.com/store/apps/details?id=org.mariotaku.twidere&#34; target=&#34;_blank&#34;&gt;twidere&lt;/a&gt;或者&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.twitter.android&#34; target=&#34;_blank&#34;&gt;twitter&lt;/a&gt;打开网页又打不开了。这次推荐三个支持HTTP proxy的浏览器。&lt;/p&gt;
+      <guid>https://xixitalk.ml/blog/2013/03/11/android-broswer-with-http-proxy/</guid>
+      <description>&lt;p&gt;之前一篇文章讲了在树莓派上搭建HTTP proxy的&lt;a href=&#34;https://xixitalk.ml/blog/2013/03/02/raspberry-pi-proxy/&#34;&gt;原理&lt;/a&gt;，这样就获得一个HTTP proxy，android上的&lt;a href=&#34;https://play.google.com/store/apps/details?id=org.mariotaku.twidere&#34; target=&#34;_blank&#34;&gt;twidere&lt;/a&gt;和&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.twitter.android&#34; target=&#34;_blank&#34;&gt;twitter&lt;/a&gt;都支持HTTP proxy，可以在设置里进行配置。但是从&lt;a href=&#34;https://play.google.com/store/apps/details?id=org.mariotaku.twidere&#34; target=&#34;_blank&#34;&gt;twidere&lt;/a&gt;或者&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.twitter.android&#34; target=&#34;_blank&#34;&gt;twitter&lt;/a&gt;打开网页又打不开了。这次推荐三个支持HTTP proxy的浏览器。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>利用Raspberry Pi加shadowsocks搭建代理服务</title>
-      <link>https://xixitalk.github.io/blog/2013/03/02/raspberry-pi-proxy/</link>
+      <link>https://xixitalk.ml/blog/2013/03/02/raspberry-pi-proxy/</link>
       <pubDate>Sat, 02 Mar 2013 12:31:00 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/03/02/raspberry-pi-proxy/</guid>
+      <guid>https://xixitalk.ml/blog/2013/03/02/raspberry-pi-proxy/</guid>
       <description>&lt;p&gt;设想：路由器和Raspberry Pi的耗电都非常小，可以常开不关机。而且手机上使用SSH -D、shadowsocks和VPN都不方便，还增加电池消耗。android上的twidere和twitter官方客户端都支持HTTP代理，iOS也方便使用pac代理。HTTP代理虽然没有加密，但是因为都在国内没有通过GFW所以不会触发屏蔽。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>

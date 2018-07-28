@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cryptography on xixitalk&#39;s snippet</title>
-    <link>https://xixitalk.github.io/tags/cryptography/</link>
+    <link>https://xixitalk.ml/tags/cryptography/</link>
     <description>Recent content in Cryptography on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 07 Jun 2013 15:33:05 +0800</lastBuildDate>
     
-	<atom:link href="https://xixitalk.github.io/tags/cryptography/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xixitalk.ml/tags/cryptography/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>数字签名时的私钥加密公钥解密</title>
-      <link>https://xixitalk.github.io/blog/2013/06/07/digest-signature/</link>
+      <link>https://xixitalk.ml/blog/2013/06/07/digest-signature/</link>
       <pubDate>Fri, 07 Jun 2013 15:33:05 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/07/digest-signature/</guid>
+      <guid>https://xixitalk.ml/blog/2013/06/07/digest-signature/</guid>
       <description>&lt;p&gt;疑问：数字签名时的&lt;code&gt;私钥加密 公钥解密&lt;/code&gt;怎么理解？&lt;/p&gt;
 
 &lt;p&gt;前一段时间设计系统启动,为了保障安全使用数字签名进行版本验证，平常的不对称加解密（公钥加密，私钥解密）很容易理解，而数字签名时的&lt;code&gt;私钥加密 公钥解密&lt;/code&gt;是怎么回事呢？&lt;/p&gt;

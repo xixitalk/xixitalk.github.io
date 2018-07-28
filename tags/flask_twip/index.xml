@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Flask_twip on xixitalk&#39;s snippet</title>
-    <link>https://xixitalk.github.io/tags/flask_twip/</link>
+    <link>https://xixitalk.ml/tags/flask_twip/</link>
     <description>Recent content in Flask_twip on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 17 Feb 2013 11:31:00 +0800</lastBuildDate>
     
-	<atom:link href="https://xixitalk.github.io/tags/flask_twip/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xixitalk.ml/tags/flask_twip/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>为flask_twip添加图片代理</title>
-      <link>https://xixitalk.github.io/blog/2013/02/17/flask-twip-proxy/</link>
+      <link>https://xixitalk.ml/blog/2013/02/17/flask-twip-proxy/</link>
       <pubDate>Sun, 17 Feb 2013 11:31:00 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/02/17/flask-twip-proxy/</guid>
+      <guid>https://xixitalk.ml/blog/2013/02/17/flask-twip-proxy/</guid>
       <description>&lt;p&gt;##为flask_twip添加图片代理
 为flask_twip添加图片代理,理论上网页也可以，但网页只抓取第一层。&lt;br /&gt;
 demo参见&lt;a href=&#34;https://xinhuanet.herokuapp.com/twip/getimg&#34; target=&#34;_blank&#34;&gt;https://xinhuanet.herokuapp.com/twip/getimg&lt;/a&gt;&lt;/p&gt;
@@ -26,10 +26,10 @@ demo参见&lt;a href=&#34;https://xinhuanet.herokuapp.com/twip/getimg&#34; targe
     
     <item>
       <title>flask_twip在heroku上搭建教程</title>
-      <link>https://xixitalk.github.io/blog/2012/11/23/flask-twip-on-heroku/</link>
+      <link>https://xixitalk.ml/blog/2012/11/23/flask-twip-on-heroku/</link>
       <pubDate>Fri, 23 Nov 2012 21:01:00 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2012/11/23/flask-twip-on-heroku/</guid>
+      <guid>https://xixitalk.ml/blog/2012/11/23/flask-twip-on-heroku/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/yegle/flask_twip&#34; target=&#34;_blank&#34;&gt;flask_twip&lt;/a&gt;是@&lt;a href=&#34;http://twitter.com/yegle&#34; target=&#34;_blank&#34;&gt;yegle&lt;/a&gt;写的一个可以搭建在&lt;a href=&#34;http://www.heroku.com/&#34; target=&#34;_blank&#34;&gt;heroku&lt;/a&gt;上的一个&lt;a href=&#34;http://code.google.com/p/twip/&#34; target=&#34;_blank&#34;&gt;twip&lt;/a&gt;的port程序。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>

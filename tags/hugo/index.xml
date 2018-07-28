@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on xixitalk&#39;s snippet</title>
-    <link>https://xixitalk.github.io/tags/hugo/</link>
+    <link>https://xixitalk.ml/tags/hugo/</link>
     <description>Recent content in Hugo on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 27 Nov 2017 17:23:59 +0800</lastBuildDate>
     
-	<atom:link href="https://xixitalk.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xixitalk.ml/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>从octopress迁移到hugo</title>
-      <link>https://xixitalk.github.io/blog/2017/11/27/migrate-to-hugo-from-octopress/</link>
+      <link>https://xixitalk.ml/blog/2017/11/27/migrate-to-hugo-from-octopress/</link>
       <pubDate>Mon, 27 Nov 2017 17:23:59 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2017/11/27/migrate-to-hugo-from-octopress/</guid>
+      <guid>https://xixitalk.ml/blog/2017/11/27/migrate-to-hugo-from-octopress/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://octopress.org/&#34; target=&#34;_blank&#34;&gt;octopress&lt;/a&gt;编译速度很慢，2.0版本依赖老的ruby版本，环境搭建复杂，3.0版本几年来还没有正式发布，所以本blog切换到了&lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;，下面是迁移记录。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>

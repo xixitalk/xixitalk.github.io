@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Flickr on xixitalk&#39;s snippet</title>
-    <link>https://xixitalk.github.io/tags/flickr/</link>
+    <link>https://xixitalk.ml/tags/flickr/</link>
     <description>Recent content in Flickr on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 19 Jun 2013 10:17:24 +0800</lastBuildDate>
     
-	<atom:link href="https://xixitalk.github.io/tags/flickr/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xixitalk.ml/tags/flickr/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>octopress里插入flickr的图片</title>
-      <link>https://xixitalk.github.io/blog/2013/06/19/Insert-a-Image-From-Flickr-in-Octopress/</link>
+      <link>https://xixitalk.ml/blog/2013/06/19/Insert-a-Image-From-Flickr-in-Octopress/</link>
       <pubDate>Wed, 19 Jun 2013 10:17:24 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/19/Insert-a-Image-From-Flickr-in-Octopress/</guid>
+      <guid>https://xixitalk.ml/blog/2013/06/19/Insert-a-Image-From-Flickr-in-Octopress/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.flickr.com&#34; target=&#34;_blank&#34;&gt;flickr&lt;/a&gt;更新之后，免费1T空间，同时可以上传质量很好的图片。&lt;a href=&#34;http://www.instagram.com&#34; target=&#34;_blank&#34;&gt;instagram&lt;/a&gt;的图片质量太差了。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>

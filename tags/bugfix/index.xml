@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bugfix on xixitalk&#39;s snippet</title>
-    <link>https://xixitalk.github.io/tags/bugfix/</link>
+    <link>https://xixitalk.ml/tags/bugfix/</link>
     <description>Recent content in Bugfix on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 09 Jul 2016 14:49:35 +0800</lastBuildDate>
     
-	<atom:link href="https://xixitalk.github.io/tags/bugfix/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xixitalk.ml/tags/bugfix/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>函数栈破坏检查</title>
-      <link>https://xixitalk.github.io/blog/2016/07/09/func-stack-check/</link>
+      <link>https://xixitalk.ml/blog/2016/07/09/func-stack-check/</link>
       <pubDate>Sat, 09 Jul 2016 14:49:35 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/07/09/func-stack-check/</guid>
+      <guid>https://xixitalk.ml/blog/2016/07/09/func-stack-check/</guid>
       <description>&lt;p&gt;函数栈破坏检查 平台 ARM linux，编译器GCC&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>malloc封装检查越界</title>
-      <link>https://xixitalk.github.io/blog/2016/07/09/malloc-wrap/</link>
+      <link>https://xixitalk.ml/blog/2016/07/09/malloc-wrap/</link>
       <pubDate>Sat, 09 Jul 2016 13:32:35 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/07/09/malloc-wrap/</guid>
+      <guid>https://xixitalk.ml/blog/2016/07/09/malloc-wrap/</guid>
       <description>&lt;p&gt;malloc封装检查越界&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -35,10 +35,10 @@
     
     <item>
       <title>UINT32引起的死循环</title>
-      <link>https://xixitalk.github.io/blog/2016/07/09/dead-loop-UINT32/</link>
+      <link>https://xixitalk.ml/blog/2016/07/09/dead-loop-UINT32/</link>
       <pubDate>Sat, 09 Jul 2016 10:02:35 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/07/09/dead-loop-UINT32/</guid>
+      <guid>https://xixitalk.ml/blog/2016/07/09/dead-loop-UINT32/</guid>
       <description>&lt;p&gt;UINT32 引起的死循环&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>

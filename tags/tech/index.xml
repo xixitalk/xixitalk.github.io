@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tech on xixitalk&#39;s snippet</title>
-    <link>https://xixitalk.github.io/tags/tech/</link>
+    <link>https://xixitalk.ml/tags/tech/</link>
     <description>Recent content in Tech on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 09 Jul 2018 20:07:29 +0800</lastBuildDate>
     
-	<atom:link href="https://xixitalk.github.io/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xixitalk.ml/tags/tech/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>动态模块加载清除icache</title>
-      <link>https://xixitalk.github.io/blog/2018/07/09/clean-icache/</link>
+      <link>https://xixitalk.ml/blog/2018/07/09/clean-icache/</link>
       <pubDate>Mon, 09 Jul 2018 20:07:29 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2018/07/09/clean-icache/</guid>
+      <guid>https://xixitalk.ml/blog/2018/07/09/clean-icache/</guid>
       <description>&lt;p&gt;产品是嵌入式RTOS系统，一个第三方软件自己实现了程序动态加载，问题是：程序加载后跳转执行，有时候正常，有时候导致系统死机，死机原因是未定义指令异常（ARM UND）。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>libgcc是什么</title>
-      <link>https://xixitalk.github.io/blog/2018/05/07/what-is-libgcc/</link>
+      <link>https://xixitalk.ml/blog/2018/05/07/what-is-libgcc/</link>
       <pubDate>Mon, 07 May 2018 11:34:13 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2018/05/07/what-is-libgcc/</guid>
+      <guid>https://xixitalk.ml/blog/2018/05/07/what-is-libgcc/</guid>
       <description>&lt;p&gt;一个产品flash空间非常小，只有16MB，所以不必要的东西都要裁剪掉。一次有个研发问我：发现有个程序如果缺失&lt;code&gt;libgcc_s.so.1&lt;/code&gt;，pthread_join()就会运行不正常，但是无论是&lt;code&gt;ldd&lt;/code&gt;还是&lt;code&gt;readelf -d&lt;/code&gt;都没有发现依赖&lt;code&gt;libgcc_s.so.1&lt;/code&gt;。搜索得知PC linux上也大量类似&lt;code&gt;libgcc_s.so.1 must be installed for pthread_cancel to work&lt;/code&gt;的问题。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -35,10 +35,10 @@
     
     <item>
       <title>linux信号回调栈空间探究</title>
-      <link>https://xixitalk.github.io/blog/2017/12/20/linux-signal-handler-stack/</link>
+      <link>https://xixitalk.ml/blog/2017/12/20/linux-signal-handler-stack/</link>
       <pubDate>Wed, 20 Dec 2017 14:13:53 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2017/12/20/linux-signal-handler-stack/</guid>
+      <guid>https://xixitalk.ml/blog/2017/12/20/linux-signal-handler-stack/</guid>
       <description>&lt;p&gt;Linux上通过signal()或者sigaction()可以自定义注册一个信号的信号回调，那么信号回调是执行的栈空间在哪里呢？以下代码以内核3.4.x  ARM架构为例。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -46,10 +46,10 @@
     
     <item>
       <title>便于代码阅读清理内核代码</title>
-      <link>https://xixitalk.github.io/blog/2017/12/03/clean-linux-kernel-file/</link>
+      <link>https://xixitalk.ml/blog/2017/12/03/clean-linux-kernel-file/</link>
       <pubDate>Sun, 03 Dec 2017 14:42:05 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2017/12/03/clean-linux-kernel-file/</guid>
+      <guid>https://xixitalk.ml/blog/2017/12/03/clean-linux-kernel-file/</guid>
       <description>&lt;p&gt;Linux代码庞大，代码阅读时候发现无关代码太多，清理一下无关代码便于阅读（清理的标准是某产品内核编译没有用到的文件）。&lt;/p&gt;
 
 &lt;p&gt;原理：版本编译用到的文件会更新文件的atime，atime没有更新的文件就是编译无关文件。&lt;/p&gt;
@@ -59,10 +59,10 @@
     
     <item>
       <title>从octopress迁移到hugo</title>
-      <link>https://xixitalk.github.io/blog/2017/11/27/migrate-to-hugo-from-octopress/</link>
+      <link>https://xixitalk.ml/blog/2017/11/27/migrate-to-hugo-from-octopress/</link>
       <pubDate>Mon, 27 Nov 2017 17:23:59 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2017/11/27/migrate-to-hugo-from-octopress/</guid>
+      <guid>https://xixitalk.ml/blog/2017/11/27/migrate-to-hugo-from-octopress/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://octopress.org/&#34; target=&#34;_blank&#34;&gt;octopress&lt;/a&gt;编译速度很慢，2.0版本依赖老的ruby版本，环境搭建复杂，3.0版本几年来还没有正式发布，所以本blog切换到了&lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;，下面是迁移记录。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -70,10 +70,10 @@
     
     <item>
       <title>用frp代替stunnel进行服务共享和安全连接</title>
-      <link>https://xixitalk.github.io/blog/2017/11/13/use-frp-instead-of-stunnel/</link>
+      <link>https://xixitalk.ml/blog/2017/11/13/use-frp-instead-of-stunnel/</link>
       <pubDate>Mon, 13 Nov 2017 16:14:36 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2017/11/13/use-frp-instead-of-stunnel/</guid>
+      <guid>https://xixitalk.ml/blog/2017/11/13/use-frp-instead-of-stunnel/</guid>
       <description>&lt;p&gt;需求：家里内网的服务，办公室内网可以访问。&lt;/p&gt;
 
 &lt;h4 id=&#34;环境说明&#34;&gt;环境说明&lt;/h4&gt;
@@ -85,10 +85,10 @@
     
     <item>
       <title>内网穿透：从家里连接办公室电脑</title>
-      <link>https://xixitalk.github.io/blog/2017/11/13/link-office-from-home-via-frp/</link>
+      <link>https://xixitalk.ml/blog/2017/11/13/link-office-from-home-via-frp/</link>
       <pubDate>Mon, 13 Nov 2017 09:11:13 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2017/11/13/link-office-from-home-via-frp/</guid>
+      <guid>https://xixitalk.ml/blog/2017/11/13/link-office-from-home-via-frp/</guid>
       <description>&lt;p&gt;环境说明: 办公室电脑是 10.40.xx.xx这样的内网IP，并且办公环境要通过HTTP代理才能访问外网。我没有公网IP的VPS，但是家里路由器是有公网IP的，可以借路由器的公网IP进行内网穿透。&lt;/p&gt;
 
 &lt;h4 id=&#34;环境&#34;&gt;环境&lt;/h4&gt;
@@ -102,10 +102,10 @@
     
     <item>
       <title>getaddrinfo 返回Name or service not known错误</title>
-      <link>https://xixitalk.github.io/blog/2017/09/19/getaddrinfo-error/</link>
+      <link>https://xixitalk.ml/blog/2017/09/19/getaddrinfo-error/</link>
       <pubDate>Tue, 19 Sep 2017 14:23:57 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2017/09/19/getaddrinfo-error/</guid>
+      <guid>https://xixitalk.ml/blog/2017/09/19/getaddrinfo-error/</guid>
       <description>&lt;p&gt;关键词：glibc  getaddrinfo&lt;/p&gt;
 
 &lt;p&gt;同事反馈说程序调用&lt;code&gt;getaddrinfo&lt;/code&gt;函数出错（arm linux平台），glibc是2.20，我想glibc不会这么弱，这么标准的函数都有问题。&lt;/p&gt;
@@ -115,10 +115,10 @@
     
     <item>
       <title>树莓派3上编译haproxy</title>
-      <link>https://xixitalk.github.io/blog/2017/09/03/compile-haproxy-on-raspberry3/</link>
+      <link>https://xixitalk.ml/blog/2017/09/03/compile-haproxy-on-raspberry3/</link>
       <pubDate>Sun, 03 Sep 2017 06:01:08 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2017/09/03/compile-haproxy-on-raspberry3/</guid>
+      <guid>https://xixitalk.ml/blog/2017/09/03/compile-haproxy-on-raspberry3/</guid>
       <description>&lt;p&gt;最近发现树莓派上haproxy有点问题，Google Play下载有些不正常。所以想更新编译haproxy。raspbian软件仓库的haproxy的版本比较低，所以直接下载haproxy源代码编译。更新过程记录下来。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -126,10 +126,10 @@
     
     <item>
       <title>华硕路由器外接硬盘格式化成什么文件系统最好</title>
-      <link>https://xixitalk.github.io/blog/2016/11/12/How-to-Format-Usb-Drive-for-asus-router/</link>
+      <link>https://xixitalk.ml/blog/2016/11/12/How-to-Format-Usb-Drive-for-asus-router/</link>
       <pubDate>Sat, 12 Nov 2016 15:33:41 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/11/12/How-to-Format-Usb-Drive-for-asus-router/</guid>
+      <guid>https://xixitalk.ml/blog/2016/11/12/How-to-Format-Usb-Drive-for-asus-router/</guid>
       <description>&lt;p&gt;关键词：华硕 AC66U AC68U 外接硬盘 文件系统 EXT4 EXT3 NTFS FAT32&lt;/p&gt;
 
 &lt;p&gt;我有一台华硕AC66U，外接了一块2.5吋移动硬盘。不知道格式化成什么格式最好？硬盘本来是EXT4格式的，插上发现没有自动挂载，搜索发现，AC66U建议用&lt;strong&gt;EXT3&lt;/strong&gt;格式，而AC68U建议用&lt;strong&gt;EXT4&lt;/strong&gt;格式。果然格式成EXT3后，插上AC66U后&lt;strong&gt;自动挂载&lt;/strong&gt;了。其他华硕机器未验证。&lt;/p&gt;
@@ -139,10 +139,10 @@
     
     <item>
       <title>pkcs11-helper编译</title>
-      <link>https://xixitalk.github.io/blog/2016/11/01/pkcs11-helper-build/</link>
+      <link>https://xixitalk.ml/blog/2016/11/01/pkcs11-helper-build/</link>
       <pubDate>Tue, 01 Nov 2016 18:37:08 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/11/01/pkcs11-helper-build/</guid>
+      <guid>https://xixitalk.ml/blog/2016/11/01/pkcs11-helper-build/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/OpenSC/pkcs11-helper/releases&#34; target=&#34;_blank&#34;&gt;pkcs11-helper&lt;/a&gt;也真是的，软件包里&lt;code&gt;INSTALL&lt;/code&gt;里说用&lt;code&gt;./configure&lt;/code&gt;生成&lt;code&gt;Makefile&lt;/code&gt;，但是软件包还没有&lt;code&gt;configure&lt;/code&gt;文件，需要&lt;code&gt;autoreconf&lt;/code&gt;生成&lt;code&gt;configure&lt;/code&gt;文件。妈蛋，&lt;code&gt;INSTALL&lt;/code&gt;多写一句&lt;code&gt;autoreconf -ivf&lt;/code&gt;会死吗？&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -150,10 +150,10 @@
     
     <item>
       <title>stunnel verify选项配置</title>
-      <link>https://xixitalk.github.io/blog/2016/10/18/stunnel-verify-config/</link>
+      <link>https://xixitalk.ml/blog/2016/10/18/stunnel-verify-config/</link>
       <pubDate>Tue, 18 Oct 2016 09:12:59 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/10/18/stunnel-verify-config/</guid>
+      <guid>https://xixitalk.ml/blog/2016/10/18/stunnel-verify-config/</guid>
       <description>&lt;p&gt;verify配置认证方式，取值0 1 2 3 4。&lt;/p&gt;
 
 &lt;p&gt;0 - request and ignore peer cert&lt;br /&gt;
@@ -167,10 +167,10 @@
     
     <item>
       <title>stunnel双向证书认证</title>
-      <link>https://xixitalk.github.io/blog/2016/10/13/Stunnel-With-Bilateral-Authentication/</link>
+      <link>https://xixitalk.ml/blog/2016/10/13/Stunnel-With-Bilateral-Authentication/</link>
       <pubDate>Thu, 13 Oct 2016 20:09:49 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/10/13/Stunnel-With-Bilateral-Authentication/</guid>
+      <guid>https://xixitalk.ml/blog/2016/10/13/Stunnel-With-Bilateral-Authentication/</guid>
       <description>&lt;p&gt;stunnel 双向证书认证：&lt;strong&gt;防止没授权的客户端连接stunnel服务器，防止客户端连接假的服务器&lt;/strong&gt;。&lt;/p&gt;
 
 &lt;p&gt;stunnel官方的&lt;a href=&#34;https://www.stunnel.org/auth.html&#34; target=&#34;_blank&#34;&gt;说明&lt;/a&gt;是：（客户端）检查服务器端证书是为了防止&lt;strong&gt;中间人攻击&lt;/strong&gt;；（服务器端）检查客户端证书是为了严格控制客户端的访问。&lt;/p&gt;
@@ -185,10 +185,10 @@
     
     <item>
       <title>DNS协议学习笔记之DNS查询</title>
-      <link>https://xixitalk.github.io/blog/2016/10/10/dns-protocol/</link>
+      <link>https://xixitalk.ml/blog/2016/10/10/dns-protocol/</link>
       <pubDate>Mon, 10 Oct 2016 19:00:54 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/10/10/dns-protocol/</guid>
+      <guid>https://xixitalk.ml/blog/2016/10/10/dns-protocol/</guid>
       <description>&lt;p&gt;DNS学习概要：&lt;/p&gt;
 
 &lt;ol&gt;
@@ -203,10 +203,10 @@
     
     <item>
       <title>TCP/IP之IP包头部</title>
-      <link>https://xixitalk.github.io/blog/2016/10/10/ipheader-of-tcpip/</link>
+      <link>https://xixitalk.ml/blog/2016/10/10/ipheader-of-tcpip/</link>
       <pubDate>Mon, 10 Oct 2016 17:03:51 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/10/10/ipheader-of-tcpip/</guid>
+      <guid>https://xixitalk.ml/blog/2016/10/10/ipheader-of-tcpip/</guid>
       <description>&lt;p&gt;TCP/IP之IP包头部&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -214,10 +214,10 @@
     
     <item>
       <title>TCP/IP之以太网帧</title>
-      <link>https://xixitalk.github.io/blog/2016/10/10/Ethernet-of-tcpip/</link>
+      <link>https://xixitalk.ml/blog/2016/10/10/Ethernet-of-tcpip/</link>
       <pubDate>Mon, 10 Oct 2016 10:15:46 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/10/10/Ethernet-of-tcpip/</guid>
+      <guid>https://xixitalk.ml/blog/2016/10/10/Ethernet-of-tcpip/</guid>
       <description>&lt;h3 id=&#34;ethernet-ii-以太网v2帧&#34;&gt;Ethernet II(以太网V2帧)&lt;/h3&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -225,10 +225,10 @@
     
     <item>
       <title>DNS在HTTP网络交互流程中的位置</title>
-      <link>https://xixitalk.github.io/blog/2016/10/09/http-connection/</link>
+      <link>https://xixitalk.ml/blog/2016/10/09/http-connection/</link>
       <pubDate>Sun, 09 Oct 2016 08:55:37 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/10/09/http-connection/</guid>
+      <guid>https://xixitalk.ml/blog/2016/10/09/http-connection/</guid>
       <description>&lt;p&gt;DNS在HTTP网络交互流程中的位置&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -236,10 +236,10 @@
     
     <item>
       <title>我的AStyle配置选项</title>
-      <link>https://xixitalk.github.io/blog/2016/07/11/my-AStyle-config/</link>
+      <link>https://xixitalk.ml/blog/2016/07/11/my-AStyle-config/</link>
       <pubDate>Mon, 11 Jul 2016 18:35:57 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/07/11/my-AStyle-config/</guid>
+      <guid>https://xixitalk.ml/blog/2016/07/11/my-AStyle-config/</guid>
       <description>&lt;p&gt;我的AStyle代码格式工具的选项：AStyle.exe -A1 -C -S -K -Y -f -s4 -p -U -o -n main.c&lt;/p&gt;
 
 &lt;p&gt;在&lt;code&gt;notepad++&lt;/code&gt;里添加：&lt;code&gt;运行(R)--运行(R)&lt;/code&gt; 选择AStyle.exe，选项输入&lt;code&gt;-A1 -C -S -K -Y -f -s4 -p -U -o -n &amp;quot;$(FULL_CURRENT_PATH)&amp;quot;&lt;/code&gt;，然后点击&lt;code&gt;保存&lt;/code&gt;，这样就保存在运行菜单里了。每次使用从&lt;code&gt;运行(R)&lt;/code&gt;点击即可。&lt;/p&gt;
@@ -249,10 +249,10 @@
     
     <item>
       <title>UINT32引起的死循环</title>
-      <link>https://xixitalk.github.io/blog/2016/07/09/dead-loop-UINT32/</link>
+      <link>https://xixitalk.ml/blog/2016/07/09/dead-loop-UINT32/</link>
       <pubDate>Sat, 09 Jul 2016 10:02:35 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/07/09/dead-loop-UINT32/</guid>
+      <guid>https://xixitalk.ml/blog/2016/07/09/dead-loop-UINT32/</guid>
       <description>&lt;p&gt;UINT32 引起的死循环&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -260,10 +260,10 @@
     
     <item>
       <title>免费申请S/MIME证书</title>
-      <link>https://xixitalk.github.io/blog/2014/06/21/Free-SMIME-Certificate-Key/</link>
+      <link>https://xixitalk.ml/blog/2014/06/21/Free-SMIME-Certificate-Key/</link>
       <pubDate>Sat, 21 Jun 2014 00:05:11 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2014/06/21/Free-SMIME-Certificate-Key/</guid>
+      <guid>https://xixitalk.ml/blog/2014/06/21/Free-SMIME-Certificate-Key/</guid>
       <description>&lt;h2 id=&#34;申请证书&#34;&gt;申请证书&lt;/h2&gt;
 
 &lt;p&gt;从这里可以申请到免费的S/MIME 邮件证书：&lt;a href=&#34;http://www.instantssl.com/ssl-certificate-products/free-email-certificate.html&#34; target=&#34;_blank&#34;&gt;http://www.instantssl.com/ssl-certificate-products/free-email-certificate.html&lt;/a&gt;，
@@ -291,10 +291,10 @@
     
     <item>
       <title>curl下载断点传续</title>
-      <link>https://xixitalk.github.io/blog/2014/04/12/curl-continue/</link>
+      <link>https://xixitalk.ml/blog/2014/04/12/curl-continue/</link>
       <pubDate>Sat, 12 Apr 2014 17:22:17 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2014/04/12/curl-continue/</guid>
+      <guid>https://xixitalk.ml/blog/2014/04/12/curl-continue/</guid>
       <description>&lt;h3 id=&#34;curl下载断点传续&#34;&gt;curl下载断点传续&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;curl -C offset -O http://google.com/p4.mp4 
@@ -312,10 +312,10 @@
     
     <item>
       <title>twitter-python BadStatusLine错误</title>
-      <link>https://xixitalk.github.io/blog/2014/04/06/twitter-python-badstatusline/</link>
+      <link>https://xixitalk.ml/blog/2014/04/06/twitter-python-badstatusline/</link>
       <pubDate>Sun, 06 Apr 2014 20:20:25 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2014/04/06/twitter-python-badstatusline/</guid>
+      <guid>https://xixitalk.ml/blog/2014/04/06/twitter-python-badstatusline/</guid>
       <description>&lt;p&gt;事情是这样的：我用&lt;a href=&#34;https://github.com/bear/python-twitter&#34; target=&#34;_blank&#34;&gt;twitter-python&lt;/a&gt;在本地运行， 抓取一个推号的homeline， 抓取后sleep两分钟再抓取， 不停的循环｡从昨天早上开始， 程序出现如下错误， 且每次都是这个错误｡获得推友收藏列表和fo人的api返回都是正常的，就是REST的api出这种错误。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -323,10 +323,10 @@
     
     <item>
       <title>python里用smtplib发邮件使用代理</title>
-      <link>https://xixitalk.github.io/blog/2014/04/04/smtplib-with-proxy/</link>
+      <link>https://xixitalk.ml/blog/2014/04/04/smtplib-with-proxy/</link>
       <pubDate>Fri, 04 Apr 2014 09:51:49 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2014/04/04/smtplib-with-proxy/</guid>
+      <guid>https://xixitalk.ml/blog/2014/04/04/smtplib-with-proxy/</guid>
       <description>&lt;p&gt;关键词：smtplib mail proxy&lt;/p&gt;
 
 &lt;p&gt;树莓派上一个cron python程序直接用smtplib发送gmail邮件昨天出现问题了，错误是：socket.error: [Errno 97] Address family not supported by protocol，之前都是好好的，我用的smtp.gmail.com，端口是587。&lt;/p&gt;
@@ -338,10 +338,10 @@
     
     <item>
       <title>搭建局域网跨路由网络</title>
-      <link>https://xixitalk.github.io/blog/2013/06/22/routing-cross/</link>
+      <link>https://xixitalk.ml/blog/2013/06/22/routing-cross/</link>
       <pubDate>Sat, 22 Jun 2013 09:34:57 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/22/routing-cross/</guid>
+      <guid>https://xixitalk.ml/blog/2013/06/22/routing-cross/</guid>
       <description>&lt;p&gt;场景：两个路由器每个都组建一个局域网，每个局域网里的电脑想访问另一个局域网的电脑。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -349,10 +349,10 @@
     
     <item>
       <title>python从字符串用readlines读取操作</title>
-      <link>https://xixitalk.github.io/blog/2013/06/13/python-readlines-from-string/</link>
+      <link>https://xixitalk.ml/blog/2013/06/13/python-readlines-from-string/</link>
       <pubDate>Thu, 13 Jun 2013 09:57:17 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/13/python-readlines-from-string/</guid>
+      <guid>https://xixitalk.ml/blog/2013/06/13/python-readlines-from-string/</guid>
       <description>&lt;p&gt;场景：用&lt;a href=&#34;http://curl.haxx.se/&#34; target=&#34;_blank&#34;&gt;cURL&lt;/a&gt;命令POST了一个文本文件到web服务器，想在服务器端对这个文件进行readlines操作&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -360,10 +360,10 @@
     
     <item>
       <title>数字签名时的私钥加密公钥解密</title>
-      <link>https://xixitalk.github.io/blog/2013/06/07/digest-signature/</link>
+      <link>https://xixitalk.ml/blog/2013/06/07/digest-signature/</link>
       <pubDate>Fri, 07 Jun 2013 15:33:05 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/07/digest-signature/</guid>
+      <guid>https://xixitalk.ml/blog/2013/06/07/digest-signature/</guid>
       <description>&lt;p&gt;疑问：数字签名时的&lt;code&gt;私钥加密 公钥解密&lt;/code&gt;怎么理解？&lt;/p&gt;
 
 &lt;p&gt;前一段时间设计系统启动,为了保障安全使用数字签名进行版本验证，平常的不对称加解密（公钥加密，私钥解密）很容易理解，而数字签名时的&lt;code&gt;私钥加密 公钥解密&lt;/code&gt;是怎么回事呢？&lt;/p&gt;
@@ -373,10 +373,10 @@
     
     <item>
       <title>反对『中医』理由汇集</title>
-      <link>https://xixitalk.github.io/blog/2013/06/06/Anti-Traditional-Chinese-medicine/</link>
+      <link>https://xixitalk.ml/blog/2013/06/06/Anti-Traditional-Chinese-medicine/</link>
       <pubDate>Thu, 06 Jun 2013 09:59:58 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/06/Anti-Traditional-Chinese-medicine/</guid>
+      <guid>https://xixitalk.ml/blog/2013/06/06/Anti-Traditional-Chinese-medicine/</guid>
       <description>&lt;h3 id=&#34;中药制剂是大分子-容易造成肾衰&#34;&gt;中药制剂是大分子，容易造成肾衰&lt;/h3&gt;
 
 &lt;p&gt;中药制剂是大分子，输液进入血液循环系统，造成肾衰。
