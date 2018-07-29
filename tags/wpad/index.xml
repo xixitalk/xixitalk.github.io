@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wpad on xixitalk&#39;s snippet</title>
-    <link>https://xixitalk.ml/tags/wpad/</link>
+    <link>https://xixitalk.top/tags/wpad/</link>
     <description>Recent content in Wpad on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 19 Jun 2013 14:34:04 +0800</lastBuildDate>
     
-	<atom:link href="https://xixitalk.ml/tags/wpad/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xixitalk.top/tags/wpad/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Dnsmasq上分发WPAD</title>
-      <link>https://xixitalk.ml/blog/2013/06/19/WPAD-with-DNS-on-Dnsmasq/</link>
+      <link>https://xixitalk.top/blog/2013/06/19/WPAD-with-DNS-on-Dnsmasq/</link>
       <pubDate>Wed, 19 Jun 2013 14:34:04 +0800</pubDate>
       
-      <guid>https://xixitalk.ml/blog/2013/06/19/WPAD-with-DNS-on-Dnsmasq/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/19/WPAD-with-DNS-on-Dnsmasq/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Web_Proxy_Autodiscovery_Protocol&#34; target=&#34;_blank&#34;&gt;WPAD&lt;/a&gt;全称是Web Proxy Auto-Discovery，可以通过DHCP或者DNS进行代理分发，这样局域网里客户端连接上后自动进行代理。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.thekelleys.org.uk/dnsmasq/doc.html&#34; target=&#34;_blank&#34;&gt;dnsmasq&lt;/a&gt;为一个轻量的DNS和DHCP服务器。dnsmasq.conf配置说明&lt;a href=&#34;http://www.thekelleys.org.uk/dnsmasq/docs/dnsmasq.conf.example&#34; target=&#34;_blank&#34;&gt;dnsmasq.conf.example&lt;/a&gt;。&lt;/p&gt;

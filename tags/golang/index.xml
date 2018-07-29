@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Golang on xixitalk&#39;s snippet</title>
-    <link>https://xixitalk.ml/tags/golang/</link>
+    <link>https://xixitalk.top/tags/golang/</link>
     <description>Recent content in Golang on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 17 Sep 2016 19:42:13 +0800</lastBuildDate>
     
-	<atom:link href="https://xixitalk.ml/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xixitalk.top/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>树莓派go语言编译器安装配置</title>
-      <link>https://xixitalk.ml/blog/2016/09/17/raspbian-golang-install/</link>
+      <link>https://xixitalk.top/blog/2016/09/17/raspbian-golang-install/</link>
       <pubDate>Sat, 17 Sep 2016 19:42:13 +0800</pubDate>
       
-      <guid>https://xixitalk.ml/blog/2016/09/17/raspbian-golang-install/</guid>
+      <guid>https://xixitalk.top/blog/2016/09/17/raspbian-golang-install/</guid>
       <description>&lt;p&gt;关键词：树莓派 go语言编译器安装 raspbian golang install&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>Raspberry Pi上安装Go lang并编译cow proxy</title>
-      <link>https://xixitalk.ml/blog/2013/06/14/go-lang-for-raspberrypi/</link>
+      <link>https://xixitalk.top/blog/2013/06/14/go-lang-for-raspberrypi/</link>
       <pubDate>Fri, 14 Jun 2013 11:48:41 +0800</pubDate>
       
-      <guid>https://xixitalk.ml/blog/2013/06/14/go-lang-for-raspberrypi/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/14/go-lang-for-raspberrypi/</guid>
       <description>&lt;p&gt;【golang和cow都提供ARM版本了 2017.11.28 更新，文档更新了一下】&lt;/p&gt;
 
 &lt;h3 id=&#34;安装go语言&#34;&gt;安装go语言&lt;/h3&gt;

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Raspbian on xixitalk&#39;s snippet</title>
-    <link>https://xixitalk.ml/tags/raspbian/</link>
+    <link>https://xixitalk.top/tags/raspbian/</link>
     <description>Recent content in Raspbian on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 27 May 2018 17:19:42 +0800</lastBuildDate>
     
-	<atom:link href="https://xixitalk.ml/tags/raspbian/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xixitalk.top/tags/raspbian/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>安装pi-hole</title>
-      <link>https://xixitalk.ml/blog/2018/05/27/install-pi-hole/</link>
+      <link>https://xixitalk.top/blog/2018/05/27/install-pi-hole/</link>
       <pubDate>Sun, 27 May 2018 17:19:42 +0800</pubDate>
       
-      <guid>https://xixitalk.ml/blog/2018/05/27/install-pi-hole/</guid>
+      <guid>https://xixitalk.top/blog/2018/05/27/install-pi-hole/</guid>
       <description>&lt;p&gt;pi-hole是通过DNS来拦截网页广告服务，突出特点是有个&lt;strong&gt;好看的数据管理/数据查询/数据分析界面&lt;/strong&gt;。它是个组合套件：包括pi-hole admin网页管理（php网页）、dnsmasq、php5、lighttpd、sqlite、curl等一起搭建一个拦截广告的DNS服务，DNS服务是通过dnsmasq提供的。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>在树莓派上安装SigmaVPN</title>
-      <link>https://xixitalk.ml/blog/2016/05/07/Install-SigmaVPN-on-Raspbian/</link>
+      <link>https://xixitalk.top/blog/2016/05/07/Install-SigmaVPN-on-Raspbian/</link>
       <pubDate>Sat, 07 May 2016 20:27:44 +0800</pubDate>
       
-      <guid>https://xixitalk.ml/blog/2016/05/07/Install-SigmaVPN-on-Raspbian/</guid>
+      <guid>https://xixitalk.top/blog/2016/05/07/Install-SigmaVPN-on-Raspbian/</guid>
       <description>&lt;p&gt;Install SigmaVPN on Raspbian&lt;br /&gt;
 在树莓派上安装SigmaVPN&lt;/p&gt;
 
