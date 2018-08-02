@@ -41,14 +41,6 @@
   
   <meta name="generator" content="Hugo 0.31" />
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-6856248067952768",
-    enable_page_level_ads: true
-  });
-</script>
-
   
   
 <script>
@@ -156,28 +148,29 @@ ga('send', 'pageview');
 <p>理论分析：ARM的icache和dcache是分开的，模块再次加载是内存填充操作，只更新了dcache，icache还是之前执行的指令，这样与内存（DDR）的程序指令不一致了。</p>
 
 <p>linux内核的ko模块加载也有类似操作，见<code>kernel/module.c</code>里<code>flush_module_icache</code>函数。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">void</span> flush_module_icache(<span style="color:#fff;font-weight:bold">const</span> <span style="color:#fff;font-weight:bold">struct</span> module *mod)
-{
-	mm_segment_t old_fs;
+<div class="highlight" style="background: #002B36"><pre style="line-height: 125%"><code class="language-c" data-lang="c"><span></span><span style="color: #719e07">static</span> <span style="color: #DC322F">void</span> <span style="color: #268BD2">flush_module_icache</span><span style="color: #93A1A1">(</span><span style="color: #719e07">const</span> <span style="color: #719e07">struct</span> <span style="color: #93A1A1">module</span> <span style="color: #719e07">*</span><span style="color: #93A1A1">mod)</span>
+<span style="color: #93A1A1">{</span>
+	<span style="color: #93A1A1">mm_segment_t</span> <span style="color: #93A1A1">old_fs;</span>
 
-	<span style="color:#007f7f">/* flush the icache in correct context */</span>
-	old_fs = get_fs();
-	set_fs(KERNEL_DS);
+	<span style="color: #586E75">/* flush the icache in correct context */</span>
+	<span style="color: #93A1A1">old_fs</span> <span style="color: #719e07">=</span> <span style="color: #93A1A1">get_fs();</span>
+	<span style="color: #93A1A1">set_fs(KERNEL_DS);</span>
 
-	<span style="color:#007f7f">/*
-</span><span style="color:#007f7f">	 * Flush the instruction cache, since we&#39;ve played with text.
-</span><span style="color:#007f7f">	 * Do it before processing of module parameters, so the module
-</span><span style="color:#007f7f">	 * can provide parameter accessor functions of its own.
-</span><span style="color:#007f7f">	 */</span>
-	<span style="color:#fff;font-weight:bold">if</span> (mod-&gt;module_init)
-		flush_icache_range((<span style="color:#fff;font-weight:bold">unsigned</span> <span style="color:#fff;font-weight:bold">long</span>)mod-&gt;module_init,
-				   (<span style="color:#fff;font-weight:bold">unsigned</span> <span style="color:#fff;font-weight:bold">long</span>)mod-&gt;module_init
-				   + mod-&gt;init_size);
-	flush_icache_range((<span style="color:#fff;font-weight:bold">unsigned</span> <span style="color:#fff;font-weight:bold">long</span>)mod-&gt;module_core,
-			   (<span style="color:#fff;font-weight:bold">unsigned</span> <span style="color:#fff;font-weight:bold">long</span>)mod-&gt;module_core + mod-&gt;core_size);
+	<span style="color: #586E75">/*</span>
+<span style="color: #586E75">	 * Flush the instruction cache, since we&#39;ve played with text.</span>
+<span style="color: #586E75">	 * Do it before processing of module parameters, so the module</span>
+<span style="color: #586E75">	 * can provide parameter accessor functions of its own.</span>
+<span style="color: #586E75">	 */</span>
+	<span style="color: #719e07">if</span> <span style="color: #93A1A1">(mod</span><span style="color: #719e07">-&gt;</span><span style="color: #93A1A1">module_init)</span>
+		<span style="color: #93A1A1">flush_icache_range((</span><span style="color: #DC322F">unsigned</span> <span style="color: #DC322F">long</span><span style="color: #93A1A1">)mod</span><span style="color: #719e07">-&gt;</span><span style="color: #93A1A1">module_init,</span>
+				   <span style="color: #93A1A1">(</span><span style="color: #DC322F">unsigned</span> <span style="color: #DC322F">long</span><span style="color: #93A1A1">)mod</span><span style="color: #719e07">-&gt;</span><span style="color: #93A1A1">module_init</span>
+				   <span style="color: #719e07">+</span> <span style="color: #93A1A1">mod</span><span style="color: #719e07">-&gt;</span><span style="color: #93A1A1">init_size);</span>
+	<span style="color: #93A1A1">flush_icache_range((</span><span style="color: #DC322F">unsigned</span> <span style="color: #DC322F">long</span><span style="color: #93A1A1">)mod</span><span style="color: #719e07">-&gt;</span><span style="color: #93A1A1">module_core,</span>
+			   <span style="color: #93A1A1">(</span><span style="color: #DC322F">unsigned</span> <span style="color: #DC322F">long</span><span style="color: #93A1A1">)mod</span><span style="color: #719e07">-&gt;</span><span style="color: #93A1A1">module_core</span> <span style="color: #719e07">+</span> <span style="color: #93A1A1">mod</span><span style="color: #719e07">-&gt;</span><span style="color: #93A1A1">core_size);</span>
 
-	set_fs(old_fs);
-}</code></pre></div>
+	<span style="color: #93A1A1">set_fs(old_fs);</span>
+<span style="color: #93A1A1">}</span>
+</code></pre></div>
          <br />
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
         </div>

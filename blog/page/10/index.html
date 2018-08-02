@@ -41,14 +41,6 @@
   
   <meta name="generator" content="Hugo 0.31" />
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-6856248067952768",
-    enable_page_level_ads: true
-  });
-</script>
-
   
   
 <script>
@@ -123,6 +115,59 @@ ga('send', 'pageview');
  <div id="content">
   <div class="blog-index">
     
+    
+    <article>
+
+        
+        
+
+<header>
+    <p class="meta">Jun 21, 2014
+        
+         - <a href="https://xixitalk.top/blog/2014/06/21/Free-SMIME-Certificate-Key/#disqus_thread">Comments</a>
+
+        
+    </p>
+    <h1 class="entry-title">
+        <a href="https://xixitalk.top/blog/2014/06/21/Free-SMIME-Certificate-Key/">免费申请S/MIME证书</a>
+    </h1>
+</header>
+
+
+        
+          <p><h2 id="申请证书">申请证书</h2>
+
+<p>从这里可以申请到免费的S/MIME 邮件证书：<a href="http://www.instantssl.com/ssl-certificate-products/free-email-certificate.html" target="_blank">http://www.instantssl.com/ssl-certificate-products/free-email-certificate.html</a>，
+提交生成之后会把证书发送到邮箱里。</p>
+
+<h2 id="证书安装">证书安装</h2>
+
+<p>在邮箱里点击连接就会把证书安装到电脑系统中（包括windows和Mac OSX)。<br />
+证书认证关系如下：</p>
+
+<ul>
+<li>第一级根证书USERTrust(UTN-USERFirst-Client Authentication and Email)，系统中默认都带了；</li>
+<li>第二级中级证书是COMODO Client Authentication and Secure Email CA;</li>
+<li>第三级才是刚刚申请的个人证书。<br />
+如果在证书管理器查看刚刚申请的个人证书显示不正常的话，说明系统中缺少第二级中级证书，从这里下载安装<a href="http://crt.comodoca.com/COMODOClientAuthenticationandSecureEmailCA.crt" target="_blank">http://crt.comodoca.com/COMODOClientAuthenticationandSecureEmailCA.crt</a>。</li>
+</ul>
+
+<h2 id="证书安装到ios系统">证书安装到iOS系统</h2>
+
+<p>在电脑系统里打开证书管理器（windows系统是运行certmgr.msc），把证书（包含私钥）导出，windows是pfx格式，Mac OSX是p12格式，导出的证书要设置私钥保护密码，iOS的证书安装需要输入这个密码。把这个pfx或者p12格式的证书发邮件到iOS上，点击打开即提示安装，输入之前的保护密码就安装到iOS系统中了。<br />
+同样，iOS系统中缺少第二级中级证书，从这里下载安装<a href="http://crt.comodoca.com/COMODOClientAuthenticationandSecureEmailCA.crt" target="_blank">http://crt.comodoca.com/COMODOClientAuthenticationandSecureEmailCA.crt</a>。</p>
+
+<p></p></p>
+
+          
+              <footer>
+                  <a href="https://xixitalk.top/blog/2014/06/21/Free-SMIME-Certificate-Key/" rel="full-article">Read on &rarr;</a>
+              </footer>
+          
+
+        
+
+    </article>
     
     <article>
 
@@ -307,47 +352,6 @@ ga('send', 'pageview');
           
               <footer>
                   <a href="https://xixitalk.top/blog/2014/03/25/Politics-as-a-Vocation/" rel="full-article">Read on &rarr;</a>
-              </footer>
-          
-
-        
-
-    </article>
-    
-    <article>
-
-        
-        
-
-<header>
-    <p class="meta">Feb 7, 2014
-        
-         - <a href="https://xixitalk.top/blog/2014/02/07/CPR-AED/#disqus_thread">Comments</a>
-
-        
-    </p>
-    <h1 class="entry-title">
-        <a href="https://xixitalk.top/blog/2014/02/07/CPR-AED/">心脏骤停急救</a>
-    </h1>
-</header>
-
-
-        
-          <p><h2 id="1-概述">1. 概述</h2>
-
-<p>心脏骤停急救分五个步骤，其中前三个在医护人员到达之前非医护人员可以做的：电话求救、CPR、电击除颤</p>
-
-<p><img src="http://crashingpatient.com/wp-content/images/acls/new%20chain.jpg" alt="五个步骤" title="心脏骤停急救五个步骤" /></p>
-
-<p>CPR：Cardiopulmonary resuscitation (CPR) 心肺复苏术<br />
-AED：Automated External Defibrillator 自动外置式心脏除颤仪<br />
-VF：Ventricular Fibrillation 心室纤维性颤动</p>
-
-<p></p></p>
-
-          
-              <footer>
-                  <a href="https://xixitalk.top/blog/2014/02/07/CPR-AED/" rel="full-article">Read on &rarr;</a>
               </footer>
           
 

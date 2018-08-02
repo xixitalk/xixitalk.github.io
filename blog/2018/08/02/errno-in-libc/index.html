@@ -12,7 +12,7 @@
   
 
   
-  <title>我的AStyle配置选项</title>
+  <title>errno是什么</title>
 
   
   
@@ -120,14 +120,14 @@ ga('send', 'pageview');
         
 
 <header>
-    <p class="meta">Jul 11, 2016
+    <p class="meta">Aug 2, 2018
         
-         - <a href="https://xixitalk.top/blog/2016/07/11/my-AStyle-config/#disqus_thread">Comments</a>
+         - <a href="https://xixitalk.top/blog/2018/08/02/errno-in-libc/#disqus_thread">Comments</a>
 
         
     </p>
     <h1 class="entry-title">
-         我的AStyle配置选项 
+         errno是什么 
     </h1>
 </header>
 
@@ -137,27 +137,32 @@ ga('send', 'pageview');
           
           
           
-          <p>我的AStyle代码格式工具的选项：AStyle.exe -A1 -C -S -K -Y -f -s4 -p -U -o -n main.c</p>
-
-<p>在<code>notepad++</code>里添加：<code>运行(R)--运行(R)</code> 选择AStyle.exe，选项输入<code>-A1 -C -S -K -Y -f -s4 -p -U -o -n &quot;$(FULL_CURRENT_PATH)&quot;</code>，然后点击<code>保存</code>，这样就保存在运行菜单里了。每次使用从<code>运行(R)</code>点击即可。</p>
+          <p>C库中的<code>errno</code>是什么？</p>
 
 <p></p>
 
-<p>简略选项：<code>-A1 -C -S -K -Y -f -s4 -p -U -o -n</code>
-对应长选项如下：</p>
+<p>首先<code>errno</code>是个全局变量，刚开始UNIX/Linux只有进程，这样多进程也是安全的。但是后来有了线程，线程间是可以共享全局变量的，这样<code>errno</code>就线程不安全了。解决办法是线程实现TLS(Thread Local Storage)，</p>
 
-<pre><code>--style=bsd
---indent-classes
---indent-switches
---indent-cases
---indent-col1-comments
---break-blocks
---indent=spaces=4
---pad-oper
---unpad-paren
---keep-one-line-statements
---suffix=none
-</code></pre>
+<blockquote>
+<p>errno is defined by the ISO C standard to be a modifiable lvalue of type int, and must not be explicitly declared; errno may be a macro. errno is thread-local; setting it in one thread does not affect its value in any other thread.</p>
+</blockquote>
+
+<p>如uClibc里的定义<code>./libc/misc/internals/errno.c</code>:</p>
+<div class="highlight" style="background: #002B36"><pre style="line-height: 125%"><code class="language-c" data-lang="c"><span></span>	<span style="color: #93A1A1">__thread</span> <span style="color: #DC322F">int</span> <span style="color: #93A1A1">errno;</span>
+</code></pre></div>
+
+<p>这依赖编译器打开TLS特性，很多嵌入式编译链不一定打开。检查<code>arm-linux-uclibcgnueabi-gcc -v</code>，如果看到<code>--enable-tls</code>就是编译链打开TLS特性。</p>
+
+<p>如果是C库是可配置的，C库的TLS也要打开，如果uClibc，查看<code>include/bits/uClibc_config.h</code>文件，查找下面选项：</p>
+<div class="highlight" style="background: #002B36"><pre style="line-height: 125%"><code class="language-c" data-lang="c"><span></span><span style="color: #719e07">#define __UCLIBC_HAS_TLS__ y</span>
+</code></pre></div>
+
+<h2 id="参考资料">参考资料</h2>
+
+<ol>
+<li><a href="https://stackoverflow.com/questions/1694164/is-errno-thread-safe" target="_blank">Is errno thread-safe?</a></li>
+<li><a href="https://wiki.osdev.org/Thread_Local_Storage" target="_blank">Thread_Local_Storage</a></li>
+</ol>
          <br />
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
         </div>
@@ -167,7 +172,7 @@ ga('send', 'pageview');
   <p class="meta">
     <span class="byline author vcard">Posted by <span class="fn">xixitalk</span></span>
     
-    <time>Jul 11, 2016</time>
+    <time>Aug 2, 2018</time>
     
       <span class="categories">
         Tags:
@@ -184,11 +189,9 @@ ga('send', 'pageview');
 
   <p class="meta">
     
-        <a class="basic-alignment left" href="https://xixitalk.top/blog/2016/07/09/func-stack-check/" title="函数栈破坏检查">函数栈破坏检查</a>
+        <a class="basic-alignment left" href="https://xixitalk.top/blog/2018/07/12/fence-wild-dogs/" title="澳洲一处隔离野狗的栅栏显著地改变了该处的景观">澳洲一处隔离野狗的栅栏显著地改变了该处的景观</a>
     
 
-    
-      <a class="basic-alignment right" href="https://xixitalk.top/blog/2016/07/11/linux-mem-used/" title="Linux内存占用分布分析">Linux内存占用分布分析</a>
     
   </p>
   

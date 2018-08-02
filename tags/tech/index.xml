@@ -6,10 +6,21 @@
     <description>Recent content in Tech on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Jul 2018 20:07:29 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 Aug 2018 14:36:18 +0800</lastBuildDate>
     
 	<atom:link href="https://xixitalk.top/tags/tech/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>errno是什么</title>
+      <link>https://xixitalk.top/blog/2018/08/02/errno-in-libc/</link>
+      <pubDate>Thu, 02 Aug 2018 14:36:18 +0800</pubDate>
+      
+      <guid>https://xixitalk.top/blog/2018/08/02/errno-in-libc/</guid>
+      <description>&lt;p&gt;C库中的&lt;code&gt;errno&lt;/code&gt;是什么？&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>动态模块加载清除icache</title>
