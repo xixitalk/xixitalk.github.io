@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>errno是什么</title>
+      <title>标准C库里的errno是怎么实现的？</title>
       <link>https://xixitalk.top/blog/2018/08/02/errno-in-libc/</link>
       <pubDate>Thu, 02 Aug 2018 14:36:18 +0800</pubDate>
       
       <guid>https://xixitalk.top/blog/2018/08/02/errno-in-libc/</guid>
-      <description>&lt;p&gt;C库中的&lt;code&gt;errno&lt;/code&gt;是什么？&lt;/p&gt;
+      <description>&lt;p&gt;首先&lt;code&gt;errno&lt;/code&gt;是个全局变量，刚开始UNIX/Linux只有进程，这样多进程也是安全的。但是后来有了线程，线程间是可以共享全局变量的，这样&lt;code&gt;errno&lt;/code&gt;就线程不安全了。解决办法是线程实现TLS(Thread Local Storage)，每个线程都有一个&lt;code&gt;errno&lt;/code&gt;变量。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

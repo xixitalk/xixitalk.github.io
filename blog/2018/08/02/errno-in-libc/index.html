@@ -12,7 +12,7 @@
   
 
   
-  <title>errno是什么</title>
+  <title>标准C库里的errno是怎么实现的？</title>
 
   
   
@@ -127,7 +127,7 @@ ga('send', 'pageview');
         
     </p>
     <h1 class="entry-title">
-         errno是什么 
+         标准C库里的errno是怎么实现的？ 
     </h1>
 </header>
 
@@ -137,23 +137,21 @@ ga('send', 'pageview');
           
           
           
-          <p>C库中的<code>errno</code>是什么？</p>
+          <p>首先<code>errno</code>是个全局变量，刚开始UNIX/Linux只有进程，这样多进程也是安全的。但是后来有了线程，线程间是可以共享全局变量的，这样<code>errno</code>就线程不安全了。解决办法是线程实现TLS(Thread Local Storage)，每个线程都有一个<code>errno</code>变量。</p>
 
 <p></p>
-
-<p>首先<code>errno</code>是个全局变量，刚开始UNIX/Linux只有进程，这样多进程也是安全的。但是后来有了线程，线程间是可以共享全局变量的，这样<code>errno</code>就线程不安全了。解决办法是线程实现TLS(Thread Local Storage)，</p>
 
 <blockquote>
 <p>errno is defined by the ISO C standard to be a modifiable lvalue of type int, and must not be explicitly declared; errno may be a macro. errno is thread-local; setting it in one thread does not affect its value in any other thread.</p>
 </blockquote>
 
-<p>如uClibc里的定义<code>./libc/misc/internals/errno.c</code>:</p>
+<p>如uClibc里的定义<code>./libc/misc/internals/errno.c</code>，glibc是<code>csu/errno.c</code>。</p>
 <div class="highlight" style="background: #002B36"><pre style="line-height: 125%"><code class="language-c" data-lang="c"><span></span>	<span style="color: #93A1A1">__thread</span> <span style="color: #DC322F">int</span> <span style="color: #93A1A1">errno;</span>
 </code></pre></div>
 
-<p>这依赖编译器打开TLS特性，很多嵌入式编译链不一定打开。检查<code>arm-linux-uclibcgnueabi-gcc -v</code>，如果看到<code>--enable-tls</code>就是编译链打开TLS特性。</p>
+<p>这依赖编译器打开TLS特性，很多嵌入式编译链不一定打开。运行<code>arm-linux-uclibcgnueabi-gcc -v</code>来检查，如果看到<code>--enable-tls</code>就是编译链打开TLS特性，这样编译链支持<code>__thread</code>或者<code>thread_local</code>关键词。</p>
 
-<p>如果是C库是可配置的，C库的TLS也要打开，如果uClibc，查看<code>include/bits/uClibc_config.h</code>文件，查找下面选项：</p>
+<p>如果是C库是可配置的，C库的TLS也要打开，如uClibc，查看<code>include/bits/uClibc_config.h</code>文件，查找是否有下面选项：</p>
 <div class="highlight" style="background: #002B36"><pre style="line-height: 125%"><code class="language-c" data-lang="c"><span></span><span style="color: #719e07">#define __UCLIBC_HAS_TLS__ y</span>
 </code></pre></div>
 

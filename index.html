@@ -129,13 +129,13 @@ ga('send', 'pageview');
         
     </p>
     <h1 class="entry-title">
-        <a href="https://xixitalk.top/blog/2018/08/02/errno-in-libc/">errno是什么</a>
+        <a href="https://xixitalk.top/blog/2018/08/02/errno-in-libc/">标准C库里的errno是怎么实现的？</a>
     </h1>
 </header>
 
 
         
-          <p><p>C库中的<code>errno</code>是什么？</p>
+          <p><p>首先<code>errno</code>是个全局变量，刚开始UNIX/Linux只有进程，这样多进程也是安全的。但是后来有了线程，线程间是可以共享全局变量的，这样<code>errno</code>就线程不安全了。解决办法是线程实现TLS(Thread Local Storage)，每个线程都有一个<code>errno</code>变量。</p>
 
 <p></p></p>
 
