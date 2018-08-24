@@ -146,11 +146,15 @@ ga('send', 'pageview');
 </blockquote>
 
 <p>如uClibc里的定义<code>./libc/misc/internals/errno.c</code>，glibc是<code>csu/errno.c</code>。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">	__thread <span style="color:#fff;font-weight:bold">int</span> errno;</code></pre></div>
+<div class="highlight" style="background: #002B36"><pre style="line-height: 125%"><code class="language-c" data-lang="c"><span></span>	<span style="color: #93A1A1">__thread</span> <span style="color: #DC322F">int</span> <span style="color: #93A1A1">errno;</span>
+</code></pre></div>
+
 <p>这依赖编译器打开TLS特性，很多嵌入式编译链不一定打开。运行<code>arm-linux-uclibcgnueabi-gcc -v</code>来检查，如果看到<code>--enable-tls</code>就是编译链打开TLS特性，这样编译链支持<code>__thread</code>或者<code>thread_local</code>关键词。</p>
 
 <p>如果是C库是可配置的，C库的TLS也要打开，如uClibc，查看<code>include/bits/uClibc_config.h</code>文件，查找是否有下面选项：</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#0f0;font-weight:bold">#define __UCLIBC_HAS_TLS__ y</span></code></pre></div>
+<div class="highlight" style="background: #002B36"><pre style="line-height: 125%"><code class="language-c" data-lang="c"><span></span><span style="color: #719e07">#define __UCLIBC_HAS_TLS__ y</span>
+</code></pre></div>
+
 <h2 id="参考资料">参考资料</h2>
 
 <ol>
@@ -186,6 +190,8 @@ ga('send', 'pageview');
         <a class="basic-alignment left" href="https://xixitalk.top/blog/2018/07/12/fence-wild-dogs/" title="澳洲一处隔离野狗的栅栏显著地改变了该处的景观">澳洲一处隔离野狗的栅栏显著地改变了该处的景观</a>
     
 
+    
+      <a class="basic-alignment right" href="https://xixitalk.top/blog/2018/08/24/Nokia-7-plus/" title="Nokia 7 Plus手机体验">Nokia 7 Plus手机体验</a>
     
   </p>
   

@@ -122,6 +122,39 @@ ga('send', 'pageview');
         
 
 <header>
+    <p class="meta">Aug 2, 2016
+        
+         - <a href="https://xixitalk.top/blog/2016/08/02/fwrite-0x0D/#disqus_thread">Comments</a>
+
+        
+    </p>
+    <h1 class="entry-title">
+        <a href="https://xixitalk.top/blog/2016/08/02/fwrite-0x0D/">fwrite()多了个了0x0D字符</a>
+    </h1>
+</header>
+
+
+        
+          <p><p>fwrite()写文件竟然多了个了0x0D字符，buffer里检查了也确实没有0x0D，一搜索竟然是如果fopen不是二进制打开，fwrite()遇到0x0A额外写一个0x0D。0D 0A是windows平台的换行符，很明显这是只有在windows平台才有的奇特现象。</p>
+
+<p></p></p>
+
+          
+              <footer>
+                  <a href="https://xixitalk.top/blog/2016/08/02/fwrite-0x0D/" rel="full-article">Read on &rarr;</a>
+              </footer>
+          
+
+        
+
+    </article>
+    
+    <article>
+
+        
+        
+
+<header>
     <p class="meta">Aug 1, 2016
         
          - <a href="https://xixitalk.top/blog/2016/08/01/pthread-errno/#disqus_thread">Comments</a>
@@ -276,39 +309,6 @@ ga('send', 'pageview');
           
               <footer>
                   <a href="https://xixitalk.top/blog/2016/07/18/linux-stack-and-memory-management/" rel="full-article">Read on &rarr;</a>
-              </footer>
-          
-
-        
-
-    </article>
-    
-    <article>
-
-        
-        
-
-<header>
-    <p class="meta">Jul 18, 2016
-        
-         - <a href="https://xixitalk.top/blog/2016/07/18/pthread-autoclean-when-exiting/#disqus_thread">Comments</a>
-
-        
-    </p>
-    <h1 class="entry-title">
-        <a href="https://xixitalk.top/blog/2016/07/18/pthread-autoclean-when-exiting/">pthread退出时自动回收资源</a>
-    </h1>
-</header>
-
-
-        
-          <p><p>pthread线程创建后默认属性是joinable，线程函数执行完资源不会自动回收线程资源，需要主进程<code>pthread_join</code>进行回收，否则就会造成不必要的内存占用，频繁创建退出线程可能会造成系统内存耗尽。除了<code>pthread_join</code>用这种办法更好些。</p>
-
-<p></p></p>
-
-          
-              <footer>
-                  <a href="https://xixitalk.top/blog/2016/07/18/pthread-autoclean-when-exiting/" rel="full-article">Read on &rarr;</a>
               </footer>
           
 
