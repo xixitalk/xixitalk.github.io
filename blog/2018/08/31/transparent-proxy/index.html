@@ -12,7 +12,7 @@
   
 
   
-  <title>Nokia 7 Plus手机体验</title>
+  <title>用ss-redir搭建透明代理</title>
 
   
   
@@ -120,14 +120,14 @@ ga('send', 'pageview');
         
 
 <header>
-    <p class="meta">Aug 24, 2018
+    <p class="meta">Aug 31, 2018
         
-         - <a href="https://xixitalk.top/blog/2018/08/24/Nokia-7-plus/#disqus_thread">Comments</a>
+         - <a href="https://xixitalk.top/blog/2018/08/31/transparent-proxy/#disqus_thread">Comments</a>
 
         
     </p>
     <h1 class="entry-title">
-         Nokia 7 Plus手机体验 
+         用ss-redir搭建透明代理 
     </h1>
 </header>
 
@@ -137,45 +137,79 @@ ga('send', 'pageview');
           
           
           
-          <h3 id="软件系统">软件系统</h3>
-
-<p>系统android Oreo 8.1，现在是8月份，可以升级到7月份的安全补丁版本。并且声称9月份提供android pie 9正式版。软件开发和安全更新很及时，超越绝大多数android手机厂商。</p>
+          <p>原生android刷机后第一次开机系统初始设置要连接Google服务器，如果没有透明代理就很麻烦，进不了桌面。这里可以通过一台Linux机器（我用的是第一代树莓派）来达到透明代理的作用。</p>
 
 <p></p>
 
-<p>大陆国行版（型号TA-1062 版本号00CN开头）内置了微信、微博和支付宝应用，可以卸载，还有如下内置国产应用不能卸载：</p>
+<h3 id="环境要求">环境要求</h3>
+
+<p>手机和树莓派在同一个局域网，并且可以相互访问，手机WiFi连接，树莓派可以是WiFi也可以是网线连接(没有WiFi的第一代树莓派即可）。</p>
+
+<h3 id="用ss-redir搭建带ss代理的端口">用ss-redir搭建带ss代理的端口</h3>
+
+<p>如果是SS用shadowsocks-libev里的ss-redir，如果是SSR用shadowsocksr-libev里的ss-redir。注意后者多了一个<code>r</code>。我用的是SSR，在树莓派上自己编译的shadowsocksr-libev，下面以SSR为例，SS类似。</p>
+
+<p>配置ss-redir.json，参数和配置SSR一样，注意：<code>&quot;local_address&quot;:&quot;0.0.0.0&quot;</code>,  这个必须为0.0.0.0。如果同一个机器上也运行SSR，local_port要用不同的端口，如SSR用1081，ss-redir用<strong>1088</strong>，下面配置里会用到1088这个端口。</p>
+
+<p>运行ss-redir，<code>-v</code>会显示一些log信息：</p>
+
+<pre><code>./ss-redir -v -c ss-redir.json
+</code></pre>
+
+<p>调试完成后，实际运行可以用：</p>
+
+<pre><code>nohup ./ss-redir -c ss-redir.json &gt; /dev/null 2&gt;&amp;1 &amp;
+</code></pre>
+
+<h3 id="设置iptables转发">设置iptables转发</h3>
+
+<p>设置iptables的目的是将本机所有流量都转向ss-redir监听的端口，这个端口是带代理的，这样所有的流量都自动代理了。iptables执行要root权限，可以切换到root用户，或者用sudo方式运行。</p>
+
+<pre><code>iptables -t nat -N SHADOWSOCKSR
+# 在 nat 表中创建新链
+
+iptables -t nat -A SHADOWSOCKSR -p tcp --dport 28888 -j RETURN
+# 28888 是 ss 代理服务器的端口，即远程 shadowsocks 服务器提供服务的端口，如果你有多个 ip 可用,但端口一致，就设置这个
+
+iptables -t nat -A SHADOWSOCKSR -d 11.11.11.11 -j RETURN
+# 11.11.11.11 是 ss 代理服务器的 ip, 如果你只有一个 ss服务器的 ip，却能选择不同端口,就设置此条
+
+iptables -t nat -A SHADOWSOCKSR -d 0.0.0.0/8 -j RETURN
+iptables -t nat -A SHADOWSOCKSR -d 10.0.0.0/8 -j RETURN
+iptables -t nat -A SHADOWSOCKSR -d 127.0.0.0/8 -j RETURN
+iptables -t nat -A SHADOWSOCKSR -d 169.254.0.0/16 -j RETURN
+iptables -t nat -A SHADOWSOCKSR -d 172.16.0.0/12 -j RETURN
+iptables -t nat -A SHADOWSOCKSR -d 192.168.0.0/16 -j RETURN
+iptables -t nat -A SHADOWSOCKSR -d 224.0.0.0/4 -j RETURN
+iptables -t nat -A SHADOWSOCKSR -d 240.0.0.0/4 -j RETURN
+# 过滤局域网IP
+
+iptables -t nat -A SHADOWSOCKSR -p tcp -j REDIRECT --to-ports 1088
+# 1088 是 ss-redir 的监听端口,ss-local 和 ss-redir 的监听端口不同,配置文件不同
+
+iptables -t nat -I PREROUTING -p tcp -j SHADOWSOCKSR
+# 在 PREROUTING 链前插入 SHADOWSOCKSR 链,使其生效
+</code></pre>
+
+<h3 id="手机端设置">手机端设置</h3>
+
+<p>手机端WiFi连接，<strong>选择静态IP，网关填写树莓派的IP</strong>。如果正常，此时手机不用配置代理即可正常访问Google服务器。</p>
+
+<h3 id="透明代理进一步配置">透明代理进一步配置</h3>
 
 <ul>
-<li>内建与应用宝内容合作提供的应用商店，可以停用</li>
-<li>内建浏览器似乎是由 QQ 浏览器技术支持，可以停用</li>
-<li>内建小源科技提供的智能短信识别功能，可以停用</li>
-<li>内建腾讯技术支持的手机管家，不能停用</li>
-<li>内建 HMD Nokia 的云账号备份／同步系统</li>
+<li>过滤国内IP，和局域网IP类似，增加iptables规则即可</li>
+<li>转发UDP流量需要SSR服务端开启，否则UDP可能转发不成功</li>
+<li>iptables规则可以sh脚本运行，或者iptables-save后用iptables-restore来加载</li>
+<li>其他特殊转发自行看iptables规则</li>
 </ul>
 
-<p>大陆国行版不带Google全家桶，但是用自带应用商店可以直接安装Google Play官方商店，安装后加上代理可以直接登录Google账号，登录Google Play。下载chrome浏览器、gmail、twitter一切正常，和原生android没有差异。</p>
+<h3 id="参考资料">参考资料</h3>
 
-<p>网上说可以刷国际版ROM，但是有人说bootloader没有解锁有基带丢失的风险，还有什么启动要解锁码。</p>
-
-<h3 id="性能和功耗">性能和功耗</h3>
-
-<p>高通660 CPU性能足够用，功耗控制优异，几乎没有发烫的情况。支持18W快充3800毫安电池也令人心安。</p>
-
-<h3 id="对付流氓应用方法">对付流氓应用方法</h3>
-
-<p>目前Nokia手机解锁bootloader和root系统都比较麻烦，root后系统也不方便OTA。建议还是用官方系统，也不root系统。这样的话冰箱之类软件无法使用。国行版系统提供<strong>锁屏清理</strong>，可以配置允许<strong>自动唤醒</strong>和<strong>锁屏保留</strong>的应用，这样锁屏后系统会及时清理流氓应用，并阻断唤醒。再加上绿色守护+island，不给权限不让使用的应用用island隔离起来，使用起来体验还算不错。</p>
-
-<h3 id="照相效果">照相效果</h3>
-
-<p>照相效果一般，<a href="https://www.dxomark.com/nokia-8-review-nokias-return-high-end-segment/" target="_blank">Nokia 8的DXOMARK分数是68</a>，可以类比一下,Nokia 7 plus的分数不会比它高。不要对照相有太多的期望，光线好的时候成相还不错，毕竟是双摄，还可以打开美颜。</p>
-
-<h3 id="缺点">缺点</h3>
-
-<p>自带的应用市场、浏览器、手机管家都无法卸载，应用市场和浏览器可以停用，但手机管家无法停用。照相效果一般。硬件配置同类手机价值1700￥左右（小米6X  6G/64G），300￥的Nokia情怀+原生android就看你觉得值不值了。</p>
-
-<h3 id="参考文档">参考文档</h3>
-
-<p><a href="https://steemit.com/cn/@momok/nokia-7-android" target="_blank">Nokia 7 的原味 Android 使用体验</a></p>
+<ol>
+<li><a href="https://gist.github.com/wen-long/8644243" target="_blank">ss-redir 透明代理</a></li>
+<li><a href="https://blog.csdn.net/chouzhou9701/article/details/78816029" target="_blank">linux 用 shadowsocks + iptables + ss-redir 实现全局代理</a></li>
+</ol>
          <br />
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
         </div>
@@ -185,12 +219,12 @@ ga('send', 'pageview');
   <p class="meta">
     <span class="byline author vcard">Posted by <span class="fn">xixitalk</span></span>
     
-    <time>Aug 24, 2018</time>
+    <time>Aug 31, 2018</time>
     
       <span class="categories">
         Tags:
         
-          <a class="category" href="https://xixitalk.top/tags/life">life</a>  
+          <a class="category" href="https://xixitalk.top/tags/tech">tech</a>  
     
     </span>
   </p>
@@ -202,11 +236,9 @@ ga('send', 'pageview');
 
   <p class="meta">
     
-        <a class="basic-alignment left" href="https://xixitalk.top/blog/2018/08/02/errno-in-libc/" title="标准C库里的errno是怎么实现的？">标准C库里的errno是怎么实现的？</a>
+        <a class="basic-alignment left" href="https://xixitalk.top/blog/2018/08/24/Nokia-7-plus/" title="Nokia 7 Plus手机体验">Nokia 7 Plus手机体验</a>
     
 
-    
-      <a class="basic-alignment right" href="https://xixitalk.top/blog/2018/08/31/transparent-proxy/" title="用ss-redir搭建透明代理">用ss-redir搭建透明代理</a>
     
   </p>
   

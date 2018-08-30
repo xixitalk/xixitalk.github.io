@@ -6,10 +6,21 @@
     <description>Recent content in Posts on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Aug 2018 09:15:38 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 31 Aug 2018 06:11:31 +0800</lastBuildDate>
     
 	<atom:link href="https://xixitalk.top/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>用ss-redir搭建透明代理</title>
+      <link>https://xixitalk.top/blog/2018/08/31/transparent-proxy/</link>
+      <pubDate>Fri, 31 Aug 2018 06:11:31 +0800</pubDate>
+      
+      <guid>https://xixitalk.top/blog/2018/08/31/transparent-proxy/</guid>
+      <description>&lt;p&gt;原生android刷机后第一次开机系统初始设置要连接Google服务器，如果没有透明代理就很麻烦，进不了桌面。这里可以通过一台Linux机器（我用的是第一代树莓派）来达到透明代理的作用。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Nokia 7 Plus手机体验</title>
