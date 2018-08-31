@@ -161,6 +161,13 @@ ga('send', 'pageview');
 <pre><code>nohup ./ss-redir -c ss-redir.json &gt; /dev/null 2&gt;&amp;1 &amp;
 </code></pre>
 
+<h3 id="启用内核转发">启用内核转发</h3>
+
+<p>使用iptables转发需要打开内核IPv4转发功能，编辑/etc/sysctl.conf，设置net.ipv4.ip_forward=1，让更新实时生效:</p>
+
+<pre><code>sudo sysctl -p /etc/sysctl.conf
+</code></pre>
+
 <h3 id="设置iptables转发">设置iptables转发</h3>
 
 <p>设置iptables的目的是将本机所有流量都转向ss-redir监听的端口，这个端口是带代理的，这样所有的流量都自动代理了。iptables执行要root权限，可以切换到root用户，或者用sudo方式运行。</p>
