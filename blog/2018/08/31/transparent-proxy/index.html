@@ -137,7 +137,7 @@ ga('send', 'pageview');
           
           
           
-          <p>原生android刷机后第一次开机系统初始设置要连接Google服务器，如果没有透明代理就很麻烦，进不了桌面。这里可以通过一台Linux机器（我用的是第一代树莓派）来达到透明代理的作用。</p>
+          <p>原生android刷机后第一次开机系统初始设置要连接Google服务器，如果没有透明代理就很麻烦，进不了桌面。这里可以通过一台Linux机器（我用的是第一代树莓派）来达到透明代理的作用。手机、平板和机顶盒也可以通过透明代理上网，简化配置。</p>
 
 <p></p>
 
@@ -192,14 +192,25 @@ iptables -t nat -A SHADOWSOCKSR -d 224.0.0.0/4 -j RETURN
 iptables -t nat -A SHADOWSOCKSR -d 240.0.0.0/4 -j RETURN
 # 过滤局域网IP
 
-# iptables -t nat -A SHADOWSOCKSR -d 223.255.252.0/24 -j RETURN
 # 需要过滤的国内IP段加在这个位置，有几千条，参考下面命令获取的cn_rules.conf
+# cn_rules.conf里是iptables命令，如果不想几千条拷贝过来可以用bash执行，如下
+# sudo bash cn_rules.conf
 
 iptables -t nat -A SHADOWSOCKSR -p tcp -j REDIRECT --to-ports 1088
 # 1088 是 ss-redir 的监听端口,ss-local 和 ss-redir 的监听端口不同,配置文件不同
 
 iptables -t nat -I PREROUTING -p tcp -j SHADOWSOCKSR
 # 在 PREROUTING 链前插入 SHADOWSOCKSR 链,使其生效
+</code></pre>
+
+<p>把上面的命令保存成 iprules.sh文件，运行设置到系统里。</p>
+
+<pre><code>sudo bash  iprules.sh
+</code></pre>
+
+<p>如果设置错误，清理iptables设置用下面的命令：</p>
+
+<pre><code>sudo iptables -t nat -F
 </code></pre>
 
 <h3 id="手机端设置">手机端设置</h3>
@@ -213,9 +224,9 @@ iptables -t nat -I PREROUTING -p tcp -j SHADOWSOCKSR
 <pre><code>curl http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest | grep 'apnic|CN|ipv4' | awk -F\| '{ printf(&quot;iptables -t nat -A SHADOWSOCKSR -d %s/%d -j RETURN\n&quot;, $4, 32-log($5)/log(2)) }' &gt; cn_rules.conf
 </code></pre>
 
-<p>我使用的ip.cn上提供的<a href="https://ip.cn/chnroutes.html" target="_blank">中国大陆 IP 列表（基于全球路由优化版）</a>，导出来2000条。获取命令：</p>
+<p>我使用的ip.cn上提供的<a href="https://ip.cn/chnroutes.html" target="_blank">中国大陆 IP 列表（基于全球路由优化版）</a>，导出来2900多条，常用的大部分大陆IP都覆盖了。获取命令：</p>
 
-<pre><code>cat chnroutes.txt | grep -v &quot;^#&quot; | awk  '{ printf(&quot;iptables -t nat -A SHADOWSOCKSR -d %s -j RETURN\n&quot;, $1) }'  &gt; cn_rules.conf
+<pre><code>curl https://raw.githubusercontent.com/ym/chnroutes2/master/chnroutes.txt | grep -v &quot;^#&quot; | awk  '{ printf(&quot;iptables -t nat -A SHADOWSOCKSR -d %s -j RETURN\n&quot;, $1) }'  &gt; cn_rules.conf
 </code></pre>
 
 <h3 id="验证国内ip过滤">验证国内IP过滤</h3>
@@ -224,10 +235,10 @@ iptables -t nat -I PREROUTING -p tcp -j SHADOWSOCKSR
 
 <h3 id="用redsocks2替代ss-redir">用redsocks2替代ss-redir</h3>
 
-<p>树莓派上本来跑了个SSR，环境太恶劣，经常需要tcping找可用的地址，重启SSR，不想再维护ss-redir了，所以切换到redsocks了，redsocks可以直接用SSR提供socks5代理。<br />
+<p>树莓派上本来跑了个SSR，环境太恶劣，经常需要tcping找可用的地址，重启SSR，不想再维护ss-redir的稳定性了，所以切换到redsocks了，redsocks可以直接用SSR提供socks5代理，只维护SSR稳定可用即可。<br />
 没有用原版的<a href="https://github.com/darkk/redsocks" target="_blank">redsocks</a>，使用了修改版的<a href="https://github.com/semigodking/redsocks" target="_blank">redsocks2</a>，下载源代码编译略过。</p>
 
-<p>redsocks2的配置如下，如果socks5代理是本机<code>ip = 192.168.1.104;</code>行改成<code>ip = 0.0.0.0;</code>。</p>
+<p>redsocks2的配置config.json如下。如果socks5代理是本机，<code>ip = 192.168.1.104;</code>行改成<code>ip = 0.0.0.0;</code>。配置文件里<code>log_debug log_info daemon</code>调试的时候可以根据需要配置成on或者off，<code>daemon = on</code>是后台运行。这里redsocks监听的端口也配置成1088。</p>
 
 <pre><code>base {
         log_debug = off;
@@ -265,12 +276,18 @@ ipcache {
 }
 </code></pre>
 
+<p>运行redsocks2</p>
+
+<pre><code>sudo ./redsocks2 -c ./config.json
+</code></pre>
+
+<p>据说redsocks稳定性可能有些问题，配置cron计划任务，每天凌晨3点重启一下好了。</p>
+
 <h3 id="其他说明">其他说明</h3>
 
 <ul>
 <li>不支持UDP流量转发</li>
 <li>iptables规则可以sh脚本运行，或者iptables-save后用iptables-restore来加载</li>
-<li>其他特殊转发自行看iptables规则</li>
 </ul>
 
 <h3 id="参考资料">参考资料</h3>
@@ -295,7 +312,7 @@ ipcache {
       <span class="categories">
         Tags:
         
-          <a class="category" href="https://xixitalk.top/tags/tech">tech</a>  
+          <a class="category" href="https://xixitalk.top/tags/tech">tech</a>  <a class="category" href="https://xixitalk.top/tags/shadowsocks">shadowsocks</a>  <a class="category" href="https://xixitalk.top/tags/redsocks">redsocks</a>  
     
     </span>
   </p>
