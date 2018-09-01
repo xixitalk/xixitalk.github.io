@@ -224,7 +224,7 @@ iptables -t nat -I PREROUTING -p tcp -j SHADOWSOCKSR
 
 <h3 id="用redsocks2替代ss-redir">用redsocks2替代ss-redir</h3>
 
-<p>树莓派上本来跑了个SSR，环境太恶劣，经常需要tcping找可用的地址，重启SSR，不想再维护ss-redir了，所有切换到redsocks了，可以直接用SSR提供socks5代理。<br />
+<p>树莓派上本来跑了个SSR，环境太恶劣，经常需要tcping找可用的地址，重启SSR，不想再维护ss-redir了，所以切换到redsocks了，redsocks可以直接用SSR提供socks5代理。<br />
 没有用原版的<a href="https://github.com/darkk/redsocks" target="_blank">redsocks</a>，使用了修改版的<a href="https://github.com/semigodking/redsocks" target="_blank">redsocks2</a>，下载源代码编译略过。</p>
 
 <p>redsocks2的配置如下，如果socks5代理是本机<code>ip = 192.168.1.104;</code>行改成<code>ip = 0.0.0.0;</code>。</p>
