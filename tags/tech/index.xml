@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>用ss-redir搭建透明代理</title>
+      <title>用ss-redir或redsocks搭建透明网关</title>
       <link>https://xixitalk.top/blog/2018/08/31/transparent-proxy/</link>
       <pubDate>Fri, 31 Aug 2018 06:11:31 +0800</pubDate>
       
       <guid>https://xixitalk.top/blog/2018/08/31/transparent-proxy/</guid>
-      <description>&lt;p&gt;原生android刷机后第一次开机系统初始设置要连接Google服务器，如果没有透明代理就很麻烦，进不了桌面。这里可以通过一台Linux机器（我用的是第一代树莓派）来达到透明代理的作用。手机、平板和机顶盒也可以通过透明代理上网，简化配置。&lt;/p&gt;
+      <description>&lt;p&gt;原生android刷机后第一次开机系统初始设置要连接Google服务器，如果没有透明代理就很麻烦，进不了桌面。这里可以通过一台Linux机器（我用的是第一代树莓派）来达到透明代理的作用。平常情况下手机、平板和机顶盒也可以通过透明代理上网，简化配置。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
