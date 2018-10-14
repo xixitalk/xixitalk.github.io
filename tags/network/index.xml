@@ -6,61 +6,10 @@
     <description>Recent content in Network on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Oct 2016 19:00:54 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 11 Mar 2013 19:11:00 +0800</lastBuildDate>
     
 	<atom:link href="https://xixitalk.top/tags/network/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>DNS协议学习笔记之DNS查询</title>
-      <link>https://xixitalk.top/blog/2016/10/10/dns-protocol/</link>
-      <pubDate>Mon, 10 Oct 2016 19:00:54 +0800</pubDate>
-      
-      <guid>https://xixitalk.top/blog/2016/10/10/dns-protocol/</guid>
-      <description>&lt;p&gt;DNS学习概要：&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;DNS几个概念：A记录、AAAA记录、MX记录、CNAME记录、TEXT记录、URL转发、NS记录&lt;/li&gt;
-&lt;li&gt;DNS查询报文&lt;/li&gt;
-&lt;li&gt;DNS响应报文&lt;/li&gt;
-&lt;li&gt;Google DNS over HTTPS&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>TCP/IP之IP包头部</title>
-      <link>https://xixitalk.top/blog/2016/10/10/ipheader-of-tcpip/</link>
-      <pubDate>Mon, 10 Oct 2016 17:03:51 +0800</pubDate>
-      
-      <guid>https://xixitalk.top/blog/2016/10/10/ipheader-of-tcpip/</guid>
-      <description>&lt;p&gt;TCP/IP之IP包头部&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>TCP/IP之以太网帧</title>
-      <link>https://xixitalk.top/blog/2016/10/10/Ethernet-of-tcpip/</link>
-      <pubDate>Mon, 10 Oct 2016 10:15:46 +0800</pubDate>
-      
-      <guid>https://xixitalk.top/blog/2016/10/10/Ethernet-of-tcpip/</guid>
-      <description>&lt;h3 id=&#34;ethernet-ii-以太网v2帧&#34;&gt;Ethernet II(以太网V2帧)&lt;/h3&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>DNS在HTTP网络交互流程中的位置</title>
-      <link>https://xixitalk.top/blog/2016/10/09/http-connection/</link>
-      <pubDate>Sun, 09 Oct 2016 08:55:37 +0800</pubDate>
-      
-      <guid>https://xixitalk.top/blog/2016/10/09/http-connection/</guid>
-      <description>&lt;p&gt;DNS在HTTP网络交互流程中的位置&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>算法：判断是否是中国IP？</title>
