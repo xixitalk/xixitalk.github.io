@@ -122,28 +122,34 @@ ga('send', 'pageview');
         
 
 <header>
-    <p class="meta">May 29, 2013
+    <p class="meta">Nov 27, 2012
         
-         - <a href="https://xixitalk.top/blog/2013/05/29/update-ddns-with-api/#disqus_thread">Comments</a>
+         - <a href="https://xixitalk.top/blog/2012/11/27/markdown-manual/#disqus_thread">Comments</a>
 
         
     </p>
     <h1 class="entry-title">
-        <a href="https://xixitalk.top/blog/2013/05/29/update-ddns-with-api/">用API更新3322.org免费二级域名的DDNS</a>
+        <a href="https://xixitalk.top/blog/2012/11/27/markdown-manual/">markdown manual</a>
     </h1>
 </header>
 
 
         
-          <p><p>用API更新3322.org免费二级域名的DDNS:<br />
-1、注册3322.org的免费二级域名：<a href="http://www.pubyun.com/" target="_blank">http://www.pubyun.com/</a><br />
-2、把下面的shell脚步保存为updateDDNS.sh。mydomain替换为你自己的二级域名，username:password替换为你自己在3322注册的帐号。用<a href="http://icanhazip.com" target="_blank">http://icanhazip.com</a>获得公网IP。</p>
+          <p><p>##链接</p>
+
+<p>第一种最简单方式，地址用&lt;&gt;包含</p>
+
+<pre><code>&lt;http://www.example.com&gt;
+</code></pre>
+
+<p>效果：
+<a href="http://www.example.com" target="_blank">http://www.example.com</a></p>
 
 <p></p></p>
 
           
               <footer>
-                  <a href="https://xixitalk.top/blog/2013/05/29/update-ddns-with-api/" rel="full-article">Read on &rarr;</a>
+                  <a href="https://xixitalk.top/blog/2012/11/27/markdown-manual/" rel="full-article">Read on &rarr;</a>
               </footer>
           
 
@@ -157,28 +163,38 @@ ga('send', 'pageview');
         
 
 <header>
-    <p class="meta">Apr 8, 2013
+    <p class="meta">Nov 24, 2012
         
-         - <a href="https://xixitalk.top/blog/2013/04/08/stunnel-principle/#disqus_thread">Comments</a>
+         - <a href="https://xixitalk.top/blog/2012/11/24/git-manual/#disqus_thread">Comments</a>
 
         
     </p>
     <h1 class="entry-title">
-        <a href="https://xixitalk.top/blog/2013/04/08/stunnel-principle/">stunnel原理</a>
+        <a href="https://xixitalk.top/blog/2012/11/24/git-manual/">git manual</a>
     </h1>
 </header>
 
 
         
-          <p><p>搜索关键词：stunnel proxy socks5 HTTP HTTPS 代理</p>
+          <p><h2 id="初始化目录">初始化目录</h2>
 
-<p>stunnel原理如图：</p>
+<p>以下两种方式</p>
+
+<h3 id="空目录初始化">空目录初始化</h3>
+
+<pre><code>git init
+</code></pre>
+
+<h3 id="获取一个git仓库代码">获取一个git仓库代码</h3>
+
+<pre><code>git clone https://github.com/yegle/flask_twip.git
+</code></pre>
 
 <p></p></p>
 
           
               <footer>
-                  <a href="https://xixitalk.top/blog/2013/04/08/stunnel-principle/" rel="full-article">Read on &rarr;</a>
+                  <a href="https://xixitalk.top/blog/2012/11/24/git-manual/" rel="full-article">Read on &rarr;</a>
               </footer>
           
 
@@ -192,130 +208,29 @@ ga('send', 'pageview');
         
 
 <header>
-    <p class="meta">Mar 11, 2013
+    <p class="meta">Nov 23, 2012
         
-         - <a href="https://xixitalk.top/blog/2013/03/11/func-is-china-ip/#disqus_thread">Comments</a>
+         - <a href="https://xixitalk.top/blog/2012/11/23/octopress-command-note/#disqus_thread">Comments</a>
 
         
     </p>
     <h1 class="entry-title">
-        <a href="https://xixitalk.top/blog/2013/03/11/func-is-china-ip/">算法：判断是否是中国IP？</a>
+        <a href="https://xixitalk.top/blog/2012/11/23/octopress-command-note/">octopress命令备忘录</a>
     </h1>
 </header>
 
 
         
-          <p><p>世界上有五个<a href="http://en.wikipedia.org/wiki/Regional_Internet_registry" target="_blank">区域互联网注册管理机构</a>，负责亚洲和太平洋地区的是亚太网络信息中心(APNIC)。<a href="http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest" target="_blank">点击这里</a>可以获得亚太地址各个国家或地区申请到的IP地址区域。
-中国共申请到42亿中的330026496个IPv4地址（约3.3亿）,分布在3579块不同的区域。<br />
-IPv4地址格式是addr1.addr2.addr3.addr4，为了减少查找次数，考虑用空间换时间思路。所有2的32次方的IP，分布在256x256的区域内，每个区域表述addr1.addr2.*.*表述的IP（65536个IP）。
-判断一个IP首先由addr1和addr2直接找到addr1.addr2.*.*的区域块，在块内进行搜索判断，这样查询的次数将大大降低。</p>
+          <p><h2 id="创建新文章">创建新文章</h2>
+
+<pre><code>rake new_post[&quot;TITLE&quot;]
+</code></pre>
 
 <p></p></p>
 
           
               <footer>
-                  <a href="https://xixitalk.top/blog/2013/03/11/func-is-china-ip/" rel="full-article">Read on &rarr;</a>
-              </footer>
-          
-
-        
-
-    </article>
-    
-    <article>
-
-        
-        
-
-<header>
-    <p class="meta">Mar 11, 2013
-        
-         - <a href="https://xixitalk.top/blog/2013/03/11/android-broswer-with-http-proxy/#disqus_thread">Comments</a>
-
-        
-    </p>
-    <h1 class="entry-title">
-        <a href="https://xixitalk.top/blog/2013/03/11/android-broswer-with-http-proxy/">android上支持HTTP proxy代理的浏览器</a>
-    </h1>
-</header>
-
-
-        
-          <p><p>之前一篇文章讲了在树莓派上搭建HTTP proxy的<a href="/blog/2013/03/02/raspberry-pi-proxy/">原理</a>，这样就获得一个HTTP proxy，android上的<a href="https://play.google.com/store/apps/details?id=org.mariotaku.twidere" target="_blank">twidere</a>和<a href="https://play.google.com/store/apps/details?id=com.twitter.android" target="_blank">twitter</a>都支持HTTP proxy，可以在设置里进行配置。但是从<a href="https://play.google.com/store/apps/details?id=org.mariotaku.twidere" target="_blank">twidere</a>或者<a href="https://play.google.com/store/apps/details?id=com.twitter.android" target="_blank">twitter</a>打开网页又打不开了。这次推荐三个支持HTTP proxy的浏览器。</p>
-
-<p></p></p>
-
-          
-              <footer>
-                  <a href="https://xixitalk.top/blog/2013/03/11/android-broswer-with-http-proxy/" rel="full-article">Read on &rarr;</a>
-              </footer>
-          
-
-        
-
-    </article>
-    
-    <article>
-
-        
-        
-
-<header>
-    <p class="meta">Mar 4, 2013
-        
-         - <a href="https://xixitalk.top/blog/2013/03/04/raspberry-pi/#disqus_thread">Comments</a>
-
-        
-    </p>
-    <h1 class="entry-title">
-        <a href="https://xixitalk.top/blog/2013/03/04/raspberry-pi/">raspberry pi(树莓派）相关记录</a>
-    </h1>
-</header>
-
-
-        
-          <p><p>搜索关键词：raspberry pi 树莓派 教程 XBMC shadowsocks</p>
-
-<p>上周用一件旧东西和推友交换了个<a href="http://www.raspberrypi.org/" target="_blank">raspberry pi</a>(树莓派），虽然内存是256M的(最新版的树莓派升级到512M)，但想来够用了。设想是：代理服务器+<a href="http://xbmc.org/" target="_blank">XBMC</a>视频播放+挂载3.5寸移动硬盘+网站服务器。</p>
-
-<p></p></p>
-
-          
-              <footer>
-                  <a href="https://xixitalk.top/blog/2013/03/04/raspberry-pi/" rel="full-article">Read on &rarr;</a>
-              </footer>
-          
-
-        
-
-    </article>
-    
-    <article>
-
-        
-        
-
-<header>
-    <p class="meta">Mar 2, 2013
-        
-         - <a href="https://xixitalk.top/blog/2013/03/02/raspberry-pi-proxy/#disqus_thread">Comments</a>
-
-        
-    </p>
-    <h1 class="entry-title">
-        <a href="https://xixitalk.top/blog/2013/03/02/raspberry-pi-proxy/">利用Raspberry Pi加shadowsocks搭建代理服务</a>
-    </h1>
-</header>
-
-
-        
-          <p><p>设想：路由器和Raspberry Pi的耗电都非常小，可以常开不关机。而且手机上使用SSH -D、shadowsocks和VPN都不方便，还增加电池消耗。android上的twidere和twitter官方客户端都支持HTTP代理，iOS也方便使用pac代理。HTTP代理虽然没有加密，但是因为都在国内没有通过GFW所以不会触发屏蔽。</p>
-
-<p></p></p>
-
-          
-              <footer>
-                  <a href="https://xixitalk.top/blog/2013/03/02/raspberry-pi-proxy/" rel="full-article">Read on &rarr;</a>
+                  <a href="https://xixitalk.top/blog/2012/11/23/octopress-command-note/" rel="full-article">Read on &rarr;</a>
               </footer>
           
 
@@ -380,19 +295,12 @@ IPv4地址格式是addr1.addr2.addr3.addr4，为了减少查找次数，考虑�
     
         <a href="/blog/page/18/" class="label-pagination">18</a>
     
-        <a href="/blog/page/19/" class="label-pagination">19</a>
-    
-        <a href="/blog/page/20/" class="label-pagination">20</a>
+
     
 
     
     
-        <a href="/blog/page/19/" aria-label="Next" class="label-pagination"><i class="fa fa-angle-right fa-lg"></i></a>
-    
-
-    
-    
-        <a href="/blog/page/20/" aria-label="Last"><i class="fa fa-angle-double-right fa-lg"></i></a>
+        <a href="/blog/page/18/" aria-label="Last"><i class="fa fa-angle-double-right fa-lg"></i></a>
     
 
 </div>

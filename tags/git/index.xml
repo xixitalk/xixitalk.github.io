@@ -61,16 +61,5 @@
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
-    <item>
-      <title>flask_twip在heroku上搭建教程</title>
-      <link>https://xixitalk.top/blog/2012/11/23/flask-twip-on-heroku/</link>
-      <pubDate>Fri, 23 Nov 2012 21:01:00 +0800</pubDate>
-      
-      <guid>https://xixitalk.top/blog/2012/11/23/flask-twip-on-heroku/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/yegle/flask_twip&#34; target=&#34;_blank&#34;&gt;flask_twip&lt;/a&gt;是@&lt;a href=&#34;http://twitter.com/yegle&#34; target=&#34;_blank&#34;&gt;yegle&lt;/a&gt;写的一个可以搭建在&lt;a href=&#34;http://www.heroku.com/&#34; target=&#34;_blank&#34;&gt;heroku&lt;/a&gt;上的一个&lt;a href=&#34;http://code.google.com/p/twip/&#34; target=&#34;_blank&#34;&gt;twip&lt;/a&gt;的port程序。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
   </channel>
 </rss>

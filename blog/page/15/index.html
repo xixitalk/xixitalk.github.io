@@ -122,28 +122,30 @@ ga('send', 'pageview');
         
 
 <header>
-    <p class="meta">Jun 14, 2013
+    <p class="meta">Jun 8, 2013
         
-         - <a href="https://xixitalk.top/blog/2013/06/14/AppEngine-OAuth-Library/#disqus_thread">Comments</a>
+         - <a href="https://xixitalk.top/blog/2013/06/08/mathjax-math-formula/#disqus_thread">Comments</a>
 
         
     </p>
     <h1 class="entry-title">
-        <a href="https://xixitalk.top/blog/2013/06/14/AppEngine-OAuth-Library/">支持twitter的AppEngine-OAuth-Library</a>
+        <a href="https://xixitalk.top/blog/2013/06/08/mathjax-math-formula/"></a>
     </h1>
 </header>
 
 
         
-          <p><p>自己在GAE上写了个浏览twitter的web页面，虽然丑陋但是自我感觉良好，使用的是v1.0的API，这两天twitter停用了v1.0的API，换用v1.1，调试了一下没有调试好，还是直接用别人造好的轮子吧。</p>
+          <p><p>具体可以参看这篇博客<a href="http://www.idryman.org/blog/2012/03/10/writing-math-equations-on-octopress/" target="_blank">http://www.idryman.org/blog/2012/03/10/writing-math-equations-on-octopress/</a></p>
 
-<p>AppEngine-OAuth-Library <a href="https://github.com/mikeknapp/AppEngine-OAuth-Library" target="_blank">https://github.com/mikeknapp/AppEngine-OAuth-Library</a></p>
+<p>几点特殊说明如下：<br />
+1、 <code>rdiscount</code> 要换成 <code>kramdown</code>，原因<code>rdiscount</code>会将公式的特殊字符转换成HTML的关键词sup、sub等。<br />
+2、 MathJax放在<code>source\_includes\custom\head.html</code>更合适，可以精简为下面,原因是kramdown不认inline单个$</p>
 
 <p></p></p>
 
           
               <footer>
-                  <a href="https://xixitalk.top/blog/2013/06/14/AppEngine-OAuth-Library/" rel="full-article">Read on &rarr;</a>
+                  <a href="https://xixitalk.top/blog/2013/06/08/mathjax-math-formula/" rel="full-article">Read on &rarr;</a>
               </footer>
           
 
@@ -157,30 +159,27 @@ ga('send', 'pageview');
         
 
 <header>
-    <p class="meta">Jun 13, 2013
+    <p class="meta">Jun 8, 2013
         
-         - <a href="https://xixitalk.top/blog/2013/06/13/wo-de-aletai/#disqus_thread">Comments</a>
+         - <a href="https://xixitalk.top/blog/2013/06/08/man-vs-HPV/#disqus_thread">Comments</a>
 
         
     </p>
     <h1 class="entry-title">
-        <a href="https://xixitalk.top/blog/2013/06/13/wo-de-aletai/">李娟《我的阿勒泰》</a>
+        <a href="https://xixitalk.top/blog/2013/06/08/man-vs-HPV/">男人是否携带HPV病毒检查不出来</a>
     </h1>
 </header>
 
 
         
-          <p><p>李娟《我的阿勒泰》</p>
-
-<p><img src="http://img3.douban.com/lpic/s4507495.jpg" alt="我的阿勒泰" /></p>
-
-<p>李娟的《我的阿勒泰》给人们展示的是新疆另一面。书中描绘的新疆和我们从新闻中所了解的新疆仿佛是存在在两个平行世界里。</p>
+          <p><p>关键词：man male HPV 男人 HPV病毒<br />
+参看这篇：<a href="http://www.nbcnews.com/id/41853611/ns/health-sexual_health/t/guys-man-get-vaccinated-hpv-your-responsibility/" target="_blank">NBCNews:Guys, man up and get vaccinated: HPV is your responsibility</a></p>
 
 <p></p></p>
 
           
               <footer>
-                  <a href="https://xixitalk.top/blog/2013/06/13/wo-de-aletai/" rel="full-article">Read on &rarr;</a>
+                  <a href="https://xixitalk.top/blog/2013/06/08/man-vs-HPV/" rel="full-article">Read on &rarr;</a>
               </footer>
           
 
@@ -194,26 +193,28 @@ ga('send', 'pageview');
         
 
 <header>
-    <p class="meta">Jun 13, 2013
+    <p class="meta">Jun 7, 2013
         
-         - <a href="https://xixitalk.top/blog/2013/06/13/python-readlines-from-string/#disqus_thread">Comments</a>
+         - <a href="https://xixitalk.top/blog/2013/06/07/digest-signature/#disqus_thread">Comments</a>
 
         
     </p>
     <h1 class="entry-title">
-        <a href="https://xixitalk.top/blog/2013/06/13/python-readlines-from-string/">python从字符串用readlines读取操作</a>
+        <a href="https://xixitalk.top/blog/2013/06/07/digest-signature/">数字签名时的私钥加密公钥解密</a>
     </h1>
 </header>
 
 
         
-          <p><p>场景：用<a href="http://curl.haxx.se/" target="_blank">cURL</a>命令POST了一个文本文件到web服务器，想在服务器端对这个文件进行readlines操作</p>
+          <p><p>疑问：数字签名时的<code>私钥加密 公钥解密</code>怎么理解？</p>
+
+<p>前一段时间设计系统启动,为了保障安全使用数字签名进行版本验证，平常的不对称加解密（公钥加密，私钥解密）很容易理解，而数字签名时的<code>私钥加密 公钥解密</code>是怎么回事呢？</p>
 
 <p></p></p>
 
           
               <footer>
-                  <a href="https://xixitalk.top/blog/2013/06/13/python-readlines-from-string/" rel="full-article">Read on &rarr;</a>
+                  <a href="https://xixitalk.top/blog/2013/06/07/digest-signature/" rel="full-article">Read on &rarr;</a>
               </footer>
           
 
@@ -227,29 +228,26 @@ ga('send', 'pageview');
         
 
 <header>
-    <p class="meta">Jun 12, 2013
+    <p class="meta">Jun 7, 2013
         
-         - <a href="https://xixitalk.top/blog/2013/06/12/duan-ge-xing-caocao/#disqus_thread">Comments</a>
+         - <a href="https://xixitalk.top/blog/2013/06/07/man-inflection-point-is-47-year-old/#disqus_thread">Comments</a>
 
         
     </p>
     <h1 class="entry-title">
-        <a href="https://xixitalk.top/blog/2013/06/12/duan-ge-xing-caocao/">曹操的《短歌行》</a>
+        <a href="https://xixitalk.top/blog/2013/06/07/man-inflection-point-is-47-year-old/">从保险投保费用看男女健康对比</a>
     </h1>
 </header>
 
 
         
-          <p><p>Dǔan   gē    xīng        cǎo  cao<br />
-短      歌    行          曹   操</p>
-
-<p>最喜欢曹操的《短歌行》</p>
+          <p><p>下表是某寿险保费列表：</p>
 
 <p></p></p>
 
           
               <footer>
-                  <a href="https://xixitalk.top/blog/2013/06/12/duan-ge-xing-caocao/" rel="full-article">Read on &rarr;</a>
+                  <a href="https://xixitalk.top/blog/2013/06/07/man-inflection-point-is-47-year-old/" rel="full-article">Read on &rarr;</a>
               </footer>
           
 
@@ -263,25 +261,38 @@ ga('send', 'pageview');
         
 
 <header>
-    <p class="meta">Jun 11, 2013
+    <p class="meta">Jun 6, 2013
         
-         - <a href="https://xixitalk.top/blog/2013/06/11/movie-stan-up-guys/#disqus_thread">Comments</a>
+         - <a href="https://xixitalk.top/blog/2013/06/06/Anti-Traditional-Chinese-medicine/#disqus_thread">Comments</a>
 
         
     </p>
     <h1 class="entry-title">
-        <a href="https://xixitalk.top/blog/2013/06/11/movie-stan-up-guys/">推荐电影《stand up guys 哥们站直了》</a>
+        <a href="https://xixitalk.top/blog/2013/06/06/Anti-Traditional-Chinese-medicine/">反对『中医』理由汇集</a>
     </h1>
 </header>
 
 
         
-          <p>刚才在推上看到 @justone_he 推荐电影《stand up guys》，下载一看果然不错。
-imdb:http://www.imdb.com/title/tt1389096/
-看头：阿尔·帕西诺、克里斯托弗·沃肯和艾伦·阿金老戏骨的精彩表演。
-维尔（阿尔·帕西诺饰）28年前犯事入狱，在监狱里一句也没说出卖兄弟的话，但是一个黑老大认为是他乱枪打死自己唯一的儿子。维尔在监狱里坐了28年牢终于假释出狱，老基友达克（克里斯托弗·沃肯饰）来接他，年过花甲的维尔和达克重述衷肠，缅怀过去年青时光，庆祝狂欢一下生活重新开始。维尔却慢慢感觉到了黑老大要向他动手了，杀手是谁呢？
-人人影视不解释 http://www.yyets.com/resource/28117</p>
+          <p><h3 id="中药制剂是大分子-容易造成肾衰">中药制剂是大分子，容易造成肾衰</h3>
 
+<p>中药制剂是大分子，输液进入血液循环系统，造成肾衰。
+<a href="http://zhongyi.ifeng.com/news/pfmf/20101/33509.shtml" target="_blank">http://zhongyi.ifeng.com/news/pfmf/20101/33509.shtml</a></p>
+
+<h3 id="马兜铃酸造成肾衰">马兜铃酸造成肾衰</h3>
+
+<p>马兜铃酸造成肾衰，存在众多中药配方中</p>
+
+<h3 id="中药安神的机理是让人重金属中毒">中药安神的机理是让人重金属中毒</h3>
+
+<p>中药安神的机理是让人硫化汞（包含在朱砂中）轻微中毒，让人萎靡、反应迟钝，达到安神镇静效果</p>
+
+<p></p></p>
+
+          
+              <footer>
+                  <a href="https://xixitalk.top/blog/2013/06/06/Anti-Traditional-Chinese-medicine/" rel="full-article">Read on &rarr;</a>
+              </footer>
           
 
         
@@ -294,26 +305,29 @@ imdb:http://www.imdb.com/title/tt1389096/
         
 
 <header>
-    <p class="meta">Jun 10, 2013
+    <p class="meta">Jun 4, 2013
         
-         - <a href="https://xixitalk.top/blog/2013/06/10/share-to-twitter/#disqus_thread">Comments</a>
+         - <a href="https://xixitalk.top/blog/2013/06/04/TestDisk-Data-Recovery/#disqus_thread">Comments</a>
 
         
     </p>
     <h1 class="entry-title">
-        <a href="https://xixitalk.top/blog/2013/06/10/share-to-twitter/">分享到twitter的方法</a>
+        <a href="https://xixitalk.top/blog/2013/06/04/TestDisk-Data-Recovery/">TestDisk 恢复误删数据的神器</a>
     </h1>
 </header>
 
 
         
-          <p><p>分享到twitter的方法：</p>
+          <p><p><img src="http://www.cgsecurity.org/mw/images/Testdisklogo_clear_100.png" alt="TestDisk" />
+TestDisk, Data Recovery</p>
+
+<p>恢复被删数据的神器TestDisk</p>
 
 <p></p></p>
 
           
               <footer>
-                  <a href="https://xixitalk.top/blog/2013/06/10/share-to-twitter/" rel="full-article">Read on &rarr;</a>
+                  <a href="https://xixitalk.top/blog/2013/06/04/TestDisk-Data-Recovery/" rel="full-article">Read on &rarr;</a>
               </footer>
           
 
@@ -378,10 +392,6 @@ imdb:http://www.imdb.com/title/tt1389096/
     
         <a href="/blog/page/18/" class="label-pagination">18</a>
     
-        <a href="/blog/page/19/" class="label-pagination">19</a>
-    
-        <a href="/blog/page/20/" class="label-pagination">20</a>
-    
 
     
     
@@ -390,7 +400,7 @@ imdb:http://www.imdb.com/title/tt1389096/
 
     
     
-        <a href="/blog/page/20/" aria-label="Last"><i class="fa fa-angle-double-right fa-lg"></i></a>
+        <a href="/blog/page/18/" aria-label="Last"><i class="fa fa-angle-double-right fa-lg"></i></a>
     
 
 </div>
