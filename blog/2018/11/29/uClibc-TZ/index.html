@@ -12,7 +12,7 @@
   
 
   
-  <title>动态模块加载清除icache</title>
+  <title>uClibc的TZ格式</title>
 
   
   
@@ -120,14 +120,14 @@ ga('send', 'pageview');
         
 
 <header>
-    <p class="meta">Jul 9, 2018
+    <p class="meta">Nov 29, 2018
         
-         - <a href="https://xixitalk.github.io/blog/2018/07/09/clean-icache/#disqus_thread">Comments</a>
+         - <a href="https://xixitalk.github.io/blog/2018/11/29/uClibc-TZ/#disqus_thread">Comments</a>
 
         
     </p>
     <h1 class="entry-title">
-         动态模块加载清除icache 
+         uClibc的TZ格式 
     </h1>
 </header>
 
@@ -137,40 +137,50 @@ ga('send', 'pageview');
           
           
           
-          <p>产品是嵌入式RTOS系统，一个第三方软件自己实现了程序动态加载，问题是：程序加载后跳转执行，有时候正常，有时候导致系统死机，死机原因是未定义指令异常（ARM UND）。</p>
+          <p>在使用uClibc的linux环境， 时间换算总是不对，特别是出现夏令时。</p>
 
 <p></p>
 
-<p>从死机导出来的现场看，该地址是个跳转指令，并没有发现有什么异常，很是奇怪。</p>
+<p>细究发现uClibc支持的TZ标准如下  <a href="http://www.opengroup.org/onlinepubs/007904975/basedefs/xbd_chap08.html" target="_blank">http://www.opengroup.org/onlinepubs/007904975/basedefs/xbd_chap08.html</a></p>
 
-<p><strong>在load模块前，按照模块地址空间清空icache后问题解决</strong>。</p>
+<pre><code>posix_time_zone 是唯一的，因为该对像创建自一个Posix 时区字符串(IEEE Std 1003.1)。POSIX 时区字符串的格式如下：
 
-<p>理论分析：ARM的icache和dcache是分开的，模块再次加载是内存填充操作，只更新了dcache，icache还是之前执行的指令，这样与内存（DDR）的程序指令不一致了。</p>
 
-<p>linux内核的ko模块加载也有类似操作，见<code>kernel/module.c</code>里<code>flush_module_icache</code>函数。</p>
-<div class="highlight" style="background: #002B36"><pre style="line-height: 125%"><code class="language-c" data-lang="c"><span></span><span style="color: #719e07">static</span> <span style="color: #DC322F">void</span> <span style="color: #268BD2">flush_module_icache</span><span style="color: #93A1A1">(</span><span style="color: #719e07">const</span> <span style="color: #719e07">struct</span> <span style="color: #93A1A1">module</span> <span style="color: #719e07">*</span><span style="color: #93A1A1">mod)</span>
-<span style="color: #93A1A1">{</span>
-	<span style="color: #93A1A1">mm_segment_t</span> <span style="color: #93A1A1">old_fs;</span>
+      &quot;std offset dst [offset],start[/time],end[/time]&quot; (可带或不带空格)。
 
-	<span style="color: #586E75">/* flush the icache in correct context */</span>
-	<span style="color: #93A1A1">old_fs</span> <span style="color: #719e07">=</span> <span style="color: #93A1A1">get_fs();</span>
-	<span style="color: #93A1A1">set_fs(KERNEL_DS);</span>
+'std' 给出时区的缩写。'offset' 为距UTC的偏移。'dst' 给出时区在夏令时的缩写。第二个offset 表示在DST时要改变的小时数（相对于格林尼治伦敦时间）。'start' 和'end' 为开始(和结束)DST的日期。
 
-	<span style="color: #586E75">/*</span>
-<span style="color: #586E75">	 * Flush the instruction cache, since we&#39;ve played with text.</span>
-<span style="color: #586E75">	 * Do it before processing of module parameters, so the module</span>
-<span style="color: #586E75">	 * can provide parameter accessor functions of its own.</span>
-<span style="color: #586E75">	 */</span>
-	<span style="color: #719e07">if</span> <span style="color: #93A1A1">(mod</span><span style="color: #719e07">-&gt;</span><span style="color: #93A1A1">module_init)</span>
-		<span style="color: #93A1A1">flush_icache_range((</span><span style="color: #DC322F">unsigned</span> <span style="color: #DC322F">long</span><span style="color: #93A1A1">)mod</span><span style="color: #719e07">-&gt;</span><span style="color: #93A1A1">module_init,</span>
-				   <span style="color: #93A1A1">(</span><span style="color: #DC322F">unsigned</span> <span style="color: #DC322F">long</span><span style="color: #93A1A1">)mod</span><span style="color: #719e07">-&gt;</span><span style="color: #93A1A1">module_init</span>
-				   <span style="color: #719e07">+</span> <span style="color: #93A1A1">mod</span><span style="color: #719e07">-&gt;</span><span style="color: #93A1A1">init_size);</span>
-	<span style="color: #93A1A1">flush_icache_range((</span><span style="color: #DC322F">unsigned</span> <span style="color: #DC322F">long</span><span style="color: #93A1A1">)mod</span><span style="color: #719e07">-&gt;</span><span style="color: #93A1A1">module_core,</span>
-			   <span style="color: #93A1A1">(</span><span style="color: #DC322F">unsigned</span> <span style="color: #DC322F">long</span><span style="color: #93A1A1">)mod</span><span style="color: #719e07">-&gt;</span><span style="color: #93A1A1">module_core</span> <span style="color: #719e07">+</span> <span style="color: #93A1A1">mod</span><span style="color: #719e07">-&gt;</span><span style="color: #93A1A1">core_size);</span>
+'offset' 的格式如下：
 
-	<span style="color: #93A1A1">set_fs(old_fs);</span>
-<span style="color: #93A1A1">}</span>
-</code></pre></div>
+
+      [+|-]hh[:mm[:ss]] {h=0-23, m/s=0-59}
+
+'time' 和'offset' 具有相同的格式,都是时分秒。
+
+'start' 和'end' 可以是以下三种格式之一：
+
+      Mm.w.d {m,month=1-12; w,week=1-5 (5总是表示最后一周); d,day=0-6，0是星期天}  
+      Jn {n=1-365 Feb29不被计算}  
+      n {n=0-365 Feb29在闰年时被计算}
+
+
+本初子午线以东是‘-’，以西是‘+’
+</code></pre>
+
+<p>举例耶路撒冷时间<code>IST-2IDT-3,M3.4.5/02:00:00,M10.5.0/02:00:00</code>，表示耶路撒冷位于东2区，夏令时比时区时间早一个小时（-3），夏令时开始时间3月，第四个星期五 2点开始变更时间，夏令时结束时间在10月最后一个星期天 2点变更时间,时间回到正常时区（东二区）。</p>
+
+<p>夏令时后面的<code>offset</code>通常忽略，<code>IST-2IDT-3,M3.4.5/02:00:00,M10.5.0/02:00:00</code>简写为<code>IST-2IDT,M3.4.5/02:00:00,M10.5.0/02:00:00</code>，切换到夏令时默认加一小时，如果不是一小时就需要注明。</p>
+
+<h3 id="参考资料">参考资料</h3>
+
+<ol>
+<li><a href="https://www.uclibc.org/FAQ.html" target="_blank">https://www.uclibc.org/FAQ.html</a></li>
+<li><a href="http://www.opengroup.org/onlinepubs/007904975/basedefs/xbd_chap08.html" target="_blank">http://www.opengroup.org/onlinepubs/007904975/basedefs/xbd_chap08.html</a></li>
+<li><a href="https://m.blog.naver.com/devil3366/10040211090" target="_blank">https://m.blog.naver.com/devil3366/10040211090</a></li>
+<li><a href="http://boost.ez2learn.com/doc/html/date_time/local_time.html" target="_blank">http://boost.ez2learn.com/doc/html/date_time/local_time.html</a></li>
+<li><a href="https://bering-uclibc.zetam.org/wiki/Bering-uClibc_6.x_-_User_Guide_-_Basic_Configuration_-_Basic_System_Configuration" target="_blank">https://bering-uclibc.zetam.org/wiki/Bering-uClibc_6.x_-_User_Guide_-_Basic_Configuration_-_Basic_System_Configuration</a></li>
+<li><a href="http://leaf.sourceforge.net/doc/buci-tz3.html" target="_blank">http://leaf.sourceforge.net/doc/buci-tz3.html</a></li>
+</ol>
          <br />
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
         </div>
@@ -180,12 +190,12 @@ ga('send', 'pageview');
   <p class="meta">
     <span class="byline author vcard">Posted by <span class="fn">xixitalk</span></span>
     
-    <time>Jul 9, 2018</time>
+    <time>Nov 29, 2018</time>
     
       <span class="categories">
         Tags:
         
-          <a class="category" href="https://xixitalk.github.io/tags/tech">tech</a>  
+          <a class="category" href="https://xixitalk.github.io/tags/linux">linux</a>  
     
     </span>
   </p>
@@ -197,11 +207,9 @@ ga('send', 'pageview');
 
   <p class="meta">
     
-        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2018/06/06/nexus-6p-update-system/" title="手机刷新系统">手机刷新系统</a>
+        <a class="basic-alignment left" href="https://xixitalk.github.io/blog/2018/08/31/transparent-proxy/" title="用ss-redir或redsocks搭建透明网关">用ss-redir或redsocks搭建透明网关</a>
     
 
-    
-      <a class="basic-alignment right" href="https://xixitalk.github.io/blog/2018/07/12/fence-wild-dogs/" title="澳洲一处隔离野狗的栅栏显著地改变了该处的景观">澳洲一处隔离野狗的栅栏显著地改变了该处的景观</a>
     
   </p>
   

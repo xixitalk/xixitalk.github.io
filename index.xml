@@ -6,10 +6,21 @@
     <description>Recent content on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Aug 2018 06:11:31 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 29 Nov 2018 15:05:49 +0800</lastBuildDate>
     
 	<atom:link href="https://xixitalk.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>uClibc的TZ格式</title>
+      <link>https://xixitalk.github.io/blog/2018/11/29/uClibc-TZ/</link>
+      <pubDate>Thu, 29 Nov 2018 15:05:49 +0800</pubDate>
+      
+      <guid>https://xixitalk.github.io/blog/2018/11/29/uClibc-TZ/</guid>
+      <description>&lt;p&gt;在使用uClibc的linux环境， 时间换算总是不对，特别是出现夏令时。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>用ss-redir或redsocks搭建透明网关</title>
