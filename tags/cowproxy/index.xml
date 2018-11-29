@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cowproxy on xixitalk&#39;s snippet</title>
-    <link>https://xixitalk.top/tags/cowproxy/</link>
+    <link>https://xixitalk.github.io/tags/cowproxy/</link>
     <description>Recent content in Cowproxy on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 14 Jun 2013 11:48:41 +0800</lastBuildDate>
     
-	<atom:link href="https://xixitalk.top/tags/cowproxy/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xixitalk.github.io/tags/cowproxy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Raspberry Pi上安装Go lang并编译cow proxy</title>
-      <link>https://xixitalk.top/blog/2013/06/14/go-lang-for-raspberrypi/</link>
+      <link>https://xixitalk.github.io/blog/2013/06/14/go-lang-for-raspberrypi/</link>
       <pubDate>Fri, 14 Jun 2013 11:48:41 +0800</pubDate>
       
-      <guid>https://xixitalk.top/blog/2013/06/14/go-lang-for-raspberrypi/</guid>
+      <guid>https://xixitalk.github.io/blog/2013/06/14/go-lang-for-raspberrypi/</guid>
       <description>&lt;p&gt;【golang和cow都提供ARM版本了 2017.11.28 更新，文档更新了一下】&lt;/p&gt;
 
 &lt;h3 id=&#34;安装go语言&#34;&gt;安装go语言&lt;/h3&gt;
