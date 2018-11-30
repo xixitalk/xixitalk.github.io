@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shadowsocks on xixitalk&#39;s snippet</title>
-    <link>https://xixitalk.github.io/tags/shadowsocks/</link>
+    <link>https://xixitalk.top/tags/shadowsocks/</link>
     <description>Recent content in Shadowsocks on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 31 Aug 2018 06:11:31 +0800</lastBuildDate>
     
-	<atom:link href="https://xixitalk.github.io/tags/shadowsocks/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xixitalk.top/tags/shadowsocks/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>用ss-redir或redsocks搭建透明网关</title>
-      <link>https://xixitalk.github.io/blog/2018/08/31/transparent-proxy/</link>
+      <link>https://xixitalk.top/blog/2018/08/31/transparent-proxy/</link>
       <pubDate>Fri, 31 Aug 2018 06:11:31 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2018/08/31/transparent-proxy/</guid>
+      <guid>https://xixitalk.top/blog/2018/08/31/transparent-proxy/</guid>
       <description>&lt;p&gt;原生android刷机后第一次开机系统初始设置要连接Google服务器，如果没有透明代理就很麻烦，进不了桌面。这里可以通过一台Linux机器（我用的是第一代树莓派）来达到透明代理的作用。平常情况下手机、平板和机顶盒也可以通过透明代理上网，简化配置。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>利用Raspberry Pi加shadowsocks搭建代理服务</title>
-      <link>https://xixitalk.github.io/blog/2013/03/02/raspberry-pi-proxy/</link>
+      <link>https://xixitalk.top/blog/2013/03/02/raspberry-pi-proxy/</link>
       <pubDate>Sat, 02 Mar 2013 12:31:00 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/03/02/raspberry-pi-proxy/</guid>
+      <guid>https://xixitalk.top/blog/2013/03/02/raspberry-pi-proxy/</guid>
       <description>&lt;p&gt;设想：路由器和Raspberry Pi的耗电都非常小，可以常开不关机。而且手机上使用SSH -D、shadowsocks和VPN都不方便，还增加电池消耗。android上的twidere和twitter官方客户端都支持HTTP代理，iOS也方便使用pac代理。HTTP代理虽然没有加密，但是因为都在国内没有通过GFW所以不会触发屏蔽。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>xixitalk&#39;s snippet</title>
-    <link>https://xixitalk.github.io/</link>
+    <link>https://xixitalk.top/</link>
     <description>Recent content on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 29 Nov 2018 15:05:49 +0800</lastBuildDate>
     
-	<atom:link href="https://xixitalk.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xixitalk.top/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>uClibc的TZ格式</title>
-      <link>https://xixitalk.github.io/blog/2018/11/29/uClibc-TZ/</link>
+      <link>https://xixitalk.top/blog/2018/11/29/uClibc-TZ/</link>
       <pubDate>Thu, 29 Nov 2018 15:05:49 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2018/11/29/uClibc-TZ/</guid>
+      <guid>https://xixitalk.top/blog/2018/11/29/uClibc-TZ/</guid>
       <description>&lt;p&gt;在使用uClibc的linux环境， 时间换算总是不对，特别是出现夏令时。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>用ss-redir或redsocks搭建透明网关</title>
-      <link>https://xixitalk.github.io/blog/2018/08/31/transparent-proxy/</link>
+      <link>https://xixitalk.top/blog/2018/08/31/transparent-proxy/</link>
       <pubDate>Fri, 31 Aug 2018 06:11:31 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2018/08/31/transparent-proxy/</guid>
+      <guid>https://xixitalk.top/blog/2018/08/31/transparent-proxy/</guid>
       <description>&lt;p&gt;原生android刷机后第一次开机系统初始设置要连接Google服务器，如果没有透明代理就很麻烦，进不了桌面。这里可以通过一台Linux机器（我用的是第一代树莓派）来达到透明代理的作用。平常情况下手机、平板和机顶盒也可以通过透明代理上网，简化配置。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -35,10 +35,10 @@
     
     <item>
       <title>Nokia 7 Plus手机体验</title>
-      <link>https://xixitalk.github.io/blog/2018/08/24/Nokia-7-plus/</link>
+      <link>https://xixitalk.top/blog/2018/08/24/Nokia-7-plus/</link>
       <pubDate>Fri, 24 Aug 2018 09:15:38 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2018/08/24/Nokia-7-plus/</guid>
+      <guid>https://xixitalk.top/blog/2018/08/24/Nokia-7-plus/</guid>
       <description>&lt;h3 id=&#34;软件系统&#34;&gt;软件系统&lt;/h3&gt;
 
 &lt;p&gt;系统android Oreo 8.1，现在是8月份，可以升级到7月份的安全补丁版本。并且声称9月份提供android pie 9正式版。软件开发和安全更新很及时，超越绝大多数android手机厂商。&lt;/p&gt;
@@ -48,10 +48,10 @@
     
     <item>
       <title>标准C库里的errno是怎么实现的？</title>
-      <link>https://xixitalk.github.io/blog/2018/08/02/errno-in-libc/</link>
+      <link>https://xixitalk.top/blog/2018/08/02/errno-in-libc/</link>
       <pubDate>Thu, 02 Aug 2018 14:36:18 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2018/08/02/errno-in-libc/</guid>
+      <guid>https://xixitalk.top/blog/2018/08/02/errno-in-libc/</guid>
       <description>&lt;p&gt;首先&lt;code&gt;errno&lt;/code&gt;是个全局变量，刚开始UNIX/Linux只有进程，这样多进程也是安全的。但是后来有了线程，线程间是可以共享全局变量的，这样&lt;code&gt;errno&lt;/code&gt;就线程不安全了。解决办法是线程实现TLS(Thread Local Storage)，每个线程都有一个&lt;code&gt;errno&lt;/code&gt;变量。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -59,10 +59,10 @@
     
     <item>
       <title>澳洲一处隔离野狗的栅栏显著地改变了该处的景观</title>
-      <link>https://xixitalk.github.io/blog/2018/07/12/fence-wild-dogs/</link>
+      <link>https://xixitalk.top/blog/2018/07/12/fence-wild-dogs/</link>
       <pubDate>Thu, 12 Jul 2018 20:24:01 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2018/07/12/fence-wild-dogs/</guid>
+      <guid>https://xixitalk.top/blog/2018/07/12/fence-wild-dogs/</guid>
       <description>&lt;h2 id=&#34;a-fence-built-to-keep-out-wild-dogs-has-dramatically-altered-the-australian-landscape&#34;&gt;A fence built to keep out wild dogs has dramatically altered the Australian landscape&lt;/h2&gt;
 
 &lt;h3 id=&#34;澳洲一处隔离野狗的栅栏显著地改变了该处的景观&#34;&gt;澳洲一处隔离野狗的栅栏显著地改变了该处的景观&lt;/h3&gt;
@@ -72,10 +72,10 @@
     
     <item>
       <title>动态模块加载清除icache</title>
-      <link>https://xixitalk.github.io/blog/2018/07/09/clean-icache/</link>
+      <link>https://xixitalk.top/blog/2018/07/09/clean-icache/</link>
       <pubDate>Mon, 09 Jul 2018 20:07:29 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2018/07/09/clean-icache/</guid>
+      <guid>https://xixitalk.top/blog/2018/07/09/clean-icache/</guid>
       <description>&lt;p&gt;产品是嵌入式RTOS系统，一个第三方软件自己实现了程序动态加载，问题是：程序加载后跳转执行，有时候正常，有时候导致系统死机，死机原因是未定义指令异常（ARM UND）。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -83,10 +83,10 @@
     
     <item>
       <title>手机刷新系统</title>
-      <link>https://xixitalk.github.io/blog/2018/06/06/nexus-6p-update-system/</link>
+      <link>https://xixitalk.top/blog/2018/06/06/nexus-6p-update-system/</link>
       <pubDate>Wed, 06 Jun 2018 15:51:04 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2018/06/06/nexus-6p-update-system/</guid>
+      <guid>https://xixitalk.top/blog/2018/06/06/nexus-6p-update-system/</guid>
       <description>&lt;p&gt;手机保留用户数据刷新系统，有时候系统启动不起来要全新刷新系统，记录下面方便下次使用。&lt;/p&gt;
 
 &lt;h2 id=&#34;备份数据&#34;&gt;备份数据&lt;/h2&gt;
@@ -106,10 +106,10 @@
     
     <item>
       <title>安装pi-hole</title>
-      <link>https://xixitalk.github.io/blog/2018/05/27/install-pi-hole/</link>
+      <link>https://xixitalk.top/blog/2018/05/27/install-pi-hole/</link>
       <pubDate>Sun, 27 May 2018 17:19:42 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2018/05/27/install-pi-hole/</guid>
+      <guid>https://xixitalk.top/blog/2018/05/27/install-pi-hole/</guid>
       <description>&lt;p&gt;pi-hole是通过DNS来拦截网页广告服务，突出特点是有个&lt;strong&gt;好看的数据管理/数据查询/数据分析界面&lt;/strong&gt;。它是个组合套件：包括pi-hole admin网页管理（php网页）、dnsmasq、php5、lighttpd、sqlite、curl等一起搭建一个拦截广告的DNS服务，DNS服务是通过dnsmasq提供的。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -117,10 +117,10 @@
     
     <item>
       <title>libgcc是什么</title>
-      <link>https://xixitalk.github.io/blog/2018/05/07/what-is-libgcc/</link>
+      <link>https://xixitalk.top/blog/2018/05/07/what-is-libgcc/</link>
       <pubDate>Mon, 07 May 2018 11:34:13 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2018/05/07/what-is-libgcc/</guid>
+      <guid>https://xixitalk.top/blog/2018/05/07/what-is-libgcc/</guid>
       <description>&lt;p&gt;一个产品flash空间非常小，只有16MB，所以不必要的东西都要裁剪掉。一次有个研发问我：发现有个程序如果缺失&lt;code&gt;libgcc_s.so.1&lt;/code&gt;，pthread_join()就会运行不正常，但是无论是&lt;code&gt;ldd&lt;/code&gt;还是&lt;code&gt;readelf -d&lt;/code&gt;都没有发现依赖&lt;code&gt;libgcc_s.so.1&lt;/code&gt;。搜索得知PC linux上也大量类似&lt;code&gt;libgcc_s.so.1 must be installed for pthread_cancel to work&lt;/code&gt;的问题。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -128,10 +128,10 @@
     
     <item>
       <title>模块unsupported RELA relocation:275错误</title>
-      <link>https://xixitalk.github.io/blog/2018/05/03/linux-module-unsupported-RELA-relocation/</link>
+      <link>https://xixitalk.top/blog/2018/05/03/linux-module-unsupported-RELA-relocation/</link>
       <pubDate>Thu, 03 May 2018 14:58:17 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2018/05/03/linux-module-unsupported-RELA-relocation/</guid>
+      <guid>https://xixitalk.top/blog/2018/05/03/linux-module-unsupported-RELA-relocation/</guid>
       <description>&lt;p&gt;ARM A53芯片有个Erratum，编号是843419，在linux内核打开修正选项后，一些模块（ko）会insmod失败，提示：&lt;/p&gt;
 
 &lt;p&gt;内核选项：CONFIG_ARM64_ERRATUM_843419&lt;/p&gt;
@@ -141,10 +141,10 @@
     
     <item>
       <title>交叉编译perf(ARM Linux)</title>
-      <link>https://xixitalk.github.io/blog/2018/05/02/perf-on-arm-linux/</link>
+      <link>https://xixitalk.top/blog/2018/05/02/perf-on-arm-linux/</link>
       <pubDate>Wed, 02 May 2018 09:14:37 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2018/05/02/perf-on-arm-linux/</guid>
+      <guid>https://xixitalk.top/blog/2018/05/02/perf-on-arm-linux/</guid>
       <description>&lt;p&gt;关键词：ARM linux perf&lt;/p&gt;
 
 &lt;p&gt;perf对于Linux性能分析非常有用。perf在linux上编译依赖几个库，库的编译问题不大，但是要打ARM架构的补丁不好操作。所以不如索性用buildroot制作一个和平台兼容的交叉编译链，在buildroot里自动选择上需要的库，让buildroot自动下载打补丁和编译，这样操作最省事省力。&lt;/p&gt;
@@ -154,10 +154,10 @@
     
     <item>
       <title>内核硬浮点VFP开关</title>
-      <link>https://xixitalk.github.io/blog/2018/01/11/vfpv3/</link>
+      <link>https://xixitalk.top/blog/2018/01/11/vfpv3/</link>
       <pubDate>Thu, 11 Jan 2018 11:50:48 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2018/01/11/vfpv3/</guid>
+      <guid>https://xixitalk.top/blog/2018/01/11/vfpv3/</guid>
       <description>&lt;p&gt;一个产品编译链打开了VFPv3开关，重新编译版本后发现内核启动init失败。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -165,10 +165,10 @@
     
     <item>
       <title>linux信号回调栈空间探究</title>
-      <link>https://xixitalk.github.io/blog/2017/12/20/linux-signal-handler-stack/</link>
+      <link>https://xixitalk.top/blog/2017/12/20/linux-signal-handler-stack/</link>
       <pubDate>Wed, 20 Dec 2017 14:13:53 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2017/12/20/linux-signal-handler-stack/</guid>
+      <guid>https://xixitalk.top/blog/2017/12/20/linux-signal-handler-stack/</guid>
       <description>&lt;p&gt;Linux上通过signal()或者sigaction()可以自定义注册一个信号的信号回调，那么信号回调是执行的栈空间在哪里呢？以下代码以内核3.4.x  ARM架构为例。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -176,10 +176,10 @@
     
     <item>
       <title>便于代码阅读清理内核代码</title>
-      <link>https://xixitalk.github.io/blog/2017/12/03/clean-linux-kernel-file/</link>
+      <link>https://xixitalk.top/blog/2017/12/03/clean-linux-kernel-file/</link>
       <pubDate>Sun, 03 Dec 2017 14:42:05 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2017/12/03/clean-linux-kernel-file/</guid>
+      <guid>https://xixitalk.top/blog/2017/12/03/clean-linux-kernel-file/</guid>
       <description>&lt;p&gt;Linux代码庞大，代码阅读时候发现无关代码太多，清理一下无关代码便于阅读（清理的标准是某产品内核编译没有用到的文件）。&lt;/p&gt;
 
 &lt;p&gt;原理：版本编译用到的文件会更新文件的atime，atime没有更新的文件就是编译无关文件。&lt;/p&gt;
@@ -189,10 +189,10 @@
     
     <item>
       <title>从octopress迁移到hugo</title>
-      <link>https://xixitalk.github.io/blog/2017/11/27/migrate-to-hugo-from-octopress/</link>
+      <link>https://xixitalk.top/blog/2017/11/27/migrate-to-hugo-from-octopress/</link>
       <pubDate>Mon, 27 Nov 2017 17:23:59 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2017/11/27/migrate-to-hugo-from-octopress/</guid>
+      <guid>https://xixitalk.top/blog/2017/11/27/migrate-to-hugo-from-octopress/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://octopress.org/&#34; target=&#34;_blank&#34;&gt;octopress&lt;/a&gt;编译速度很慢，2.0版本依赖老的ruby版本，环境搭建复杂，3.0版本几年来还没有正式发布，所以本blog切换到了&lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;，下面是迁移记录。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -200,19 +200,19 @@
     
     <item>
       <title>About</title>
-      <link>https://xixitalk.github.io/about/</link>
+      <link>https://xixitalk.top/about/</link>
       <pubDate>Sun, 26 Nov 2017 22:17:08 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/about/</guid>
+      <guid>https://xixitalk.top/about/</guid>
       <description>xixitalk</description>
     </item>
     
     <item>
       <title>用frp代替stunnel进行服务共享和安全连接</title>
-      <link>https://xixitalk.github.io/blog/2017/11/13/use-frp-instead-of-stunnel/</link>
+      <link>https://xixitalk.top/blog/2017/11/13/use-frp-instead-of-stunnel/</link>
       <pubDate>Mon, 13 Nov 2017 16:14:36 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2017/11/13/use-frp-instead-of-stunnel/</guid>
+      <guid>https://xixitalk.top/blog/2017/11/13/use-frp-instead-of-stunnel/</guid>
       <description>&lt;p&gt;需求：家里内网的服务，办公室内网可以访问。&lt;/p&gt;
 
 &lt;h4 id=&#34;环境说明&#34;&gt;环境说明&lt;/h4&gt;
@@ -224,10 +224,10 @@
     
     <item>
       <title>内网穿透：从家里连接办公室电脑</title>
-      <link>https://xixitalk.github.io/blog/2017/11/13/link-office-from-home-via-frp/</link>
+      <link>https://xixitalk.top/blog/2017/11/13/link-office-from-home-via-frp/</link>
       <pubDate>Mon, 13 Nov 2017 09:11:13 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2017/11/13/link-office-from-home-via-frp/</guid>
+      <guid>https://xixitalk.top/blog/2017/11/13/link-office-from-home-via-frp/</guid>
       <description>&lt;p&gt;环境说明: 办公室电脑是 10.40.xx.xx这样的内网IP，并且办公环境要通过HTTP代理才能访问外网。我没有公网IP的VPS，但是家里路由器是有公网IP的，可以借路由器的公网IP进行内网穿透。&lt;/p&gt;
 
 &lt;h4 id=&#34;环境&#34;&gt;环境&lt;/h4&gt;
@@ -241,10 +241,10 @@
     
     <item>
       <title>getaddrinfo 返回Name or service not known错误</title>
-      <link>https://xixitalk.github.io/blog/2017/09/19/getaddrinfo-error/</link>
+      <link>https://xixitalk.top/blog/2017/09/19/getaddrinfo-error/</link>
       <pubDate>Tue, 19 Sep 2017 14:23:57 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2017/09/19/getaddrinfo-error/</guid>
+      <guid>https://xixitalk.top/blog/2017/09/19/getaddrinfo-error/</guid>
       <description>&lt;p&gt;关键词：glibc  getaddrinfo&lt;/p&gt;
 
 &lt;p&gt;同事反馈说程序调用&lt;code&gt;getaddrinfo&lt;/code&gt;函数出错（arm linux平台），glibc是2.20，我想glibc不会这么弱，这么标准的函数都有问题。&lt;/p&gt;
@@ -254,10 +254,10 @@
     
     <item>
       <title>树莓派3上编译haproxy</title>
-      <link>https://xixitalk.github.io/blog/2017/09/03/compile-haproxy-on-raspberry3/</link>
+      <link>https://xixitalk.top/blog/2017/09/03/compile-haproxy-on-raspberry3/</link>
       <pubDate>Sun, 03 Sep 2017 06:01:08 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2017/09/03/compile-haproxy-on-raspberry3/</guid>
+      <guid>https://xixitalk.top/blog/2017/09/03/compile-haproxy-on-raspberry3/</guid>
       <description>&lt;p&gt;最近发现树莓派上haproxy有点问题，Google Play下载有些不正常。所以想更新编译haproxy。raspbian软件仓库的haproxy的版本比较低，所以直接下载haproxy源代码编译。更新过程记录下来。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -265,10 +265,10 @@
     
     <item>
       <title>当小孩吞吃了一个红枣核</title>
-      <link>https://xixitalk.github.io/blog/2017/08/28/When-a-child-eat-a-chinese-date-stone/</link>
+      <link>https://xixitalk.top/blog/2017/08/28/When-a-child-eat-a-chinese-date-stone/</link>
       <pubDate>Mon, 28 Aug 2017 10:51:54 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2017/08/28/When-a-child-eat-a-chinese-date-stone/</guid>
+      <guid>https://xixitalk.top/blog/2017/08/28/When-a-child-eat-a-chinese-date-stone/</guid>
       <description>&lt;p&gt;&lt;strong&gt;不要给小孩吃红枣！不要给小孩吃红枣！不要给小孩吃红枣！&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -276,10 +276,10 @@
     
     <item>
       <title>华硕路由器外接硬盘格式化成什么文件系统最好</title>
-      <link>https://xixitalk.github.io/blog/2016/11/12/How-to-Format-Usb-Drive-for-asus-router/</link>
+      <link>https://xixitalk.top/blog/2016/11/12/How-to-Format-Usb-Drive-for-asus-router/</link>
       <pubDate>Sat, 12 Nov 2016 15:33:41 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/11/12/How-to-Format-Usb-Drive-for-asus-router/</guid>
+      <guid>https://xixitalk.top/blog/2016/11/12/How-to-Format-Usb-Drive-for-asus-router/</guid>
       <description>&lt;p&gt;关键词：华硕 AC66U AC68U 外接硬盘 文件系统 EXT4 EXT3 NTFS FAT32&lt;/p&gt;
 
 &lt;p&gt;我有一台华硕AC66U，外接了一块2.5吋移动硬盘。不知道格式化成什么格式最好？硬盘本来是EXT4格式的，插上发现没有自动挂载，搜索发现，AC66U建议用&lt;strong&gt;EXT3&lt;/strong&gt;格式，而AC68U建议用&lt;strong&gt;EXT4&lt;/strong&gt;格式。果然格式成EXT3后，插上AC66U后&lt;strong&gt;自动挂载&lt;/strong&gt;了。其他华硕机器未验证。&lt;/p&gt;
@@ -289,10 +289,10 @@
     
     <item>
       <title>pkcs11-helper编译</title>
-      <link>https://xixitalk.github.io/blog/2016/11/01/pkcs11-helper-build/</link>
+      <link>https://xixitalk.top/blog/2016/11/01/pkcs11-helper-build/</link>
       <pubDate>Tue, 01 Nov 2016 18:37:08 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/11/01/pkcs11-helper-build/</guid>
+      <guid>https://xixitalk.top/blog/2016/11/01/pkcs11-helper-build/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/OpenSC/pkcs11-helper/releases&#34; target=&#34;_blank&#34;&gt;pkcs11-helper&lt;/a&gt;也真是的，软件包里&lt;code&gt;INSTALL&lt;/code&gt;里说用&lt;code&gt;./configure&lt;/code&gt;生成&lt;code&gt;Makefile&lt;/code&gt;，但是软件包还没有&lt;code&gt;configure&lt;/code&gt;文件，需要&lt;code&gt;autoreconf&lt;/code&gt;生成&lt;code&gt;configure&lt;/code&gt;文件。妈蛋，&lt;code&gt;INSTALL&lt;/code&gt;多写一句&lt;code&gt;autoreconf -ivf&lt;/code&gt;会死吗？&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -300,10 +300,10 @@
     
     <item>
       <title>西部数据硬盘Load_Cycle_Count增长过快的问题</title>
-      <link>https://xixitalk.github.io/blog/2016/10/31/Western-Digital-problems/</link>
+      <link>https://xixitalk.top/blog/2016/10/31/Western-Digital-problems/</link>
       <pubDate>Mon, 31 Oct 2016 08:39:21 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/10/31/Western-Digital-problems/</guid>
+      <guid>https://xixitalk.top/blog/2016/10/31/Western-Digital-problems/</guid>
       <description>&lt;p&gt;关键词：硬盘 西部数据 希捷 东芝&lt;/p&gt;
 
 &lt;p&gt;我有一块西部数据的3.5寸硬盘，同时有一块笔记本淘汰下来的东芝的2.5寸硬盘，关键数据用这两个硬盘进行备份。最近东芝的硬盘偶尔读取失败，所以寻思再买一块硬盘替代东芝的这块硬盘。于是在网上搜索到底是买西部数据还是希捷，还是东芝的硬盘。搜索发现了西部数据硬盘曾经有“Load_Cycle_Count”的问题:&lt;a href=&#34;https://blog.vandenbrand.org/2012/04/05/western-digital-green-caviar-wd10eads-and-hdparm-problems/&#34; target=&#34;_blank&#34;&gt;Western Digital Green Caviar WD10EADS and hdparm problems&lt;/a&gt;
@@ -314,10 +314,10 @@
     
     <item>
       <title>编译stunnel</title>
-      <link>https://xixitalk.github.io/blog/2016/10/19/compile-stunnel-from-source/</link>
+      <link>https://xixitalk.top/blog/2016/10/19/compile-stunnel-from-source/</link>
       <pubDate>Wed, 19 Oct 2016 09:21:51 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/10/19/compile-stunnel-from-source/</guid>
+      <guid>https://xixitalk.top/blog/2016/10/19/compile-stunnel-from-source/</guid>
       <description>&lt;p&gt;现在最新的stunnel是v5.36，而很多平台都还是&lt;code&gt;stunnel4&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -325,10 +325,10 @@
     
     <item>
       <title>stunnel verify选项配置</title>
-      <link>https://xixitalk.github.io/blog/2016/10/18/stunnel-verify-config/</link>
+      <link>https://xixitalk.top/blog/2016/10/18/stunnel-verify-config/</link>
       <pubDate>Tue, 18 Oct 2016 09:12:59 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/10/18/stunnel-verify-config/</guid>
+      <guid>https://xixitalk.top/blog/2016/10/18/stunnel-verify-config/</guid>
       <description>&lt;p&gt;verify配置认证方式，取值0 1 2 3 4。&lt;/p&gt;
 
 &lt;p&gt;0 - request and ignore peer cert&lt;br /&gt;
@@ -342,10 +342,10 @@
     
     <item>
       <title>stunnel双向证书认证</title>
-      <link>https://xixitalk.github.io/blog/2016/10/13/Stunnel-With-Bilateral-Authentication/</link>
+      <link>https://xixitalk.top/blog/2016/10/13/Stunnel-With-Bilateral-Authentication/</link>
       <pubDate>Thu, 13 Oct 2016 20:09:49 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/10/13/Stunnel-With-Bilateral-Authentication/</guid>
+      <guid>https://xixitalk.top/blog/2016/10/13/Stunnel-With-Bilateral-Authentication/</guid>
       <description>&lt;p&gt;stunnel 双向证书认证：&lt;strong&gt;防止没授权的客户端连接stunnel服务器，防止客户端连接假的服务器&lt;/strong&gt;。&lt;/p&gt;
 
 &lt;p&gt;stunnel官方的&lt;a href=&#34;https://www.stunnel.org/auth.html&#34; target=&#34;_blank&#34;&gt;说明&lt;/a&gt;是：（客户端）检查服务器端证书是为了防止&lt;strong&gt;中间人攻击&lt;/strong&gt;；（服务器端）检查客户端证书是为了严格控制客户端的访问。&lt;/p&gt;
@@ -360,10 +360,10 @@
     
     <item>
       <title>octopress里用表格</title>
-      <link>https://xixitalk.github.io/blog/2016/10/12/table-in-octopress/</link>
+      <link>https://xixitalk.top/blog/2016/10/12/table-in-octopress/</link>
       <pubDate>Wed, 12 Oct 2016 10:53:20 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/10/12/table-in-octopress/</guid>
+      <guid>https://xixitalk.top/blog/2016/10/12/table-in-octopress/</guid>
       <description>&lt;p&gt;octopress里怎么样用表格？octopress默认的表格border是0，看起来不整齐。这样修改可以显示border。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -371,10 +371,10 @@
     
     <item>
       <title>柏林警方在难民中心枪杀了一名父亲，因为他企图攻击性侵他女儿的嫌疑犯</title>
-      <link>https://xixitalk.github.io/blog/2016/09/30/Berlin-Police-shoot-dead-father-at-refugee-centre-as-he-attacks-man-he-accused-of-abusing-daughter/</link>
+      <link>https://xixitalk.top/blog/2016/09/30/Berlin-Police-shoot-dead-father-at-refugee-centre-as-he-attacks-man-he-accused-of-abusing-daughter/</link>
       <pubDate>Fri, 30 Sep 2016 09:10:49 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/09/30/Berlin-Police-shoot-dead-father-at-refugee-centre-as-he-attacks-man-he-accused-of-abusing-daughter/</guid>
+      <guid>https://xixitalk.top/blog/2016/09/30/Berlin-Police-shoot-dead-father-at-refugee-centre-as-he-attacks-man-he-accused-of-abusing-daughter/</guid>
       <description>&lt;h3 id=&#34;berlin-police-shoot-dead-father-at-refugee-centre-as-he-attacks-man-he-accused-of-abusing-daughter&#34;&gt;Berlin Police shoot dead father at refugee centre as he attacks man he accused of abusing daughter&lt;/h3&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -382,10 +382,10 @@
     
     <item>
       <title>树莓派go语言编译器安装配置</title>
-      <link>https://xixitalk.github.io/blog/2016/09/17/raspbian-golang-install/</link>
+      <link>https://xixitalk.top/blog/2016/09/17/raspbian-golang-install/</link>
       <pubDate>Sat, 17 Sep 2016 19:42:13 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/09/17/raspbian-golang-install/</guid>
+      <guid>https://xixitalk.top/blog/2016/09/17/raspbian-golang-install/</guid>
       <description>&lt;p&gt;关键词：树莓派 go语言编译器安装 raspbian golang install&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -393,10 +393,10 @@
     
     <item>
       <title>造了一个轮子：sleep命令</title>
-      <link>https://xixitalk.github.io/blog/2016/09/15/sleep-linux-command/</link>
+      <link>https://xixitalk.top/blog/2016/09/15/sleep-linux-command/</link>
       <pubDate>Thu, 15 Sep 2016 08:03:35 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/09/15/sleep-linux-command/</guid>
+      <guid>https://xixitalk.top/blog/2016/09/15/sleep-linux-command/</guid>
       <description>&lt;p&gt;我们一个嵌入式平台，系统是&lt;code&gt;uClinux&lt;/code&gt;，不支持动态库，只能用静态库，每个程序都包含了所有调用的函数代码，包括C库的。客户一个产品压力测试时偶现系统内存不够，期望当天我们能协助他们解决，内存优化有很多方向，不好入手啊。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -404,10 +404,10 @@
     
     <item>
       <title>产品中多个不明可执行程序dvrHelper</title>
-      <link>https://xixitalk.github.io/blog/2016/08/30/virus-dvrHelper/</link>
+      <link>https://xixitalk.top/blog/2016/08/30/virus-dvrHelper/</link>
       <pubDate>Tue, 30 Aug 2016 16:48:47 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/08/30/virus-dvrHelper/</guid>
+      <guid>https://xixitalk.top/blog/2016/08/30/virus-dvrHelper/</guid>
       <description>&lt;p&gt;一个数据类产品，测试报告描述：FTP上传下载加浏览器看视频，一个小时内必死机。&lt;/p&gt;
 
 &lt;p&gt;死机现场初步分析：死机直接原因是系统内存耗尽，但是发现进程里多了三个奇怪的进程，进程名都像是随机字符串，两个死机现场都有，并且进程名还随机的不一样。&lt;/p&gt;
@@ -417,10 +417,10 @@
     
     <item>
       <title>netlink遇到ENOBUFS错误</title>
-      <link>https://xixitalk.github.io/blog/2016/08/18/netlink-ENOBUFS/</link>
+      <link>https://xixitalk.top/blog/2016/08/18/netlink-ENOBUFS/</link>
       <pubDate>Thu, 18 Aug 2016 08:49:42 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/08/18/netlink-ENOBUFS/</guid>
+      <guid>https://xixitalk.top/blog/2016/08/18/netlink-ENOBUFS/</guid>
       <description>&lt;p&gt;一个场景：USB插拔的时候内核会通过netlink广播到user层，多个应用接收这个消息。但是出现了errno 105错误，105错误是：&lt;code&gt;No buffer space available&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -428,10 +428,10 @@
     
     <item>
       <title>在内核里获取当前任务名</title>
-      <link>https://xixitalk.github.io/blog/2016/08/10/current-comm/</link>
+      <link>https://xixitalk.top/blog/2016/08/10/current-comm/</link>
       <pubDate>Wed, 10 Aug 2016 08:33:02 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/08/10/current-comm/</guid>
+      <guid>https://xixitalk.top/blog/2016/08/10/current-comm/</guid>
       <description>&lt;p&gt;遇到一个问题，在一个内核模块里使用current-&amp;gt;comm保存当前任务名，编译报错:&lt;code&gt;dereferencing pointer to incomplete type&lt;/code&gt;。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -439,10 +439,10 @@
     
     <item>
       <title>jemalloc add2line ligsigsegv</title>
-      <link>https://xixitalk.github.io/blog/2016/08/03/jemalloc-add2line-ligsigsegv/</link>
+      <link>https://xixitalk.top/blog/2016/08/03/jemalloc-add2line-ligsigsegv/</link>
       <pubDate>Wed, 03 Aug 2016 18:38:22 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/08/03/jemalloc-add2line-ligsigsegv/</guid>
+      <guid>https://xixitalk.top/blog/2016/08/03/jemalloc-add2line-ligsigsegv/</guid>
       <description>&lt;p&gt;一些定位工具还需要研究&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -450,10 +450,10 @@
     
     <item>
       <title>fwrite()多了个了0x0D字符</title>
-      <link>https://xixitalk.github.io/blog/2016/08/02/fwrite-0x0D/</link>
+      <link>https://xixitalk.top/blog/2016/08/02/fwrite-0x0D/</link>
       <pubDate>Tue, 02 Aug 2016 08:18:55 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/08/02/fwrite-0x0D/</guid>
+      <guid>https://xixitalk.top/blog/2016/08/02/fwrite-0x0D/</guid>
       <description>&lt;p&gt;fwrite()写文件竟然多了个了0x0D字符，buffer里检查了也确实没有0x0D，一搜索竟然是如果fopen不是二进制打开，fwrite()遇到0x0A额外写一个0x0D。0D 0A是windows平台的换行符，很明显这是只有在windows平台才有的奇特现象。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -461,10 +461,10 @@
     
     <item>
       <title>pthread和errno</title>
-      <link>https://xixitalk.github.io/blog/2016/08/01/pthread-errno/</link>
+      <link>https://xixitalk.top/blog/2016/08/01/pthread-errno/</link>
       <pubDate>Mon, 01 Aug 2016 19:10:02 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/08/01/pthread-errno/</guid>
+      <guid>https://xixitalk.top/blog/2016/08/01/pthread-errno/</guid>
       <description>&lt;p&gt;pthread和errno：pthread函数在出错的时候不会设置errno，而是直接返回错误值。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -472,10 +472,10 @@
     
     <item>
       <title>C库线程安全函数</title>
-      <link>https://xixitalk.github.io/blog/2016/07/31/Thread-safe-C-library-functions/</link>
+      <link>https://xixitalk.top/blog/2016/07/31/Thread-safe-C-library-functions/</link>
       <pubDate>Sun, 31 Jul 2016 08:28:21 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/07/31/Thread-safe-C-library-functions/</guid>
+      <guid>https://xixitalk.top/blog/2016/07/31/Thread-safe-C-library-functions/</guid>
       <description>&lt;p&gt;C库线程安全函数和不安全函数&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -483,10 +483,10 @@
     
     <item>
       <title>linux内核代码瘦身</title>
-      <link>https://xixitalk.github.io/blog/2016/07/20/linux-kernel-source-strip/</link>
+      <link>https://xixitalk.top/blog/2016/07/20/linux-kernel-source-strip/</link>
       <pubDate>Wed, 20 Jul 2016 21:07:23 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/07/20/linux-kernel-source-strip/</guid>
+      <guid>https://xixitalk.top/blog/2016/07/20/linux-kernel-source-strip/</guid>
       <description>&lt;p&gt;linux内核代码瘦身，原理：把不参与编译的代码删除，这样用Source Insight工具阅读代码的时候就轻简了很多。&lt;/p&gt;
 
 &lt;p&gt;例子数据：原本一个嵌入式linux内核代码1万7千个C文件，精简之后只有1222个C文件，删除了1万6千个C文件。&lt;/p&gt;
@@ -496,10 +496,10 @@
     
     <item>
       <title>linux内核代码预处理后便于阅读</title>
-      <link>https://xixitalk.github.io/blog/2016/07/19/preprocess-linux-kernel/</link>
+      <link>https://xixitalk.top/blog/2016/07/19/preprocess-linux-kernel/</link>
       <pubDate>Tue, 19 Jul 2016 13:39:01 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/07/19/preprocess-linux-kernel/</guid>
+      <guid>https://xixitalk.top/blog/2016/07/19/preprocess-linux-kernel/</guid>
       <description>&lt;p&gt;linux 内核庞大而复杂。内核代码阅读的时候，有没有遇到因为宏定义或者inline层次太深而不知道到底代码是什么样子。代码预处理可以解决这个难题。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -507,10 +507,10 @@
     
     <item>
       <title>linux栈和内存管理</title>
-      <link>https://xixitalk.github.io/blog/2016/07/18/linux-stack-and-memory-management/</link>
+      <link>https://xixitalk.top/blog/2016/07/18/linux-stack-and-memory-management/</link>
       <pubDate>Mon, 18 Jul 2016 09:11:52 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/07/18/linux-stack-and-memory-management/</guid>
+      <guid>https://xixitalk.top/blog/2016/07/18/linux-stack-and-memory-management/</guid>
       <description>&lt;p&gt;先记录，待细看&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -518,10 +518,10 @@
     
     <item>
       <title>pthread退出时自动回收资源</title>
-      <link>https://xixitalk.github.io/blog/2016/07/18/pthread-autoclean-when-exiting/</link>
+      <link>https://xixitalk.top/blog/2016/07/18/pthread-autoclean-when-exiting/</link>
       <pubDate>Mon, 18 Jul 2016 08:49:16 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/07/18/pthread-autoclean-when-exiting/</guid>
+      <guid>https://xixitalk.top/blog/2016/07/18/pthread-autoclean-when-exiting/</guid>
       <description>&lt;p&gt;pthread线程创建后默认属性是joinable，线程函数执行完资源不会自动回收线程资源，需要主进程&lt;code&gt;pthread_join&lt;/code&gt;进行回收，否则就会造成不必要的内存占用，频繁创建退出线程可能会造成系统内存耗尽。除了&lt;code&gt;pthread_join&lt;/code&gt;用这种办法更好些。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -529,10 +529,10 @@
     
     <item>
       <title>linux内核kmalloc和vmalloc的区别</title>
-      <link>https://xixitalk.github.io/blog/2016/07/18/kmalloc-vs-vmalloc/</link>
+      <link>https://xixitalk.top/blog/2016/07/18/kmalloc-vs-vmalloc/</link>
       <pubDate>Mon, 18 Jul 2016 08:41:56 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/07/18/kmalloc-vs-vmalloc/</guid>
+      <guid>https://xixitalk.top/blog/2016/07/18/kmalloc-vs-vmalloc/</guid>
       <description>&lt;p&gt;kmalloc 和 vmalloc的区别&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -540,10 +540,10 @@
     
     <item>
       <title>linux kernel全局变量contig_page_data含义</title>
-      <link>https://xixitalk.github.io/blog/2016/07/13/kernel-contig_page_data/</link>
+      <link>https://xixitalk.top/blog/2016/07/13/kernel-contig_page_data/</link>
       <pubDate>Wed, 13 Jul 2016 09:03:20 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/07/13/kernel-contig_page_data/</guid>
+      <guid>https://xixitalk.top/blog/2016/07/13/kernel-contig_page_data/</guid>
       <description>&lt;p&gt;&lt;code&gt;contig_page_data&lt;/code&gt;是内核内存管理一个很重要的变量。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -551,10 +551,10 @@
     
     <item>
       <title>linux应用内存占用maps分析</title>
-      <link>https://xixitalk.github.io/blog/2016/07/12/app-mem-used-on-linux/</link>
+      <link>https://xixitalk.top/blog/2016/07/12/app-mem-used-on-linux/</link>
       <pubDate>Tue, 12 Jul 2016 10:50:20 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/07/12/app-mem-used-on-linux/</guid>
+      <guid>https://xixitalk.top/blog/2016/07/12/app-mem-used-on-linux/</guid>
       <description>&lt;p&gt;假设一个应用的pid是PID，则&lt;code&gt;cat /proc/PID/maps&lt;/code&gt;显示这个应用的内存占用。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -562,10 +562,10 @@
     
     <item>
       <title>Linux内存占用分布分析</title>
-      <link>https://xixitalk.github.io/blog/2016/07/11/linux-mem-used/</link>
+      <link>https://xixitalk.top/blog/2016/07/11/linux-mem-used/</link>
       <pubDate>Mon, 11 Jul 2016 21:07:20 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/07/11/linux-mem-used/</guid>
+      <guid>https://xixitalk.top/blog/2016/07/11/linux-mem-used/</guid>
       <description>&lt;h2 id=&#34;1-内存占用&#34;&gt;1. 内存占用&lt;/h2&gt;
 
 &lt;p&gt;linux内存占用分两部分：一部分是不可见的，内核代码段数据段的本身的占用空间，对于PC 上几个G的内存来说可能很小可以忽略不计，但是只有几十M内存的嵌入式环境来说就不能忽略了。另一部分就是linux系统可见的内存，&lt;code&gt;free&lt;/code&gt;命令里的&lt;code&gt;total&lt;/code&gt;或者&lt;code&gt;cat /proc/meminfo&lt;/code&gt;里看到的&lt;code&gt;MemTotal&lt;/code&gt;。&lt;/p&gt;
@@ -575,10 +575,10 @@
     
     <item>
       <title>我的AStyle配置选项</title>
-      <link>https://xixitalk.github.io/blog/2016/07/11/my-AStyle-config/</link>
+      <link>https://xixitalk.top/blog/2016/07/11/my-AStyle-config/</link>
       <pubDate>Mon, 11 Jul 2016 18:35:57 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/07/11/my-AStyle-config/</guid>
+      <guid>https://xixitalk.top/blog/2016/07/11/my-AStyle-config/</guid>
       <description>&lt;p&gt;我的AStyle代码格式工具的选项：AStyle.exe -A1 -C -S -K -Y -f -s4 -p -U -o -n main.c&lt;/p&gt;
 
 &lt;p&gt;在&lt;code&gt;notepad++&lt;/code&gt;里添加：&lt;code&gt;运行(R)--运行(R)&lt;/code&gt; 选择AStyle.exe，选项输入&lt;code&gt;-A1 -C -S -K -Y -f -s4 -p -U -o -n &amp;quot;$(FULL_CURRENT_PATH)&amp;quot;&lt;/code&gt;，然后点击&lt;code&gt;保存&lt;/code&gt;，这样就保存在运行菜单里了。每次使用从&lt;code&gt;运行(R)&lt;/code&gt;点击即可。&lt;/p&gt;
@@ -588,10 +588,10 @@
     
     <item>
       <title>函数栈破坏检查</title>
-      <link>https://xixitalk.github.io/blog/2016/07/09/func-stack-check/</link>
+      <link>https://xixitalk.top/blog/2016/07/09/func-stack-check/</link>
       <pubDate>Sat, 09 Jul 2016 14:49:35 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/07/09/func-stack-check/</guid>
+      <guid>https://xixitalk.top/blog/2016/07/09/func-stack-check/</guid>
       <description>&lt;p&gt;函数栈破坏检查 平台 ARM linux，编译器GCC&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -599,10 +599,10 @@
     
     <item>
       <title>malloc封装检查越界</title>
-      <link>https://xixitalk.github.io/blog/2016/07/09/malloc-wrap/</link>
+      <link>https://xixitalk.top/blog/2016/07/09/malloc-wrap/</link>
       <pubDate>Sat, 09 Jul 2016 13:32:35 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/07/09/malloc-wrap/</guid>
+      <guid>https://xixitalk.top/blog/2016/07/09/malloc-wrap/</guid>
       <description>&lt;p&gt;malloc封装检查越界&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -610,10 +610,10 @@
     
     <item>
       <title>UINT32引起的死循环</title>
-      <link>https://xixitalk.github.io/blog/2016/07/09/dead-loop-UINT32/</link>
+      <link>https://xixitalk.top/blog/2016/07/09/dead-loop-UINT32/</link>
       <pubDate>Sat, 09 Jul 2016 10:02:35 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/07/09/dead-loop-UINT32/</guid>
+      <guid>https://xixitalk.top/blog/2016/07/09/dead-loop-UINT32/</guid>
       <description>&lt;p&gt;UINT32 引起的死循环&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -621,10 +621,10 @@
     
     <item>
       <title>Nexus 6P上用flashfire升级系统</title>
-      <link>https://xixitalk.github.io/blog/2016/06/12/flashfire-nexus-6p/</link>
+      <link>https://xixitalk.top/blog/2016/06/12/flashfire-nexus-6p/</link>
       <pubDate>Sun, 12 Jun 2016 10:53:35 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/06/12/flashfire-nexus-6p/</guid>
+      <guid>https://xixitalk.top/blog/2016/06/12/flashfire-nexus-6p/</guid>
       <description>&lt;p&gt;Nexus 6P上用flashfire升级系统&lt;/p&gt;
 
 &lt;p&gt;问题：Nexus原生系统root后怎么升级到最新系统？&lt;/p&gt;
@@ -634,10 +634,10 @@
     
     <item>
       <title>在树莓派上安装SigmaVPN</title>
-      <link>https://xixitalk.github.io/blog/2016/05/07/Install-SigmaVPN-on-Raspbian/</link>
+      <link>https://xixitalk.top/blog/2016/05/07/Install-SigmaVPN-on-Raspbian/</link>
       <pubDate>Sat, 07 May 2016 20:27:44 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/05/07/Install-SigmaVPN-on-Raspbian/</guid>
+      <guid>https://xixitalk.top/blog/2016/05/07/Install-SigmaVPN-on-Raspbian/</guid>
       <description>&lt;p&gt;Install SigmaVPN on Raspbian&lt;br /&gt;
 在树莓派上安装SigmaVPN&lt;/p&gt;
 
@@ -646,10 +646,10 @@
     
     <item>
       <title>Install owncloud 9.0.2 on RaspberryPi</title>
-      <link>https://xixitalk.github.io/blog/2016/04/22/Install-owncloud-on-raspberrypi/</link>
+      <link>https://xixitalk.top/blog/2016/04/22/Install-owncloud-on-raspberrypi/</link>
       <pubDate>Fri, 22 Apr 2016 23:16:41 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2016/04/22/Install-owncloud-on-raspberrypi/</guid>
+      <guid>https://xixitalk.top/blog/2016/04/22/Install-owncloud-on-raspberrypi/</guid>
       <description>&lt;p&gt;Install owncloud 9.0.2 on RaspberryPi&lt;br /&gt;
 在树莓派上安装owncloud 9.0.2&lt;/p&gt;
 
@@ -658,10 +658,10 @@
     
     <item>
       <title>高度近视眼底例行检查</title>
-      <link>https://xixitalk.github.io/blog/2014/06/29/fundus-examination/</link>
+      <link>https://xixitalk.top/blog/2014/06/29/fundus-examination/</link>
       <pubDate>Sun, 29 Jun 2014 21:32:13 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2014/06/29/fundus-examination/</guid>
+      <guid>https://xixitalk.top/blog/2014/06/29/fundus-examination/</guid>
       <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zh&#34; dir=&#34;ltr&#34;&gt;感谢金葡萄老师 &lt;a href=&#34;https://twitter.com/goldengrape?ref_src=twsrc%5Etfw&#34;&gt;@goldengrape&lt;/a&gt; 的洗脑，高度近视每半年复查眼底。今天查出来双眼视网膜裂孔（只有一点点大，首诊的医生拿不准说疑似，主任看了才确认的），做了激光光凝术（听起来有点像魔法，笑~）。&lt;/p&gt;&amp;mdash; 如月中天 (@gttnnn) &lt;a href=&#34;https://twitter.com/gttnnn/status/474409944809095168?ref_src=twsrc%5Etfw&#34;&gt;June 5, 2014&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
@@ -673,10 +673,10 @@
     
     <item>
       <title>免费申请S/MIME证书</title>
-      <link>https://xixitalk.github.io/blog/2014/06/21/Free-SMIME-Certificate-Key/</link>
+      <link>https://xixitalk.top/blog/2014/06/21/Free-SMIME-Certificate-Key/</link>
       <pubDate>Sat, 21 Jun 2014 00:05:11 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2014/06/21/Free-SMIME-Certificate-Key/</guid>
+      <guid>https://xixitalk.top/blog/2014/06/21/Free-SMIME-Certificate-Key/</guid>
       <description>&lt;h2 id=&#34;申请证书&#34;&gt;申请证书&lt;/h2&gt;
 
 &lt;p&gt;从这里可以申请到免费的S/MIME 邮件证书：&lt;a href=&#34;http://www.instantssl.com/ssl-certificate-products/free-email-certificate.html&#34; target=&#34;_blank&#34;&gt;http://www.instantssl.com/ssl-certificate-products/free-email-certificate.html&lt;/a&gt;，
@@ -704,10 +704,10 @@
     
     <item>
       <title>curl下载断点传续</title>
-      <link>https://xixitalk.github.io/blog/2014/04/12/curl-continue/</link>
+      <link>https://xixitalk.top/blog/2014/04/12/curl-continue/</link>
       <pubDate>Sat, 12 Apr 2014 17:22:17 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2014/04/12/curl-continue/</guid>
+      <guid>https://xixitalk.top/blog/2014/04/12/curl-continue/</guid>
       <description>&lt;h3 id=&#34;curl下载断点传续&#34;&gt;curl下载断点传续&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;curl -C offset -O http://google.com/p4.mp4 
@@ -725,10 +725,10 @@
     
     <item>
       <title>twitter-python BadStatusLine错误</title>
-      <link>https://xixitalk.github.io/blog/2014/04/06/twitter-python-badstatusline/</link>
+      <link>https://xixitalk.top/blog/2014/04/06/twitter-python-badstatusline/</link>
       <pubDate>Sun, 06 Apr 2014 20:20:25 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2014/04/06/twitter-python-badstatusline/</guid>
+      <guid>https://xixitalk.top/blog/2014/04/06/twitter-python-badstatusline/</guid>
       <description>&lt;p&gt;事情是这样的：我用&lt;a href=&#34;https://github.com/bear/python-twitter&#34; target=&#34;_blank&#34;&gt;twitter-python&lt;/a&gt;在本地运行， 抓取一个推号的homeline， 抓取后sleep两分钟再抓取， 不停的循环｡从昨天早上开始， 程序出现如下错误， 且每次都是这个错误｡获得推友收藏列表和fo人的api返回都是正常的，就是REST的api出这种错误。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -736,10 +736,10 @@
     
     <item>
       <title>python里用smtplib发邮件使用代理</title>
-      <link>https://xixitalk.github.io/blog/2014/04/04/smtplib-with-proxy/</link>
+      <link>https://xixitalk.top/blog/2014/04/04/smtplib-with-proxy/</link>
       <pubDate>Fri, 04 Apr 2014 09:51:49 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2014/04/04/smtplib-with-proxy/</guid>
+      <guid>https://xixitalk.top/blog/2014/04/04/smtplib-with-proxy/</guid>
       <description>&lt;p&gt;关键词：smtplib mail proxy&lt;/p&gt;
 
 &lt;p&gt;树莓派上一个cron python程序直接用smtplib发送gmail邮件昨天出现问题了，错误是：socket.error: [Errno 97] Address family not supported by protocol，之前都是好好的，我用的smtp.gmail.com，端口是587。&lt;/p&gt;
@@ -751,10 +751,10 @@
     
     <item>
       <title>科学作为一种志业</title>
-      <link>https://xixitalk.github.io/blog/2014/03/26/Science-as-a-Vocation/</link>
+      <link>https://xixitalk.top/blog/2014/03/26/Science-as-a-Vocation/</link>
       <pubDate>Wed, 26 Mar 2014 10:08:49 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2014/03/26/Science-as-a-Vocation/</guid>
+      <guid>https://xixitalk.top/blog/2014/03/26/Science-as-a-Vocation/</guid>
       <description>&lt;p&gt;中文：&lt;a href=&#34;http://blog.sciencenet.cn/blog-449420-610439.html&#34; target=&#34;_blank&#34;&gt;http://blog.sciencenet.cn/blog-449420-610439.html&lt;/a&gt;&lt;br /&gt;
 英文：&lt;a href=&#34;http://anthropos-lab.net/wp/wp-content/uploads/2011/12/Weber-Science-as-a-Vocation.pdf&#34; target=&#34;_blank&#34;&gt;http://anthropos-lab.net/wp/wp-content/uploads/2011/12/Weber-Science-as-a-Vocation.pdf&lt;/a&gt;&lt;/p&gt;
 
@@ -768,10 +768,10 @@
     
     <item>
       <title>韦伯：政治作为一种志业</title>
-      <link>https://xixitalk.github.io/blog/2014/03/25/Politics-as-a-Vocation/</link>
+      <link>https://xixitalk.top/blog/2014/03/25/Politics-as-a-Vocation/</link>
       <pubDate>Tue, 25 Mar 2014 09:50:57 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2014/03/25/Politics-as-a-Vocation/</guid>
+      <guid>https://xixitalk.top/blog/2014/03/25/Politics-as-a-Vocation/</guid>
       <description>&lt;p&gt;马克斯‧韦伯(Max Weber, 1864-1920)，德国学者，与马克思、涂尔干齐名，并列为现代社会学的「奠基者」。他不但是当代西方有影响力的社会科学家之一，也是现代文化比较研究的先驱人物。历任柏林、弗莱堡及海德堡等大学教授，曾主编Archiv fur Sozialwissenschaft und Sozialpolitik与Grundriss der Sozialokonomik。一生著述甚多，以《新教伦理与资本主义精神》、《宗教社会学论文集》及《经济与社会》等最为脍炙人口。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://www.liberal-vision.org/wp-content/uploads/2010/03/weber.jpg&#34; alt=&#34;Max Webber&#34; title=&#34;Max Webber&#34; /&gt;&lt;/p&gt;
@@ -784,10 +784,10 @@
     
     <item>
       <title>心脏骤停急救</title>
-      <link>https://xixitalk.github.io/blog/2014/02/07/CPR-AED/</link>
+      <link>https://xixitalk.top/blog/2014/02/07/CPR-AED/</link>
       <pubDate>Fri, 07 Feb 2014 11:11:10 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2014/02/07/CPR-AED/</guid>
+      <guid>https://xixitalk.top/blog/2014/02/07/CPR-AED/</guid>
       <description>&lt;h2 id=&#34;1-概述&#34;&gt;1. 概述&lt;/h2&gt;
 
 &lt;p&gt;心脏骤停急救分五个步骤，其中前三个在医护人员到达之前非医护人员可以做的：电话求救、CPR、电击除颤&lt;/p&gt;
@@ -803,10 +803,10 @@ VF：Ventricular Fibrillation 心室纤维性颤动&lt;/p&gt;
     
     <item>
       <title>维多利亚的秘密的创始人的秘密</title>
-      <link>https://xixitalk.github.io/blog/2013/10/31/Roy-Raymond/</link>
+      <link>https://xixitalk.top/blog/2013/10/31/Roy-Raymond/</link>
       <pubDate>Thu, 31 Oct 2013 17:24:19 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/10/31/Roy-Raymond/</guid>
+      <guid>https://xixitalk.top/blog/2013/10/31/Roy-Raymond/</guid>
       <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zh&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;http://t.co/zIRPxaQ12H&#34;&gt;http://t.co/zIRPxaQ12H&lt;/a&gt; 维多利亚的秘密背后的悲剧：1977年，斯坦福的MBA想给太太买内衣，但是在店里觉得尴尬无比，于是就开了自己的内衣店。1982年1百万卖掉。 1993年他跳下金门大桥&lt;/p&gt;&amp;mdash; 柯冰 (@laojiang2010) &lt;a href=&#34;https://twitter.com/laojiang2010/status/395660825291022336?ref_src=twsrc%5Etfw&#34;&gt;October 30, 2013&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
@@ -816,10 +816,10 @@ VF：Ventricular Fibrillation 心室纤维性颤动&lt;/p&gt;
     
     <item>
       <title>The Vitamin Myth: Why We Think We Need Supplements</title>
-      <link>https://xixitalk.github.io/blog/2013/07/21/The-Vitamin-Myth/</link>
+      <link>https://xixitalk.top/blog/2013/07/21/The-Vitamin-Myth/</link>
       <pubDate>Sun, 21 Jul 2013 13:10:46 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/07/21/The-Vitamin-Myth/</guid>
+      <guid>https://xixitalk.top/blog/2013/07/21/The-Vitamin-Myth/</guid>
       <description>&lt;p&gt;来源：&lt;a href=&#34;http://www.theatlantic.com/health/archive/2013/07/the-vitamin-myth-why-we-think-we-need-supplements/277947/&#34; target=&#34;_blank&#34;&gt;The Vitamin Myth: Why We Think We Need Supplements&lt;/a&gt; by &lt;a href=&#34;http://www.theatlantic.com/paul-offit/&#34; target=&#34;_blank&#34;&gt;PAUL OFFIT&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;中文翻译：&lt;a href=&#34;http://ww3.sinaimg.cn/large/7c3fe21bjw1e6th1c1puxj20hsf4k4qs.jpg&#34; target=&#34;_blank&#34;&gt;维生素迷信：为什么我们认为我们需要补充维生素&lt;/a&gt;  by @蕨代霜蛟&lt;/p&gt;
@@ -837,10 +837,10 @@ VF：Ventricular Fibrillation 心室纤维性颤动&lt;/p&gt;
     
     <item>
       <title>git ssh使用代理</title>
-      <link>https://xixitalk.github.io/blog/2013/07/12/git-ssh-proxy/</link>
+      <link>https://xixitalk.top/blog/2013/07/12/git-ssh-proxy/</link>
       <pubDate>Fri, 12 Jul 2013 08:23:33 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/07/12/git-ssh-proxy/</guid>
+      <guid>https://xixitalk.top/blog/2013/07/12/git-ssh-proxy/</guid>
       <description>&lt;p&gt;昨天在树莓派上发现通过&lt;code&gt;ssh&lt;/code&gt;方式向&lt;code&gt;github.com&lt;/code&gt;的代码仓库&lt;code&gt;git push&lt;/code&gt;代码一直提示连接&lt;code&gt;github.com&lt;/code&gt;的22端口失败。而&lt;code&gt;HTTP&lt;/code&gt;和&lt;code&gt;HTTPS&lt;/code&gt;访问&lt;code&gt;github.com&lt;/code&gt;正常，怀疑&lt;code&gt;github.com&lt;/code&gt;的22端口被墙了。使用&lt;code&gt;ssh&lt;/code&gt;方式的特点是可以不用输入密码，方便在shell里进行自动操作，而&lt;code&gt;https&lt;/code&gt;需要输入密码。&lt;/p&gt;
 
 &lt;p&gt;树莓派上有&lt;code&gt;socks5&lt;/code&gt;代理和&lt;code&gt;http&lt;/code&gt;代理，下面配置&lt;code&gt;git ssh&lt;/code&gt;通过代理进行&lt;code&gt;git&lt;/code&gt;操作。&lt;/p&gt;
@@ -850,10 +850,10 @@ VF：Ventricular Fibrillation 心室纤维性颤动&lt;/p&gt;
     
     <item>
       <title>《美丽新世界》</title>
-      <link>https://xixitalk.github.io/blog/2013/07/11/Brave-New-World/</link>
+      <link>https://xixitalk.top/blog/2013/07/11/Brave-New-World/</link>
       <pubDate>Thu, 11 Jul 2013 15:49:04 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/07/11/Brave-New-World/</guid>
+      <guid>https://xixitalk.top/blog/2013/07/11/Brave-New-World/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.ruanyifeng.com/blog/2011/03/brave_new_world.html&#34; target=&#34;_blank&#34;&gt;阮一峰《美丽新世界》读后感》&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.guokr.com/blog/310237/&#34; target=&#34;_blank&#34;&gt;金色葡萄《如何拒绝进入美丽新世界》&lt;/a&gt;&lt;/p&gt;
@@ -865,10 +865,10 @@ VF：Ventricular Fibrillation 心室纤维性颤动&lt;/p&gt;
     
     <item>
       <title>linux常用命令和配置</title>
-      <link>https://xixitalk.github.io/blog/2013/07/10/linux-command/</link>
+      <link>https://xixitalk.top/blog/2013/07/10/linux-command/</link>
       <pubDate>Wed, 10 Jul 2013 16:08:18 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/07/10/linux-command/</guid>
+      <guid>https://xixitalk.top/blog/2013/07/10/linux-command/</guid>
       <description>&lt;p&gt;下面是最近工作需要用到的命令，记录下来以供查阅。&lt;/p&gt;
 
 &lt;h3 id=&#34;添加新用户test&#34;&gt;添加新用户test&lt;/h3&gt;
@@ -884,10 +884,10 @@ chown test /home/test
     
     <item>
       <title>最近一些有趣的网页</title>
-      <link>https://xixitalk.github.io/blog/2013/07/08/funny-site/</link>
+      <link>https://xixitalk.top/blog/2013/07/08/funny-site/</link>
       <pubDate>Mon, 08 Jul 2013 22:51:46 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/07/08/funny-site/</guid>
+      <guid>https://xixitalk.top/blog/2013/07/08/funny-site/</guid>
       <description>&lt;h3 id=&#34;宇宙囧片王-天机-富春山居图&#34;&gt;宇宙囧片王：天机•富春山居图&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://pulolesu.proresu.com/dream/kuso/switch1.html&#34; target=&#34;_blank&#34;&gt;宇宙囧片王：天机•富春山居图（上）&lt;/a&gt;&lt;br /&gt;
@@ -899,10 +899,10 @@ chown test /home/test
     
     <item>
       <title>中国时区：CCT</title>
-      <link>https://xixitalk.github.io/blog/2013/07/06/china-coast-time/</link>
+      <link>https://xixitalk.top/blog/2013/07/06/china-coast-time/</link>
       <pubDate>Sat, 06 Jul 2013 08:17:55 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/07/06/china-coast-time/</guid>
+      <guid>https://xixitalk.top/blog/2013/07/06/china-coast-time/</guid>
       <description>&lt;p&gt;octopress的&lt;code&gt;rake generate&lt;/code&gt;的时候，如果时间在晚上22：00到24：00左右，发现生成的博客HTML文件日期会是第二天的日期。Google之后有人说要加&lt;code&gt;TZ=CCT&lt;/code&gt;来设定时区。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -910,10 +910,10 @@ chown test /home/test
     
     <item>
       <title>乙肝五项指标</title>
-      <link>https://xixitalk.github.io/blog/2013/07/05/Second-liver-5-indexes/</link>
+      <link>https://xixitalk.top/blog/2013/07/05/Second-liver-5-indexes/</link>
       <pubDate>Fri, 05 Jul 2013 15:41:59 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/07/05/Second-liver-5-indexes/</guid>
+      <guid>https://xixitalk.top/blog/2013/07/05/Second-liver-5-indexes/</guid>
       <description>&lt;p&gt;乙型肝炎病毒表面抗原      HBsAg       阴性&lt;br /&gt;
 乙型肝炎病毒表面抗体      HBsAb       阳性&lt;br /&gt;
 乙型肝炎病毒e抗原         HBeAg     阴性&lt;br /&gt;
@@ -927,10 +927,10 @@ chown test /home/test
     
     <item>
       <title>用base64进行关键词编码</title>
-      <link>https://xixitalk.github.io/blog/2013/07/02/base64-encode/</link>
+      <link>https://xixitalk.top/blog/2013/07/02/base64-encode/</link>
       <pubDate>Tue, 02 Jul 2013 22:01:04 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/07/02/base64-encode/</guid>
+      <guid>https://xixitalk.top/blog/2013/07/02/base64-encode/</guid>
       <description>&lt;p&gt;用base64对关键词进行两次编码，浏览器客户端用javascript进行两次解码。对于支持javascript的浏览器来说透明，目的是防止关键词过滤。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -938,10 +938,10 @@ chown test /home/test
     
     <item>
       <title>西奥克兰发生一起自杀溺亡</title>
-      <link>https://xixitalk.github.io/blog/2013/06/25/West-Auckland-drowning-not-suspicious/</link>
+      <link>https://xixitalk.top/blog/2013/06/25/West-Auckland-drowning-not-suspicious/</link>
       <pubDate>Tue, 25 Jun 2013 16:57:00 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/25/West-Auckland-drowning-not-suspicious/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/25/West-Auckland-drowning-not-suspicious/</guid>
       <description>&lt;p&gt;来源:&lt;a href=&#34;http://www.3news.co.nz/West-Auckland-drowning-not-suspicious/tabid/423/articleID/302561/Default.aspx&#34; target=&#34;_blank&#34;&gt;West Auckland drowning not suspicious&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Police say the death of a man found in a stream bordering the west Auckland suburbs of Henderson and Massey was not suspicious.&lt;br /&gt;
@@ -952,10 +952,10 @@ chown test /home/test
     
     <item>
       <title>树莓派nf_conntrack错误</title>
-      <link>https://xixitalk.github.io/blog/2013/06/25/nf_conntrack-error/</link>
+      <link>https://xixitalk.top/blog/2013/06/25/nf_conntrack-error/</link>
       <pubDate>Tue, 25 Jun 2013 08:57:52 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/25/nf_conntrack-error/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/25/nf_conntrack-error/</guid>
       <description>&lt;p&gt;最近我的树莓派出现大量的重启，特别是看电影+下bt的时候，并且&lt;a href=&#34;http://www.thekelleys.org.uk/dnsmasq/doc.html&#34; target=&#34;_blank&#34;&gt;Dnsmasq&lt;/a&gt;也经常退出，在&lt;code&gt;/var/log/syslog&lt;/code&gt;和&lt;code&gt;/var/log/messages&lt;/code&gt;出现大量的nf_conntrack错误。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt; raspbmc kernel: nf_conntrack: table full, dropping packet
@@ -966,10 +966,10 @@ chown test /home/test
     
     <item>
       <title>穆斯林禁食猪肉常见问答</title>
-      <link>https://xixitalk.github.io/blog/2013/06/23/PORK-FORBIDDEN/</link>
+      <link>https://xixitalk.top/blog/2013/06/23/PORK-FORBIDDEN/</link>
       <pubDate>Sun, 23 Jun 2013 07:42:11 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/23/PORK-FORBIDDEN/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/23/PORK-FORBIDDEN/</guid>
       <description>&lt;p&gt;第一个信息来源 &lt;a href=&#34;http://www.irf.net/index.php?option=com_content&amp;amp;view=article&amp;amp;id=394%3Apork-forbidden&amp;amp;catid=71%3Amost-common-questions-asked-by-non-muslim&amp;amp;Itemid=199&#34; target=&#34;_blank&#34;&gt;FAQs Most Common Questions asked by Non Muslims：PORK FORBIDDEN&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;第二个信息来源 &lt;a href=&#34;http://www.islamicvoice.com/february.99/zakir.htm&#34; target=&#34;_blank&#34;&gt;Questions Commonly Asked by Non-Muslims - VI : Why is Pork Forbidden?&lt;/a&gt;,和第一个信息地址的内容大部分相同，比第一个信息更正式一些。&lt;/p&gt;
@@ -992,10 +992,10 @@ The fact that consumption of pork is prohibited in Islam is well-known. The foll
     
     <item>
       <title>搭建局域网跨路由网络</title>
-      <link>https://xixitalk.github.io/blog/2013/06/22/routing-cross/</link>
+      <link>https://xixitalk.top/blog/2013/06/22/routing-cross/</link>
       <pubDate>Sat, 22 Jun 2013 09:34:57 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/22/routing-cross/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/22/routing-cross/</guid>
       <description>&lt;p&gt;场景：两个路由器每个都组建一个局域网，每个局域网里的电脑想访问另一个局域网的电脑。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -1003,10 +1003,10 @@ The fact that consumption of pork is prohibited in Islam is well-known. The foll
     
     <item>
       <title>世界卫生组织（WHO）对转基因技术的看法</title>
-      <link>https://xixitalk.github.io/blog/2013/06/21/WHO-Transgene/</link>
+      <link>https://xixitalk.top/blog/2013/06/21/WHO-Transgene/</link>
       <pubDate>Fri, 21 Jun 2013 11:23:57 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/21/WHO-Transgene/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/21/WHO-Transgene/</guid>
       <description>&lt;p&gt;世界卫生组织（WHO）2005年的生物技术报告 &lt;a href=&#34;http://www.who.int/foodsafety/fs_management/No_04_Biotech_Jun05_ch.pdf&#34; target=&#34;_blank&#34;&gt;http://www.who.int/foodsafety/fs_management/No_04_Biotech_Jun05_ch.pdf&lt;/a&gt;&lt;/p&gt;
 
 &lt;ol&gt;
@@ -1021,10 +1021,10 @@ The fact that consumption of pork is prohibited in Islam is well-known. The foll
     
     <item>
       <title>octopress加快rake generate速度</title>
-      <link>https://xixitalk.github.io/blog/2013/06/19/Octopress-Rake-gen_deploy/</link>
+      <link>https://xixitalk.top/blog/2013/06/19/Octopress-Rake-gen_deploy/</link>
       <pubDate>Wed, 19 Jun 2013 21:35:54 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/19/Octopress-Rake-gen_deploy/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/19/Octopress-Rake-gen_deploy/</guid>
       <description>&lt;p&gt;octopress随着文件越来越多，&lt;code&gt;rake generate&lt;/code&gt;越来越慢。这样可以加快速度。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -1032,10 +1032,10 @@ The fact that consumption of pork is prohibited in Islam is well-known. The foll
     
     <item>
       <title>从已经存在的octopress新建环境</title>
-      <link>https://xixitalk.github.io/blog/2013/06/19/clone-from-exist-octopress/</link>
+      <link>https://xixitalk.top/blog/2013/06/19/clone-from-exist-octopress/</link>
       <pubDate>Wed, 19 Jun 2013 18:45:41 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/19/clone-from-exist-octopress/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/19/clone-from-exist-octopress/</guid>
       <description>&lt;p&gt;场景需求：为已经存在的octopress博客在另一个目录或者主机新建一个octopress发布环境&lt;/p&gt;
 
 &lt;h3 id=&#34;获得source和master分支代码&#34;&gt;获得source和master分支代码&lt;/h3&gt;
@@ -1050,10 +1050,10 @@ $ git clone git@github.com:xixitalk/xixitalk.github.com.git _deploy
     
     <item>
       <title>Dnsmasq上分发WPAD</title>
-      <link>https://xixitalk.github.io/blog/2013/06/19/WPAD-with-DNS-on-Dnsmasq/</link>
+      <link>https://xixitalk.top/blog/2013/06/19/WPAD-with-DNS-on-Dnsmasq/</link>
       <pubDate>Wed, 19 Jun 2013 14:34:04 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/19/WPAD-with-DNS-on-Dnsmasq/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/19/WPAD-with-DNS-on-Dnsmasq/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Web_Proxy_Autodiscovery_Protocol&#34; target=&#34;_blank&#34;&gt;WPAD&lt;/a&gt;全称是Web Proxy Auto-Discovery，可以通过DHCP或者DNS进行代理分发，这样局域网里客户端连接上后自动进行代理。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.thekelleys.org.uk/dnsmasq/doc.html&#34; target=&#34;_blank&#34;&gt;dnsmasq&lt;/a&gt;为一个轻量的DNS和DHCP服务器。dnsmasq.conf配置说明&lt;a href=&#34;http://www.thekelleys.org.uk/dnsmasq/docs/dnsmasq.conf.example&#34; target=&#34;_blank&#34;&gt;dnsmasq.conf.example&lt;/a&gt;。&lt;/p&gt;
@@ -1065,10 +1065,10 @@ $ git clone git@github.com:xixitalk/xixitalk.github.com.git _deploy
     
     <item>
       <title>octopress里插入flickr的图片</title>
-      <link>https://xixitalk.github.io/blog/2013/06/19/Insert-a-Image-From-Flickr-in-Octopress/</link>
+      <link>https://xixitalk.top/blog/2013/06/19/Insert-a-Image-From-Flickr-in-Octopress/</link>
       <pubDate>Wed, 19 Jun 2013 10:17:24 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/19/Insert-a-Image-From-Flickr-in-Octopress/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/19/Insert-a-Image-From-Flickr-in-Octopress/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.flickr.com&#34; target=&#34;_blank&#34;&gt;flickr&lt;/a&gt;更新之后，免费1T空间，同时可以上传质量很好的图片。&lt;a href=&#34;http://www.instagram.com&#34; target=&#34;_blank&#34;&gt;instagram&lt;/a&gt;的图片质量太差了。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -1076,10 +1076,10 @@ $ git clone git@github.com:xixitalk/xixitalk.github.com.git _deploy
     
     <item>
       <title>grep命令手册</title>
-      <link>https://xixitalk.github.io/blog/2013/06/18/grep-man/</link>
+      <link>https://xixitalk.top/blog/2013/06/18/grep-man/</link>
       <pubDate>Tue, 18 Jun 2013 17:51:43 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/18/grep-man/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/18/grep-man/</guid>
       <description>&lt;p&gt;详细参看这个博文 &lt;a href=&#34;http://blog.51yip.com/linux/1008.html&#34; target=&#34;_blank&#34;&gt;http://blog.51yip.com/linux/1008.html&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;GNU Grep 2.14 &lt;a href=&#34;http://www.gnu.org/software/grep/manual/grep.html&#34; target=&#34;_blank&#34;&gt;http://www.gnu.org/software/grep/manual/grep.html&lt;/a&gt;&lt;/p&gt;
@@ -1100,10 +1100,10 @@ DIR 查找的目录范围&lt;/p&gt;
     
     <item>
       <title>搭建带代理的奶瓶腿</title>
-      <link>https://xixitalk.github.io/blog/2013/06/15/netputweets-proxy/</link>
+      <link>https://xixitalk.top/blog/2013/06/15/netputweets-proxy/</link>
       <pubDate>Sat, 15 Jun 2013 21:39:29 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/15/netputweets-proxy/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/15/netputweets-proxy/</guid>
       <description>&lt;p&gt;今天证实了一个猜想：因为奶瓶腿连接twitter API是通过cURL模块，而cURL本身支持proxy，所以在国内可以搭建奶瓶腿，只要加上代理就可以正常使用。代理可以是shadowsocks转换的socks代理，也可以是再通过polipo进一步转化的HTTP代理。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -1111,10 +1111,10 @@ DIR 查找的目录范围&lt;/p&gt;
     
     <item>
       <title>Raspberry Pi上安装Go lang并编译cow proxy</title>
-      <link>https://xixitalk.github.io/blog/2013/06/14/go-lang-for-raspberrypi/</link>
+      <link>https://xixitalk.top/blog/2013/06/14/go-lang-for-raspberrypi/</link>
       <pubDate>Fri, 14 Jun 2013 11:48:41 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/14/go-lang-for-raspberrypi/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/14/go-lang-for-raspberrypi/</guid>
       <description>&lt;p&gt;【golang和cow都提供ARM版本了 2017.11.28 更新，文档更新了一下】&lt;/p&gt;
 
 &lt;h3 id=&#34;安装go语言&#34;&gt;安装go语言&lt;/h3&gt;
@@ -1126,10 +1126,10 @@ DIR 查找的目录范围&lt;/p&gt;
     
     <item>
       <title>支持twitter的AppEngine-OAuth-Library</title>
-      <link>https://xixitalk.github.io/blog/2013/06/14/AppEngine-OAuth-Library/</link>
+      <link>https://xixitalk.top/blog/2013/06/14/AppEngine-OAuth-Library/</link>
       <pubDate>Fri, 14 Jun 2013 09:13:55 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/14/AppEngine-OAuth-Library/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/14/AppEngine-OAuth-Library/</guid>
       <description>&lt;p&gt;自己在GAE上写了个浏览twitter的web页面，虽然丑陋但是自我感觉良好，使用的是v1.0的API，这两天twitter停用了v1.0的API，换用v1.1，调试了一下没有调试好，还是直接用别人造好的轮子吧。&lt;/p&gt;
 
 &lt;p&gt;AppEngine-OAuth-Library &lt;a href=&#34;https://github.com/mikeknapp/AppEngine-OAuth-Library&#34; target=&#34;_blank&#34;&gt;https://github.com/mikeknapp/AppEngine-OAuth-Library&lt;/a&gt;&lt;/p&gt;
@@ -1139,10 +1139,10 @@ DIR 查找的目录范围&lt;/p&gt;
     
     <item>
       <title>python从字符串用readlines读取操作</title>
-      <link>https://xixitalk.github.io/blog/2013/06/13/python-readlines-from-string/</link>
+      <link>https://xixitalk.top/blog/2013/06/13/python-readlines-from-string/</link>
       <pubDate>Thu, 13 Jun 2013 09:57:17 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/13/python-readlines-from-string/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/13/python-readlines-from-string/</guid>
       <description>&lt;p&gt;场景：用&lt;a href=&#34;http://curl.haxx.se/&#34; target=&#34;_blank&#34;&gt;cURL&lt;/a&gt;命令POST了一个文本文件到web服务器，想在服务器端对这个文件进行readlines操作&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -1150,10 +1150,10 @@ DIR 查找的目录范围&lt;/p&gt;
     
     <item>
       <title>分享到twitter的方法</title>
-      <link>https://xixitalk.github.io/blog/2013/06/10/share-to-twitter/</link>
+      <link>https://xixitalk.top/blog/2013/06/10/share-to-twitter/</link>
       <pubDate>Mon, 10 Jun 2013 22:41:26 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/10/share-to-twitter/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/10/share-to-twitter/</guid>
       <description>&lt;p&gt;分享到twitter的方法：&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -1161,10 +1161,10 @@ DIR 查找的目录范围&lt;/p&gt;
     
     <item>
       <title>推荐一个web ssh client</title>
-      <link>https://xixitalk.github.io/blog/2013/06/09/web-ssh-client/</link>
+      <link>https://xixitalk.top/blog/2013/06/09/web-ssh-client/</link>
       <pubDate>Sun, 09 Jun 2013 23:00:34 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/09/web-ssh-client/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/09/web-ssh-client/</guid>
       <description>&lt;p&gt;推荐一个免费的web ssh client &lt;a href=&#34;https://www.sshd.org/server/quick-connect.html&#34; target=&#34;_blank&#34;&gt;https://www.sshd.org/server/quick-connect.html&lt;/a&gt;，免费稳定可靠，值得推荐。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -1172,10 +1172,10 @@ DIR 查找的目录范围&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>https://xixitalk.github.io/blog/2013/06/08/mathjax-math-formula/</link>
+      <link>https://xixitalk.top/blog/2013/06/08/mathjax-math-formula/</link>
       <pubDate>Sat, 08 Jun 2013 23:32:24 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/08/mathjax-math-formula/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/08/mathjax-math-formula/</guid>
       <description>&lt;p&gt;具体可以参看这篇博客&lt;a href=&#34;http://www.idryman.org/blog/2012/03/10/writing-math-equations-on-octopress/&#34; target=&#34;_blank&#34;&gt;http://www.idryman.org/blog/2012/03/10/writing-math-equations-on-octopress/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;几点特殊说明如下：&lt;br /&gt;
@@ -1187,10 +1187,10 @@ DIR 查找的目录范围&lt;/p&gt;
     
     <item>
       <title>男人是否携带HPV病毒检查不出来</title>
-      <link>https://xixitalk.github.io/blog/2013/06/08/man-vs-HPV/</link>
+      <link>https://xixitalk.top/blog/2013/06/08/man-vs-HPV/</link>
       <pubDate>Sat, 08 Jun 2013 15:13:47 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/08/man-vs-HPV/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/08/man-vs-HPV/</guid>
       <description>&lt;p&gt;关键词：man male HPV 男人 HPV病毒&lt;br /&gt;
 参看这篇：&lt;a href=&#34;http://www.nbcnews.com/id/41853611/ns/health-sexual_health/t/guys-man-get-vaccinated-hpv-your-responsibility/&#34; target=&#34;_blank&#34;&gt;NBCNews:Guys, man up and get vaccinated: HPV is your responsibility&lt;/a&gt;&lt;/p&gt;
 
@@ -1199,10 +1199,10 @@ DIR 查找的目录范围&lt;/p&gt;
     
     <item>
       <title>数字签名时的私钥加密公钥解密</title>
-      <link>https://xixitalk.github.io/blog/2013/06/07/digest-signature/</link>
+      <link>https://xixitalk.top/blog/2013/06/07/digest-signature/</link>
       <pubDate>Fri, 07 Jun 2013 15:33:05 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/07/digest-signature/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/07/digest-signature/</guid>
       <description>&lt;p&gt;疑问：数字签名时的&lt;code&gt;私钥加密 公钥解密&lt;/code&gt;怎么理解？&lt;/p&gt;
 
 &lt;p&gt;前一段时间设计系统启动,为了保障安全使用数字签名进行版本验证，平常的不对称加解密（公钥加密，私钥解密）很容易理解，而数字签名时的&lt;code&gt;私钥加密 公钥解密&lt;/code&gt;是怎么回事呢？&lt;/p&gt;
@@ -1212,10 +1212,10 @@ DIR 查找的目录范围&lt;/p&gt;
     
     <item>
       <title>从保险投保费用看男女健康对比</title>
-      <link>https://xixitalk.github.io/blog/2013/06/07/man-inflection-point-is-47-year-old/</link>
+      <link>https://xixitalk.top/blog/2013/06/07/man-inflection-point-is-47-year-old/</link>
       <pubDate>Fri, 07 Jun 2013 10:01:44 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/07/man-inflection-point-is-47-year-old/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/07/man-inflection-point-is-47-year-old/</guid>
       <description>&lt;p&gt;下表是某寿险保费列表：&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -1223,10 +1223,10 @@ DIR 查找的目录范围&lt;/p&gt;
     
     <item>
       <title>反对『中医』理由汇集</title>
-      <link>https://xixitalk.github.io/blog/2013/06/06/Anti-Traditional-Chinese-medicine/</link>
+      <link>https://xixitalk.top/blog/2013/06/06/Anti-Traditional-Chinese-medicine/</link>
       <pubDate>Thu, 06 Jun 2013 09:59:58 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/06/Anti-Traditional-Chinese-medicine/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/06/Anti-Traditional-Chinese-medicine/</guid>
       <description>&lt;h3 id=&#34;中药制剂是大分子-容易造成肾衰&#34;&gt;中药制剂是大分子，容易造成肾衰&lt;/h3&gt;
 
 &lt;p&gt;中药制剂是大分子，输液进入血液循环系统，造成肾衰。
@@ -1245,10 +1245,10 @@ DIR 查找的目录范围&lt;/p&gt;
     
     <item>
       <title>TestDisk 恢复误删数据的神器</title>
-      <link>https://xixitalk.github.io/blog/2013/06/04/TestDisk-Data-Recovery/</link>
+      <link>https://xixitalk.top/blog/2013/06/04/TestDisk-Data-Recovery/</link>
       <pubDate>Tue, 04 Jun 2013 09:50:39 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/04/TestDisk-Data-Recovery/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/04/TestDisk-Data-Recovery/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://www.cgsecurity.org/mw/images/Testdisklogo_clear_100.png&#34; alt=&#34;TestDisk&#34; /&gt;
 TestDisk, Data Recovery&lt;/p&gt;
 
@@ -1259,10 +1259,10 @@ TestDisk, Data Recovery&lt;/p&gt;
     
     <item>
       <title>高速列车击中飞鸟，前窗玻璃受到多少牛顿的力？</title>
-      <link>https://xixitalk.github.io/blog/2013/06/03/bird-strike/</link>
+      <link>https://xixitalk.top/blog/2013/06/03/bird-strike/</link>
       <pubDate>Mon, 03 Jun 2013 15:39:25 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/03/bird-strike/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/03/bird-strike/</guid>
       <description>&lt;p&gt;新闻来源：&lt;a href=&#34;http://kb.dsqq.cn/html/2013-06/03/content_270372.htm&#34; target=&#34;_blank&#34;&gt;飞鸟撞裂“子弹头”玻璃 高铁G38昨被迫在南京换车&lt;/a&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -1278,19 +1278,19 @@ TestDisk, Data Recovery&lt;/p&gt;
     
     <item>
       <title>I have a dream</title>
-      <link>https://xixitalk.github.io/blog/2013/06/02/i-have-a-dream/</link>
+      <link>https://xixitalk.top/blog/2013/06/02/i-have-a-dream/</link>
       <pubDate>Sun, 02 Jun 2013 22:53:52 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/06/02/i-have-a-dream/</guid>
+      <guid>https://xixitalk.top/blog/2013/06/02/i-have-a-dream/</guid>
       <description>对带小院子的房子真是没有抵抗力啊。</description>
     </item>
     
     <item>
       <title>用浏览器发布博客到octopress</title>
-      <link>https://xixitalk.github.io/blog/2013/05/31/octopress-post-from-raspberrypi/</link>
+      <link>https://xixitalk.top/blog/2013/05/31/octopress-post-from-raspberrypi/</link>
       <pubDate>Fri, 31 May 2013 19:57:25 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/05/31/octopress-post-from-raspberrypi/</guid>
+      <guid>https://xixitalk.top/blog/2013/05/31/octopress-post-from-raspberrypi/</guid>
       <description>&lt;h3 id=&#34;目标&#34;&gt;目标&lt;/h3&gt;
 
 &lt;p&gt;用网页发布到octopress，这样手机、iPad、办公环境都可以通过浏览器发octopress博文了。&lt;/p&gt;
@@ -1304,10 +1304,10 @@ TestDisk, Data Recovery&lt;/p&gt;
     
     <item>
       <title>用iptables将8222端口转向22（SSH）</title>
-      <link>https://xixitalk.github.io/blog/2013/05/30/iptables-port-8222-to-ssh-22/</link>
+      <link>https://xixitalk.top/blog/2013/05/30/iptables-port-8222-to-ssh-22/</link>
       <pubDate>Thu, 30 May 2013 21:53:00 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/05/30/iptables-port-8222-to-ssh-22/</guid>
+      <guid>https://xixitalk.top/blog/2013/05/30/iptables-port-8222-to-ssh-22/</guid>
       <description>&lt;p&gt;场景：家里树莓派的SSH端口是22，因为我的树莓派本身没有连接键盘，所以不敢轻易修改SSH的端口。从办公室里连接树莓派的SSH，需要家里的路由器进行端口转发。比如将路由器的22端口转发到树莓派的22端口。实际上路由器的22转发不成功，想来应该路由器本身占用了22端口，或者屏蔽了22端口的访问。所以这样操作：路由器转发8222端口到树莓派的8222端口，树莓派的8222端口再转发到本机的22端口，实现外部SSH的访问。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -1315,10 +1315,10 @@ TestDisk, Data Recovery&lt;/p&gt;
     
     <item>
       <title>用API更新3322.org免费二级域名的DDNS</title>
-      <link>https://xixitalk.github.io/blog/2013/05/29/update-ddns-with-api/</link>
+      <link>https://xixitalk.top/blog/2013/05/29/update-ddns-with-api/</link>
       <pubDate>Wed, 29 May 2013 19:22:00 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/05/29/update-ddns-with-api/</guid>
+      <guid>https://xixitalk.top/blog/2013/05/29/update-ddns-with-api/</guid>
       <description>&lt;p&gt;用API更新3322.org免费二级域名的DDNS:&lt;br /&gt;
 1、注册3322.org的免费二级域名：&lt;a href=&#34;http://www.pubyun.com/&#34; target=&#34;_blank&#34;&gt;http://www.pubyun.com/&lt;/a&gt;&lt;br /&gt;
 2、把下面的shell脚步保存为updateDDNS.sh。mydomain替换为你自己的二级域名，username:password替换为你自己在3322注册的帐号。用&lt;a href=&#34;http://icanhazip.com&#34; target=&#34;_blank&#34;&gt;http://icanhazip.com&lt;/a&gt;获得公网IP。&lt;/p&gt;
@@ -1328,10 +1328,10 @@ TestDisk, Data Recovery&lt;/p&gt;
     
     <item>
       <title>stunnel原理</title>
-      <link>https://xixitalk.github.io/blog/2013/04/08/stunnel-principle/</link>
+      <link>https://xixitalk.top/blog/2013/04/08/stunnel-principle/</link>
       <pubDate>Mon, 08 Apr 2013 16:31:00 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/04/08/stunnel-principle/</guid>
+      <guid>https://xixitalk.top/blog/2013/04/08/stunnel-principle/</guid>
       <description>&lt;p&gt;搜索关键词：stunnel proxy socks5 HTTP HTTPS 代理&lt;/p&gt;
 
 &lt;p&gt;stunnel原理如图：&lt;/p&gt;
@@ -1341,10 +1341,10 @@ TestDisk, Data Recovery&lt;/p&gt;
     
     <item>
       <title>算法：判断是否是中国IP？</title>
-      <link>https://xixitalk.github.io/blog/2013/03/11/func-is-china-ip/</link>
+      <link>https://xixitalk.top/blog/2013/03/11/func-is-china-ip/</link>
       <pubDate>Mon, 11 Mar 2013 19:11:00 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/03/11/func-is-china-ip/</guid>
+      <guid>https://xixitalk.top/blog/2013/03/11/func-is-china-ip/</guid>
       <description>&lt;p&gt;世界上有五个&lt;a href=&#34;http://en.wikipedia.org/wiki/Regional_Internet_registry&#34; target=&#34;_blank&#34;&gt;区域互联网注册管理机构&lt;/a&gt;，负责亚洲和太平洋地区的是亚太网络信息中心(APNIC)。&lt;a href=&#34;http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest&#34; target=&#34;_blank&#34;&gt;点击这里&lt;/a&gt;可以获得亚太地址各个国家或地区申请到的IP地址区域。
 中国共申请到42亿中的330026496个IPv4地址（约3.3亿）,分布在3579块不同的区域。&lt;br /&gt;
 IPv4地址格式是addr1.addr2.addr3.addr4，为了减少查找次数，考虑用空间换时间思路。所有2的32次方的IP，分布在256x256的区域内，每个区域表述addr1.addr2.*.*表述的IP（65536个IP）。
@@ -1355,21 +1355,21 @@ IPv4地址格式是addr1.addr2.addr3.addr4，为了减少查找次数，考虑�
     
     <item>
       <title>android上支持HTTP proxy代理的浏览器</title>
-      <link>https://xixitalk.github.io/blog/2013/03/11/android-broswer-with-http-proxy/</link>
+      <link>https://xixitalk.top/blog/2013/03/11/android-broswer-with-http-proxy/</link>
       <pubDate>Mon, 11 Mar 2013 17:07:00 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/03/11/android-broswer-with-http-proxy/</guid>
-      <description>&lt;p&gt;之前一篇文章讲了在树莓派上搭建HTTP proxy的&lt;a href=&#34;https://xixitalk.github.io/blog/2013/03/02/raspberry-pi-proxy/&#34;&gt;原理&lt;/a&gt;，这样就获得一个HTTP proxy，android上的&lt;a href=&#34;https://play.google.com/store/apps/details?id=org.mariotaku.twidere&#34; target=&#34;_blank&#34;&gt;twidere&lt;/a&gt;和&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.twitter.android&#34; target=&#34;_blank&#34;&gt;twitter&lt;/a&gt;都支持HTTP proxy，可以在设置里进行配置。但是从&lt;a href=&#34;https://play.google.com/store/apps/details?id=org.mariotaku.twidere&#34; target=&#34;_blank&#34;&gt;twidere&lt;/a&gt;或者&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.twitter.android&#34; target=&#34;_blank&#34;&gt;twitter&lt;/a&gt;打开网页又打不开了。这次推荐三个支持HTTP proxy的浏览器。&lt;/p&gt;
+      <guid>https://xixitalk.top/blog/2013/03/11/android-broswer-with-http-proxy/</guid>
+      <description>&lt;p&gt;之前一篇文章讲了在树莓派上搭建HTTP proxy的&lt;a href=&#34;https://xixitalk.top/blog/2013/03/02/raspberry-pi-proxy/&#34;&gt;原理&lt;/a&gt;，这样就获得一个HTTP proxy，android上的&lt;a href=&#34;https://play.google.com/store/apps/details?id=org.mariotaku.twidere&#34; target=&#34;_blank&#34;&gt;twidere&lt;/a&gt;和&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.twitter.android&#34; target=&#34;_blank&#34;&gt;twitter&lt;/a&gt;都支持HTTP proxy，可以在设置里进行配置。但是从&lt;a href=&#34;https://play.google.com/store/apps/details?id=org.mariotaku.twidere&#34; target=&#34;_blank&#34;&gt;twidere&lt;/a&gt;或者&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.twitter.android&#34; target=&#34;_blank&#34;&gt;twitter&lt;/a&gt;打开网页又打不开了。这次推荐三个支持HTTP proxy的浏览器。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>raspberry pi(树莓派）相关记录</title>
-      <link>https://xixitalk.github.io/blog/2013/03/04/raspberry-pi/</link>
+      <link>https://xixitalk.top/blog/2013/03/04/raspberry-pi/</link>
       <pubDate>Mon, 04 Mar 2013 10:48:00 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/03/04/raspberry-pi/</guid>
+      <guid>https://xixitalk.top/blog/2013/03/04/raspberry-pi/</guid>
       <description>&lt;p&gt;搜索关键词：raspberry pi 树莓派 教程 XBMC shadowsocks&lt;/p&gt;
 
 &lt;p&gt;上周用一件旧东西和推友交换了个&lt;a href=&#34;http://www.raspberrypi.org/&#34; target=&#34;_blank&#34;&gt;raspberry pi&lt;/a&gt;(树莓派），虽然内存是256M的(最新版的树莓派升级到512M)，但想来够用了。设想是：代理服务器+&lt;a href=&#34;http://xbmc.org/&#34; target=&#34;_blank&#34;&gt;XBMC&lt;/a&gt;视频播放+挂载3.5寸移动硬盘+网站服务器。&lt;/p&gt;
@@ -1379,10 +1379,10 @@ IPv4地址格式是addr1.addr2.addr3.addr4，为了减少查找次数，考虑�
     
     <item>
       <title>利用Raspberry Pi加shadowsocks搭建代理服务</title>
-      <link>https://xixitalk.github.io/blog/2013/03/02/raspberry-pi-proxy/</link>
+      <link>https://xixitalk.top/blog/2013/03/02/raspberry-pi-proxy/</link>
       <pubDate>Sat, 02 Mar 2013 12:31:00 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/03/02/raspberry-pi-proxy/</guid>
+      <guid>https://xixitalk.top/blog/2013/03/02/raspberry-pi-proxy/</guid>
       <description>&lt;p&gt;设想：路由器和Raspberry Pi的耗电都非常小，可以常开不关机。而且手机上使用SSH -D、shadowsocks和VPN都不方便，还增加电池消耗。android上的twidere和twitter官方客户端都支持HTTP代理，iOS也方便使用pac代理。HTTP代理虽然没有加密，但是因为都在国内没有通过GFW所以不会触发屏蔽。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -1390,10 +1390,10 @@ IPv4地址格式是addr1.addr2.addr3.addr4，为了减少查找次数，考虑�
     
     <item>
       <title>Security audit finds dev OUTSOURCED his JOB to China</title>
-      <link>https://xixitalk.github.io/blog/2013/01/16/security-audit-finds-dev-outsourced-his-job-to-china/</link>
+      <link>https://xixitalk.top/blog/2013/01/16/security-audit-finds-dev-outsourced-his-job-to-china/</link>
       <pubDate>Wed, 16 Jan 2013 14:38:00 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2013/01/16/security-audit-finds-dev-outsourced-his-job-to-china/</guid>
+      <guid>https://xixitalk.top/blog/2013/01/16/security-audit-finds-dev-outsourced-his-job-to-china/</guid>
       <description>&lt;p&gt;来源：&lt;a href=&#34;http://www.theregister.co.uk/2013/01/16/developer_oursources_job_china/&#34; target=&#34;_blank&#34;&gt;http://www.theregister.co.uk/2013/01/16/developer_oursources_job_china/&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;security-audit-finds-dev-outsourced-his-job-to-china&#34;&gt;Security audit finds dev OUTSOURCED his JOB to China&lt;/h2&gt;
@@ -1416,10 +1416,10 @@ Posted in Security, 16th January 2013 01:29 GMT&lt;/p&gt;
     
     <item>
       <title>苹果应用商店启用https，中国要对应用进行审查</title>
-      <link>https://xixitalk.github.io/blog/2012/12/20/apple-adopted-https-in-app-store-china-threatens-to-censor-apps/</link>
+      <link>https://xixitalk.top/blog/2012/12/20/apple-adopted-https-in-app-store-china-threatens-to-censor-apps/</link>
       <pubDate>Thu, 20 Dec 2012 15:25:00 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2012/12/20/apple-adopted-https-in-app-store-china-threatens-to-censor-apps/</guid>
+      <guid>https://xixitalk.top/blog/2012/12/20/apple-adopted-https-in-app-store-china-threatens-to-censor-apps/</guid>
       <description>&lt;p&gt;来源:&lt;a href=&#34;https://en.greatfire.org/blog/2012/dec/apple-adopted-https-app-store-china-threatens-censor-apps&#34; target=&#34;_blank&#34;&gt;https://en.greatfire.org/blog/2012/dec/apple-adopted-https-app-store-china-threatens-censor-apps&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;apple-adopted-https-in-app-store-china-threatens-to-censor-apps&#34;&gt;Apple adopted https in App Store. China threatens to censor apps.&lt;/h2&gt;
@@ -1437,10 +1437,10 @@ Posted in Security, 16th January 2013 01:29 GMT&lt;/p&gt;
     
     <item>
       <title>markdown manual</title>
-      <link>https://xixitalk.github.io/blog/2012/11/27/markdown-manual/</link>
+      <link>https://xixitalk.top/blog/2012/11/27/markdown-manual/</link>
       <pubDate>Tue, 27 Nov 2012 14:56:00 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2012/11/27/markdown-manual/</guid>
+      <guid>https://xixitalk.top/blog/2012/11/27/markdown-manual/</guid>
       <description>&lt;p&gt;##链接&lt;/p&gt;
 
 &lt;p&gt;第一种最简单方式，地址用&amp;lt;&amp;gt;包含&lt;/p&gt;
@@ -1456,10 +1456,10 @@ Posted in Security, 16th January 2013 01:29 GMT&lt;/p&gt;
     
     <item>
       <title>git manual</title>
-      <link>https://xixitalk.github.io/blog/2012/11/24/git-manual/</link>
+      <link>https://xixitalk.top/blog/2012/11/24/git-manual/</link>
       <pubDate>Sat, 24 Nov 2012 21:54:00 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2012/11/24/git-manual/</guid>
+      <guid>https://xixitalk.top/blog/2012/11/24/git-manual/</guid>
       <description>&lt;h2 id=&#34;初始化目录&#34;&gt;初始化目录&lt;/h2&gt;
 
 &lt;p&gt;以下两种方式&lt;/p&gt;
@@ -1479,10 +1479,10 @@ Posted in Security, 16th January 2013 01:29 GMT&lt;/p&gt;
     
     <item>
       <title>octopress命令备忘录</title>
-      <link>https://xixitalk.github.io/blog/2012/11/23/octopress-command-note/</link>
+      <link>https://xixitalk.top/blog/2012/11/23/octopress-command-note/</link>
       <pubDate>Fri, 23 Nov 2012 23:07:00 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2012/11/23/octopress-command-note/</guid>
+      <guid>https://xixitalk.top/blog/2012/11/23/octopress-command-note/</guid>
       <description>&lt;h2 id=&#34;创建新文章&#34;&gt;创建新文章&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;rake new_post[&amp;quot;TITLE&amp;quot;]

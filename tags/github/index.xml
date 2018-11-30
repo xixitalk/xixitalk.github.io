@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Github on xixitalk&#39;s snippet</title>
-    <link>https://xixitalk.github.io/tags/github/</link>
+    <link>https://xixitalk.top/tags/github/</link>
     <description>Recent content in Github on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Nov 2012 23:07:00 +0800</lastBuildDate>
     
-	<atom:link href="https://xixitalk.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xixitalk.top/tags/github/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>octopress命令备忘录</title>
-      <link>https://xixitalk.github.io/blog/2012/11/23/octopress-command-note/</link>
+      <link>https://xixitalk.top/blog/2012/11/23/octopress-command-note/</link>
       <pubDate>Fri, 23 Nov 2012 23:07:00 +0800</pubDate>
       
-      <guid>https://xixitalk.github.io/blog/2012/11/23/octopress-command-note/</guid>
+      <guid>https://xixitalk.top/blog/2012/11/23/octopress-command-note/</guid>
       <description>&lt;h2 id=&#34;创建新文章&#34;&gt;创建新文章&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;rake new_post[&amp;quot;TITLE&amp;quot;]
