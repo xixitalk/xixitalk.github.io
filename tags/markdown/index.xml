@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Markdown on xixitalk&#39;s snippet</title>
-    <link>https://xixitalk.top/tags/markdown/</link>
+    <link>https://xixitalk.github.io/tags/markdown/</link>
     <description>Recent content in Markdown on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 27 Nov 2012 14:56:00 +0800</lastBuildDate>
     
-	<atom:link href="https://xixitalk.top/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xixitalk.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>markdown manual</title>
-      <link>https://xixitalk.top/blog/2012/11/27/markdown-manual/</link>
+      <link>https://xixitalk.github.io/blog/2012/11/27/markdown-manual/</link>
       <pubDate>Tue, 27 Nov 2012 14:56:00 +0800</pubDate>
       
-      <guid>https://xixitalk.top/blog/2012/11/27/markdown-manual/</guid>
+      <guid>https://xixitalk.github.io/blog/2012/11/27/markdown-manual/</guid>
       <description>&lt;p&gt;##链接&lt;/p&gt;
 
 &lt;p&gt;第一种最简单方式，地址用&amp;lt;&amp;gt;包含&lt;/p&gt;

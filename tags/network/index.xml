@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Network on xixitalk&#39;s snippet</title>
-    <link>https://xixitalk.top/tags/network/</link>
+    <link>https://xixitalk.github.io/tags/network/</link>
     <description>Recent content in Network on xixitalk&#39;s snippet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 11 Mar 2013 19:11:00 +0800</lastBuildDate>
     
-	<atom:link href="https://xixitalk.top/tags/network/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xixitalk.github.io/tags/network/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>算法：判断是否是中国IP？</title>
-      <link>https://xixitalk.top/blog/2013/03/11/func-is-china-ip/</link>
+      <link>https://xixitalk.github.io/blog/2013/03/11/func-is-china-ip/</link>
       <pubDate>Mon, 11 Mar 2013 19:11:00 +0800</pubDate>
       
-      <guid>https://xixitalk.top/blog/2013/03/11/func-is-china-ip/</guid>
+      <guid>https://xixitalk.github.io/blog/2013/03/11/func-is-china-ip/</guid>
       <description>&lt;p&gt;世界上有五个&lt;a href=&#34;http://en.wikipedia.org/wiki/Regional_Internet_registry&#34; target=&#34;_blank&#34;&gt;区域互联网注册管理机构&lt;/a&gt;，负责亚洲和太平洋地区的是亚太网络信息中心(APNIC)。&lt;a href=&#34;http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest&#34; target=&#34;_blank&#34;&gt;点击这里&lt;/a&gt;可以获得亚太地址各个国家或地区申请到的IP地址区域。
 中国共申请到42亿中的330026496个IPv4地址（约3.3亿）,分布在3579块不同的区域。&lt;br /&gt;
 IPv4地址格式是addr1.addr2.addr3.addr4，为了减少查找次数，考虑用空间换时间思路。所有2的32次方的IP，分布在256x256的区域内，每个区域表述addr1.addr2.*.*表述的IP（65536个IP）。
