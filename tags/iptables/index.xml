@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Iptables on xixitalk&#39;s snippet</title>
+    <link>https://xixitalk.github.io/tags/iptables/</link>
+    <description>Recent content in Iptables on xixitalk&#39;s snippet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 30 May 2013 21:53:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://xixitalk.github.io/tags/iptables/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>用iptables将8222端口转向22（SSH）</title>
+      <link>https://xixitalk.github.io/blog/2013/05/30/iptables-port-8222-to-ssh-22/</link>
+      <pubDate>Thu, 30 May 2013 21:53:00 +0800</pubDate>
+      
+      <guid>https://xixitalk.github.io/blog/2013/05/30/iptables-port-8222-to-ssh-22/</guid>
+      <description>&lt;p&gt;场景：家里树莓派的SSH端口是22，因为我的树莓派本身没有连接键盘，所以不敢轻易修改SSH的端口。从办公室里连接树莓派的SSH，需要家里的路由器进行端口转发。比如将路由器的22端口转发到树莓派的22端口。实际上路由器的22转发不成功，想来应该路由器本身占用了22端口，或者屏蔽了22端口的访问。所以这样操作：路由器转发8222端口到树莓派的8222端口，树莓派的8222端口再转发到本机的22端口，实现外部SSH的访问。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
